@@ -1,0 +1,68 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+baal_hammon =
+{
+	# (Manpower - Navy)
+	manpower_recovery_speed = 0.1
+	naval_morale = 0.1
+	
+	allow = { religion = canaanite }
+	sprite = 14
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+
+tanit = 
+{
+	#(Diplomatic - Economy)
+	diplomatic_reputation = 1
+	production_efficiency = 0.10
+	
+	allow = { religion = canaanite }
+	sprite = 13
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+astarte =
+{
+	#(Innovative - Tech/Idea)
+	idea_cost = -0.05
+	technology_cost = -0.05
+	
+	allow = { religion = canaanite }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}		
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}			
+	}	
+}

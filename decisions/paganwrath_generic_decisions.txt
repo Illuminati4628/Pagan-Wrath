@@ -1,0 +1,47 @@
+country_decisions = {
+	
+	pw_enable_pagans = {
+
+		potential = {
+			ai = no
+			NOT = {
+				has_global_flag = pw_pagan_religion_enabled
+			}
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		allow = {
+			ai = no
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		effect = {
+			custom_tooltip = pw_pagan_religion_enabled.tt
+			set_global_flag = pw_pagan_religion_enabled
+		}
+
+	}
+	
+	pw_reestablish_imperial_cult = {
+		
+		potential = {
+			tag = BYZ
+			religion_group = hellenic
+		}
+		
+		allow = {
+			monarch_admin_skill = 4
+			151 = { religion = ROOT }
+		}
+
+		effect = {
+			change_religion = imperial_hellenic
+			151 = { change_religion = imperial_hellenic }
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
