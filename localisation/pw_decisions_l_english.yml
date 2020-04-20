@@ -1,4 +1,6 @@
 ﻿l_english:
  pw_enable_pagans_title:0 "Enable Pagan Resurgence"
  pw_enable_pagans_desc:0 "Enable the Pagan Resurgence and events related to it."
- pw_pagan_religion_enabled.tt:0 "After enable this decision, pagan religions will begin to spawn around 30 years after the age of reformation begins."
+ pw_pagan_religion_enabled.tt:0 "After enabling this decision, pagan religions will begin to spawn around 100 years after the decision was enabled."
+ pw_reestablish_imperial_cult_title:0 "Establish Imperial Apotheosis"
+ pw_reestablish_imperial_cult_desc:0 "Establish Apotheosis, the tranformation of past empereors into gods."

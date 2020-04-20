@@ -1,0 +1,792 @@
+namespace = pw_expansion
+
+province_event = { #The Norse Expansion
+	id = pw_expansion.1
+	title = pw_expansion.1.t
+	desc = pw_expansion.1.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_norse_spawn_area = yes
+		religion_years = {
+			norse_pagan_reformed = 3
+		}
+		if = {
+			limit = {
+				region = scandinavia_region
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_norse_timer
+			}
+			had_global_flag = {
+				flag = pw_norse_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = norse_pagan_reformed
+				count = 3
+			}
+			religion_years = {
+				norse_pagan_reformed = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = norse_pagan_reformed
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_norse_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.1.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = norse_pagan_reformed
+		add_reform_center = norse_pagan_reformed
+		set_global_flag = pw_norse_timer
+	}
+}
+
+province_event = { #The Germanic Expansion
+	id = pw_expansion.2
+	title = pw_expansion.2.t
+	desc = pw_expansion.2.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_continental_germanic_spawn_area = yes
+		religion_years = {
+			continental_germanic = 3
+		}
+		if = {
+			limit = {
+				region = north_germany_region
+			}			
+			development = 20
+		}
+		else_if = {
+			limit = {
+				region = south_germany_region
+			}
+			development = 20
+		}
+		else_if = {
+			limit = {
+				region = low_countries_region
+			}
+			development = 20
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_continental_germanic_timer
+			}
+			had_global_flag = {
+				flag = pw_continental_germanic_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = continental_germanic
+				count = 3
+			}
+			religion_years = {
+				continental_germanic = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = continental_germanic
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_continental_germanic_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.2.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = continental_germanic
+		add_reform_center = continental_germanic
+		set_global_flag = pw_continental_germanic_timer
+	}
+}	
+
+province_event = { #The Anglic Expansion
+	id = pw_expansion.3
+	title = pw_expansion.3.t
+	desc = pw_expansion.3.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_insular_germanic_spawn_area = yes
+		religion_years = {
+			norse_pagan_reformed = 3
+		}
+		if = {
+			limit = {
+				region = great_britain_region
+			}			
+			development = 12
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_insular_germanic_timer
+			}
+			had_global_flag = {
+				flag = pw_insular_germanic_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = insular_germanic
+				count = 3
+			}
+			religion_years = {
+				insular_germanic = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = insular_germanic
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_insular_germanic_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.1.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = insular_germanic
+		add_reform_center = insular_germanic
+		set_global_flag = pw_insular_germanic_timer
+	}
+}	
+
+province_event = { #The Druidic Expansion
+	id = pw_expansion.4
+	title = pw_expansion.4.t
+	desc = pw_expansion.4.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_norse_spawn_area = yes
+		religion_years = {
+			druidic = 3
+		}
+		if = {
+			limit = {
+				region = ireland_region
+			}			
+			development = 12
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					area = wales_area
+					area = cornwall_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area
+				}
+			}
+			development = 12
+		}	
+		OR = {
+			NOT = {
+				has_global_flag = pw_druidic_timer
+			}
+			had_global_flag = {
+				flag = pw_druidic_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = druidic
+				count = 3
+			}
+			religion_years = {
+				druidic = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = druidic
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_druidic_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.4.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = druidic
+		add_reform_center = druidic
+		set_global_flag = druidic
+	}
+}	
+
+province_event = { #The Dei Consentes Expansion
+	id = pw_expansion.5
+	title = pw_expansion.5.t
+	desc = pw_expansion.5.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_latin_hellenic_spawn_area = yes
+		religion_years = {
+			latin_hellenic = 3
+		}
+		if = {
+			limit = {
+				pw_latin_hellenic_spawn_area
+			}			
+			development = 20
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_latin_hellenic_timer
+			}
+			had_global_flag = {
+				flag = pw_latin_hellenic_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = latin_hellenic
+				count = 3
+			}
+			religion_years = {
+				latin_hellenic = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = latin_hellenic
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_latin_hellenic_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.1.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = latin_hellenic
+		add_reform_center = latin_hellenic
+		set_global_flag = pw_latin_hellenic_timer
+	}
+}	
+
+province_event = { #The Olympian Expansion
+	id = pw_expansion.6
+	title = pw_expansion.6.t
+	desc = pw_expansion.6.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_greek_hellenic_spawn_area = yes
+		religion_years = {
+			norse_pagan_reformed = 3
+		}
+		if = {
+			limit = {
+				pw_greek_hellenic_spawn_area
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_greek_hellenic_timer
+			}
+			had_global_flag = {
+				flag = pw_greek_hellenic_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = greek_hellenic
+				count = 3
+			}
+			religion_years = {
+				greek_hellenic = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = greek_hellenic
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_greek_hellenic_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.7.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}		
+		change_religion = greek_hellenic
+		add_reform_center = greek_hellenic
+		set_global_flag = pw_greek_hellenic_timer
+	}
+}	
+
+province_event = { #The Romuva Expansion
+	id = pw_expansion.10
+	title = pw_expansion.10.t
+	desc = pw_expansion.10.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_baltic_pagan_reformed_spawn_area = yes
+		religion_years = {
+			baltic_pagan_reformed_pagan_reformed = 3
+		}
+		if = {
+			limit = {
+				region = baltic_region
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_baltic_pagan_reformed_timer
+			}
+			had_global_flag = {
+				flag = pw_baltic_pagan_reformed_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = baltic_pagan_reformed
+				count = 3
+			}
+			religion_years = {
+				baltic_pagan_reformed = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = baltic_pagan_reformed
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_baltic_pagan_reformed_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.10.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = baltic_pagan_reformed
+		add_reform_center = baltic_pagan_reformed
+		set_global_flag = pw_baltic_pagan_reformed_timer
+	}
+}	
+
+province_event = { #The Suomenusko Expansion
+	id = pw_expansion.11
+	title = pw_expansion.11.t
+	desc = pw_expansion.11.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_finnish_pagan_reformed_spawn_area = yes
+		religion_years = {
+			finnish_pagan_reformed = 3
+		}
+		if = {
+			limit = {
+				region = pw_finnish_pagan_reformed_spawn_area
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_finnish_pagan_reformed_timer
+			}
+			had_global_flag = {
+				flag = pw_finnish_pagan_reformed_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = finnish_pagan_reformed
+				count = 3
+			}
+			religion_years = {
+				finnish_pagan_reformed = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = finnish_pagan_reformed
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_finnish_pagan_reformed_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.11.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = finnish_pagan_reformed
+		add_reform_center = finnish_pagan_reformed
+		set_global_flag = pw_finnish_pagan_reformed_timer
+	}
+}	
+
+province_event = { #The Zalmoxian Expansion
+	id = pw_expansion.12
+	title = pw_expansion.12.t
+	desc = pw_expansion.12.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_zalmoxian_spawn_area = yes
+		religion_years = {
+			zalmoxian = 3
+		}
+		if = {
+			limit = {
+				region = carpathia_region
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_zalmoxian_timer
+			}
+			had_global_flag = {
+				flag = pw_zalmoxian_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = zalmoxian
+				count = 3
+			}
+			religion_years = {
+				zalmoxian = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = zalmoxian
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_zalmoxian_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.12.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = zalmoxian
+		add_reform_center = zalmoxian
+		set_global_flag = pw_zalmoxian_timer
+	}
+}	
+
+province_event = { #The Kemetic Expansion
+	id = pw_expansion.13
+	title = pw_expansion.13.t
+	desc = pw_expansion.13.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_egyptian_pagan_spawn_area = yes
+		religion_years = {
+			egyptian_pagan = 3
+		}
+		if = {
+			limit = {
+				region = egypt_region
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_egyptian_pagan_timer
+			}
+			had_global_flag = {
+				flag = pw_egyptian_pagan_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = norse_egyptian_pagan_reformed
+				count = 3
+			}
+			religion_years = {
+				egyptian_pagan = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = egyptian_pagan
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_egyptian_pagan_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.13.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = egyptian_pagan
+		add_reform_center = egyptian_pagan
+		set_global_flag = pw_egyptian_pagan_timer
+	}
+}	
+
+province_event = { #The Canaanite Expansion
+	id = pw_expansion.14
+	title = pw_expansion.14.t
+	desc = pw_expansion.14.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_canaanite_spawn_area = yes
+		religion_years = {
+			canaanite = 3
+		}
+		if = {
+			limit = {
+				region = maghreb_region
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_canaanite_timer
+			}
+			had_global_flag = {
+				flag = pw_canaanite_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = canaanite
+				count = 3
+			}
+			religion_years = {
+				canaanite = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = canaanite
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_canaanite_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.14.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = canaanite
+		add_reform_center = canaanite
+		set_global_flag = pw_canaanite_timer
+	}
+}	
+
+province_event = { #The Zoroastrian Expansion
+	id = pw_expansion.15
+	title = pw_expansion.15.t
+	desc = pw_expansion.15.desc
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		pw_zoroastrian_spawn_area = yes
+		religion_years = {
+			zoroastrian = 3
+		}
+		if = {
+			limit = {
+				region = persia_region
+			}			
+			development = 8
+		}
+		OR = {
+			NOT = {
+				has_global_flag = pw_zoroastrian_timer
+			}
+			had_global_flag = {
+				flag = pw_zoroastrian_timer
+				days = 365
+			}
+		}
+		NOT = {
+			num_of_centers_of_reformation = {
+				religion = zoroastrian
+				count = 3
+			}
+			religion_years = {
+				zoroastrian = 50
+			}
+			any_province_in_state = {
+				AND = {
+					religion = zoroastrian
+					is_reformation_center = yes
+				}
+			}
+			is_reformation_center = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	immediate = {
+		clr_global_flag = pw_zoroastrian_timer
+	}
+
+	#Perhaps this is more than a mere cult...
+	option = {
+		name = pw_expansion.15.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}				
+		change_religion = zoroastrian
+		add_reform_center = zoroastrian
+		set_global_flag = pw_zoroastrian_timer
+	}
+}			

@@ -1,7 +1,9 @@
 country_decisions = {
 	
 	pw_enable_pagans = {
-
+	
+		major = yes
+		
 		potential = {
 			ai = no
 			NOT = {
@@ -30,18 +32,41 @@ country_decisions = {
 		
 		potential = {
 			tag = BYZ
-			religion_group = hellenic
+			religion_group = hellenic_group
+			NOT = { religion = imperial_hellenic }
 		}
 		
 		allow = {
 			monarch_admin_skill = 4
-			151 = { religion = ROOT }
+			151 = { religion = greek_hellenic }
+			118 = { religion = greek_hellenic }
+			147 = { religion = greek_hellenic }
+			owns_core_province = 151
+			owns_core_province = 118
+			owns_core_province = 147
 		}
 
 		effect = {
+			enable_religion = imperial_hellenic
 			change_religion = imperial_hellenic
 			151 = { change_religion = imperial_hellenic }
+			118 = { change_religion = imperial_hellenic }
+			147 = { change_religion = imperial_hellenic }
+			random_owned_province = {
+				AND = {
+					NOT = { 151 }
+					NOT = { 118 }
+					NOT = { 147 }
+					amount = 10
+				}	
+				limit = { religion = greek_hellenic }
+				change_religion = { imperial_hellenic }
+			}	
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
 			}
+		}
+	}
+
+}	

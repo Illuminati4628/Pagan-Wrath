@@ -17,11 +17,21 @@ christian = {
 	
 	
 	catholic = {
-		color = { 254 230 244 }
+		color = { 220 180 205 }
 		icon = 1
 		allowed_conversion = {
 			reformed
 			protestant
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian
 		}
 		country = {
 			tolerance_own = 1
@@ -233,6 +243,11 @@ christian = {
 		allowed_center_conversion = {
 			catholic
 		}
+		allowed_conversion = {
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+		}	
 		country = {
 			development_cost = -0.1
 			innovativeness_gain = 0.5
@@ -265,6 +280,16 @@ christian = {
 		allowed_conversion = {
 			reformed
 			catholic
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian			
 		}
 		allowed_center_conversion = {
 			catholic
@@ -400,6 +425,16 @@ christian = {
 		allowed_conversion = {
 			protestant
 			catholic
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian			
 		}
 		allowed_center_conversion = {
 			catholic
@@ -515,6 +550,14 @@ christian = {
 	orthodox = {
 		color = { 179 0 128 }
 		icon = 4
+		allowed_conversion = {
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian
+		}	
 		country = {
 			stability_cost_modifier = -0.1
 			tolerance_own = 1
@@ -651,7 +694,12 @@ christian = {
 		flags_with_emblem_percentage = 20
 		flag_emblem_index_range = { 1 4 }
 
-		color = { 175 42 109 }
+		color = { 100 30 80 }
+		allowed_conversion = {
+			greek_hellenic
+			latin_hellenic
+			egyptian_pagan
+		}	
 		icon = 14
 		country = {
 			defensiveness = 0.1
@@ -987,6 +1035,11 @@ muslim = {
 	sunni = {
 		color = { 0 108 53 }
 		icon = 5
+		allowed_conversion = {
+			egyptian_pagan
+			canaanite
+			zoroastrian
+		}	
 		country = {
 			cav_to_inf_ratio = 0.10
 			heir_chance = 1.0
@@ -1007,6 +1060,11 @@ muslim = {
 	shiite = {
 		color = { 0 149 48 }
 		icon = 6
+		allowed_conversion = {
+			egyptian_pagan
+			canaanite
+			zoroastrian
+		}			
 		country = {
 			heir_chance = 1.0
 			land_morale = 0.05
@@ -1027,6 +1085,11 @@ muslim = {
 	ibadi = {
 		color = { 0 153 0 }
 		icon = 16
+		allowed_conversion = {
+			egyptian_pagan
+			canaanite
+			zoroastrian
+		}			
 		country = {
 			heir_chance = 1.0
 			global_trade_goods_size_modifier = 0.1
@@ -1302,7 +1365,7 @@ pagan = {
 		heretic = { SNAKE_CLAN }
 	}
 	totemism = {
-		color = { 218 145 0 }
+		color = { 150 90 25 }
 		icon = 13
 		country = {
 			tolerance_own = 1
@@ -1438,6 +1501,27 @@ zoroastrian_group = {
 	zoroastrian = {
 		icon = 26
 		color = { 226 88 34 }
+		allowed_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1540.1.1				
+		on_convert = {
+			change_religion = zoroastrian
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}		
+		}		
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -1466,8 +1550,6 @@ germanic_group = {
 			protestant
 			reformed
 			catholic
-			continental_germanic
-			insular_germanic
 		}
 		allowed_center_conversion = {
 			protestant	
@@ -1475,6 +1557,7 @@ germanic_group = {
 			catholic
 		}		
 		misguided_heretic = yes
+		date = 1540.1.1				
 		color = { 100 100 130 }
 		country = {
 			shock_damage = 0.15
@@ -1486,14 +1569,6 @@ germanic_group = {
 		}
 		
 		personal_deity = yes
-	
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = norse_pagan_reformed
-				}
-			}
-		}
 
 		on_convert = {
 			change_religion = norse_pagan_reformed
@@ -1505,78 +1580,11 @@ germanic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = norse_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = norse_pagan_reformed
-							}
-						}
-						change_religion = norse_pagan_reformed
-						add_reform_center = norse_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = norse_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = norse_pagan_reformed
-							}
-						}
-						change_religion = norse_pagan_reformed
-						add_reform_center = norse_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
 			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
 		}	
 		
 		heretic = { OLD_NORSE }	
@@ -1585,20 +1593,19 @@ germanic_group = {
 	insular_germanic = {
 		icon = 61
 		color = { 120 60 60 }
-		allowed_conversion = {
-			protestant
-			reformed
-			catholic
-			anglican
-			continental_germanic
-			norse_pagan_reformed
-		}
 		allowed_center_conversion = {
 			protestant	
 			reformed			
 			catholic
 			anglican
 		}
+		allowed_conversion = {
+			protestant
+			reformed
+			catholic
+			anglican
+		}
+		date = 1540.1.1				
 		misguided_heretic = yes
 		
 		country = {
@@ -1611,14 +1618,6 @@ germanic_group = {
 		}
 		
 		personal_deity = yes
-	
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = insular_germanic
-				}
-			}
-		}
 
 		on_convert = {
 			change_religion = insular_germanic
@@ -1630,78 +1629,11 @@ germanic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = insular_germanic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = insular_germanic
-							}
-						}
-						change_religion = insular_germanic
-						add_reform_center = insular_germanic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = insular_germanic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = insular_germanic
-							}
-						}
-						change_religion = insular_germanic
-						add_reform_center = insular_germanic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
 			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
 		}
 		
 		heretic = { OLD_INSULAR_GERMANIC }			
@@ -1714,8 +1646,6 @@ germanic_group = {
 			protestant
 			reformed
 			catholic
-			norse_pagan_reformed
-			insular_germanic
 		}
 		allowed_center_conversion = {
 			protestant	
@@ -1723,6 +1653,7 @@ germanic_group = {
 			catholic
 		}			
 		misguided_heretic = yes
+		date = 1540.1.1				
 		country = {
 			land_morale = 0.1
 			land_attrition = -0.1
@@ -1733,13 +1664,6 @@ germanic_group = {
 		}		
 		personal_deity = yes
 		
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = continental_germanic
-				}
-			}
-		}
 
 		on_convert = {
 			change_religion = continental_germanic
@@ -1751,78 +1675,11 @@ germanic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = continental_germanic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = continental_germanic
-							}
-						}
-						change_religion = continental_germanic
-						add_reform_center = continental_germanic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = continental_germanic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = continental_germanic
-							}
-						}
-						change_religion = continental_germanic
-						add_reform_center = continental_germanic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
+			}		
 		}
 		
 		heretic = { OLD_CONTINENTAL_GERMANIC }
@@ -1840,13 +1697,15 @@ celtic_group = {
 			protestant
 			catholic
 			reformed
+			anglican
 		}
 		allowed_center_conversion = {
 			protestant	
 			reformed			
 			catholic
 			anglican
-		}			
+		}
+		date = 1540.1.1				
 		misguided_heretic = yes
 		country = {
 			land_morale = 0.1
@@ -1857,13 +1716,6 @@ celtic_group = {
 			army_tradition_decay = -0.1
 		}		
 			
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = druidic
-				}
-			}
-		}
 		personal_deity = yes
 		
 		on_convert = {
@@ -1876,78 +1728,11 @@ celtic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = druidic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = druidic
-							}
-						}
-						change_religion = druidic
-						add_reform_center = druidic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = druidic
-								is_reformation_center = yes
-							}
-							amount = 2
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = druidic
-							}
-						}
-						change_religion = druidic
-						add_reform_center = druidic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
+			}		
 		}
 		
 		heretic = { OLD_DRUIDIC }
@@ -1961,12 +1746,18 @@ hellenic_group = {
 		color = { 165 0 65 }
 		allowed_conversion = {
 			orthodox
+			catholic
+			protestant
+			reformed
 		}
 		allowed_center_conversion = {				
 			catholic
 			othodox
+			protestant
+			reformed
 		}			
 		misguided_heretic = yes
+		date = 1540.1.1		
 		country = {
 			stability_cost_modifier = -0.1
 			tolerance_heathen = 1
@@ -1976,14 +1767,6 @@ hellenic_group = {
 			religous_unity = 1
 		}		
 		personal_deity = yes
-			
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = greek_hellenic
-				}
-			}
-		}
 
 		on_convert = {
 			change_religion = greek_hellenic
@@ -1995,78 +1778,6 @@ hellenic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = greek_hellenic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = greek_hellenic
-							}
-						}
-						change_religion = greek_hellenic
-						add_reform_center = greek_hellenic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = greek_hellenic
-								is_reformation_center = yes
-							}
-							amount = 2
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = greek_hellenic
-							}
-						}
-						change_religion = greek_hellenic
-						add_reform_center = greek_hellenic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			
-			add_country_modifier = {
-				name = "pagan_conversion_zeal"
-				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
 		}
 		
 		heretic = { OLD_greek_hellenic }
@@ -2077,11 +1788,17 @@ hellenic_group = {
 		color = { 220 20 40 }
 		allowed_conversion = {
 			catholic
+			orthodox
+			protestant
+			reformed
 		}
 		allowed_center_conversion = {				
 			catholic
 			othodox
-		}			
+			protestant
+			reformed
+		}	
+		date = 1540.1.1				
 		misguided_heretic = yes
 		country = {
 			stability_cost_modifier = -0.1
@@ -2092,14 +1809,6 @@ hellenic_group = {
 			religous_unity = 1
 		}		
 		personal_deity = yes
-			
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = latin_hellenic
-				}
-			}
-		}
 
 		on_convert = {
 			change_religion = latin_hellenic
@@ -2111,78 +1820,11 @@ hellenic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = latin_hellenic
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = latin_hellenic
-							}
-						}
-						change_religion = latin_hellenic
-						add_reform_center = latin_hellenic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = latin_hellenic
-								is_reformation_center = yes
-							}
-							amount = 2
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = latin_hellenic
-							}
-						}
-						change_religion = latin_hellenic
-						add_reform_center = latin_hellenic
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
 			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
 		}
 		
 		heretic = { OLD_latin_hellenic }
@@ -2190,47 +1832,18 @@ hellenic_group = {
 
 	imperial_hellenic = { #For Byzantium if they survive
 		icon = 65
-		color = { 102 2 60 } #The Triple Whammy, get this mod, Byzantine Resurgance and Cultural Influence/My Colour mod and you get the Tyrian Purple Political, Cultural and Religious map.		
+		color = { 102 2 60 } #The Triple Whammy, get this mod, Byzantine Resurgance and Cultural Influence/My Colour mod and you get the Tyrian Purple Political, Cultural/Linguistic and Religious map.		
 		misguided_heretic = yes
 		country = {
-			global_missionary_strength = 0.03
+			global_missionary_strength = 0.02
 			global_unrest = -2
 		}
 		country_as_secondary = {
 			unrest = -1
 			religous_unity = 1
 		}		
-		has_patriarchs = yes		
-
-		on_convert = {
-			change_religion = imperial_hellenic
-			add_prestige = -100
-			remove_country_modifier = counter_reformation
-			remove_country_modifier = the_statue_in_restraint_of_appeals
-			remove_country_modifier = bavarian_jesuits
-			remove_country_modifier = the_societas_jesu
-			remove_country_modifier = the_declaration_of_indulgence
-			remove_country_modifier = de_heretico_comburendo
-			remove_country_modifier = the_conventicle_act
-			
-			add_country_modifier = {
-				name = "conversion_zeal"
-				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
-		}
+		has_patriarchs = yes	
+		date = 1540.1.1				
 		
 		heretic = { OLD_imperial_hellenic }
 	}
@@ -2249,14 +1862,14 @@ balto_slavic_group = {
 			reformed
 			catholic
 			orthodox
-			slavic_pagan_reformed
 		}
 		allowed_center_conversion = {
 			protestant	
 			reformed			
 			catholic
 			orthodox
-		}			
+		}	
+		date = 1540.1.1				
 		country = {
 			enemy_core_creation = 0.2
 			hostile_attrition = 1
@@ -2279,78 +1892,11 @@ balto_slavic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = baltic_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 1
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = baltic_pagan_reformed
-							}
-						}
-						change_religion = baltic_pagan_reformed
-						add_reform_center = baltic_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = baltic_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 1
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = baltic_pagan_reformed
-							}
-						}
-						change_religion = baltic_pagan_reformed
-						add_reform_center = baltic_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
+			}	
 		}		
 		
 		personal_deity = yes
@@ -2366,14 +1912,14 @@ balto_slavic_group = {
 			reformed
 			catholic
 			orthodox
-			baltic_pagan_reformed
 		}
 		allowed_center_conversion = {
 			protestant	
 			reformed			
 			catholic
 			orthodox
-		}		
+		}
+		date = 1540.1.1				
 		country = {
 			culture_conversion_cost = -0.15
 		}
@@ -2394,78 +1940,11 @@ balto_slavic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = slavic_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = slavic_pagan_reformed
-							}
-						}
-						change_religion = slavic_pagan_reformed
-						add_reform_center = slavic_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = slavic_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 2
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = slavic_pagan_reformed
-							}
-						}
-						change_religion = slavic_pagan_reformed
-						add_reform_center = slavic_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
+			}	
 		}		
 
 		personal_deity = yes
@@ -2482,7 +1961,7 @@ balto_slavic_group = {
 finnic_group = {	
 	finnish_pagan_reformed = {
 		icon = 54
-		color = { 0.863 0.078 0.235 }
+		color = { 190 110 50 }
 		allowed_conversion = {
 			protestant
 			reformed
@@ -2494,7 +1973,8 @@ finnic_group = {
 			reformed			
 			catholic
 			orthodox
-		}		
+		}
+		date = 1540.1.1				
 		country = {
 			hostile_attrition = 1
 			defensiveness = 0.2
@@ -2513,78 +1993,11 @@ finnic_group = {
 			remove_country_modifier = the_declaration_of_indulgence
 			remove_country_modifier = de_heretico_comburendo
 			remove_country_modifier = the_conventicle_act
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = finnish_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 1
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = finnish_pagan_reformed
-							}
-						}
-						change_religion = finnish_pagan_reformed
-						add_reform_center = finnish_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = finnish_pagan_reformed
-								is_reformation_center = yes
-							}
-							amount = 1
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = finnish_pagan_reformed
-							}
-						}
-						change_religion = finnish_pagan_reformed
-						add_reform_center = finnish_pagan_reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
+			}	
 		}		
 		personal_deity = yes
 		
@@ -2597,8 +2010,8 @@ finnic_group = {
 }
 
 egyptian_pagan_group = {
-	egyptian = {
-		color = { 0.9 0.9 0.3 }
+	egyptian_pagan = {
+		color = { 230 230 77 }
 		icon = 66
 		allowed_conversion = {
 			sunni
@@ -2609,7 +2022,8 @@ egyptian_pagan_group = {
 			sunni
 			shiite
 			ibadi
-		}		
+		}	
+		date = 1540.1.1				
 		country = {
 			build_cost = -0.1
 			tolerance_heathen = 1
@@ -2623,65 +2037,11 @@ egyptian_pagan_group = {
 			add_prestige = -100
 			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
 	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = egyptian
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = egyptian
-							}
-						}
-						change_religion = egyptian
-						add_reform_center = egyptian
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = egyptian
-								is_reformation_center = yes
-							}
-							amount = 2
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = egyptian
-							}
-						}
-						change_religion = egyptian
-						add_reform_center = egyptian
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
+			}	
 		}			
 
 		personal_deity = yes
@@ -2696,7 +2056,7 @@ egyptian_pagan_group = {
 
 canaanite_group = {
 	canaanite = {
-		color = { 200 80 20 }
+		color = { 200 120 20 }
 		icon = 67
 		country = {
 			navy_maintenance_cost = -0.1
@@ -2711,7 +2071,8 @@ canaanite_group = {
 			sunni
 			shiite
 			ibadi
-		}		
+		}
+		date = 1540.1.1				
 		country = {
 			build_cost = -0.1
 			tolerance_heathen = 1
@@ -2724,66 +2085,11 @@ canaanite_group = {
 			change_religion = canaanite
 			add_prestige = -100
 			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
-	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = canaanite
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = canaanite
-							}
-						}
-						change_religion = canaanite
-						add_reform_center = canaanite
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = canaanite
-								is_reformation_center = yes
-							}
-							amount = 2
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = canaanite
-							}
-						}
-						change_religion = canaanite
-						add_reform_center = canaanite
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
 			
 			add_country_modifier = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
-			}			
-			set_country_flag = reformation_money
+			}	
 		}	
 
 	personal_deity = yes
@@ -2795,3 +2101,55 @@ canaanite_group = {
 
 	crusade_name = HOLY_WAR	
 }
+
+dacian_group = {
+	zalmoxian = {
+		color = { 10 10 60 }
+		icon = 68
+		country = {
+			defensiveness = 0.2
+			tolerance_heathen = 2
+		}
+		allowed_conversion = {
+			catholic
+			orthodox
+			protestant
+			reformed
+		}
+		allowed_center_conversion = {
+			catholic
+			orthodox
+			protestant
+			reformed
+			sunni
+		}	
+		date = 1540.1.1				
+		country_as_secondary = {
+			build_speed = 0.1
+			discipline = 0.2
+		}
+		on_convert = {
+			change_religion = zalmoxian
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}	
+		
+	heretic = { OLD_ZALMOXIAN }
+	}
+	
+	harmonized_modifier = harmonized_dacian_group
+
+	crusade_name = HOLY_WAR		
+	
+}	

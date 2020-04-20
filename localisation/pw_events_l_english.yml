@@ -1,0 +1,111 @@
+1_english:
+ pw_reformation.01.t:0 "The Norse Faith's Resurgence!"
+ pw_reformation.01.d:0 "The old faith of the Vikings has reformed in [Root.GetName]!"
+ pw_reformation.1.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.1.t:0 "The Norse Faith's Expansion!"
+ pw_expansion.1.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.1.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.02.t:0 "The Germanic Faith's Resurgence!"
+ pw_reformation.02.d:0 "The old faith of the Germanic Tribes has reformed in [Root.GetName]!"
+ pw_reformation.2.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.2.t:0 "The Germanic Faith's Expansion!"
+ pw_expansion.2.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.2.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.03.t:0 "The Anglic Faith's Resurgence!"
+ pw_reformation.03.d:0 "The old faith of the Anglo-Saxon Conquerors has reformed and altered largely from the mainland Germanic faith in [Root.GetName]!"
+ pw_reformation.3.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.3.t:0 "The Anglic Faith's Expansion!"
+ pw_expansion.3.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.3.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.04.t:0 "The Druidic Faith's Resurgence!"
+ pw_reformation.04.d:0 "The old celtic faith has reformed in [Root.GetName]!"
+ pw_reformation.4.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.4.t:0 "The Druidic Faith's Expansion!"
+ pw_expansion.4.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.4.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.05.t:0 "The Dei Consentes Faith's Resurgence!"
+ pw_reformation.05.d:0 "The ancient Roman faith has reformed in [Root.GetName]!"
+ pw_reformation.5.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.5.t:0 "The Dei Consentes Faith's Expansion!"
+ pw_expansion.5.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.5.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.06.t:0 "The Olympian Faith's Resurgence!"
+ pw_reformation.06.d:0 "The ancient Greek faith has reformed in [Root.GetName]!"
+ pw_reformation.6.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.6.t:0 "The Olympian Faith's Expansion!"
+ pw_expansion.6.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.6.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.07.t:0 "The Slavic Faith's Resurgence among the West Slavs!"
+ pw_reformation.07.d:0 "The old faith of the West Slavs has reformed in [Root.GetName]!"
+ pw_reformation.7.a:0 "This is just a mere cult, nothing more... right?"
+
+
+ pw_reformation.08.t:0 "The Slavic Faith's Resurgence among the East Slavs!"
+ pw_reformation.08.d:0 "The old faith of the East Slavs has reformed in [Root.GetName]!"
+ pw_reformation.8.a:0 "This is just a mere cult, nothing more... right?"
+
+
+ pw_reformation.09.t:0 "The Slavic Faith's Resurgence among the South Slavs!"
+ pw_reformation.09.d:0 "The old faith of the South Slavs has reformed in [Root.GetName]!"
+ pw_reformation.9.a:0 "This is just a mere cult, nothing more... right?"
+
+
+ pw_reformation.10.t:0 "The Romuva Faith's Resurgence!"
+ pw_reformation.10.d:0 "The old faith of the Baltic People has reformed in [Root.GetName]!"
+ pw_reformation.10.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.10.t:0 "The Romuva Faith's Expansion!"
+ pw_expansion.10.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.10.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.11.t:0 "The Suomenusko Faith's Resurgence!"
+ pw_reformation.11.d:0 "The old faith of the Finnic people has reformed in [Root.GetName]!"
+ pw_reformation.11.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.11.t:0 "The Suomenusko Faith's Expansion!"
+ pw_expansion.11.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.11.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.12.t:0 "The Zalmoxian Faith's Resurgence!"
+ pw_reformation.12.d:0 "The ancient Dacian faith has reformed in [Root.GetName]!"
+ pw_reformation.12.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.12.t:0 "The Zalmoxian Faith's Expansion!"
+ pw_expansion.12.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.12.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.13.t:0 "The Kemetic Faith's Resurgence!"
+ pw_reformation.13.d:0 "The ancient Egyptian faith has reformed in [Root.GetName]!"
+ pw_reformation.13.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.13.t:0 "The Kemetic Faith's Expansion!"
+ pw_expansion.13.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.13.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.14.t:0 "The Canaanite Faith's Resurgence!"
+ pw_reformation.14.d:0 "The ancient Carthagenian faith has reformed in [Root.GetName]!"
+ pw_reformation.14.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.14.t:0 "The Canaanite Faith's Expansion!"
+ pw_expansion.14.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.14.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.15.t:0 "The Zoroastrian Faith's Resurgence!"
+ pw_reformation.15.d:0 "The old Iranian faith has reformed in [Root.GetName]!"
+ pw_reformation.15.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.15.t:0 "The Zoroastrian Faith's Expansion!"
+ pw_expansion.15.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.15.a:0 "Perhaps this is more than a mere cult..."

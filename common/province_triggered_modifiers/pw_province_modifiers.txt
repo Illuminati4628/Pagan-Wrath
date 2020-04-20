@@ -1,0 +1,16 @@
+mount_olympus_modifier_hellenic = {
+	potential = {
+		owner = {
+			religion_group = hellenic_group
+		}
+	}
+
+	trigger = {
+		owner = {
+			religion_group = hellenic_group
+		}
+		religion_group = hellenic_group
+	}
+	
+	missionaries = 1
+}

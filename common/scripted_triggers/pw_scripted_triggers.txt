@@ -1,0 +1,227 @@
+pw_norse_spawn_area = {
+	OR = {
+		AND = {
+			region = scandinavia_region
+			NOT = { area = northern_norway }
+			NOT = { area = norrland_area }
+			NOT = { area = bothnia_area }
+			NOT = { area = finland_area }
+			NOT = { area = west_karelia_area }
+			NOT = { area = trondelag_area }
+			NOT = { area = subarctic_islands_area }
+			NOT = { area = iceland_area }			
+		}
+	}
+}	
+
+pw_continental_germanic_spawn_area = {
+	OR = {
+		region = north_german_region
+		AND = {
+			region = south_german_region
+			NOT = { area = bohemia_area } 
+			NOT = { area = erzgebirge_area }		
+			NOT = { area = moravia_area }
+		}	
+		region = low_countries_german_region		
+	}
+}
+
+pw_insular_germanic_spawn_area = {
+	OR = {
+		AND = {
+			region = british_isles_region
+			NOT = { area = wales_area }
+			NOT = { area = cornwall_area }
+			NOT = { area = highlands_area }
+			NOT = { area = kingdom_of_the_isles_area }
+		}	
+	}
+}
+
+pw_druidic_spawn_area = {
+	OR = {
+		region = ireland_area #why is this area instead of region like all the others?
+		area = wales_area
+		area = cornwall_area
+		area = highlands_area
+		area = kingdom_of_the_isles_area 
+		area = lower_brittany_area
+	}
+}
+
+pw_latin_hellenic_spawn_area = {
+	OR = {
+		AND = {
+			region = italy_region
+			NOT = { area = sicily_area }
+			NOT = { area = naples_area}
+			NOT = { area = calabria_area }
+			NOT = { area = apulia_area }
+			NOT = { area = abruzzo_area }
+			NOT = { area = umbria_area }
+			NOT = { area = central_italy_area }
+			NOT = { area = north_marche_area }
+		}
+	}
+}
+
+pw_greek_hellenic_spawn_area = {
+	OR = {
+		area = naples_area
+		area = sicily_area
+		area = calabria_area
+		area = apulia_area
+		area = abruzzo_area
+		area = morea_area
+		area = aegean_archipelago_area	
+		area = eastern_mediterrenean_islands_area
+		area = western_aegean_area
+		area = aetolia_area
+		area = thessaly_area
+		area = northern_epirus_area
+		area = northern_greece_area
+		area = macedonia_area
+	}
+}
+
+pw_slavic_spawn_area_west = {
+	OR = {
+		region = poland_region
+		area = bohemia_area 
+		area = erzgebirge_area 	
+		area = moravia_area 
+		area = slovakia_area
+		area = carpathian_ruthenia_area
+		area = podolia_volhynia_area
+		area = podlasie_area
+		area = red_ruthenia_area
+	}
+}	
+
+pw_slavic_spawn_area_east = {
+	OR = {
+		AND = {
+			region = russia_region
+			NOT = { area = north_karelia_area }
+			NOT = { area = karelia_area }
+			NOT = { area = laponia_area }
+		}
+		AND = {
+			region = ruthenia_region
+			NOT = { area = podolia_volhynia_area }
+			NOT = { area = podlasie_area }
+			NOT = { area = red_ruthenia_area }
+			NOT = { area = trakai_area }
+			NOT = { area = yotvingia_area }
+		}	
+	}
+}	
+
+pw_slavic_spawn_area_south = {
+	OR = {
+		AND = {
+			region = balkan_region
+			NOT = { area = morea_area }
+			NOT = { area = aegean_archipelago_area	 }
+			NOT = { area = eastern_mediterrenean_islands_area }
+			NOT = { area = western_aegean_area }
+			NOT = { area = aetolia_area }
+			NOT = { area = thessaly_area }
+			NOT = { area = northern_epirus_area }
+			NOT = { area = northern_greece_area }
+			NOT = { area = macedonia_area }
+			NOT = { area = albania_area }
+			NOT = { area = eastern_macedonia_area }
+			NOT = { area = thrace_area }
+		}	
+	}
+}	
+
+pw_baltic_pagan_reformed_spawn_area = {
+	OR = {
+		AND = {
+			region = baltic_region
+			NOT = { area = estonia_ingria_area }
+			NOT = { area = north_livonia_area }
+			NOT = { area = west_prussia_area }
+			NOT = { area = east_prussia_area }
+			NOT = { area = masuria_area }
+			NOT = { area = nadruvia_area }
+		}	
+		area = trakai_area		
+		area = yotvingia_area
+	}
+}	
+
+pw_finnish_pagan_reformed_spawn_area = {
+	OR = {
+		area = north_karelia_area
+		area = karelia_area
+		area = laponia_area
+		area = northern_norway
+		area = norrland_area
+		area = bothnia_area
+		area = finland_area
+		area = west_karelia_area
+		area = trondelag_area		
+	}
+}	
+
+pw_zalmoxian_spawn_area = {
+	OR = {
+		AND = {
+			region = carpathia_region
+			NOT = { area = slovakia_area }
+			NOT = { area = carpathian_ruthenia_area }
+			NOT = { area = transdanubia_area }
+			NOT = { area = alfold_area }
+		}	
+	}
+}	
+
+pw_egyptian_pagan_spawn_area = {
+	OR = {
+		region = egypt_region
+	}
+}	
+
+pw_canaanite_spawn_area = {
+	OR = {
+		area = tunisia_area
+		area = kabylia_area
+		area = tripolitania_area
+		area = ouled_nail_area
+		area = barbary_coast_area
+		area = northern_morocco_area
+	}
+}	
+
+pw_zoroastrian_spawn_area = {
+	OR = {
+		region = persia_region
+		region = khorasan_region
+	}
+}	
+
+pw_resurgence_trigger = { #Not used, but I might need it later
+	#$RELIGION$ needs to match the religion of the center that is being spawned.
+	NOT = { province_id = 118 }
+	is_reformation_center = no
+	is_island = no
+	expelling_minorities = no
+	development = 5
+	NOT = {
+		any_neighbor_province = {
+			is_reformation_center = yes
+		}
+	}
+	NOT = {
+		any_province = {
+			area = PREV
+			is_reformation_center = yes
+			religion = $RELIGION$
+		}
+	}
+}
+	

@@ -437,22 +437,6 @@ norse_center_of_reformation = {
 			has_province_modifier = religious_zeal_at_conv
 		}
 		modifier = {
-			factor = 0.5
-			religion = protestant
-		}
-		modifier = {
-			factor = 0.5
-			religion = reformed
-		}		
-		modifier = {
-			factor = 0.5
-			religion = anglican
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
-		}
-		modifier = {
 			factor = 0
 			NOT = { continent = FROM }
 		}
@@ -493,6 +477,12 @@ norse_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	scandinavian	
+			}	
+		}		
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -501,15 +491,7 @@ norse_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = norse_pagan_reformed count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.01
-			religion = orthodox
-		}		
+		}	
 	}
 }
 
@@ -544,22 +526,6 @@ insular_germanic_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0.5
-			religion = protestant
-		}
-		modifier = {
-			factor = 0.5
-			religion = reformed
-		}		
-		modifier = {
-			factor = 0.5
-			religion = anglican
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -602,6 +568,12 @@ insular_germanic_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	british		
+			}	
+		}		
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -610,14 +582,6 @@ insular_germanic_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = insular_germanic count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.01
-			religion = orthodox
 		}		
 	}
 }
@@ -653,22 +617,6 @@ continental_germanic_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0.5
-			religion = protestant
-		}
-		modifier = {
-			factor = 0.5
-			religion = reformed
-		}		
-		modifier = {
-			factor = 0.5
-			religion = anglican
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -711,6 +659,12 @@ continental_germanic_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	germanic		
+			}	
+		}
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -719,14 +673,6 @@ continental_germanic_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = continental_germanic count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.01
-			religion = orthodox
 		}		
 	}
 }
@@ -762,22 +708,6 @@ druidic_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0.5
-			religion = protestant
-		}
-		modifier = {
-			factor = 0.5
-			religion = reformed
-		}		
-		modifier = {
-			factor = 0.5
-			religion = anglican
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -820,6 +750,14 @@ druidic_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	gaelic
+				culture_group =	brythonic
+				culture_group =	celtic			
+			}	
+		}
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -828,14 +766,6 @@ druidic_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = druidic count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.01
-			religion = orthodox
 		}		
 	}
 }
@@ -871,14 +801,6 @@ greek_hellenic_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
-		}
-		modifier = {
-			factor = 0
-			NOT = { continent = FROM }
 		}
 		modifier = {
 			factor = 0.7
@@ -917,6 +839,14 @@ greek_hellenic_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture = neapolitan
+				culture = sicilian
+				culture_group =	byzantine			
+			}	
+		}		
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -925,15 +855,7 @@ greek_hellenic_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = greek_hellenic count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.5
-			religion = catholic
-		}		
+		}	
 	}
 }
 
@@ -968,10 +890,6 @@ latin_hellenic_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -1014,6 +932,17 @@ latin_hellenic_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture = tuscan
+				culture = venetian
+				culture = dalmatian_culture
+				culture_group =	gallo_italic
+				culture_group =	rhaetian
+				culture_group =	island_romance				
+			}	
+		}			
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -1022,15 +951,7 @@ latin_hellenic_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = latin_hellenic count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.01
-			religion = orthodox
-		}		
+		}	
 	}
 }
 
@@ -1065,10 +986,6 @@ baltic_pagan_reformed_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -1111,6 +1028,12 @@ baltic_pagan_reformed_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group = baltic				
+			}	
+		}			
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -1119,15 +1042,7 @@ baltic_pagan_reformed_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = baltic_pagan_reformed count = 1 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}		
-		modifier = {
-			factor = 0.5
-			religion = orthodox
-		}		
+		}	
 	}
 }
 
@@ -1162,10 +1077,6 @@ slavic_pagan_reformed_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -1208,6 +1119,15 @@ slavic_pagan_reformed_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group = west_slavic
+				culture_group = east_slavic	
+				culture_group = south_slavic	
+				culture_group = unified_slavic				
+			}	
+		}			
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -1216,11 +1136,7 @@ slavic_pagan_reformed_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = slavic_pagan_reformed = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
-		}				
+		}			
 	}
 }
 
@@ -1255,10 +1171,6 @@ finnish_pagan_reformed_center_of_reformation = {
 		modifier = {
 			factor = 0
 			has_province_modifier = religious_zeal_at_conv
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -1301,6 +1213,12 @@ finnish_pagan_reformed_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture_group = finno_ugric
+			}	
+		}	
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -1309,17 +1227,13 @@ finnish_pagan_reformed_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = finnish_pagan_reformed count = 2 } }
-		}
-		modifier = {
-			factor = 0.01
-			religion = coptic
 		}				
 	}
 }
 
-egyptian_center_of_reformation = {
+egyptian_pagan_center_of_reformation = {
 
-	religion = egyptian
+	religion = egyptian_pagan
 	
 	map_icon = GFX_religious_conversion_center_protestant
 
@@ -1350,19 +1264,20 @@ egyptian_center_of_reformation = {
 			has_province_modifier = religious_zeal_at_conv
 		}
 		modifier = {
-			factor = 0
-			NOT = { religion_group = muslim }
-		}
-		modifier = {
-			factor = 0
-			NOT = { continent = FROM }
-		}
-		modifier = {
 			factor = 1.5
 			owner = {
-				religion = egyptian
+				religion = egyptian_pagan
 			}
 		}
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = egyptian_group
+				culture = sudanese_arabic
+				culture = old_egyptian
+				culture = al_misr_arabic
+			}	
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1371,16 +1286,8 @@ egyptian_center_of_reformation = {
 			factor = 2
 			culture_group = FROM
 			development = 10
-			NOT = { num_of_centers_of_reformation = { religion = egyptian count = 2 } }
+			NOT = { num_of_centers_of_reformation = { religion = egyptian_pagan count = 2 } }
 		}
-		modifier = {
-			factor = 0.01
-			religion = shiite
-		}		
-		modifier = {
-			factor = 0.01
-			religion = ibadi
-		}		
 	}
 }
 
@@ -1418,10 +1325,6 @@ canaanite_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = muslim }
-		}
-		modifier = {
-			factor = 0
 			NOT = { continent = FROM }
 		}
 		modifier = {
@@ -1431,6 +1334,13 @@ canaanite_center_of_reformation = {
 			}
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				culture = tunisian
+				culture = algerian
+				culture = moroccan
+		}			
+		modifier = {
 			factor = 1.5
 			culture_group = FROM
 		}
@@ -1439,14 +1349,124 @@ canaanite_center_of_reformation = {
 			culture_group = FROM
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = canaanite count = 2 } }
+		}		
+	}
+}
+
+zoroastrian_center_of_reformation = {
+
+	religion = zoroastrian
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5.0
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
 		}
 		modifier = {
-			factor = 0.01
-			religion = shiite
-		}		
+			factor = 0
+			is_empty = yes
+		}
 		modifier = {
-			factor = 0.01
-			religion = ibadi
-		}		
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = zoroastrian
+			}
+		}
+		modifier = {
+			factor = 3
+			culture_group = iranian
+		}	
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = zoroastrian count = 2 } }
+		}	
+	}
+}
+
+zalmoxian_center_of_reformation = {
+
+	religion = zalmoxian
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5.0
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = zalmoxian
+			}
+		}
+		modifier = {
+			factor = 3
+			culture_group = dacian
+		}	
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = zalmoxian count = 2 } }
+		}	
 	}
 }
