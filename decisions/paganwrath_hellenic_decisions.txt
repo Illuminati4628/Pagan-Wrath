@@ -1,0 +1,172 @@
+country_decisions = {
+
+
+	pw_neoplatonic_reforms_decision = {
+	
+		potential = {
+			religion_group = hellenic_group
+			NOT = { has_country_modifier = pw_neoplatonic_reforms }
+		}
+		
+		allow = {
+			theologian = 2
+			has_institution = renaissance
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "pw_neoplatonic_reforms"
+				duration = -1
+			}	
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	pw_reestablish_imperial_cult = {
+	
+		major = yes
+		
+		potential = {
+			government = monarchy
+			government_rank = 3
+			religion_group = hellenic_group
+			NOT = { religion = imperial_hellenic } #Debated on whether or not to allow a united HRE to do this, but I figured if you're enough of a memelord to go Hellenic after forming it I figured why not, and I guess it makes it holy again. Instead now the Emperor is what is venerated as being holy, as disgusting as a Habsburg being deified is, rather then whatever the hell the holy actually meant in our timeline.
+		}
+		
+		allow = {
+			adm = 4
+			dip = 4
+			theologian = 2
+			total_development = 3000
+		}
+
+		effect = {
+			enable_religion = imperial_hellenic
+			change_religion = imperial_hellenic
+			every_owned_province = {
+				limit = {
+					religion = ROOT
+					OR = {
+						any_neighbor_province = { development = 40 }
+						development = 40
+					}	
+				}
+				change_religion = imperial_hellenic
+			}			
+			capital_scope = { change_religion = imperial_hellenic }
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
+		}
+	}
+	
+	pw_proclaim_imperial_hellenic_dominance = {
+	
+		major = yes
+		
+		potential = {
+			religion = imperial_hellenic
+			is_free_or_tributary_trigger = yes
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					province_id = 118 #Rome
+					province_id = 151 #Constantinople
+					province_id = 2313 #Antioch
+					province_id = 379 #Jerusalem
+					province_id = 358 #Alexandria
+				}
+			}
+			NOT = { has_global_flag = pw_imperial_hellenic_dominance }
+		}
+		
+		allow = {
+			118 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = imperial_hellenic
+			}
+			151 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = imperial_hellenic
+			}
+			2313 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = imperial_hellenic
+			}
+			379 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = imperial_hellenic
+			}
+			358 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = imperial_hellenic
+			}
+		}
+		
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						118 = {
+							NOT = { has_province_modifier = imperial_hellenic_religious_center }
+						}
+					}
+					118 = { 
+						add_province_triggered_modifier = imperial_hellenic_religious_center
+					}
+				}
+				if = {
+					limit = {
+						151 = {
+							NOT = { has_province_modifier = imperial_hellenic_religious_center }
+						}
+					}
+					151 = { 
+						add_province_triggered_modifier = imperial_hellenic_religious_center
+					}
+				}
+				if = {
+					limit = {
+						2313 = {
+							NOT = { has_province_modifier = imperial_hellenic_religious_center }
+						}
+					}
+					2313 = { 
+						add_province_triggered_modifier = imperial_hellenic_religious_center
+					}
+				}
+				if = {
+					limit = {
+						379 = {
+							NOT = { has_province_modifier = imperial_hellenic_religious_center }
+						}
+					}
+					379 = { 
+						add_province_triggered_modifier = imperial_hellenic_religious_center
+					}
+				}
+				if = {
+					limit = {
+						358 = {
+							NOT = { has_province_modifier = imperial_hellenic_religious_center }
+						}
+					}
+					358 = {
+						add_province_triggered_modifier = imperial_hellenic_religious_center
+					}
+				}
+			}
+			add_prestige = 20
+			country_event = { id = pw_hellenic.1 }
+			set_global_flag = pw_imperial_hellenic_dominance
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+}		

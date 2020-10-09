@@ -8,7 +8,7 @@ baltic_pagan_reformed_rebels = {
 	independence = none				# Does not strive for independence
 	unit_transfer = yes
 	gfx_type = culture_province
-	color = { 70 200 240 }
+	color = { 45 85 90 }
 
 	will_relocate = no
 

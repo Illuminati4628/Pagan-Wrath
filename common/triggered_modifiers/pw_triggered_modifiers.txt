@@ -1,0 +1,44 @@
+imperial_hellenic_dominance = { #Like the Pentarchy, but for Apothesians
+	potential = {
+		normal_or_historical_nations = yes
+		religion = imperial_hellenic
+		OR = {
+			has_discovered = 118 	# Rome
+			has_discovered = 151 	# Constantinople
+			has_discovered = 2313 	# Antioch
+			has_discovered = 379 	# Jerusalem
+			has_discovered = 358 	# Alexandria
+		}
+	}
+
+	trigger = { #Does not require direct ownership of the provinces.
+		owns_or_non_sovereign_subject_of = 118 	# Rome
+		owns_or_non_sovereign_subject_of = 151 	# Constantinople
+		owns_or_non_sovereign_subject_of = 2313 # Antioch
+		owns_or_non_sovereign_subject_of = 379 	# Jerusalem
+		owns_or_non_sovereign_subject_of = 358 	# Alexandria
+		118 = { religion = imperial_hellenic }
+		151 = { religion = imperial_hellenic }
+		2313 = { religion = imperial_hellenic }
+		379 = { religion = imperial_hellenic }
+		358 = { religion = imperial_hellenic }
+	}
+	
+	prestige = 0.5
+	missionaries = 1
+}
+
+pw_hellenic_olympus = {
+	potential = {
+		normal_or_historical_nations = yes
+		has_discovered = 147	# Province Containing Mt Olympus
+		religion_group = hellenic_group
+	}
+
+	trigger = {
+		owns = 147 # Province Containing Mt Olympus
+	}
+
+	prestige = 0.5
+	missionaries = 1
+}

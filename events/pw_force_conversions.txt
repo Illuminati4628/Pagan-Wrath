@@ -1,0 +1,1692 @@
+namespace = pw_forceconversion
+
+country_event = {
+	id = pw_forceconversion.1
+	title =  pw_forceconversion.1.t
+	desc = pw_forceconversion.1.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = norse_pagan_reformed }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { norse_pagan_reformed = 5 }
+		NOT = { religion = norse_pagan_reformed }
+		culture_group = scandinavian
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = norse_pagan_reformed
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = norse_pagan_reformed
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = norse_pagan_reformed
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}
+}	
+
+country_event = {
+	id = pw_forceconversion.2
+	title =  pw_forceconversion.2.t
+	desc = pw_forceconversion.2.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = insular_germanic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { insular_germanic = 5 }
+		NOT = { religion = insular_germanic }
+		culture_group = british
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = insular_germanic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = insular_germanic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = insular_germanic
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}	
+
+country_event = {
+	id = pw_forceconversion.3
+	title =  pw_forceconversion.3.t
+	desc = pw_forceconversion.3.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = continental_germanic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { continental_germanic = 5 }
+		NOT = { religion = continental_germanic }
+		culture_group = germanic
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = continental_germanic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = continental_germanic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = continental_germanic
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}	
+
+country_event = {
+	id = pw_forceconversion.4
+	title =  pw_forceconversion.4.t
+	desc = pw_forceconversion.4.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = druidic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { druidic = 5 }
+		NOT = { religion = druidic }
+		OR = {
+			culture_group =	gaelic
+			culture_group =	brythonic
+			culture_group =	celtic			
+		}			
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = druidic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = druidic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = druidic
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.5
+	title =  pw_forceconversion.5.t
+	desc = pw_forceconversion.5.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = latin_hellenic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { latin_hellenic = 5 }
+		NOT = { religion = latin_hellenic }
+		OR = {
+			culture_group = latin
+			culture_group =	gallo_italic
+			culture_group =	rhaetian
+			culture_group =	island_romance				
+		}		
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = latin_hellenic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = latin_hellenic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = latin_hellenic
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}	
+
+country_event = {
+	id = pw_forceconversion.6
+	title =  pw_forceconversion.6.t
+	desc = pw_forceconversion.6.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = greek_hellenic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { greek_hellenic = 5 }
+		NOT = { religion = greek_hellenic }
+		culture_group = byzantine
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = greek_hellenic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = greek_hellenic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = greek_hellenic
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}	
+
+country_event = {
+	id = pw_forceconversion.7
+	title =  pw_forceconversion.7.t
+	desc = pw_forceconversion.7.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = baltic_pagan_reformed }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { baltic_pagan_reformed = 5 }
+		NOT = { religion = baltic_pagan_reformed }
+		culture_group = baltic	
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = baltic_pagan_reformed
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = baltic_pagan_reformed
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = baltic_pagan_reformed
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}	
+
+country_event = {
+	id = pw_forceconversion.8
+	title =  pw_forceconversion.8.t
+	desc = pw_forceconversion.8.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = slavic_pagan_reformed }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { slavic_pagan_reformed = 5 }
+		NOT = { religion = slavic_pagan_reformed }
+		OR = {
+			culture_group = west_slavic
+			culture_group = east_slavic	
+			culture_group = south_slavic	
+			culture_group = unified_slavic				
+		}	
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = slavic_pagan_reformed
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = slavic_pagan_reformed
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = slavic_pagan_reformed
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}
+}	
+
+country_event = {
+	id = pw_forceconversion.9
+	title =  pw_forceconversion.9.t
+	desc = pw_forceconversion.9.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = finnish_pagan_reformed }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { finnish_pagan_reformed = 5 }
+		NOT = { religion = finnish_pagan_reformed }
+		culture_group = finno_ugric
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = finnish_pagan_reformed
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = finnish_pagan_reformed
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = finnish_pagan_reformed
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}
+}	
+
+country_event = {
+	id = pw_forceconversion.10
+	title =  pw_forceconversion.10.t
+	desc = pw_forceconversion.10.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = egyptian_pagan }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { egyptian_pagan = 5 }
+		NOT = { religion = egyptian_pagan }
+		OR = {
+			culture_group = egyptian_group
+			culture = sudanese_arabic
+			culture = old_egyptian
+			culture = al_misr_arabic
+		}		
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = egyptian_pagan
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = egyptian_pagan
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = egyptian_pagan
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.11
+	title =  pw_forceconversion.11.t
+	desc = pw_forceconversion.11.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = canaanite }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { canaanite = 5 }
+		NOT = { religion = canaanite }
+		OR = {
+			culture = tunisian
+			culture = algerian
+			culture = moroccan
+		}			
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = canaanite
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = canaanite
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = canaanite
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.12
+	title =  pw_forceconversion.12.t
+	desc = pw_forceconversion.12.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = zalmoxian }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { zalmoxian = 5 }
+		NOT = { religion = zalmoxian }
+		culture_group = dacian
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = zalmoxian
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = zalmoxian
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = zalmoxian
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.13
+	title =  pw_forceconversion.13.t
+	desc = pw_forceconversion.13.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = arabic_pagan }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { arabic_pagan = 5 }
+		NOT = { religion = arabic_pagan }
+		OR = {
+			culture = gulf_arabic
+			culture = bedouin_arabic
+			culture = hejazi_culture
+			culture = omani_culture
+			culture = yemeni_culture
+			culture = true_bedouin
+			culture = mashriqi
+		}	
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = arabic_pagan
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = arabic_pagan
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = arabic_pagan
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.14
+	title =  pw_forceconversion.14.t
+	desc = pw_forceconversion.14.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = ashurist }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { ashurist = 5 }
+		NOT = { religion = ashurist }
+		OR = {
+			culture = al_iraqiya_arabic
+			culture = al_suryah_arabic
+		}	
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = ashurist
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = ashurist
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = arabic_pagan
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.15
+	title =  pw_forceconversion.15.t
+	desc = pw_forceconversion.15.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = tengri_pagan_reformed }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { tengri_pagan_reformed = 5 }
+		NOT = { religion = tengri_pagan_reformed }
+		OR = {
+			culture_group = tartar
+			culture_group = kipchak
+			culture_group = oghur
+		}			
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = tengri_pagan_reformed
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = tengri_pagan_reformed
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = tengri_pagan_reformed
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.16
+	title =  pw_forceconversion.16.t
+	desc = pw_forceconversion.16.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		any_owned_province = { religion = zoroastrian }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { zoroastrian = 5 }
+		NOT = { religion = zoroastrian }
+		OR = {
+			culture_group = iranian
+			NOT = { culture = baluchi }
+			NOT = { culture = afghani }
+			NOT = { culture = tajik	}
+		}		
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = zoroastrian
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = zoroastrian
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = zoroastrian
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}

@@ -8,7 +8,7 @@ egyptian_pagan_rebels = {
 	independence = none				# Does not strive for independence
 	unit_transfer = yes
 	gfx_type = culture_province
-	color = { 70 200 240 }
+	color = { 230 230 77 }
 
 	will_relocate = no
 

@@ -1,4 +1,137 @@
 pagan_conversion_zeal = {
-	global_missionary_strength = 0.05
+	global_missionary_strength = 0.1
 	missionary_maintenance_cost = -0.33
 }
+
+heathen_tolerance = {
+	global_missionary_strength = -0.1
+	tolerance_heathen = 4
+	tolerance_own = -3
+}
+
+pw_religious_violance = {
+	tolerance_heathen = -2
+	religious_unity = -0.25
+}
+	
+pw_religious_tolerance = {
+	religious_unity = 0.25
+	tolerance_heathen = 2
+	tolerance_heretic = 1
+}
+
+pw_anti_pagan_conversion = {
+	tolerance_own = 2
+	tolerance_heathen = -2
+	global_missionary_strength = 0.05
+	global_heretic_missionary_strength = -0.05
+}	
+
+#Missionary Strength Decisions
+
+pw_mystery_cult = {
+	global_missionary_strength = 0.02
+	tolerance_heathen = -1
+}
+
+pw_official_religious_authorities = {
+	global_missionary_strength = 0.02
+	global_institution_spread = -0.05
+}
+
+pw_neoplatonic_reforms = {
+	global_missionary_strength = 0.01
+	idea_cost = -0.05
+}
+
+spreading_anglic_rituals = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+spreading_germanic_rituals = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+	
+#Taken from Shattered Europa
+
+killed_an_old_one = {
+	land_morale = 0.1
+	naval_morale = 0.1
+}
+
+insaneinthebrain = {
+	missionaries = 2
+	global_missionary_strength = 0.1
+	global_unrest = 2
+	diplomatic_reputation = -1
+	diplomatic_upkeep = -1
+}
+
+##################################################
+# Harmonized Modifiers
+##################################################
+
+# Religion Groups
+
+harmonized_germanic_group = {
+	shock_damage = 0.05
+	religion = yes
+}
+
+harmonized_celtic_group	 = {
+	production_efficiency = 0.05
+	religion = yes
+}	
+
+harmonized_hellenic_group = {
+	technology_cost = -0.05
+	religion = yes
+}
+
+harmonized_balto_slavic_group = {
+	state_maintenance_modifier = -0.05
+	religion = yes
+}
+
+harmonized_finnic_group = {
+	land_attrition = -0.05
+	religion = yes
+}
+
+harmonized_egyptian_group = {
+	build_time = -0.05
+	religion = yes
+}
+
+harmonized_canaanite_group = {
+	global_ship_cost = -0.05
+	religion = yes
+}
+
+harmonized_dacian_group = {
+	defensiveness = 0.05
+	religion = yes
+}
+
+harmonized_arabic_pagan_group = {
+	global_tax_modifier = 0.05
+	religion = yes
+}
+
+harmonized_new_world_pagan = {
+	global_colonial_growth = 50
+	religion = yes
+}	
+
+harmonized_turko_mongol_group = {
+	cav_to_inf_ratio = 0.15
+	religion = yes
+}	
+
+harmonized_eldritch_group = { #This seems highly cursed... though in saying that things like the Wartgod exist so my point is probably moot.
+	reinforce_speed = 0.05
+	religion = yes
+}	
+	

@@ -1,0 +1,1246 @@
+# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+
+# Uses all 'modifiers' possible thats exported as a Modifier.
+
+christian = {
+
+	catholic = {
+		color = { 240 200 240 }
+		icon = 1
+		allowed_conversion = {
+			reformed
+			protestant
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian
+		}
+	}
+
+	anglican = {
+		color = { 20 50 160 }
+		icon = 28
+
+		allowed_center_conversion = {
+			catholic
+		}
+		allowed_conversion = {
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+		}	
+	}
+	
+	hussite = {
+		color = { 235 115 80 }
+		icon = 22
+
+		allowed_center_conversion = {
+			catholic
+		}
+		allowed_conversion = {
+			continental_germanic
+			slavic_pagan_reformed
+		}	
+	}
+	
+	protestant = {
+		color = { 0 40 110 }
+		icon = 2
+
+		allowed_conversion = {
+			reformed
+			catholic
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian			
+		}
+		allowed_center_conversion = {
+			catholic
+			cathar
+			waldensian			
+		}	
+	}
+
+	reformed = {
+		color = { 100 100 250 }
+		icon = 3
+		allowed_conversion = {
+			protestant
+			catholic
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian			
+		}
+		allowed_center_conversion = {
+			catholic
+		}
+	}
+
+	orthodox = {
+		color = { 180 50 130 }
+		icon = 4
+		allowed_conversion = {
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			zalmoxian
+		}	
+	}
+	
+	coptic = {
+		color = { 160 145 170 }
+		allowed_conversion = {
+			greek_hellenic
+			latin_hellenic
+			egyptian_pagan
+		}	
+		icon = 14
+	}
+}
+
+muslim = {
+
+	sunni = {
+		color = { 0 110 55 }
+		icon = 5
+		allowed_conversion = {
+			greek_hellenic
+			egyptian_pagan
+			canaanite
+			zoroastrian
+			arabic_pagan
+			ashurist
+			zunist
+			tengri_pagan_reformed
+		}	
+	}
+
+	shiite = {
+		color = { 0 150 50 }
+		icon = 6
+		allowed_conversion = {
+			egyptian_pagan
+			canaanite
+			zoroastrian
+			arabic_pagan
+			ashurist
+			zunist
+		}			
+	}
+	
+	ibadi = {
+		color = { 10 140 30 }
+		icon = 16
+		allowed_conversion = {
+			egyptian_pagan
+			canaanite
+			zoroastrian
+			arabic_pagan
+			ashurist
+			zunist
+		}			
+	}
+}
+
+eastern = {
+	buddhism = { #Theravada
+		color = { 225 200 50 }
+		icon = 24
+	}
+	
+	vajrayana = {
+		color = { 130 0 0 }
+		icon = 25
+	}
+	
+	mahayana = {
+		color = { 205 120 35 }
+		icon = 23
+	}
+
+	confucianism = {
+		color = { 20 25 45 }
+		icon = 9
+	}
+
+	shinto = {
+		color = { 190 0 40 }
+		icon = 10
+	}
+	
+	crusade_name = CRUSADE
+	
+}
+
+dharmic = {
+	center_of_religion = 522 #Just using Delhi this doesn't really matter beyond what continent centers of reformation work on.
+	hinduism = {
+		color = { 245 50 20 }
+		icon = 8
+		allowed_conversion = {
+			sikhism
+			zunist
+			jainism
+		}
+	}
+
+	sikhism = {
+		color = { 0 0 150 }
+		icon = 15
+		allowed_conversion = {
+			hinduism
+			zunist
+			jainism
+			sunni
+			shiite
+		}
+	}
+	
+	zunist = {
+		color = { 210 190 30 }
+		icon = 43
+		allowed_conversion = {
+			hinduism
+			sikhism
+			jainism
+		}
+		allowed_center_conversion = {
+			hinduism
+			sikhism
+			jainism
+		}		
+		country = {
+			defensiveness = 0.2
+			land_morale = 0.1
+		}
+		country_as_secondary = {
+			hostile_attrition = 0.05
+			global_unrest = -1
+		}
+		on_convert = {
+			change_religion = zunist
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
+		}
+
+		heretic = { OLD_ZUNIST }
+
+		date = 1445.01.01
+	}
+
+	jainism = {
+		color = { 250 160 100 }
+		icon = 59
+		allowed_conversion = {
+			hinduism
+			sikhism
+			zunist
+		}
+		allowed_center_conversion = {
+			hinduism
+			sikhism
+			zunist
+		}			
+		country = {
+			global_tax_modifier = 0.05
+			tolerance_heretic = 3
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			global_unrest = -1
+		}
+		on_convert = {
+			change_religion = jainism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
+		}
+
+		heretic = { OLD_JAIN }
+
+		date = 1445.01.01
+	}		
+	harmonized_modifier = harmonized_dharmic
+	
+	crusade_name = CRUSADE
+}
+
+pagan = {
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+	center_of_religion = 2190	#Was the Great Horde's Capital, but ultimately I decided to move this to Asia
+	shamanism = { #Fetishism, tag kept to avoid breaking saves.
+		color = { 75 55 35 }
+		icon = 12
+	}
+	new_shamanist = {
+		color = { 110 90 60 }
+		icon = 29
+		country = {
+			hostile_attrition = 0.1
+			land_attrition = -0.1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		country_as_secondary = {
+			loot_amount = 0.25
+			global_supply_limit_modifier = 0.33
+		}
+
+		heretic = { OLD_SHAMANIST }
+	}		
+	animism = {
+		color = { 0 120 95 }
+		icon = 11
+	}
+	tengri_pagan_reformed = {
+		icon = 27
+		color = { 0 175 200 }
+	}	
+}
+
+#turko_mongol_group = { #Attempt to split tengri from the others, but for some reason kept causing crashes, I believe it is something to do with Harmonisation, for now I'll keep them in the same group.
+#	center_of_religion = 2190	#Was the Great Horde's Capital, but ultimately I decided to move this to Asia
+#		
+#
+#	crusade_name = CRUSADE
+#	harmonized_modifier = harmonized_turko_mongol_group	
+#}	
+
+new_world_pagan = {
+	totemism = {
+		color = { 150 90 25 }
+		icon = 13
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		heretic = { BEAR_SPIRIT }	
+	}
+	
+	inti = {
+		color = { 210 180 60 }
+		icon = 18
+		country = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+
+		country_as_secondary = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
+		
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		authority = yes
+		religious_reforms = yes
+		reform_tooltip = INTI_REFORM_TOOLTIP
+		
+		heretic = { INTI_HERETIC }	
+	}
+	
+	nahuatl = {
+		color = { 150 0 25 }
+		icon = 17
+		country = {
+			land_morale = 0.1
+			global_unrest = -2
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			raze_power_gain = 0.2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		doom = yes
+		declare_war_in_regency = yes
+		religious_reforms = yes
+		reform_tooltip = NAHUATL_REFORM_TOOLTIP
+		
+		heretic = { NAHUATL_HERETIC }	
+	}
+	
+	mesoamerican_religion = {
+		color = { 0 170 110 }
+		icon = 19
+		country = {
+			tolerance_own = 1
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			stability_cost_modifier = -0.1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		religious_reforms = yes
+		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
+		
+		heretic = { MESOAMERICAN_HERETIC }	
+	}
+	
+	south_american_pagan = {
+		color = { 10 95 60 }
+		icon = 57 
+		country = {
+			tolerance_own = 1
+			global_tax_modifier = 0.05
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			global_tax_modifier = 0.05
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		heretic = { SOUTHAMERICAN_HERETIC }	
+	}
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_new_world_pagan
+}	
+
+jewish_group = {
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 106 107 }
+
+	jewish = {
+		icon = 20
+		color = { 90 115 150 }
+	}	
+}
+
+
+zoroastrian_group = {
+	defender_of_faith = yes
+	flag_emblem_index_range = { 110 110 }
+	center_of_religion = 433 #Yazd, the last Zoroastrian Province in 1444
+	zoroastrian = {
+		icon = 26
+		color = { 225 90 35 }
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1445.1.1							
+		on_convert = {
+			change_religion = zoroastrian
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}		
+		}		
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = {
+			tolerance_own = 2
+			trade_efficiency = 0.1
+		}
+		country_as_secondary = {
+			merchants = 1
+			tolerance_own = 1
+		}
+		
+		heretic = { MAZDAKI MANICHEAN }	
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group
+	
+	crusade_name = HOLY_WAR
+	
+}
+
+germanic_group = {
+	defender_of_faith = yes
+	center_of_religion = 1
+
+	norse_pagan_reformed = {
+		icon = 21
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard
+		}		
+		misguided_heretic = yes
+		date = 1445.1.1							
+		color = { 100 100 130 }
+		country = {
+			shock_damage = 0.15
+			naval_forcelimit_modifier = 0.10
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
+		
+		personal_deity = yes
+
+		on_convert = {
+			change_religion = norse_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}			
+		}	
+		
+		heretic = { OLD_NORSE }	
+	}
+	
+	insular_germanic = { #Anglic
+		icon = 91
+		color = { 120 60 60 }
+		allowed_center_conversion = {
+			protestant
+			reformed
+			catholic
+			anglican
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		misguided_heretic = yes
+		
+		country = {
+			heavy_ship_power = 0.1
+			fire_damage = 0.1
+		}
+		country_as_secondary = {
+			global_ship_cost = -0.1
+			army_tradition_decay = -0.1
+		}
+		
+		personal_deity = yes
+
+		on_convert = {
+			change_religion = insular_germanic
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
+		}
+
+		heretic = { OLD_INSULAR_GERMANIC }
+	}
+	
+	continental_germanic = {
+		icon = 92
+		color = { 80 90 80 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		misguided_heretic = yes
+		date = 1445.1.1							
+		country = {
+			land_morale = 0.1
+			land_attrition = -0.1
+		}
+		country_as_secondary = {
+			global_ship_cost = -0.1
+			army_tradition_decay = -0.1
+		}
+		personal_deity = yes
+		
+
+		on_convert = {
+			change_religion = continental_germanic			
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}		
+		}
+		
+		heretic = { OLD_CONTINENTAL_GERMANIC }
+	}
+	
+	harmonized_modifier = harmonized_germanic_group
+
+	crusade_name = HOLY_WAR
+}
+
+celtic_group = {
+	defender_of_faith = yes
+	center_of_religion = 4379
+	druidic = {
+		icon = 93
+		color = { 50 205 50 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			anglican
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		misguided_heretic = yes
+		country = {
+			land_morale = 0.1
+			land_attrition = -0.1
+		}
+		country_as_secondary = {
+			global_ship_cost = -0.1
+			army_tradition_decay = -0.1
+		}		
+			
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = druidic				
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}		
+		}
+		
+		heretic = { OLD_DRUIDIC }
+	}	
+	harmonized_modifier = harmonized_celtic_group			
+}
+
+hellenic_group = { #Hellenistic
+	defender_of_faith = yes
+	center_of_religion = 146
+	greek_hellenic = { #Hellenic
+		icon = 58
+		color = { 165 0 65 }
+		allowed_center_conversion = {				
+			catholic
+			orthodox
+			protestant
+			reformed
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}			
+		misguided_heretic = yes
+		date = 1445.1.1					
+		country = {
+			stability_cost_modifier = -0.1
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			global_unrest = -1
+			religious_unity = 1
+		}		
+		personal_deity = yes
+
+		on_convert = {
+			change_religion = greek_hellenic			
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+		}
+		
+		heretic = { OLD_greek_hellenic }
+	}
+
+	latin_hellenic = { #Latin
+		icon = 94
+		color = { 220 20 40 }
+		allowed_center_conversion = {				
+			catholic
+			orthodox
+			protestant
+			reformed
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}	
+		date = 1445.1.1				
+		misguided_heretic = yes
+		country = {
+			stability_cost_modifier = -0.1
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			global_unrest = -1
+			religious_unity = 1
+		}		
+		personal_deity = yes
+
+		on_convert = {
+			change_religion = latin_hellenic			
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}			
+		}
+		
+		heretic = { OLD_latin_hellenic }
+	}		
+
+	imperial_hellenic = { #Apotheosian
+		icon = 95
+		color = { 100 0 60 } 
+		misguided_heretic = yes
+		country = {
+			global_missionary_strength = 0.02
+			global_unrest = -2
+		}
+		country_as_secondary = {
+			global_unrest = -1
+			religious_unity = 1
+		}		
+		
+		date = 1445.1.1							
+		
+		heretic = { OLD_imperial_hellenic }
+	}
+	
+	harmonized_modifier = harmonized_hellenic_group
+
+	crusade_name = HOLY_WAR	
+}	
+
+balto_slavic_group = {
+	defender_of_faith = yes
+	center_of_religion = 295
+	baltic_pagan_reformed = {
+		icon = 53
+		color = { 120 85 105 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			orthodox
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}	
+		date = 1445.1.1							
+		country = {
+			enemy_core_creation = 0.2
+			hostile_attrition = 1
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			tolerance_heathen = 2
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		
+		on_convert = {
+			change_religion = baltic_pagan_reformed			
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+		
+		personal_deity = yes
+		
+		heretic = { OLD_ROMUVA }	
+	}
+
+	slavic_pagan_reformed = {
+		icon = 55
+		color = { 140 85 135 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			orthodox
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		country = {
+			culture_conversion_cost = -0.15
+			manpower_recovery_speed = 0.1
+		}
+		province = {
+			local_manpower_modifier = 0.1
+		}
+		country_as_secondary = {
+			manpower_recovery_speed = 0.1
+			advisor_pool = 1
+		}
+		on_convert = {
+			change_religion = slavic_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act		
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+
+		personal_deity = yes
+
+		heretic = { OLD_SLAVIC }
+	}
+	
+	harmonized_modifier = harmonized_balto_slavic_group
+
+	crusade_name = HOLY_WAR	
+	
+}
+
+finnic_group = {
+	defender_of_faith = yes
+	center_of_religion = 4151
+	finnish_pagan_reformed = {
+		icon = 54
+		color = { 190 110 50 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			orthodox
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		country = {
+			hostile_attrition = 1
+			defensiveness = 0.2
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			global_tax_modifier = 0.1
+		}
+		on_convert = {
+			change_religion = finnish_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act		
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+		personal_deity = yes
+		
+		heretic = { OLD_SUOMENUSKO }	
+	}
+
+	uralic_pagan_reformed = {
+		icon = 100
+		color = { 195 145 105 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			orthodox
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		country = {
+			hostile_attrition = 1
+			defensiveness = 0.2
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			global_tax_modifier = 0.1
+		}
+		on_convert = {
+			change_religion = finnish_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act		
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+		personal_deity = yes
+		
+		heretic = { OLD_URALIC }	
+	}
+
+	harmonized_modifier = harmonized_finnic_group
+
+	crusade_name = HOLY_WAR	
+}
+
+egyptian_pagan_group = {
+	defender_of_faith = yes
+	center_of_religion = 5264
+	egyptian_pagan = { #Kemetic
+		color = { 230 230 80 }
+		icon = 96
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}	
+		date = 1445.1.1							
+		country = {
+			build_cost = -0.1
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			build_cost = -0.1
+			defensiveness = 0.2
+		}
+		on_convert = {
+			change_religion = egyptian_pagan
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
+				
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}			
+
+		personal_deity = yes
+		
+		heretic = { BEAR_SPIRIT SNAKE_CLAN }
+	}
+	
+	harmonized_modifier = harmonized_egyptian_pagan_group
+
+	crusade_name = HOLY_WAR	
+}	
+
+canaanite_group = {
+	defender_of_faith = yes
+	center_of_religion = 341
+	canaanite = {
+		color = { 200 120 20 }
+		icon = 97
+		country = {
+			naval_maintenance_modifier = -0.1
+			trade_efficiency = 0.1
+		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1445.1.1
+		country_as_secondary = {
+			build_cost = -0.1
+			defensiveness = 0.2
+		}
+		on_convert = {
+			change_religion = canaanite
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?				
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}	
+
+	personal_deity = yes
+		
+	heretic = { OLD_CANAANITE }
+	}
+	
+	harmonized_modifier = harmonized_canaanite_group
+
+	crusade_name = HOLY_WAR	
+}
+
+dacian_group = {
+	defender_of_faith = yes
+	center_of_religion = 7752
+	zalmoxian = {
+		color = { 10 10 60 }
+		icon = 98
+		country = {
+			defensiveness = 0.2
+			tolerance_heathen = 2
+		}
+		allowed_center_conversion = {
+			catholic
+			orthodox
+			protestant
+			reformed
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}	
+		date = 1445.1.1							
+		country_as_secondary = {
+			build_time = -0.1
+			discipline = 0.2
+		}
+		on_convert = {
+			change_religion = zalmoxian
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}	
+		
+	heretic = { OLD_ZALMOXIAN }
+	}
+	
+	harmonized_modifier = harmonized_dacian_group
+
+	crusade_name = HOLY_WAR		
+	
+}
+
+arabic_pagan_group = {
+	defender_of_faith = yes
+	center_of_religion = 385
+	arabic_pagan = {
+		color = { 80 210 90 }
+		icon = 101
+		country = {
+			global_trade_power = 0.1
+			defensiveness = 0.1
+		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1445.1.1							
+		country_as_secondary = {
+			hostile_attrition = 1
+			global_unrest = -1
+		}
+		on_convert = {
+			change_religion = arabic_pagan
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?				
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}	
+
+		personal_deity = yes
+		
+		heretic = { OLD_ARABIC }
+	}
+	ashurist = {
+		color = { 155 180 60 }
+		icon = 102
+		country = {
+			tolerance_heathen = 1
+			defensiveness = 0.1
+		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1445.1.1
+		country_as_secondary = {
+			land_maintenance_modifier = -0.1
+			global_unrest = -1
+		}
+		on_convert = {
+			change_religion = ashurist
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?				
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+
+	personal_deity = yes
+		
+	heretic = { OLD_ASHURIST }
+	}
+	
+	harmonized_modifier = harmonized_arabic_pagan_group
+	
+	crusade_name = HOLY_WAR	
+}
+
+eldritch_group = {
+	defender_of_faith = yes
+	cthulhu = {
+		date = 1445.1.1
+		color = { 5 65 65 }
+		icon = 99
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = {
+			tolerance_own = 2
+			tolerance_heretic = -5
+			naval_morale = 0.15
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			naval_morale = 0.05
+		}
+		heretic = { TERAPANTHA DARKNESS }
+		fervor = yes
+	}
+	
+	harmonized_modifier = harmonized_eldritch_group #An odd event if that were to happen
+
+	crusade_name = ELDRITCH_CRUSADE
+	
+}	

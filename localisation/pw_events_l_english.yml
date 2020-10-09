@@ -1,4 +1,4 @@
-1_english:
+﻿l_english:
  pw_reformation.01.t:0 "The Norse Faith's Resurgence!"
  pw_reformation.01.d:0 "The old faith of the Vikings has reformed in [Root.GetName]!"
  pw_reformation.1.a:0 "This is just a mere cult, nothing more... right?"
@@ -24,26 +24,26 @@
  pw_expansion.3.a:0 "Perhaps this is more than a mere cult..."
 
  pw_reformation.04.t:0 "The Druidic Faith's Resurgence!"
- pw_reformation.04.d:0 "The old celtic faith has reformed in [Root.GetName]!"
+ pw_reformation.04.d:0 "The old Celtic faith has reformed in [Root.GetName]!"
  pw_reformation.4.a:0 "This is just a mere cult, nothing more... right?"
 
  pw_expansion.4.t:0 "The Druidic Faith's Expansion!"
  pw_expansion.4.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.4.a:0 "Perhaps this is more than a mere cult..."
 
- pw_reformation.05.t:0 "The Dei Consentes Faith's Resurgence!"
+ pw_reformation.05.t:0 "The Latin Faith's Resurgence!"
  pw_reformation.05.d:0 "The ancient Roman faith has reformed in [Root.GetName]!"
  pw_reformation.5.a:0 "This is just a mere cult, nothing more... right?"
 
- pw_expansion.5.t:0 "The Dei Consentes Faith's Expansion!"
+ pw_expansion.5.t:0 "The Latin Faith's Expansion!"
  pw_expansion.5.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.5.a:0 "Perhaps this is more than a mere cult..."
 
- pw_reformation.06.t:0 "The Olympian Faith's Resurgence!"
+ pw_reformation.06.t:0 "The Hellenic Faith's Resurgence!"
  pw_reformation.06.d:0 "The ancient Greek faith has reformed in [Root.GetName]!"
  pw_reformation.6.a:0 "This is just a mere cult, nothing more... right?"
 
- pw_expansion.6.t:0 "The Olympian Faith's Expansion!"
+ pw_expansion.6.t:0 "The Hellenic Faith's Expansion!"
  pw_expansion.6.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.6.a:0 "Perhaps this is more than a mere cult..."
 
@@ -51,17 +51,26 @@
  pw_reformation.07.d:0 "The old faith of the West Slavs has reformed in [Root.GetName]!"
  pw_reformation.7.a:0 "This is just a mere cult, nothing more... right?"
 
-
+ pw_expansion.6.t:0 "The Slavic Faith's Expansion among the West Slavs!"
+ pw_expansion.6.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.6.a:0 "Perhaps this is more than a mere cult..."
+ 
  pw_reformation.08.t:0 "The Slavic Faith's Resurgence among the East Slavs!"
  pw_reformation.08.d:0 "The old faith of the East Slavs has reformed in [Root.GetName]!"
  pw_reformation.8.a:0 "This is just a mere cult, nothing more... right?"
 
-
+ pw_expansion.6.t:0 "The Slavic Faith's Expansion among the East Slavs!"
+ pw_expansion.6.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.6.a:0 "Perhaps this is more than a mere cult..."
+ 
  pw_reformation.09.t:0 "The Slavic Faith's Resurgence among the South Slavs!"
  pw_reformation.09.d:0 "The old faith of the South Slavs has reformed in [Root.GetName]!"
  pw_reformation.9.a:0 "This is just a mere cult, nothing more... right?"
 
-
+ pw_expansion.6.t:0 "The Slavic Faith's Expansion among the South Slavs!"
+ pw_expansion.6.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.6.a:0 "Perhaps this is more than a mere cult..."
+ 
  pw_reformation.10.t:0 "The Romuva Faith's Resurgence!"
  pw_reformation.10.d:0 "The old faith of the Baltic People has reformed in [Root.GetName]!"
  pw_reformation.10.a:0 "This is just a mere cult, nothing more... right?"
@@ -70,11 +79,11 @@
  pw_expansion.10.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.10.a:0 "Perhaps this is more than a mere cult..."
 
- pw_reformation.11.t:0 "The Suomenusko Faith's Resurgence!"
+ pw_reformation.11.t:0 "The Finnic Faith's Resurgence!"
  pw_reformation.11.d:0 "The old faith of the Finnic people has reformed in [Root.GetName]!"
  pw_reformation.11.a:0 "This is just a mere cult, nothing more... right?"
 
- pw_expansion.11.t:0 "The Suomenusko Faith's Expansion!"
+ pw_expansion.11.t:0 "The Finnic Faith's Expansion!"
  pw_expansion.11.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.11.a:0 "Perhaps this is more than a mere cult..."
 
@@ -109,3 +118,119 @@
  pw_expansion.15.t:0 "The Zoroastrian Faith's Expansion!"
  pw_expansion.15.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.15.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.16.t:0 "The Arabic Faith's Resurgence!"
+ pw_reformation.16.d:0 "The old Arabic faith has reformed in [Root.GetName]!"
+ pw_reformation.16.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.16.t:0 "The Arabic Faith's Expansion!"
+ pw_expansion.16.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.16.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.17.t:0 "The Ashurist Faith's Resurgence!"
+ pw_reformation.17.d:0 "The old Assyrian faith has reformed in [Root.GetName]!"
+ pw_reformation.17.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.17.t:0 "The Ashurist Faith's Expansion!"
+ pw_expansion.17.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.17.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.18.t:0 "The Zunist Faith's Resurgence!"
+ pw_reformation.18.d:0 "The old Afghan faith has reformed in [Root.GetName]!"
+ pw_reformation.18.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.18.t:0 "The Zunist Faith's Expansion!"
+ pw_expansion.18.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.18.a:0 "Perhaps this is more than a mere cult..."
+
+ pw_reformation.19.t:0 "The Jainist Faith's Resurgence!"
+ pw_reformation.19.d:0 "The old Indian faith has reformed in [Root.GetName]!"
+ pw_reformation.19.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.19.t:0 "The Jainist Faith's Expansion!"
+ pw_expansion.19.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.19.a:0 "Perhaps this is more than a mere cult..."
+ 
+ pw_reformation.20.t:0 "The Tengri Faith's Resurgence!"
+ pw_reformation.20.d:0 "The old Mongol-Turkic faith has reformed in [Root.GetName]!"
+ pw_reformation.20.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.20.t:0 "The Tengri Faith's Expansion!"
+ pw_expansion.20.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.20.a:0 "Perhaps this is more than a mere cult..."
+ 
+ pw_hellenic.1.t:0 "Hellenic Dominance"
+ pw_hellenic.1.d:0 "The Hellenic faiths have captured and converted all 5 cities of the old Pentarchy, enforcing their dominance over the Christians. Once more will the gods of the Greeks and Romans rule across the mediterranean, while Christianity fades into obscurity in the region."
+ pw_hellenic.1.a:0 "A Glorious Achievement!"
+ 
+ oldgods.1.t:0 "Mysterious Happenings"
+ oldgods.1.d:0 "An old cottar and his wife who were known for their cruelty to cats were found dead in their home this morning, their bones picked clean of meat. My steward tells me that the local townspeople had their cats go missing the day before, but all the missing cats returned today looking fat and happy..."
+ oldgods.1.a:0 "Pass a law banning the killing of cats"
+ oldgods.1.b:0 "A coincidence, nothing more"
+ oldgods.2.t:0 "Visiting a Quaint Village"
+ oldgods.2.d:0 "Since the incident some weeks ago [Root.Monarch.GetTitle] [Root.Monarch.GetName] has felt uneasy. Hoping to clear [Root.Monarch.GetHerHis] mind, [Root.Monarch.GetSheHe] took a walk along the coast and found a small village where the people claimed to worship the 'Old Ones', Gods older than even those of the [Root.Religion.GetName] faith. They invited [Root.Monarch.GetHerHim] to join in their rituals and showed [Root.Monarch.GetHerHim] a dusty old grimoire written by a mad Saracen."
+ oldgods.2.a:0 "[Root.Monarch.GetName] studies the grimoire"
+ oldgods.3.t:0 "A Seaside Ritual"
+ oldgods.3.d:0 "With intense study of the grimoire [Root.Monarch.GetName] has gained much knowledge. [Root.Monarch.GetName] has devised a ritual to awaken the most powerful of the Old Ones where he sleeps, dead but dreaming, in his watery tomb beneath the ocean. The cult has prepared the ritual attire and is gathering the necessary sacrifices."
+ oldgods.3.a:0 "Tonight, he will wake!"
+ oldgods.4.t:0 "Something rises from the sea..."
+ oldgods.4.d:0 "The cult has gathered for the ritual on the shore of a black and stormy sea. The chanting begins, Ph'nglui mglw'nafh..., and in the depths of the dark waters something stirs..."
+ oldgods.4.a:0 "He comes! HE COMES!"
+ oldgods.4.b:0 "What have I done?! I must stop this!"
+ oldgods.5.t:0 "A Heroic Assault"
+ oldgods.5.d:0 "[Root.Monarch.GetName] steered the longboat through the raging waters towards the monstrous creature. It stood as tall as a castle tower, with the body of a man and the head of a great tentacled beast. [Root.Monarch.GetName] knew that [Root.Monarch.GetSheHe] had awoken it from where it slept beneath the waves and that it was here to end the age of man. There was only one thing [Root.Monarch.GetSheHe] could do..."
+ oldgods.5.a:0 "Ramming speed!"
+ oldgods.6.t:0 "Waking up"
+ oldgods.6.d:0 "[Root.Monarch.GetName] awoke in [Root.Monarch.GetHerHis]	 own bed weak and sweating. The servants told [Root.Monarch.GetHerHim] that they had found [Root.Monarch.GetHerHim] on the shore, naked and half-drowned. The [Root.Monarch.GetTitle] asked them about the creature and the ship but they just looked at [Root.Monarch.GetHerHim] with worried eyes and shook their heads. It seems [Root.Monarch.GetName] is the only living witness to these events."
+ oldgods.6.a:0 "I must put them to print"
+ oldgods.6.b:0 "Fools! I saved you all!"
+ oldgods.7.t:0 "Nightmares..."
+ oldgods.7.d:0 "[Root.Monarch.GetName] awoke in [Root.Monarch.GetHerHis] bed weak and sweating in the dark of the night, [Root.Monarch.GetHerHis] dreams plagued with horrid nightmares. Suddenly an unbearable pressure fills [Root.Monarch.GetHerHis] mind. Clutching [Root.Monarch.GetHerHis] head, screaming in agony, [Root.Monarch.GetName] falls to the floor convulsing and foaming at the mouth. Eyes rolling back in [Root.Monarch.GetHerHis] head, all goes dark..."
+ oldgods.7.a:0 "All is silent"
+ oldgods.8.t:0 "A New Day"
+ oldgods.8.d:0 "Worried servants found [Root.Monarch.GetName] spralled accross the floor, telling [Root.Monarch.GetHerHim] that they had found [Root.Monarch.GetHerHim] parents on the shore, naked and drowned. Unmoved, [Root.Monarch.GetName] dismisses [Root.Monarch.GetHerHis] attenents. A dark entity had spoken to [Root.Monarch.GetName] in the night, revealing the truth that [Root.Monarch.GetHerHis] parents were seeking. With darkness in [Root.Monarch.GetHerHis] eyes, [Root.Monarch.GetName] let out a maniacal chuckle, with new plans for the nation."
+ oldgods.8.a:0 "All shall tremble before my might!"
+ 
+ pw_harmonisations.1.t:0 "Harmonisation of Germanic Faiths"
+ pw_harmonisations.1.d:0 "We have managed to integrate the Germanic faiths and customs into our own."
+ pw_harmonisations.1.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.2.t:0 "Harmonisation of Celtic Faiths"
+ pw_harmonisations.2.d:0 "We have managed to integrate the Celtic faiths and customs into our own."
+ pw_harmonisations.2.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.3.t:0 "Harmonisation of Hellenic Faiths"
+ pw_harmonisations.3.d:0 "We have managed to integrate the Hellenic faiths and customs into our own."
+ pw_harmonisations.3.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.4.t:0 "Harmonisation of Balto-Slavic Faiths"
+ pw_harmonisations.4.d:0 "We have managed to integrate the Balto-Slavic faiths and customs into our own."
+ pw_harmonisations.4.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.5.t:0 "Harmonisation of Finnic Faiths"
+ pw_harmonisations.5.d:0 "We have managed to integrate the Finnic faiths and customs into our own."
+ pw_harmonisations.5.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.6.t:0 "Harmonisation of Egyptian Faiths"
+ pw_harmonisations.6.d:0 "We have managed to integrate the Egyptian faiths and customs into our own."
+ pw_harmonisations.6.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.7.t:0 "Harmonisation of Canaanite Faiths"
+ pw_harmonisations.7.d:0 "We have managed to integrate the Canaanite faiths and customs into our own."
+ pw_harmonisations.7.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.8.t:0 "Harmonisation of Dacian Faiths"
+ pw_harmonisations.8.d:0 "We have managed to integrate the Dacian faiths and customs into our own."
+ pw_harmonisations.8.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.9.t:0 "Harmonisation of Levantine Faiths"
+ pw_harmonisations.9.d:0 "We have managed to integrate the Levantine faiths and customs into our own."
+ pw_harmonisations.9.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.10.t:0 "Harmonisation of Eldritch Faiths"
+ pw_harmonisations.10.d:0 "We have managed to integrate the Eldritch faiths and customs into our own."
+ pw_harmonisations.10.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.11.d:0 "We have managed to integrate the New World Pagan faiths and customs into our own."
+ pw_harmonisations.11.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
+ pw_harmonisations.12.d:0 "We have managed to integrate the Turko-Mongol faiths and customs into our own."
+ pw_harmonisations.12.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'" 
+ #Tooltips
+
+ dreamerstirs:0 "Somewhere, a dreamer stirs..."
+ grimoiresecrets:0 "[Root.Monarch.GetName] learns the forbidden secrets."
+ robeandhat:0 "[Root.Monarch.GetName] puts on a black robe and wizened old hat."
+ monarchinaboat:0 "[Root.Monarch.GetName] commandeers a longboat."
+ fatefullcollision:0 "A fateful collision..."
+ heirnightmares:0 "[Root.Heir.GetName]'s dreams are plagued with nightmares..."
+ thesunrises:0 "The Sun Rises..."

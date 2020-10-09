@@ -1,0 +1,59 @@
+entity = {
+	name = "germanic_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "celtic_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "hellenic_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "balto_slavic_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "finnic_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "egyptian_pagan_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "canaanite_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "dacian_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "arabic_pagan_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "eldritch_group_missionary"
+	pdxmesh = "pagan_missionary_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}

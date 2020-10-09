@@ -23,7 +23,7 @@ pw_continental_germanic_spawn_area = {
 			NOT = { area = erzgebirge_area }		
 			NOT = { area = moravia_area }
 		}	
-		region = low_countries_german_region		
+		region = low_countries_region		
 	}
 }
 
@@ -32,9 +32,12 @@ pw_insular_germanic_spawn_area = {
 		AND = {
 			region = british_isles_region
 			NOT = { area = wales_area }
-			NOT = { area = cornwall_area }
+			NOT = { area = deheubarth_area }
 			NOT = { area = highlands_area }
 			NOT = { area = kingdom_of_the_isles_area }
+			NOT = { province_id = 8142 }
+			NOT = { province_id = 4366 }
+			NOT = { province_id = 233 }
 		}	
 	}
 }
@@ -43,10 +46,13 @@ pw_druidic_spawn_area = {
 	OR = {
 		region = ireland_area #why is this area instead of region like all the others?
 		area = wales_area
-		area = cornwall_area
+		area = deheubarth_area
 		area = highlands_area
 		area = kingdom_of_the_isles_area 
 		area = lower_brittany_area
+		province_id = 8142
+		province_id = 4366
+		province_id = 233	
 	}
 }
 
@@ -54,25 +60,13 @@ pw_latin_hellenic_spawn_area = {
 	OR = {
 		AND = {
 			region = italy_region
-			NOT = { area = sicily_area }
-			NOT = { area = naples_area}
-			NOT = { area = calabria_area }
-			NOT = { area = apulia_area }
-			NOT = { area = abruzzo_area }
-			NOT = { area = umbria_area }
 			NOT = { area = central_italy_area }
-			NOT = { area = north_marche_area }
 		}
 	}
 }
 
 pw_greek_hellenic_spawn_area = {
 	OR = {
-		area = naples_area
-		area = sicily_area
-		area = calabria_area
-		area = apulia_area
-		area = abruzzo_area
 		area = morea_area
 		area = aegean_archipelago_area	
 		area = eastern_mediterrenean_islands_area
@@ -82,6 +76,9 @@ pw_greek_hellenic_spawn_area = {
 		area = northern_epirus_area
 		area = northern_greece_area
 		area = macedonia_area
+		area = albania_area
+		area = eastern_macedonia_area
+		area = thrace_area
 	}
 }
 
@@ -107,14 +104,6 @@ pw_slavic_spawn_area_east = {
 			NOT = { area = karelia_area }
 			NOT = { area = laponia_area }
 		}
-		AND = {
-			region = ruthenia_region
-			NOT = { area = podolia_volhynia_area }
-			NOT = { area = podlasie_area }
-			NOT = { area = red_ruthenia_area }
-			NOT = { area = trakai_area }
-			NOT = { area = yotvingia_area }
-		}	
 	}
 }	
 
@@ -159,12 +148,9 @@ pw_finnish_pagan_reformed_spawn_area = {
 		area = north_karelia_area
 		area = karelia_area
 		area = laponia_area
-		area = northern_norway
-		area = norrland_area
 		area = bothnia_area
 		area = finland_area
-		area = west_karelia_area
-		area = trondelag_area		
+		area = west_karelia_area	
 	}
 }	
 
@@ -176,6 +162,7 @@ pw_zalmoxian_spawn_area = {
 			NOT = { area = carpathian_ruthenia_area }
 			NOT = { area = transdanubia_area }
 			NOT = { area = alfold_area }
+			NOT = { area = upper_hungary_area }
 		}	
 	}
 }	
@@ -200,7 +187,79 @@ pw_canaanite_spawn_area = {
 pw_zoroastrian_spawn_area = {
 	OR = {
 		region = persia_region
-		region = khorasan_region
+		AND = {
+			region = khorasan_region
+			NOT = { area = ghor_area }
+			NOT = { area = balkh_area }
+			NOT = { area = kabulistan_area }
+			NOT = { area = makran_area }
+			NOT = { area = kalat_area }
+		}	
+	}
+}
+
+pw_arabic_pagan_spawn_area = {
+	OR = {
+		region = arabia_region	
+	}
+}
+
+pw_ashurist_spawn_area = {
+	OR = {
+		AND = {
+			region = mesopotamia_region
+			NOT = { area = mardin_area }
+			NOT = { area = erzurum_area }
+			NOT = { area = north_kurdistan_area }
+		}	
+	}
+}
+
+pw_zunist_spawn_area = {
+	OR = {
+		area = ghor_area 
+		area = balkh_area 
+		area = kabulistan_area 
+		area = makran_area 
+		area = kalat_area 	
+	}
+}
+
+pw_jainism_spawn_area = {
+	OR = {
+		region = coromandel_region
+		region = deccan_region
+		region = west_india_region
+		region = hindusthan_region
+		region = bengal_region
+	}
+}
+
+pw_tengri_spawn_area = { #Moved from Western Steppe
+	OR = {
+		AND = {
+			region = central_asia_region
+			#NOT = { area = tambov_area }
+			#NOT = { area = saratov_area }
+			#NOT = { area = samara_area }
+		}
+	}
+}		
+
+pw_pagan_trigger = {
+	OR = {
+		religion_group = germanic_group
+		religion_group = celtic_group
+		religion_group = hellenic_group
+		religion_group = balto_slavic_group 
+		religion_group = finnic_group
+		religion_group = egyptian_pagan_group
+		religion_group = canaanite_group
+		religion_group = dacian_group
+		religion_group = arabic_group
+		religion_group = turko_mongol_group
+		religion = zunist
+		religion = jainism
 	}
 }	
 

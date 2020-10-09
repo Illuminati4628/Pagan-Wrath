@@ -1,0 +1,58 @@
+Just a file for quick access for various things
+
+Religions: 18 Resurgence Faiths 
+Germanic (group) = germanic_group
+Norse = norse_pagan_reforemd
+Anglic = insular_germanic
+Germanic = continental_germanic
+
+Celtic = celtic_group
+Druidic = druidic
+
+Hellenistic = hellenic_group
+Latin = latin_hellenic
+Hellenic = greek_hellenic
+
+Balto-Slavic = balto_slavic_group
+Romuva = baltic_pagan_reformed
+Slavic = slavic_pagan_reformed
+
+Finnic = finnic_group
+Suomenusko = finnish_pagan_reformed
+
+Egyptian = egyptian_pagan_group
+Kemetic = egyptian_pagan
+
+Canaanite (group) = canaanite_group
+Canaanite = canaanite
+
+Dacian = dacian_group
+Zalmoxian = zalmoxian
+
+Levantine = arabic_pagan_group
+Arabic = arabic_pagan
+Ashurist = ashurist
+
+Dharmic = dharmic
+Jain = jainism
+Zunist = zunist
+
+Pagan = pagan_group
+Shamanist = new_shamanist
+Tengri = tengri_pagan_reformed
+
+Zoroastrian (group) = zoroastrian_group
+Zorastrian = zoroastrian 
+
+
+
+
+
+
+
+
+
+
+
+
+

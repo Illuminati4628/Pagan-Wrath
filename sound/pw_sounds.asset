@@ -1,0 +1,198 @@
+sound = {
+	name = defender_of_the_norse_pagan_reformed_faith
+	file = "start_conversion_continental_germanic.wav" #Placeholders for now... I'm a programmer not a sound maker
+}
+sound = {
+	name = defender_of_the_continental_germanic_faith
+	file = "start_conversion_continental_germanic.wav"
+}
+sound = {
+	name = start_convert_continental_germanic
+	file = "start_conversion_continental_germanic.wav"
+}
+sound = {
+	name = religion_continental_germanic
+	file = "start_conversion_continental_germanic.wav"
+}
+sound = {
+	name = defender_of_the_insular_germanic_faith
+	file = "start_conversion_insular_germanic.wav" 
+}
+sound = {
+	name = start_convert_insular_germanic
+	file = "start_conversion_insular_germanic.wav"
+}
+sound = {
+	name = religion_insular_germanic
+	file = "start_conversion_insular_germanic.wav"
+}
+sound = {
+	name = defender_of_the_druidic_faith
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = start_convert_druidic
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = religion_druidic
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = defender_of_the_greek_hellenic_faith
+	file = "claim_defender_faith_greek_hellenic.wav"
+}
+sound = {
+	name = start_convert_greek_hellenic
+	file = "start_conversion_greek_hellenic.wav"
+}
+sound = {
+	name = religion_greek_hellenic
+	file = "start_conversion_greek_hellenic.wav"
+}
+sound = {
+	name = defender_of_the_latin_hellenic_faith
+	file = "claim_defender_faith_latin_hellenic.wav"
+}
+sound = {
+	name = start_convert_latin_hellenic
+	file = "start_conversion_latin_hellenic.wav"
+}
+sound = {
+	name = religion_latin_hellenic
+	file = "start_conversion_latin_hellenic.wav"
+}
+sound = {
+	name = defender_of_the_imperial_hellenic_faith
+	file = "claim_defender_faith_imperial_hellenic.wav"
+}
+sound = {
+	name = start_convert_latin_hellenic
+	file = "start_conversion_imperial_hellenic.wav"
+}
+sound = {
+	name = religion_imperial_hellenic
+	file = "start_conversion_imperial_hellenic.wav"
+}
+sound = {
+	name = defender_of_the_baltic_pagan_reformed_faith
+	file = "start_conversion_baltic_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_baltic_pagan_reformed
+	file = "start_conversion_baltic_pagan_reformed.wav"
+}
+sound = {
+	name = religion_baltic_pagan_reformed
+	file = "start_conversion_baltic_pagan_reformed.wav"
+}
+sound = {
+	name = defender_of_the_slavic_pagan_reformed_faith
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_slavic_pagan_reformed
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = religion_slavic_pagan_reformed
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = defender_of_the_finnish_pagan_reformed_faith
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_finnish_pagan_reformed
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = religion_finnish_pagan_reformed
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = defender_of_the_egyptian_pagan_faith
+	file = "start_conversion_egyptian_pagan.wav"
+}
+sound = {
+	name = start_convert_egyptian_pagan
+	file = "start_conversion_egyptian_pagan.wav"
+}
+sound = {
+	name = religion_egyptian_pagan
+	file = "start_conversion_egyptian_pagan.wav"
+}
+sound = {
+	name = defender_of_the_canaanite_faith
+	file = "start_conversion_canaanite.wav"
+}
+sound = {
+	name = start_convert_canaanite
+	file = "start_conversion_canaanite.wav"
+}
+sound = {
+	name = religion_canaanite
+	file = "start_conversion_canaanite.wav"
+}
+sound = {
+	name = defender_of_the_zalmoxian_faith
+	file = "start_conversion_zalmoxian.wav"
+}
+sound = {
+	name = start_convert_zalmoxian
+	file = "start_conversion_zalmoxian.wav"
+}
+sound = {
+	name = religion_zalmoxian
+	file = "start_conversion_zalmoxian.wav"
+}
+sound = {
+	name = defender_of_the_arabic_pagan_faith
+	file = "start_conversion_arabic_pagan.wav"
+}
+sound = {
+	name = start_convert_arabic_pagan
+	file = "start_conversion_arabic_pagan.wav"
+}
+sound = {
+	name = religion_arabic_pagan
+	file = "start_conversion_arabic_pagan.wav"
+}
+sound = {
+	name = defender_of_the_ashurist_faith
+	file = "start_conversion_ashurist.wav"
+}
+sound = {
+	name = start_convert_ashurist
+	file = "start_conversion_ashurist.wav"
+}
+sound = {
+	name = religion_ashurist
+	file = "start_conversion_ashurist.wav"
+}
+sound = {
+	name = start_convert_jainism
+	file = "start_conversion_jainism.wav"
+}
+sound = {
+	name = religion_jainism
+	file = "start_conversion_jainism.wav"
+}
+sound = {
+	name = start_convert_zunist
+	file = "start_conversion_zunist.wav"
+}
+sound = {
+	name = religion_zunist
+	file = "start_conversion_zunist.wav"
+}
+sound = {
+	name = start_convert_new_shamanist
+	file = "start_conversion_new_shamanist.wav"
+}
+sound = {
+	name = religion_new_shamanist
+	file = "start_conversion_new_shamanist.wav"
+}
+
+	

@@ -1,4 +1,35 @@
-01_english:
+﻿l_english:
  mount_olympus_modifier_hellenic:0 "Mount Olympus"
  desc_mount_olympus_modifier_hellenic:0 "Mount Olympus is the home of the gods, having control of it will allow us to spread our great faith further!"
  pagan_conversion_zeal:0 "Pagan Conversion Zeal"
+ imperial_hellenic_religious_center:0 "The importance of this province as a Religious Center will make it very difficult to convert."
+ imperial_hellenic_dominance:0 "Apotheosian Dominance"
+ desc_imperial_hellenic_dominance:0 "The Apotheosian Sect has enforced dominance over the Mediterranean."
+ 
+ pw_religious_violance:0 "Religious Violence"
+ desc_pw_religious_violance:0 "The mix of faiths within out country has cause some particulary violent groups to become even more aggressive, causing much unrest."
+ pw_religious_tolerance:0 "Religious Tolerance"
+ desc_pw_religious_tolerance:0 "Our tolerant ruler has managed to calm down some of our different religious subjects, bringing some peace to our country."
+ pw_anti_pagan_conversion:0 "Anti-Pagan Conversion Efforts"
+ desc_pw_anti_pagan_conversion:0 "Our zealous ruler has organised a plan to deal with the various pagan faiths in our country, although the efforts to convert them won't help when it comes to heretics."
+
+ pw_mystery_cult:0 "Mystery Cult"
+ desc_pw_mystery_cult:0 "We have established cults to better spread our religion."
+ pw_official_religious_authorities:0 "Official Religious Authorities"
+ desc_pw_official_religious_authorities:0 "We have established an official hierachy for our faith, allowing us to better convert our population."
+ pw_neoplatonic_reforms:0 "Neoplatonic Reforms"
+ desc_pw_neoplatonic_reforms:0 "By adopting Neoplatonic Reforms we can better spread our religion and ideas to our people."
+ spreading_anglic_rituals:0 "Spreading of Anglic Rituals"
+ desc_spreading_anglic_rituals:0 "We have established rituals for the Anglic faith."
+ spreading_germanic_rituals:0 "Spreading of Germanic Rituals"
+ desc_spreading_germanic_rituals:0 "We have established rituals for the Germanic faith."
+ 
+ lunatic_personality:0 "Lunatic"
+ desc_lunatic_personality:0 "This ruler is stark raving mad. They are plauged by voices whispering to them, telling them what to do... horrible, horrible things they want them to do... Widespread tales of arbitrary and random actions by our ruler has greatly disturbed many of our subjects and allies."
+ lunatic_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] insane delusions shall be remembered for generations to come..."
+ void_affliction_personality:0 "Void Afflicted"
+ desc_void_affliction_personality:0 "This ruler has become afflicted with an unknown darkness, causing them to do somewhat odd things, however it seems to have made them into a more willing conqueror as a result..."
+ void_affliction_personality_die:0 "[Root.Monarch.GetHerHisCap] distorted voice and accompanying shadows in placed where they should not be will leave quite a legacy to [Root.Monarch.GetHerHis] name..."
+ 
+ hellenistic_olympus:0 "Mount Olympus"
+ desc_hellenistic_olmypus:0 "Mount Olympus is said to be the seat of the Olympian gods and is a major holy site in the hellenistic religions."

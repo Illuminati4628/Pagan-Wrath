@@ -11,10 +11,21 @@ province_event = {
 	
 	trigger = {
 		pw_norse_spawn_area	= yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_norse_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -22,7 +33,7 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -35,7 +46,6 @@ province_event = {
 		enable_religion = norse_pagan_reformed
 		change_religion = norse_pagan_reformed
 		add_reform_center = norse_pagan_reformed
-		save_global_event_target_as = pw_norse_pagan_reformed_spawn_prov
 	}
 }
 
@@ -50,10 +60,21 @@ province_event = {
 	
 	trigger = {
 		pw_continental_germanic_spawn_area	= yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_continental_germanic_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 10
 		is_reformation_center = no		
 	}
@@ -61,16 +82,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.2.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}		
 		enable_religion = continental_germanic
 		change_religion = continental_germanic
 		add_reform_center = continental_germanic
-		save_global_event_target_as = pw_continental_germanic_reformed_spawn_prov
 	}
 }
 
@@ -84,28 +108,42 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_insular_germanic_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
-		development = 6
+		pw_insular_germanic_spawn_area	= yes
+		NOT = { has_global_flag = pw_insular_germanic_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 10
 		is_reformation_center = no		
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.3.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}	
 		enable_religion = insular_germanic
 		change_religion = insular_germanic
 		add_reform_center = insular_germanic
-		save_global_event_target_as = pw_insular_germanic_spawn_prov
 	}
 }
 
@@ -120,10 +158,21 @@ province_event = {
 	
 	trigger = {
 		pw_druidic_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_druidic_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -131,16 +180,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.4.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = druidic
 		change_religion = druidic
-		add_reform_center =druidic
-		save_global_event_target_as = pw_druidic_spawn_prov
+		add_reform_center = druidic
 	}
 }
 
@@ -155,10 +207,21 @@ province_event = {
 	
 	trigger = {
 		pw_latin_hellenic_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_latin_hellenic_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 15
 		is_reformation_center = no		
 	}
@@ -166,20 +229,23 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.5.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}		
 		enable_religion = latin_hellenic
 		change_religion = latin_hellenic
 		add_reform_center = latin_hellenic
-		save_global_event_target_as = pw_latin_hellenic_spawn_prov
 	}
 }
 
-# The Olympian Reformation
+# The Hellenic Reformation
 province_event = {
 	id = pw_reformation.06
 	title = "pw_reformation.06.t"
@@ -190,10 +256,21 @@ province_event = {
 	
 	trigger = {
 		pw_greek_hellenic_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_greek_hellenic_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -201,16 +278,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.6.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}		
 		enable_religion = greek_hellenic
 		change_religion = greek_hellenic
 		add_reform_center = greek_hellenic
-		save_global_event_target_as = pw_greek_hellenic_spawn_prov
 	}
 }
 
@@ -225,10 +305,21 @@ province_event = {
 	
 	trigger = {
 		pw_slavic_spawn_area_west = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -236,16 +327,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.7.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}	
 		enable_religion = slavic_pagan_reformed
 		change_religion = slavic_pagan_reformed
 		add_reform_center = slavic_pagan_reformed
-		save_global_event_target_as = pw_slavic_pagan_reformed_west_spawn_prov
 	}
 }
 
@@ -260,10 +354,21 @@ province_event = {
 	
 	trigger = {
 		pw_slavic_spawn_area_east = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -271,16 +376,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.8.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}	
 		enable_religion = slavic_pagan_reformed
 		change_religion = slavic_pagan_reformed
 		add_reform_center = slavic_pagan_reformed
-		save_global_event_target_as = pw_slavic_pagan_reformed_east_spawn_prov
 	}
 }
 
@@ -295,10 +403,21 @@ province_event = {
 	
 	trigger = {
 		pw_slavic_spawn_area_south = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -306,16 +425,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.9.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = slavic_pagan_reformed
 		change_religion = slavic_pagan_reformed
 		add_reform_center = slavic_pagan_reformed
-		save_global_event_target_as = pw_slavic_pagan_reformed_south_spawn_prov
 	}
 }
 
@@ -330,10 +452,21 @@ province_event = {
 	
 	trigger = {
 		pw_baltic_pagan_reformed_spawn_area	= yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_baltic_pagan_reformed_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -341,20 +474,23 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.1.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}		
 		enable_religion = baltic_pagan_reformed
 		change_religion = baltic_pagan_reformed
 		add_reform_center = baltic_pagan_reformed
-		save_global_event_target_as = pw_baltic_pagan_reformed_spawn_prov
 	}
 }
 
-# The Suomenusko Resurgence
+# The Finnic Resurgence
 province_event = {
 	id = pw_reformation.11
 	title = "pw_reformation.11.t"
@@ -365,10 +501,21 @@ province_event = {
 	
 	trigger = {
 		pw_finnish_pagan_reformed_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_finnish_pagan_reformed_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -376,16 +523,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.11.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = finnish_pagan_reformed
 		change_religion = finnish_pagan_reformed
 		add_reform_center = finnish_pagan_reformed
-		save_global_event_target_as = pw_finnish_pagan_reformed_spawn_prov
 	}
 }
 
@@ -400,10 +550,21 @@ province_event = {
 	
 	trigger = {
 		pw_zalmoxian_spawn_area	= yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_zalmoxian_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -411,16 +572,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.12.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = zalmoxian
 		change_religion = zalmoxian
 		add_reform_center = zalmoxian
-		save_global_event_target_as = pw_zalmoxian_spawn_prov
 	}
 }
 
@@ -435,10 +599,21 @@ province_event = {
 	
 	trigger = {
 		pw_egyptian_pagan_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_egyptian_pagan_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -446,16 +621,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.13.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = egyptian_pagan
 		change_religion = egyptian_pagan
 		add_reform_center = egyptian_pagan
-		save_global_event_target_as = pw_egyptian_pagan_spawn_prov
 	}
 }
 
@@ -470,10 +648,21 @@ province_event = {
 	
 	trigger = {
 		pw_canaanite_spawn_area	= yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_canaanite_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -481,16 +670,19 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.14.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = canaanite
 		change_religion = canaanite
 		add_reform_center = canaanite
-		save_global_event_target_as = pw_canaanite_spawn_prov
 	}
 }
 
@@ -505,10 +697,21 @@ province_event = {
 	
 	trigger = {
 		pw_zoroastrian_spawn_area = yes
-		had_global_flag = {
-			flag = pw_pagan_religion_enabled
-			days = 36500
-		}
+		NOT = { has_global_flag = pw_zoroastrian_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
 		development = 5
 		is_reformation_center = no		
 	}
@@ -516,15 +719,264 @@ province_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 30
+		months = 50
 	}
 
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.15.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
 		enable_religion = zoroastrian
 		change_religion = zoroastrian
 		add_reform_center = zoroastrian
-		save_global_event_target_as = pw_zoroastrian_spawn_prov
+	}
+}
+
+# The Arabic Reformation
+province_event = {
+	id = pw_reformation.16
+	title = "pw_reformation.16.t"
+	desc = "pw_reformation.16.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		pw_arabic_pagan_spawn_area = yes
+		NOT = { has_global_flag = pw_arabic_pagan_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.16.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
+		enable_religion = arabic_pagan
+		change_religion = arabic_pagan
+		add_reform_center = arabic_pagan
+		save_global_event_target_as = pw_arabic_pagan_spawn_prov
+	}
+}
+
+# The Ashurist Reformation
+province_event = {
+	id = pw_reformation.17
+	title = "pw_reformation.17.t"
+	desc = "pw_reformation.17.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		pw_ashurist_spawn_area = yes
+		NOT = { has_global_flag = pw_ashurist_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.17.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
+		enable_religion = ashurist
+		change_religion = ashurist
+		add_reform_center = ashurist
+	}
+}
+
+# The Zunist Reformation
+province_event = {
+	id = pw_reformation.18
+	title = "pw_reformation.18.t"
+	desc = "pw_reformation.18.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		pw_zunist_spawn_area = yes
+		NOT = { has_global_flag = pw_zunist_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.18.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
+		enable_religion = zunist
+		change_religion = zunist
+		add_reform_center = zunist
+	}
+}
+
+# The Jain Reformation
+province_event = {
+	id = pw_reformation.19
+	title = "pw_reformation.19.t"
+	desc = "pw_reformation.19.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		pw_jainism_spawn_area = yes
+		NOT = { has_global_flag = pw_jainism_toggle_off }
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.19.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
+		enable_religion = jainism
+		change_religion = jainism
+		add_reform_center = jainism
+	}
+}
+
+# The Tengri Resurgence among the Tatars
+province_event = {
+	id = pw_reformation.20
+	title = "pw_reformation.20.t"
+	desc = "pw_reformation.20.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		pw_tengri_spawn_area = yes
+		NOT = { has_global_flag = pw_tengri_pagan_reformed_toggle_off }		
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.20.a
+		add_permanent_province_modifier = {
+			name = "religious_zeal_at_conv"
+				duration = 9000		
+		}			
+		change_religion = tengri_pagan_reformed
+		add_reform_center = tengri_pagan_reformed
+		set_global_flag = tengri_resurgence
 	}
 }

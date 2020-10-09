@@ -1,16 +1,11 @@
-mount_olympus_modifier_hellenic = {
+imperial_hellenic_religious_center = {
 	potential = {
-		owner = {
-			religion_group = hellenic_group
-		}
+		religion = imperial_hellenic
 	}
 
 	trigger = {
-		owner = {
-			religion_group = hellenic_group
-		}
-		religion_group = hellenic_group
+		religion = imperial_hellenic
 	}
 	
-	missionaries = 1
+	local_missionary_strength = -0.05
 }

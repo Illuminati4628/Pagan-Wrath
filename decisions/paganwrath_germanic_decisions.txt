@@ -1,0 +1,48 @@
+country_decisions = {
+
+
+	spreading_of_anglic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_anglic_rituals }
+			religion = insular_germanic
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_anglic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
+	
+	spreading_of_germanic_rituals = {
+		potential = {
+			NOT = { has_country_modifier = spreading_germanic_rituals }
+			religion = continental_germanic
+		}
+		allow = {
+			ADM = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "spreading_germanic_rituals"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}	

@@ -1,0 +1,17 @@
+Err, what, looking for a tutorial or something?
+
+Okay, heres one.
+
+Don't like the colours of the religions? That's easy to change, just go into common/religions/00_religion.txt and find the desired religion to change
+go to the colour line which should looks something like this. 
+
+	catholic = {
+		color = { 220 180 205 }
+		
+		
+From there just change the numbers to whatever colour you desire as per the RGB colour code, so if you want to change catholic back to the vanilla yellow change it to
+
+	catholic = {
+		color = { 204 204 0 }
+		
+Congratulations, you can now change the colours of the religions.

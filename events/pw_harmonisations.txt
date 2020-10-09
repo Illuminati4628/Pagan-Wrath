@@ -1,0 +1,398 @@
+namespace = pw_harmonisations #Darn you yanks with your zeds (or should I say zees?) instead of the letter s.
+
+#Germanic Group Harmonisation
+country_event = {
+	id = pw_harmonisations.1
+	title = "pw_harmonisations.1.t"
+	desc = "pw_harmonisations.1.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = germanic_group }
+				save_event_target_as = pw_germanic_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.1.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_germanic_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Celtic Group Harmonisation
+country_event = {
+	id = pw_harmonisations.2
+	title = "pw_harmonisations.2.t"
+	desc = "pw_harmonisations.2.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = celtic_group }
+				save_event_target_as = pw_celtic_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.2.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_celtic_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Hellenic Group Harmonisation
+country_event = {
+	id = pw_harmonisations.3
+	title = "pw_harmonisations.3.t"
+	desc = "pw_harmonisations.3.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = hellenic_group }
+				save_event_target_as = pw_hellenic_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.3.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_hellenic_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Balto-Slavic Group Harmonisation
+country_event = {
+	id = pw_harmonisations.4
+	title = "pw_harmonisations.4.t"
+	desc = "pw_harmonisations.4.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = balto_slavic_group }
+				save_event_target_as = pw_balto_slavic_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.4.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_balto_slavic_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Finnic Group Harmonisation
+country_event = {
+	id = pw_harmonisations.5
+	title = "pw_harmonisations.5.t"
+	desc = "pw_harmonisations.5.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = finnic_group  }
+				save_event_target_as = pw_finnic_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.5.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_finnic_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Egyptian Group Harmonisation
+country_event = {
+	id = pw_harmonisations.6
+	title = "pw_harmonisations.6.t"
+	desc = "pw_harmonisations.6.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = egyptian_group }
+				save_event_target_as = pw_egyptian_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.6.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_egyptian_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Canaanite Group Harmonisation
+country_event = {
+	id = pw_harmonisations.7
+	title = "pw_harmonisations.7.t"
+	desc = "pw_harmonisations.7.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = canaanite_group }
+				save_event_target_as = pw_canaanite_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.7.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_canaanite_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Dacian Group Harmonisation
+country_event = {
+	id = pw_harmonisations.8
+	title = "pw_harmonisations.8.t"
+	desc = "pw_harmonisations.8.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = dacian_group }
+				save_event_target_as = pw_dacian_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.8.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_dacian_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Levantine Group Harmonisation
+country_event = {
+	id = pw_harmonisations.9
+	title = "pw_harmonisations.9.t"
+	desc = "pw_harmonisations.9.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = arabic_pagan_group }
+				save_event_target_as = pw_arabic_pagan_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.9.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_arabic_pagan_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Eldritch Group Harmonisation
+country_event = {
+	id = pw_harmonisations.10
+	title = "pw_harmonisations.10.t"
+	desc = "pw_harmonisations.10.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = eldritch_group }
+				save_event_target_as = pw_eldritch_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.10.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_eldritch_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#New World Pagan Group Harmonisation
+country_event = {
+	id = pw_harmonisations.11
+	title = "pw_harmonisations.11.t"
+	desc = "pw_harmonisations.11.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = new_world_pagan }
+				save_event_target_as = pw_new_world_pagan_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.11.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_new_world_pagan"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#Turko-Mongol Group Harmonisation
+country_event = {
+	id = pw_harmonisations.12
+	title = "pw_harmonisations.12.t"
+	desc = "pw_harmonisations.12.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = turko_mongol_group }
+				save_event_target_as = pw_turko_mongol_group_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.12.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_turko_mongol_group"
+				duration = -1
+			}
+		}
+	}
+}
