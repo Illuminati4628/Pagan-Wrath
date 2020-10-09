@@ -1,0 +1,1 @@
+religion = south_american_pagan
