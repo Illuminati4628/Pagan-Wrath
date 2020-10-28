@@ -10,4 +10,4 @@ Integrated into this mod for quite a few vanilla religions is reddbane's  Histor
 
 I have also taken some assets from Shattered Universalis and Extended Timeline (no I'm not going to make an ET or even Vanilla version for this, others can feel free to do so though, as long as you link back here.)
 
-Join either https://discord.gg/2S6MChJ My Discord or the https://discord.gg/B7MNfQn BT Discord to talk to me more efficiently than here on steam.
+Join either https://discord.gg/2S6MChJ My Discord or the https://discord.gg/B7MNfQn BT Discord to talk to me more efficiently than here on github.
