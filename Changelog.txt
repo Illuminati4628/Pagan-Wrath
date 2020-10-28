@@ -1,48 +1,90 @@
-Version 0.4 - Fixes, edits and more stuff
-Renamed Suomenusko to Finnic. (It meant something around Finland Religion)
-Split Suomenusko into Finnic in and around Finland and Uralic in the Urals
-Split Old World and New World Pagans
-	-Changed Animists in new world to Ritualist
-Added ability to toggle off Cthulhu
-Stopped Hellenic centers trying to appear in Anatolia (different continent so it won't work, blame pdx)
-Moved Tengri into its own group and moved the resurgence zone from the Western Steppe to the Central Asian Steppe. Of course a player can still change regardless. 
-	-It's just how the game mechanics work, if I could I would extend to the Central Asian Steppe rather then moving.
-    -Warning might be a bit buggy, please to report if centers of reformation don't appear and provinces randomly change to Tengri.
-Did a bunch of other things but because I'm less organised than even Draiocht I don't remember what they are... sorry
+Version 0.5
 
-Version 0.3 - Rebalances and Flavour
-Rebalanced religious spread to follow the spread of respective cultures more closely (Zalmoxian should appear in south Slavic provinces far less now for example)
-Changed the Hellenic religion to only spawn in Greece, Thrace, The Aegean coastline and the Marmara Sea Coastline
-Changed the Latin religion to be able to spawn all across Italy except for the Rome area because Papacy
-Tengri Resurgence in the western steppe
-Allowed Sunnis to convert to Hellenic for those wierdos who want to become Hellenic Ottomans
-Added an event to force convert nations or have negative consequences
-Added options to toggle the different religions at the start of the game
-Added options to have the resurgence start in 10 or 50 years, along with the initial 100 years
+ Bug Fixes
+  - Fixed newly spawned CoRs not having the Religious Zeal Modifier (how did this go unnoticed for so long?_
 
-Version 0.2.1 - Jain, Zunist CoR Hotfix
-Fixed centers of reformation not showing up for Jains and Zunists
+ Changes
+  - Cleaned up the changelog.
+  - Completely changed how centers of resurgence appear, rather than appearing in set areas they can now appear on any respective culture/group as long as it's on the correct continent. This means if a player manages to wipe out a culture/culture group before the CoR spawns that religion can no longer appear. Though that probably won't happen... unless you're Vlindemann
+  - Renamed Druidic to Gaelo-Druidic
+  - Renamed Arabic (the pagan religion) to Wathanist
+  
+ Additions
+  - Added Ibero-Druidic and Gallo-Druidic (Now France and Iberia can get in on the fun! Although they are pretty much different coloured druidics for now.)
+  
+Version 0.4
 
-Version 0.2 - Additional Flavour + New Religions down in India and Arabia but also Mespotamia aswell as Afghanistan
-Added a changelog
-Renamed Latic to Latin, Olympian to Hellenic and Hellenic (the Group) to Hellenistic
-Added Neoplatonic Reform Decision for Hellenistics
-Added Mystery Cults for all resurgent pagans
-Gave varients of Norse Rituals to the other Germanic faiths
-Changed name of Pagan Centers of Reformation to Centers of Resurgence
-Added Zunist and Jainism to the Dharmic Group
-Added Arabic and Ashurist in the Levantine Group
+Bug Fixes
+ - Stopped Hellenic centers trying to appear in Anatolia (different continent so it won't work, blame pdx)
+ 
+Changes 
 
-Version 0.1.1 - Thumbnail Fix
-Fixed the missing thumbnail
+ - Renamed Suomenusko to Finnic. (It meant something around Finland Religion)
+ - Split Suomenusko into Finnic in and around Finland and Uralic in the Urals
+ - Split Old World and New World Pagans
+	- Changed Animists in new world to Ritualist
+ - Added ability to toggle off Cthulhu
+ - Moved Tengri into its own group and moved the resurgence zone from the Western Steppe to the Central Asian Steppe. Of course a player can still change regardless. 
+	- It's just how the game mechanics work, if I could I would extend to the Central Asian Steppe rather then moving.
+    - Warning, might be a bit buggy, please do report if centers of reformation don't appear and provinces randomly change to Tengri.
+Misc	
+ - Did a bunch of other things but because I'm less organised than even Draiocht I don't remember what they are... sorry
+ - Changed province histories to only overwrite religion instead of all provincial information, using the technique discovered by Perry
 
-Version 0.1 - Release
-Added Germanic and Norse, Anglic in the Germanic Group
-Added Druidic in the Celtic Group
-Added Suomenusko in the Finnic Group, also changing Finno-Ugric Provinces that were Animist/Tengri to Suomenusko
-Added Romuva and Slavic in the Balto-Slavic Group
-Added Latic and Olympian in the Hellenic Group
-Added Canaanite in the Canaanite Group
-Added Kemetic in the Egyptian Group
-Allowed Zoroastrian to Resurge along with the Pagans
-Readded Shamanist in the Generic Pagan group in North East Siberia
+Version 0.3
+
+ Changes
+
+  - Rebalanced religious spread to follow the spread of respective cultures more closely (Zalmoxian should appear in south Slavic provinces far less now for example)
+  - Changed the Hellenic religion to only spawn in Greece, Thrace, The Aegean coastline and the Marmara Sea Coastline (yea those last bits should only have been on the European side)
+  - Changed the Latin religion to be able to spawn all across Italy except for the Rome area because Papacy
+  - Allowed Sunnis to convert to Hellenic for those wierdos who want to become Hellenic Ottomans
+
+ Additions  
+  - Added an event to force convert nations or have negative consequences
+  - Options to toggle the different religions at the start of the game
+  - Options to have the resurgence start in 10 or 50 years, along with the initial 100 years
+  - Tengri Resurgence in the western steppe
+
+Version 0.2.1
+
+ Bug Fixes
+
+  - Fixed centers of reformation not showing up for Jains and Zunists
+
+Version 0.2
+
+ Changes
+  - Added a changelog
+  - Renamed Latic to Latin, Olympian to Hellenic and Hellenic (the Group) to Hellenistic
+  - Changed name of Pagan Centers of Reformation to Centers of Resurgence
+
+ Additions 
+  - Added Neoplatonic Reform Decision for Hellenistics
+  - Added Mystery Cults for all resurgent pagans
+  - Gave varients of Norse Rituals to the other Germanic faiths
+  - Added Zunist and Jainism to the Dharmic Group
+  - Added Arabic and Ashurist in the Levantine Group
+
+Version 0.1.1
+
+ Bug Fixes
+  - Changed name of Pagan Centers of Reformation to Centers of ResurgenceFixed the missing thumbnail
+
+Version 0.1
+
+ Changes
+  
+  - Moved Norse to the new Germanic Group
+
+ Additions
+
+  - Added Germanic and Anglic in the Germanic Group
+  - Added Druidic in the Celtic Group
+  - Added Suomenusko in the Finnic Group, also changing Finno-Ugric Provinces that were Animist/Tengri to Suomenusko
+  - Added Romuva and Slavic in the Balto-Slavic Group
+  - Added Latic and Olympian in the Hellenic Group
+  - Added Canaanite in the Canaanite Group
+  - Added Kemetic in the Egyptian Group
+  - Allowed Zoroastrian to Resurge along with the Pagans
+  - Readded Shamanist in the Generic Pagan group in North East Siberia 
