@@ -3,11 +3,11 @@ namespace = pw_forceconversion
 country_event = {
 	id = pw_forceconversion.1
 	title =  pw_forceconversion.1.t
-	desc = pw_forceconversion.1.d
+	desc = pw_forceconversion.1.desc
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = norse_pagan_reformed }
+		ROOT = any_owned_province = { religion = norse_pagan_reformed }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { norse_pagan_reformed = 5 }
 		NOT = { religion = norse_pagan_reformed }
@@ -110,7 +110,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = insular_germanic }
+		ROOT = any_owned_province = { religion = insular_germanic }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { insular_germanic = 5 }
 		NOT = { religion = insular_germanic }
@@ -213,7 +213,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = continental_germanic }
+		ROOT = any_owned_province = { religion = continental_germanic }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { continental_germanic = 5 }
 		NOT = { religion = continental_germanic }
@@ -316,7 +316,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = druidic }
+		ROOT = any_owned_province = { religion = druidic }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { druidic = 5 }
 		NOT = { religion = druidic }
@@ -423,7 +423,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = latin_hellenic }
+		ROOT = any_owned_province = { religion = latin_hellenic }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { latin_hellenic = 5 }
 		NOT = { religion = latin_hellenic }
@@ -531,7 +531,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = greek_hellenic }
+		ROOT = any_owned_province = { religion = greek_hellenic }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { greek_hellenic = 5 }
 		NOT = { religion = greek_hellenic }
@@ -634,7 +634,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = baltic_pagan_reformed }
+		ROOT = any_owned_province = { religion = baltic_pagan_reformed }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { baltic_pagan_reformed = 5 }
 		NOT = { religion = baltic_pagan_reformed }
@@ -737,7 +737,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = slavic_pagan_reformed }
+		ROOT = any_owned_province = { religion = slavic_pagan_reformed }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { slavic_pagan_reformed = 5 }
 		NOT = { religion = slavic_pagan_reformed }
@@ -845,7 +845,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = finnish_pagan_reformed }
+		ROOT = any_owned_province = { religion = finnish_pagan_reformed }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { finnish_pagan_reformed = 5 }
 		NOT = { religion = finnish_pagan_reformed }
@@ -948,7 +948,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = egyptian_pagan }
+		ROOT = any_owned_province = { religion = egyptian_pagan }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { egyptian_pagan = 5 }
 		NOT = { religion = egyptian_pagan }
@@ -1056,7 +1056,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = canaanite }
+		ROOT = any_owned_province = { religion = canaanite }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { canaanite = 5 }
 		NOT = { religion = canaanite }
@@ -1163,7 +1163,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = zalmoxian }
+		ROOT = any_owned_province = { religion = zalmoxian }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { zalmoxian = 5 }
 		NOT = { religion = zalmoxian }
@@ -1266,7 +1266,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = arabic_pagan }
+		ROOT = any_owned_province = { religion = arabic_pagan }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { arabic_pagan = 5 }
 		NOT = { religion = arabic_pagan }
@@ -1377,7 +1377,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = ashurist }
+		ROOT = any_owned_province = { religion = ashurist }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { ashurist = 5 }
 		NOT = { religion = ashurist }
@@ -1483,7 +1483,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = tengri_pagan_reformed }
+		ROOT = any_owned_province = { religion = tengri_pagan_reformed }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { tengri_pagan_reformed = 5 }
 		NOT = { religion = tengri_pagan_reformed }
@@ -1590,7 +1590,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		any_owned_province = { religion = zoroastrian }
+		ROOT = any_owned_province = { religion = zoroastrian }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { zoroastrian = 5 }
 		NOT = { religion = zoroastrian }
@@ -1644,6 +1644,225 @@ country_event = {
 				NOT = {
 					num_of_religion = {
 						religion = zoroastrian
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.17
+	title =  pw_forceconversion.17.t
+	desc = pw_forceconversion.17.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		ROOT = any_owned_province = { religion = gallo_druidic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { gallo_druidic = 5 }
+		NOT = { religion = gallo_druidic }
+		OR = {
+			culture_group =	french
+			AND = {
+				culture_group =	occitanic
+				NOT = { culture = catalan }
+			}	
+			AND = {
+				culture_group =	occitano_romance
+				NOT = { culture = catalan }
+			}			
+		}			
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = druidic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = gallo_druidic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = gallo_druidic
+						value = 0.3
+					}	
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}	
+	option = {
+		name = pw_forceconversion.1.c #Perhaps we can come to a compromise?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		required_personality = tolerant_personality
+		add_prestige = -20
+		add_country_modifier = {
+			name = "pw_religious_tolerance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}	
+	}
+	option = {
+		name = pw_forceconversion.1.d #Deal with these heathens at once!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		required_personality = zealot_personality		
+		add_prestige = 25
+		add_country_modifier = {
+			name = "pw_anti_pagan_conversion"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}		
+	}	
+}
+
+country_event = {
+	id = pw_forceconversion.18
+	title =  pw_forceconversion.18.t
+	desc = pw_forceconversion.18.d
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		ROOT = any_owned_province = { religion = ibero_druidic }
+		NOT = { religious_unity = 0.9 }
+		religion_years = { ibero_druidic = 5 }
+		NOT = { religion = ibero_druidic }
+		OR = {
+			culture_group =	iberian
+			culture = catalan			
+		}			
+	}
+	mean_time_to_happen = {
+		months = 1200
+	}
+	option = { #Perhaps this is the best way foward
+		name = pw_forceconversion.1.a
+		change_religion = druidic
+		add_prestige = -50
+		add_country_modifier = {
+			name = "pagan_conversion_zeal"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				num_of_religion = {
+					religion = ibero_druidic
+					value = 0.3
+				}	
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = zealot_personality
+				}	
+			}			
+		}
+	}
+	option = {
+		name = pw_forceconversion.1.b #We will not allow it
+		add_prestige = 20
+		add_country_modifier = {
+			name = "pw_religious_violance"
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				NOT = {
+					num_of_religion = {
+						religion = ibero_druidic
 						value = 0.3
 					}	
 				}	
