@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  pw_enable_pagans_title:0 "Enable Pagan Resurgence (100 Years)"
  pw_enable_pagans_desc:0 "Enable the Pagan Resurgence and events related to it."
  pw_pagan_religion_enabled.tt:0 "After enabling this decision, pagan religions will begin to spawn around 100 years after the decision was enabled."
@@ -37,11 +37,23 @@
  pw_toggle_continental_germanic_on_title:0 "Reenable Germanic Religion"
  pw_toggle_continental_germanic_on_desc:0 "Reenables the Germanic religion and events related to it, can be toggled back off if you so wish."
  
- pw_toggle_druidic_off_title:0 "Disable Druidic Religion"
- pw_toggle_druidic_off_desc:0 "Disables the Druidic religion and events related to it, can be toggled back on if you so wish."
+ pw_toggle_druidic_off_title:0 "Disable Gaelo-Druidic Religion"
+ pw_toggle_druidic_off_desc:0 "Disables the Gaelo-Druidic religion and events related to it, can be toggled back on if you so wish."
  
- pw_toggle_druidic_on_title:0 "Reenable Druidic Religion"
- pw_toggle_druidic_on_desc:0 "Reenables the Druidic religion and events related to it, can be toggled back off if you so wish."
+ pw_toggle_druidic_on_title:0 "Reenable Gaelo-Druidic Religion"
+ pw_toggle_druidic_on_desc:0 "Reenables the Gaelo-Druidic religion and events related to it, can be toggled back off if you so wish."
+ 
+ pw_toggle_gallo_druidic_off_title:0 "Disable Gallo-Druidic Religion"
+ pw_toggle_gallo_druidic_off_desc:0 "Disables the Gallo-Druidic religion and events related to it, can be toggled back on if you so wish."
+ 
+ pw_toggle_druidic_on_title:0 "Reenable Gallo-Druidic Religion"
+ pw_toggle_druidic_on_desc:0 "Reenables the Gallo-Druidic religion and events related to it, can be toggled back off if you so wish."
+ 
+ pw_toggle_ibero_druidic_off_title:0 "Disable Ibero-Druidic Religion"
+ pw_toggle_ibero_druidic_off_desc:0 "Disables the Ibero-Druidic religion and events related to it, can be toggled back on if you so wish."
+ 
+ pw_toggle_ibero_druidic_on_title:0 "Reenable Ibero-Druidic Religion"
+ pw_toggle_ibero_druidic_on_desc:0 "Reenables the Ibero-Druidic religion and events related to it, can be toggled back off if you so wish."
  
  pw_toggle_latin_hellenic_off_title:0 "Disable Latin Religion"
  pw_toggle_latin_hellenic_off_desc:0 "Disables the Latin religion and events related to it, can be toggled back on if you so wish."
@@ -119,19 +131,19 @@
  pw_toggle_tengri_pagan_reformed_off_desc:0 "Disables the Tengri resurgence on the western steppe, can be toggled back on if you so wish."
  
  pw_toggle_tengri_pagan_reformed_on_title:0 "Reenable Tengri Resurgence"
- pw_toggle_tengri_pagan_reformed_on_desc:0 "Reenables the Tengri resurgence on the western steppe, can be toggled back on if you so wish."
+ pw_toggle_tengri_pagan_reformed_on_desc:0 "Reenables the Tengri resurgence on the western steppe, can be toggled back off if you so wish."
  
  pw_toggle_zoroastrian_off_title:0 "Disable Zoroastrian Resurgence"
  pw_toggle_zoroastrian_off_desc:0 "Disables the Zoroastrian resurgence, can be toggled back on if you so wish."
  
  pw_toggle_zoroastrian_on_title:0 "Reenable Zoroastrian Resurgence"
- pw_toggle_zoroastrian_on_desc:0 "Reenables the Zoroastrian resurgence, can be toggled back on if you so wish."
+ pw_toggle_zoroastrian_on_desc:0 "Reenables the Zoroastrian resurgence, can be toggled back off if you so wish."
  
  pw_toggle_cthuhlu_off_title:0 "Disable Cthulhism"
  pw_toggle_cthuhlu_off_desc:0 "Disables Cthulhism, can be toggled back on if you so wish."
  
  pw_cthuhlu_on_title:0 "Reenable Cthulhism"
- pw_cthuhlu_on_desc:0 "Reenables Cthulhism, can be toggled back on if you so wish." 
+ pw_cthuhlu_on_desc:0 "Reenables Cthulhism, can be toggled back off if you so wish." 
  
  pw_neoplatonic_reforms_decision_title:0 "Neoplatonic Reforms"
  pw_neoplatonic_reforms_decision_desc:0 "By establishing Neoplatonic reforms we will be able to increase the influence of our faith and help study the works of ancient phlisophers."
