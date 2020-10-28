@@ -39,6 +39,30 @@ sound = {
 	file = "start_conversion_druidic.wav"
 }
 sound = {
+	name = defender_of_the_gallo_druidic_faith
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = start_convert_gallo_druidic
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = religion_gallo_druidic
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = defender_of_the_gallo_druidic_faith
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = start_convert_gallo_druidic
+	file = "start_conversion_druidic.wav"
+}
+sound = {
+	name = religion_gallo_druidic
+	file = "start_conversion_druidic.wav"
+}
+sound = {
 	name = defender_of_the_greek_hellenic_faith
 	file = "claim_defender_faith_greek_hellenic.wav"
 }
