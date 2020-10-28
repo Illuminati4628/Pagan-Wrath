@@ -10,7 +10,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_norse_spawn_area	= yes
+		AND = {
+			culture_group = scandinavian
+			every_neighbor_province = { culture_group = scandinavian } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}	
 		NOT = { has_global_flag = pw_norse_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -38,14 +43,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.1.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}				
+		name = pw_reformation.1.a			
 		enable_religion = norse_pagan_reformed
 		change_religion = norse_pagan_reformed
 		add_reform_center = norse_pagan_reformed
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}			
 	}
 }
 
@@ -59,7 +64,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_continental_germanic_spawn_area	= yes
+		AND = {
+			culture_group = germanic
+			every_neighbor_province = { culture_group = germanic } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
 		NOT = { has_global_flag = pw_continental_germanic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -88,13 +98,13 @@ province_event = {
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.2.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}		
 		enable_religion = continental_germanic
 		change_religion = continental_germanic
 		add_reform_center = continental_germanic
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}			
 	}
 }
 
@@ -108,7 +118,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_insular_germanic_spawn_area	= yes
+		AND = {
+			culture_group = british
+			every_neighbor_province = { culture_group = british } #Don't want this on fringe provinces
+			continent = europe
+			NOT = { area = iceland_area } #Because Britain is an island by the previous definition, which is unhelpful when trying to spawn this oen.
+		}	
 		NOT = { has_global_flag = pw_insular_germanic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -137,13 +152,13 @@ province_event = {
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.3.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}	
 		enable_religion = insular_germanic
 		change_religion = insular_germanic
 		add_reform_center = insular_germanic
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}
 	}
 }
 
@@ -157,7 +172,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_druidic_spawn_area = yes
+		AND = {
+			culture_group = gaelic
+			every_neighbor_province = { culture_group = gaelic } #Don't want this on fringe provinces
+			continent = europe
+			NOT = { area = iceland_area } #Because Britain and Ireland are islands by the previous definition, which is unhelpful when trying to spawn this oen.
+		}	
 		NOT = { has_global_flag = pw_druidic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -185,18 +205,18 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.4.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.4.a		
 		enable_religion = druidic
 		change_religion = druidic
 		add_reform_center = druidic
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
-# The Dei Consentes Reformation
+# The Latin Reformation
 province_event = {
 	id = pw_reformation.05
 	title = "pw_reformation.05.t"
@@ -206,7 +226,48 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_latin_hellenic_spawn_area = yes
+		AND = {
+			OR = {
+				AND = {
+					culture_group = latin
+					OR = {
+						every_neighbor_province = { culture_group = latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = old_latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = gallo_italic } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = rhaetian } #Don't want this on fringe provinces
+					}	
+				}	
+				AND = {
+					culture_group = old_latin
+					OR = {
+						every_neighbor_province = { culture_group = latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = old_latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = gallo_italic } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = rhaetian } #Don't want this on fringe provinces
+					}
+				}	
+				AND = {
+					culture_group = gallo_italic
+					OR = {
+						every_neighbor_province = { culture_group = latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = old_latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = gallo_italic } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = rhaetian } #Don't want this on fringe provinces
+					}
+				}	
+				AND = {
+					culture_group = rhaetian
+					OR = {
+						every_neighbor_province = { culture_group = latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = old_latin } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = gallo_italic } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = rhaetian } #Don't want this on fringe provinces
+					}
+				}					
+			}
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}	
 		NOT = { has_global_flag = pw_latin_hellenic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -234,14 +295,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.5.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}		
+		name = pw_reformation.5.a	
 		enable_religion = latin_hellenic
 		change_religion = latin_hellenic
 		add_reform_center = latin_hellenic
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -255,7 +316,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_greek_hellenic_spawn_area = yes
+		AND = {
+			culture_group = byzantine
+			every_neighbor_province = { culture_group = byzantine } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}	
 		NOT = { has_global_flag = pw_greek_hellenic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -284,13 +350,13 @@ province_event = {
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.6.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}		
 		enable_religion = greek_hellenic
 		change_religion = greek_hellenic
 		add_reform_center = greek_hellenic
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -304,7 +370,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_slavic_spawn_area_west = yes
+		AND = {
+			culture_group = west_slavic
+			every_neighbor_province = { culture_group = west_slavic } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
 		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -333,13 +404,13 @@ province_event = {
 	#This is just a mere cult, nothing more... right?
 	option = {
 		name = pw_reformation.7.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}	
 		enable_religion = slavic_pagan_reformed
 		change_religion = slavic_pagan_reformed
 		add_reform_center = slavic_pagan_reformed
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -353,7 +424,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_slavic_spawn_area_east = yes
+		AND = {
+			culture_group = east_slavic
+			every_neighbor_province = { culture_group = east_slavic } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
 		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -381,14 +457,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.8.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}	
+		name = pw_reformation.8.a	
 		enable_religion = slavic_pagan_reformed
 		change_religion = slavic_pagan_reformed
 		add_reform_center = slavic_pagan_reformed
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -402,7 +478,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_slavic_spawn_area_south = yes
+		AND = {
+			culture_group = south_slavic
+			every_neighbor_province = { culture_group = south_slavic } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
 		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -430,14 +511,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.9.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.9.a			
 		enable_religion = slavic_pagan_reformed
 		change_religion = slavic_pagan_reformed
 		add_reform_center = slavic_pagan_reformed
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -451,7 +532,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_baltic_pagan_reformed_spawn_area	= yes
+		AND = {
+			culture_group = baltic
+			every_neighbor_province = { culture_group = baltic } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
 		NOT = { has_global_flag = pw_baltic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -479,14 +565,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.1.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}		
+		name = pw_reformation.1.a		
 		enable_religion = baltic_pagan_reformed
 		change_religion = baltic_pagan_reformed
 		add_reform_center = baltic_pagan_reformed
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -500,7 +586,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_finnish_pagan_reformed_spawn_area = yes
+		AND = {
+			culture_group = finno_ugric
+			every_neighbor_province = { culture_group = finno_ugric } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}	
 		NOT = { has_global_flag = pw_finnish_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -528,14 +619,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.11.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.11.a		
 		enable_religion = finnish_pagan_reformed
 		change_religion = finnish_pagan_reformed
 		add_reform_center = finnish_pagan_reformed
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -549,7 +640,12 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_zalmoxian_spawn_area	= yes
+		AND = {
+			culture_group = dacian
+			every_neighbor_province = { culture_group = dacian } #Don't want this on fringe provinces
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}	
 		NOT = { has_global_flag = pw_zalmoxian_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -577,14 +673,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.12.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.12.a			
 		enable_religion = zalmoxian
 		change_religion = zalmoxian
 		add_reform_center = zalmoxian
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -598,7 +694,20 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_egyptian_pagan_spawn_area = yes
+		AND = {
+			OR = {
+				AND = {
+					culture = al_misr_arabic
+					every_neighbor_province = { culture = al_misr_arabic } #Don't want this on fringe provinces
+				}
+				AND = {
+					culture_group = egyptian_group
+					every_neighbor_province = { culture = al_misr_arabic } #Don't want this on fringe provinces
+				}
+			}	
+			continent = africa
+			province_is_on_an_island = no #Don't want this spawning on random islands
+		}	
 		NOT = { has_global_flag = pw_egyptian_pagan_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -626,14 +735,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.13.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.13.a			
 		enable_religion = egyptian_pagan
 		change_religion = egyptian_pagan
 		add_reform_center = egyptian_pagan
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -647,7 +756,53 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_canaanite_spawn_area	= yes
+		AND = {
+			OR = {
+				AND = {
+					culture = moroccan
+					OR = {
+						every_neighbor_province = { culture = moroccan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = tunisian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = algerian } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = berber_group } #Don't want this on fringe provinces, er well not too fringe in this area.
+					}	
+				}
+				AND = {
+					culture = tunisian
+					OR = {
+						every_neighbor_province = { culture = moroccan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = tunisian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = algerian } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = berber_group } #Don't want this on fringe provinces, er well not too fringe in this area.
+					}	
+				}
+				AND = {
+					culture = algerian
+					OR = {
+						every_neighbor_province = { culture = moroccan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = tunisian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = algerian } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = berber_group } #Don't want this on fringe provinces, er well not too fringe in this area.
+					}		
+				}	
+				AND = {
+					AND = {
+						culture_group = berber_group
+						NOT = { culture = tuareg }
+						NOT = { culture = zenaga }
+						NOT = { culture = libyan_berber_culture }
+					}	
+					OR = {
+						every_neighbor_province = { culture = moroccan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = tunisian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture = algerian } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = berber_group } #Don't want this on fringe provinces, er well not too fringe in this area.
+					}	
+				}					
+			}	
+			continent = africa
+			province_is_on_an_island = no
+		}	
 		NOT = { has_global_flag = pw_canaanite_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -675,14 +830,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.14.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.14.a		
 		enable_religion = canaanite
 		change_religion = canaanite
 		add_reform_center = canaanite
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -696,7 +851,16 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_zoroastrian_spawn_area = yes
+		AND = {
+			culture_group = iranian
+			NOT = { culture = baluchi } #These Guys get Zunist Instead
+			NOT = { culture = afghani }
+			NOT = { culture = dari_afghan }
+			NOT = { culture = tajik }	
+			every_neighbor_province = { culture_group = iranian } #Don't want this on fringe provinces
+			continent = asia
+			province_is_on_an_island = no
+		}	
 		NOT = { has_global_flag = pw_zoroastrian_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -724,14 +888,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.15.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.15.a		
 		enable_religion = zoroastrian
 		change_religion = zoroastrian
 		add_reform_center = zoroastrian
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -745,7 +909,20 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_arabic_pagan_spawn_area = yes
+		AND = {
+			OR = {
+				AND = {
+					OR = {
+						culture_group = turko_semitic
+						NOT = { culture = al_suryah_arabic }
+						NOT = { culture = al_iraqiya_arabic }
+					}	
+					every_neighbor_province = { culture_group = turko_semitic } #Don't want this on fringe provinces
+				}
+			}	
+			continent = asia
+			province_is_on_an_island = no #Don't want this spawning on random islands
+		}
 		NOT = { has_global_flag = pw_arabic_pagan_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -773,15 +950,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.16.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.16.a		
 		enable_religion = arabic_pagan
 		change_religion = arabic_pagan
 		add_reform_center = arabic_pagan
-		save_global_event_target_as = pw_arabic_pagan_spawn_prov
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -795,7 +971,19 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_ashurist_spawn_area = yes
+		AND = {
+			OR = {
+				AND = {
+					OR = {
+						culture = al_suryah_arabic
+						culture = al_iraqiya_arabic
+					}	
+					every_neighbor_province = { culture_group = turko_semitic } #Don't want this on fringe provinces
+				}
+			}	
+			continent = asia
+			province_is_on_an_island = no #Don't want this spawning on random islands
+		}
 		NOT = { has_global_flag = pw_ashurist_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -823,14 +1011,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.17.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.17.a			
 		enable_religion = ashurist
 		change_religion = ashurist
 		add_reform_center = ashurist
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -844,7 +1032,17 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_zunist_spawn_area = yes
+		AND = {
+			OR = {
+				culture = baluchi
+				culture = afghani
+				culture = dari_afghan
+				culture = tajik
+			}	
+			every_neighbor_province = { culture_group = iranian } #Don't want this on fringe provinces
+			continent = asia
+			province_is_on_an_island = no
+		}	
 		NOT = { has_global_flag = pw_zunist_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -872,14 +1070,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.18.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.18.a			
 		enable_religion = zunist
 		change_religion = zunist
 		add_reform_center = zunist
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -893,7 +1091,59 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_jainism_spawn_area = yes
+			OR = {
+				AND = {
+					culture_group = eastern_aryan #I could probably have just gone and made a scripted trigger here, but oh well...
+					OR = {
+						every_neighbor_province = { culture_group = eastern_aryan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = hindusthani } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = western_aryan } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = dravidian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = central_indic } #Don't want this on fringe provinces						
+					}	
+				}
+				AND = {
+					culture_group = hindusthani
+					OR = {
+						every_neighbor_province = { culture_group = eastern_aryan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = hindusthani } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = western_aryan } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = dravidian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = central_indic } #Don't want this on fringe provinces						
+					}	
+				}
+				AND = {
+					culture_group = western_aryan
+					OR = {
+						every_neighbor_province = { culture_group = eastern_aryan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = hindusthani } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = western_aryan } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = dravidian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = central_indic } #Don't want this on fringe provinces						
+					}		
+				}	
+				AND = {
+					culture_group = dravidian
+					OR = {
+						every_neighbor_province = { culture_group = eastern_aryan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = hindusthani } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = western_aryan } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = dravidian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = central_indic } #Don't want this on fringe provinces						
+					}		
+				}	
+				AND = {
+					culture_group = central_indic
+					OR = {
+						every_neighbor_province = { culture_group = eastern_aryan } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = hindusthani } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = western_aryan } #Don't want this on fringe provinces	
+						every_neighbor_province = { culture_group = dravidian } #Don't want this on fringe provinces
+						every_neighbor_province = { culture_group = central_indic } #Don't want this on fringe provinces						
+					}		
+				}					
+			}
+		}	
 		NOT = { has_global_flag = pw_jainism_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -921,14 +1171,14 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.19.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.19.a			
 		enable_religion = jainism
 		change_religion = jainism
 		add_reform_center = jainism
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
 
@@ -942,7 +1192,18 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		pw_tengri_spawn_area = yes
+		AND = {
+			OR = {
+				culture_group = kipchak
+				culture_group = tartar
+			}
+			OR = {
+				every_neighbor_province = { culture_group = kipchak } #Don't want this on fringe provinces
+				every_neighbor_province = { culture_group = tartar } #Don't want this on fringe provinces
+			}
+			continent = asia
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
 		NOT = { has_global_flag = pw_tengri_pagan_reformed_toggle_off }		
 		OR = {
 			had_global_flag = {
@@ -970,13 +1231,147 @@ province_event = {
 
 	#This is just a mere cult, nothing more... right?
 	option = {
-		name = pw_reformation.20.a
-		add_permanent_province_modifier = {
-			name = "religious_zeal_at_conv"
-				duration = 9000		
-		}			
+		name = pw_reformation.20.a		
 		change_religion = tengri_pagan_reformed
 		add_reform_center = tengri_pagan_reformed
 		set_global_flag = tengri_resurgence
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
+	}
+}
+
+# The Gallo-Druidic Resurgence
+province_event = {
+	id = pw_reformation.21
+	title = "pw_reformation.21.t"
+	desc = "pw_reformation.21.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		AND = {
+			OR = {
+				culture_group = french
+				OR = {
+					culture_group =	occitanic
+					NOT = { culture = catalan }
+				}	
+				OR = {
+					culture_group =	occitano_romance	
+					NOT = { culture = catalan }
+				}
+			}
+			OR = {
+				every_neighbor_province = { culture_group = french } #Don't want this on fringe provinces
+				OR = {
+					every_neighbor_province = { culture_group =	occitanic }
+					every_neighbor_province = { NOT = { culture = catalan } }
+				}	
+				OR = {
+					every_neighbor_province = { culture_group =	occitano_romance }	
+					every_neighbor_province = { NOT = { culture = catalan } }
+				}				
+			}
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
+		NOT = { has_global_flag = pw_gallo_druidic_toggle_off }		
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.21.a		
+		change_religion = gallo_druidic
+		add_reform_center = gallo_druidic
+		set_global_flag = gallo_druidic_resurgence
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
+	}
+}
+
+# The Ibero-Druidic Resurgence
+province_event = {
+	id = pw_reformation.22
+	title = "pw_reformation.22.t"
+	desc = "pw_reformation.22.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		AND = {
+			OR = {
+				culture_group = iberian
+				culture = catalan
+			}
+			OR = {
+				every_neighbor_province = { culture_group = french } #Don't want this on fringe provinces
+				every_neighbor_province = { culture = catalan }			
+			}
+			continent = europe
+			province_is_on_an_island = no #Don't want this spawning on Iceland
+		}
+		NOT = { has_global_flag = pw_ibero_druidic_toggle_off }		
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 5
+		is_reformation_center = no		
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 50
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.22.a		
+		change_religion = ibero_druidic
+		add_reform_center = ibero_druidic
+		set_global_flag = ibero_druidic_resurgence
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
 	}
 }
