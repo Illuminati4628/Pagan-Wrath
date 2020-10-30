@@ -700,7 +700,7 @@ celtic_group = {
 		heretic = { OLD_DRUIDIC }
 	}	
 	gallo_druidic = {
-		icon = 93
+		icon = 103
 		color = { 20 135 60 }
 		allowed_center_conversion = {
 			protestant	
@@ -746,7 +746,7 @@ celtic_group = {
 		heretic = { OLD_GALLO_DRUIDIC }
 	}	
 	ibero_druidic = {
-		icon = 93
+		icon = 104
 		color = { 80 110 70 }
 		allowed_center_conversion = {
 			protestant	
