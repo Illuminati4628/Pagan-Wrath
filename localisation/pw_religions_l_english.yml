@@ -40,9 +40,9 @@ l_english:
 
  celtic_group:0 "Celtic"
  
- druidic:0 "Gaelo-Druidic"
- druidic_religion_desc:0 "Gaelo-Druidism was the polytheistic religion of the Gaelic peoples, believing in many deities, both gods and goddesses, some of which were venerated only in a small, local area, but others whose worship had a wider geographical distribution."
- OLD_DRUIDIC:0 "Old Gaelo-Druidic"
+ druidic:0 "Gaelic"
+ druidic_religion_desc:0 "Gaelic Druidism was the polytheistic religion of the Gaelic peoples, believing in many deities, both gods and goddesses, some of which were venerated only in a small, local area, but others whose worship had a wider geographical distribution."
+ OLD_DRUIDIC:0 "Old Gaelic"
  druidic_rebels_demand:0 "Convert $COUNTRYNAME$"
  druidic_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  druidic_rebels_title:0 "Religious"
@@ -62,9 +62,9 @@ l_english:
  brigid: "Brigid"
  brigid_desc: "Brigid or Brigantia is a Celtic goddess of life and healing."
  
- gallo_druidic:0 "Gallo-Druidic"
- gallo_druidic_religion_desc:0 "Gallo-Druidism was the polytheistic religion of the Gualish peoples, believing in many deities, both gods and goddesses, some of which were venerated only in a small, local area, but others whose worship had a wider geographical distribution."
- OLD_GALLO_DRUIDIC:0 "Old Gallo-Druidic"
+ gallo_druidic:0 "Gallic"
+ gallo_druidic_religion_desc:0 "Gallic Druidism was the polytheistic religion of the Gualish peoples, believing in many deities, both gods and goddesses, some of which were venerated only in a small, local area, but others whose worship had a wider geographical distribution."
+ OLD_GALLO_DRUIDIC:0 "Old Gallic"
  gallo_druidic_rebels_demand:0 "Convert $COUNTRYNAME$"
  gallo_druidic_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  gallo_druidic_rebels_title:0 "Religious"
@@ -84,9 +84,9 @@ l_english:
  brigid: "Brigid"
  brigid_desc: "Brigid or Brigantia is a Celtic goddess of life and healing."
 
- ibero_druidic:0 "Ibero-Druidic"
- druidic_religion_desc:0 "Ibero-Druidism was the polytheistic religion of the Celtiberian peoples, believing in many deities, both gods and goddesses, some of which were venerated only in a small, local area, but others whose worship had a wider geographical distribution."
- OLD_IBERO_DRUIDIC:0 "Old Ibero-Druidic"
+ ibero_druidic:0 "Celiberic"
+ druidic_religion_desc:0 "Celiberic Druidism was the polytheistic religion of the Celtiberian peoples, believing in many deities, both gods and goddesses, some of which were venerated only in a small, local area, but others whose worship had a wider geographical distribution."
+ OLD_IBERO_DRUIDIC:0 "Old Celiberic"
  ibero_druidic_rebels_demand:0 "Convert $COUNTRYNAME$"
  ibero_druidic_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  ibero_druidic_rebels_title:0 "Religious"
