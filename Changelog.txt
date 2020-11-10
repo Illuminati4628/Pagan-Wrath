@@ -1,16 +1,23 @@
 Version 0.5
 
  Bug Fixes
-  - Fixed newly spawned CoRs not having the Religious Zeal Modifier (how did this go unnoticed for so long?_
+  - Fixed newly spawned CoRs not having the Religious Zeal Modifier (how did this go unnoticed for so long?
+  - If this bug was in a released version; fixed the New World Pagans and Norse not being in the correct groups.
+  - (Re)restored Buryatia, when I performed my history file update I accidently killed them, sorry about that.
 
  Changes
   - Cleaned up the changelog.
   - Completely changed how centers of resurgence appear, rather than appearing in set areas they can now appear on any respective culture/group as long as it's on the correct continent. This means if a player manages to wipe out a culture/culture group before the CoR spawns that religion can no longer appear. Though that probably won't happen... unless you're Vlindemann
-  - Renamed Druidic to Gaelo-Druidic
+  - Renamed Druidic to Gaelic and tweaked its colour to be less similar to the Muslims
   - Renamed Arabic (the pagan religion) to Wathanist
+  - Renamed Slavic to Prabohnic (more on this in additions)
   
  Additions
-  - Added Ibero-Druidic and Gallo-Druidic (Now France and Iberia can get in on the fun! Although they are pretty much different coloured druidics for now.)
+  - Added Celtiberic and Gallic (Now France and Iberia can get in on the fun! Although they are pretty much different coloured druidics for now.)
+  - Added Sudunic and Rodunic, splitting up the Slavic pagans into East, West and South, allowing for more centers of reformation to match up with the other groups. I named them after the supreme god for now, but if anyone comes up with something better I will likely change it.
+    - This means that Prabohnic now has the same Expansion events, giving it 3 CoRs, hopefully this will counterbalance the crazy Romuva I've seen fairly often.
+  - Made provinces that neighbour newly spawned CoRs more susceptical to the CoRs
+
   
 Version 0.4
 
@@ -24,12 +31,11 @@ Changes
  - Split Old World and New World Pagans
 	- Changed Animists in new world to Ritualist
  - Added ability to toggle off Cthulhu
- - Moved Tengri into its own group and moved the resurgence zone from the Western Steppe to the Central Asian Steppe. Of course a player can still change regardless. 
+ - Moved the Tengri resurgence zone from the Western Steppe to the Central Asian Steppe. Of course a player can still change regardless. 
 	- It's just how the game mechanics work, if I could I would extend to the Central Asian Steppe rather then moving.
-    - Warning, might be a bit buggy, please do report if centers of reformation don't appear and provinces randomly change to Tengri.
 Misc	
  - Did a bunch of other things but because I'm less organised than even Draiocht I don't remember what they are... sorry
- - Changed province histories to only overwrite religion instead of all provincial information, using the technique discovered by Perry
+ - Changed province histories to only overwrite religion instead of all provincial information, using the technique discovered by Perry (unfortunately I killed Buryatia by accident here, but they are back in 0.5!)
 
 Version 0.3
 
