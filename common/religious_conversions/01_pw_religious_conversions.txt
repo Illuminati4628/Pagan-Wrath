@@ -1544,3 +1544,316 @@ tengri_pagan_reformed_center_of_reformation = {
 		}	
 	}
 }
+
+druidic_center_of_reformation = {
+
+	religion = druidic
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = druidic
+			}
+		}
+		modifier = {
+			factor = 0.01
+			OR = {
+				NOT = { culture_group = gaelic }
+				NOT = { culture_group = brythonic }
+				NOT = { culture_group = celtic }
+			}	
+		}			
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	gaelic
+				culture_group =	brythonic
+				culture_group =	celtic			
+			}	
+		}
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = druidic count = 2 } }
+		}		
+	}
+}
+
+gallo_druidic_center_of_reformation = {
+
+	religion = gallo_druidic
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = gallo_druidic
+			}
+		}
+		modifier = {
+			factor = 0.01
+			OR = {
+				NOT = { culture_group = french }
+				OR = {
+					NOT = { culture_group =	occitanic }
+					culture = catalan
+				}	
+				OR = {
+					NOT = { culture_group =	occitano_romance }	
+					culture = catalan
+				}
+			}	
+		}			
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	french
+				OR = {
+					culture_group =	occitanic
+					NOT = { culture = catalan }
+				}	
+				OR = {
+					culture_group =	occitano_romance	
+					NOT = { culture = catalan }
+				}	
+			}	
+		}
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = gallo_druidic count = 2 } }
+		}		
+	}
+}
+
+ibero_druidic_center_of_reformation = {
+
+	religion = ibero_druidic
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = ibero_druidic
+			}
+		}
+		modifier = {
+			factor = 0.01
+			OR = {
+				NOT = { culture_group = iberian }
+				NOT = { culture = catalan }
+			}	
+		}			
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	iberian
+				culture = catalan		
+			}	
+		}
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = ibero_druidic count = 2 } }
+		}		
+	}
+}

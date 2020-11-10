@@ -119,6 +119,388 @@ christian = {
 		}	
 		icon = 14
 	}
+	##These are religions added by Heresy! I put them here just in case anything acts up, that's all, I won't do anything else with them.
+	cathar = {
+		color = { 64 196 255 } #40C4FF
+		icon = 34
+		allowed_conversion = {
+			reformed
+			protestant
+			#waldensian
+			catholic
+		}
+		country = {
+			tolerance_own = 2
+			stability_cost_modifier = -0.1
+			#may_recruit_female_generals = yes
+			#female_advisor_chance = 0.2
+		}
+		province = {
+			local_development_cost = 0.05
+		}
+		country_as_secondary = {
+			yearly_corruption = -0.1
+			advisor_pool = 1
+		}
+		#hre_heretic_religion = yes
+		
+		heretic = { BOGOMILIST SOCINIAN }
+		
+		uses_church_power = yes				# Uses church power/aspect mechanics
+		aspects = {
+			cathar_bishoprics_aspect
+			cathar_marriage_aspect
+			cathar_fortresses_aspect
+			cathar_allow_weaving_aspect
+			cathar_disallow_burning_aspect
+			cathar_living_icons_aspect
+			cathar_flock_to_the_cross_aspect
+			#priests_may_marry_aspect
+			#adult_baptism_aspect
+			#holy_sacraments_aspect
+			#saints_accept_prayers_aspect
+			#icons_images_aspect
+			#legalised_divorces_aspect
+			#heretics_deported_aspect
+			#parish_registers_aspect
+			#individual_creeds_aspect
+			#allow_usury_aspect
+			#translated_bibles_aspect
+		}
+		aspects_name = CATHAR_ASPECTS
+		
+		will_get_center = {
+			any_owned_province = {
+				dh_can_have_heresy_cor_trigger = {
+					RELIGION = cathar
+				}
+			}
+			NOT = {
+				calc_true_if = {
+					all_province = {
+						religion = cathar
+						is_reformation_center = yes
+					}
+					amount = 3
+				}
+			}
+		}
+
+		on_convert = {
+			dh_conv_to_cathar = yes
+			if = {
+				limit = {					
+					NOT = {
+						religion_years = {
+							cathar = 20
+						}
+					}
+					any_owned_province = {
+						dh_can_have_heresy_cor_trigger = {
+							RELIGION = cathar
+						}
+					}
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = cathar
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+					NOT = {
+						any_owned_province = {
+							is_reformation_center = yes
+						}
+					}
+				}				
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							dh_can_have_heresy_cor_trigger = {
+								RELIGION = cathar
+							}							
+							NOT = {
+								owner = {									
+									calc_true_if = {
+										all_province = {
+											religion = cathar
+											is_reformation_center = yes
+										}
+										amount = 3
+									}
+								}
+							}
+						}
+						change_religion = cathar
+						add_reform_center = cathar
+						add_permanent_province_modifier = {
+							name = religious_zeal_at_conv
+							duration = 9125
+						}
+						dh_add_neighbor_conv_weakness = yes
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}		
+		}
+
+		allowed_center_conversion = {
+			catholic
+			waldensian
+		}
+
+		date = 1445.1.1
+	}
+	fraticelli = {
+		color = { 155 70 230 }
+		icon = 35
+		allowed_conversion = {
+			reformed
+			protestant
+		}
+		country = {
+			legitimacy = 1
+			tolerance_own = 2
+		}
+		province = {
+			local_tax_modifier = -0.1
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			tolerance_own = 1
+		}
+		#hre_religion = yes
+		
+		
+		on_convert = {
+			dh_conv_to_waldo = yes
+		}
+		
+		heretic = { BOGOMILIST SOCINIAN }
+
+		allowed_center_conversion = {
+			catholic
+		}
+
+		date = 1445.1.1
+	}
+	waldensian = {
+		color = { 156 39 176 } #9C27B0
+		icon = 36
+		allowed_conversion = {
+			reformed
+			protestant
+			#cathar
+			catholic
+		}
+		country = {
+			tolerance_heretic = 1
+			technology_cost = -0.05
+		}
+		
+		country_as_secondary = {
+			global_unrest = -1
+			technology_cost = -0.05
+		}
+		
+		#hre_heretic_religion = yes
+		fervor = yes
+		
+		heretic = { BOGOMILIST SOCINIAN }
+
+		will_get_center = {
+			any_owned_province = {
+				dh_can_have_heresy_cor_trigger = {
+					RELIGION = waldensian
+				}
+			}
+			NOT = {
+				calc_true_if = {
+					all_province = {
+						religion = waldensian
+						is_reformation_center = yes
+					}
+					amount = 3
+				}
+			}
+		}
+		
+		on_convert = {
+			change_religion = waldensian
+			add_prestige = -100
+			
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						dh_can_have_heresy_cor_trigger = {
+							RELIGION = waldensian
+						}
+					}
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = waldensian
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+					NOT = {
+						any_owned_province = {
+							is_reformation_center = yes
+						}
+					}
+				}				
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							dh_can_have_heresy_cor_trigger = {
+								RELIGION = waldensian
+							}														
+							NOT = {
+								owner = {
+									calc_true_if = {
+										all_province = {
+											religion = waldensian
+											is_reformation_center = yes
+										}
+										amount = 3
+									}
+								}
+							}
+						}
+						change_religion = waldensian
+						add_reform_center = waldensian
+						add_permanent_province_modifier = {
+							name = religious_zeal_at_conv
+							duration = 9125
+						}
+						dh_add_neighbor_conv_weakness = yes
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+		}
+		
+		allowed_center_conversion = {
+			catholic
+			cathar
+		}
+
+		misguided_heretic = yes		# Other christians hate them less
+
+		date = 1445.1.1
+	}	
+	#messalian = {
+	#	color = { 0.6 0.1 0.4 }
+	#	icon = 33
+	#	country = {
+	#		global_missionary_strength = 0.01
+	#		heir_chance = 1
+	#		may_recruit_female_generals = yes
+	#		female_advisor_chance = 0.2
+	#	}
+	#	province = {
+	#		local_missionary_strength = -0.01
+	#	}
+	#	country_as_secondary = {
+	#		global_missionary_strength = 0.01
+	#		advisor_cost = -0.1
+	#	}
+	#	heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
+	#	
+	#	fervor = yes
+	#	
+	#	misguided_heretic = yes		# Other christians hate them less
+	#}
+	lollard = {
+		color = { 109 116 167 }
+		icon = 37
+		allowed_conversion = {
+			reformed
+			protestant
+			cathar
+			waldensian
+		}
+		country = {
+			global_institution_spread = 0.1 #Lollards were some of the first to translate the Bible into the vernacular
+			stability_cost_modifier = -0.1
+		}
+		province = {
+			local_tax_modifier = -0.1
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.2
+		}
+		hre_heretic_religion = yes
+		
+		#fervor = yes
+
+		will_get_center = {
+			any_owned_province = {
+				region = british_isles_region
+			}
+		}
+
+		allowed_center_conversion = {
+			catholic
+			cathar
+			waldensian
+		}
+		
+		heretic = { PAPIST }
+		
+		on_convert = {		
+			dh_conv_to_lollard = yes
+			remove_country_modifier = eng_tolerates_lollards
+			remove_country_modifier = eng_opposes_lollards
+			if = {
+				limit = {
+					any_owned_province = {
+						region = british_isles_region
+					}
+				}				
+				random_owned_province = {
+					limit = {
+						region = british_isles_region
+						dh_can_have_heresy_cor_trigger = {
+							RELIGION = lollard
+						}																				
+						NOT = {
+							owner = {
+								calc_true_if = {							
+									all_province = {
+										religion = lollard
+										is_reformation_center = yes
+									}
+									amount = 3
+								}
+							}
+						}
+					}
+					change_religion = lollard
+					add_reform_center = lollard
+					add_permanent_province_modifier = {
+						name = religious_zeal_at_conv
+						duration = 9125
+					}
+					dh_add_neighbor_conv_weakness = yes
+				}
+			}
+		}
+		
+		date = 1445.1.1
+	}
 }
 
 muslim = {
@@ -163,6 +545,15 @@ muslim = {
 			zunist
 		}			
 	}
+#####This one is also 'added' by Heresy! However it is currently unimplemented, so don't @me, go @neo (don't actually though, that will just slow down the progress because you annoyed him)
+#	alevi = {
+#		icon = 61
+#		heretic = {	}
+#		color = { 140 250 225 }
+#		allowed_conversion = {
+#			sunni
+#		}
+#	}		
 }
 
 eastern = {
@@ -653,9 +1044,9 @@ germanic_group = {
 celtic_group = {
 	defender_of_faith = yes
 	center_of_religion = 4379
-	druidic = {
+	druidic = { #Gaelic
 		icon = 93
-		color = { 50 140 50 }
+		color = { 90 150 75 }
 		allowed_center_conversion = {
 			protestant	
 			reformed			
@@ -699,9 +1090,9 @@ celtic_group = {
 		
 		heretic = { OLD_DRUIDIC }
 	}	
-	gallo_druidic = {
+	gallo_druidic = { #Gallic
 		icon = 103
-		color = { 20 135 60 }
+		color = { 130 180 115 }
 		allowed_center_conversion = {
 			protestant	
 			reformed			
@@ -745,7 +1136,7 @@ celtic_group = {
 		
 		heretic = { OLD_GALLO_DRUIDIC }
 	}	
-	ibero_druidic = {
+	ibero_druidic = { #Celtiberic
 		icon = 104
 		color = { 80 110 70 }
 		allowed_center_conversion = {
@@ -959,9 +1350,9 @@ balto_slavic_group = {
 		heretic = { OLD_ROMUVA }	
 	}
 
-	slavic_pagan_reformed = {
+	slavic_pagan_reformed = { #Zapadoslavic
 		icon = 55
-		color = { 140 85 135 }
+		color = { 180 120 130 }
 		allowed_center_conversion = {
 			protestant	
 			reformed			
@@ -1005,6 +1396,100 @@ balto_slavic_group = {
 
 		heretic = { OLD_SLAVIC }
 	}
+	
+	east_slavic_pagan_reformed = { #Rusic
+		icon = 55
+		color = { 135 80 130 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			orthodox
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		country = {
+			culture_conversion_cost = -0.15
+			manpower_recovery_speed = 0.1
+		}
+		province = {
+			local_manpower_modifier = 0.1
+		}
+		country_as_secondary = {
+			manpower_recovery_speed = 0.1
+			advisor_pool = 1
+		}
+		on_convert = {
+			change_religion = east_slavic_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act		
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+
+		personal_deity = yes
+
+		heretic = { OLD_EAST_SLAVIC }
+	}
+
+	south_slavic_pagan_reformed = { #Yugoslavic
+		icon = 55
+		color = { 150 100 175 }
+		allowed_center_conversion = {
+			protestant	
+			reformed			
+			catholic
+			orthodox
+			hussite
+			cathar
+			fraticelli
+			waldensian
+			lollard			
+		}
+		date = 1445.1.1							
+		country = {
+			culture_conversion_cost = -0.15
+			manpower_recovery_speed = 0.1
+		}
+		province = {
+			local_manpower_modifier = 0.1
+		}
+		country_as_secondary = {
+			manpower_recovery_speed = 0.1
+			advisor_pool = 1
+		}
+		on_convert = {
+			change_religion = south_slavic_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act		
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}	
+		}		
+
+		personal_deity = yes
+
+		heretic = { OLD_SOUTH_SLAVIC }
+	}	
 	
 	harmonized_modifier = harmonized_balto_slavic_group
 

@@ -1,0 +1,12 @@
+#Province scope
+pw_add_neighbour_resistance_weakness = {	
+	custom_tooltip = pw_add_resistance_weakness.tt				
+	hidden_effect = {
+		every_neighbor_province = {
+			add_province_modifier = {
+				name = pw_resistance_weakness
+				duration = 3650
+			}
+		}
+	}
+}
