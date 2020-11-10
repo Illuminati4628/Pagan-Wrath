@@ -687,7 +687,115 @@ country_decisions = {
 			clr_global_flag = pw_slavic_pagan_reformed_toggle_off
 		}
 
-	}		
+	}	
+
+	pw_toggle_slavic_pagan_reformed_off = {
+	
+		major = yes
+		
+		potential = {
+			ai = no
+			has_global_flag = pw_toggle_pagans_on	
+			NOT =  { has_global_flag = pw_east_slavic_pagan_reformed_toggle_off }
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		allow = {
+			ai = no
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		effect = {
+			custom_tooltip = pw_pagan_toggle_off.tt
+			set_global_flag = pw_east_slavic_pagan_reformed_toggle_off
+		}
+
+	}	
+	
+	pw_toggle_slavic_pagan_reformed_on = {
+	
+		major = yes
+		
+		potential = {
+			ai = no
+			has_global_flag = pw_toggle_pagans_on	
+			has_global_flag = pw_east_slavic_pagan_reformed_toggle_off
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		allow = {
+			ai = no
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		effect = {
+			custom_tooltip = pw_pagan_toggle_on.tt
+			clr_global_flag = pw_east_slavic_pagan_reformed_toggle_off
+		}
+
+	}
+
+	pw_toggle_south_slavic_pagan_reformed_off = {
+	
+		major = yes
+		
+		potential = {
+			ai = no
+			has_global_flag = pw_toggle_pagans_on	
+			NOT =  { has_global_flag = pw_south_slavic_pagan_reformed_toggle_off }
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		allow = {
+			ai = no
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		effect = {
+			custom_tooltip = pw_pagan_toggle_off.tt
+			set_global_flag = pw_south_slavic_pagan_reformed_toggle_off
+		}
+
+	}	
+	
+	pw_toggle_south_slavic_pagan_reformed_on = {
+	
+		major = yes
+		
+		potential = {
+			ai = no
+			has_global_flag = pw_toggle_pagans_on	
+			has_global_flag = pw_south_slavic_pagan_reformed_toggle_off
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		allow = {
+			ai = no
+			NOT = {
+				is_year = 1450
+			}
+		}
+
+		effect = {
+			custom_tooltip = pw_pagan_toggle_on.tt
+			clr_global_flag = pw_slavic_pagan_reformed_toggle_off
+		}
+
+	}	
 
 	pw_toggle_finnish_pagan_reformed_off = {
 	
