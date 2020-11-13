@@ -1,7 +1,13 @@
+Version 0.5.1
+
+ Changes
+  - Changed German to Tuistic
+
+
 Version 0.5
 
  Bug Fixes
-  - Fixed newly spawned CoRs not having the Religious Zeal Modifier (how did this go unnoticed for so long?
+  - Fixed newly spawned CoRs not having the Religious Zeal Modifier (how did this go unnoticed for so long?)
   - If this bug was in a released version; fixed the New World Pagans and Norse not being in the correct groups.
   - (Re)restored Buryatia, when I performed my history file update I accidently killed them, sorry about that.
 
