@@ -31,11 +31,11 @@
  pw_toggle_insular_germanic_on_title:0 "Reenable Anglic Religion"
  pw_toggle_insular_germanic_on_desc:0 "Reenables the Anglic religion and events related to it, can be toggled back off if you so wish."
  
- pw_toggle_continental_germanic_off_title:0 "Disable German Religion"
- pw_toggle_continental_germanic_off_desc:0 "Disables the German religion and events related to it, can be toggled back on if you so wish."
+ pw_toggle_continental_germanic_off_title:0 "Disable Tuistic Religion"
+ pw_toggle_continental_germanic_off_desc:0 "Disables the Tuistic religion and events related to it, can be toggled back on if you so wish."
  
- pw_toggle_continental_germanic_on_title:0 "Reenable German Religion"
- pw_toggle_continental_germanic_on_desc:0 "Reenables the German religion and events related to it, can be toggled back off if you so wish."
+ pw_toggle_continental_germanic_on_title:0 "Reenable Tuistic Religion"
+ pw_toggle_continental_germanic_on_desc:0 "Reenables the Tuistic religion and events related to it, can be toggled back off if you so wish."
  
  pw_toggle_druidic_off_title:0 "Disable Gaelic Religion"
  pw_toggle_druidic_off_desc:0 "Disables the Gaelic religion and events related to it, can be toggled back on if you so wish."
