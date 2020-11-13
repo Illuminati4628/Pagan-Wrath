@@ -15,9 +15,9 @@
  insular_germanic_rebels_army:0 "$RELIGION$ Army"
 
  
- continental_germanic:0 "German"
- continental_germanic_religion_desc:0 "Although quite similar to the Norse faith, Continental Germanic has formed a hierarchy not disimilar from the Orthodox Christians, unlike the Norse faith."
- OLD_CONTINENTAL_GERMANIC:0 "Old German"
+ continental_germanic:0 "Tuistic"
+ continental_germanic_religion_desc:0 "Tuistic is the faith of the old Germanic Tribes, named after Tuisto, the divine ancestor of the germanic people."
+ OLD_CONTINENTAL_GERMANIC:0 "Old Tuistic"
  continental_germanic_rebels_demand:0 "Convert $COUNTRYNAME$"
  continental_germanic_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  continental_germanic_rebels_title:0 "Religious"
