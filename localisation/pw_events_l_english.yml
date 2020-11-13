@@ -7,11 +7,11 @@
  pw_expansion.1.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.1.a:0 "Perhaps this is more than a mere cult..."
 
- pw_reformation.02.t:0 "The German Faith's Resurgence!"
+ pw_reformation.02.t:0 "The Tuistic Faith's Resurgence!"
  pw_reformation.02.d:0 "The old faith of the Germanic Tribes has reformed in [Root.GetName]!"
  pw_reformation.2.a:0 "This is just a mere cult, nothing more... right?"
 
- pw_expansion.2.t:0 "The German Faith's Expansion!"
+ pw_expansion.2.t:0 "The Tuistic Faith's Expansion!"
  pw_expansion.2.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.2.a:0 "Perhaps this is more than a mere cult..."
 
