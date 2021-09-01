@@ -1,8 +1,8 @@
-﻿l_english:
- mount_olympus_modifier_hellenic:0 "Mount Olympus"
- desc_mount_olympus_modifier_hellenic:0 "Mount Olympus is the home of the gods, having control of it will allow us to spread our great faith further!"
+﻿l_spanish:
  pagan_conversion_zeal:0 "Pagan Conversion Zeal"
- imperial_hellenic_religious_center:0 "The importance of this province as a Religious Center will make it very difficult to convert."
+ 
+ imperial_hellenic_religious_center:0 "Apotheosian Religious Center"
+ desc_imperial_hellenic_religious_center:0 "The importance of this province as a Religious Center will make it very difficult to convert."
  imperial_hellenic_dominance:0 "Apotheosian Dominance"
  desc_imperial_hellenic_dominance:0 "The Apotheosian Sect has enforced dominance over the Mediterranean."
  
@@ -27,12 +27,9 @@
  lunatic_personality:0 "Lunatic"
  desc_lunatic_personality:0 "This ruler is stark raving mad. They are plauged by voices whispering to them, telling them what to do... horrible, horrible things they want them to do... Widespread tales of arbitrary and random actions by our ruler has greatly disturbed many of our subjects and allies."
  lunatic_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] insane delusions shall be remembered for generations to come..."
- void_affliction_personality:0 "Void Afflicted"
- desc_void_affliction_personality:0 "This ruler has become afflicted with an unknown darkness, causing them to do somewhat odd things, however it seems to have made them into a more willing conqueror as a result..."
- void_affliction_personality_die:0 "[Root.Monarch.GetHerHisCap] distorted voice and accompanying shadows in placed where they should not be will leave quite a legacy to [Root.Monarch.GetHerHis] name..."
  
- hellenistic_olympus:0 "Mount Olympus"
- desc_hellenistic_olmypus:0 "Mount Olympus is said to be the seat of the Olympian gods and is a major holy site in the Hellenistic Religions."
+ pw_hellenic_olympus:0 "Mount Olympus"
+ desc_pw_hellenic_olympus:0 "Mount Olympus is said to be the seat of the Olympian gods and is a major holy site in the Hellenistic Religions."
  
  pw_add_resistance_weakness.tt:0 "All provinces neighboring [This.GetName] will receive §R-50%§! local Resistance to Reformation."
  

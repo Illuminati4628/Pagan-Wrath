@@ -49,7 +49,6 @@ pw_druidic_spawn_area = {
 		area = deheubarth_area
 		area = highlands_area
 		area = kingdom_of_the_isles_area 
-		area = lower_brittany_area
 		province_id = 8142
 		province_id = 4366
 		province_id = 233	
@@ -60,7 +59,8 @@ pw_latin_hellenic_spawn_area = {
 	OR = {
 		AND = {
 			region = italy_region
-			NOT = { area = central_italy_area }
+			NOT = { area = central_italy_area } #Papacy says no
+			NOT = { province_id = 118 } #Papacy really says no
 		}
 	}
 }
@@ -78,7 +78,10 @@ pw_greek_hellenic_spawn_area = {
 		area = macedonia_area
 		area = albania_area
 		area = eastern_macedonia_area
-		area = thrace_area
+		AND = {
+			area = thrace_area
+			NOT = { province_id = 151 } #Ecumenical Patriachate says no, unless the Ottomans got rid of him, in which case they say no
+		}	
 	}
 }
 
@@ -246,6 +249,24 @@ pw_tengri_spawn_area = { #Moved from Western Steppe
 	}
 }		
 
+pw_turkic_spawn_area = {
+	OR = {
+		region = anatolia_region
+	}
+}	
+
+pw_gallic_spawn_area = {
+	OR = {
+		region = france_region
+	}	
+}
+
+pw_celtiberic_spawn_area = {
+	OR = {
+		region = iberia_region
+	}
+}
+	
 pw_pagan_trigger = {
 	OR = {
 		religion_group = germanic_group
@@ -257,13 +278,13 @@ pw_pagan_trigger = {
 		religion_group = canaanite_group
 		religion_group = dacian_group
 		religion_group = arabic_group
-		religion_group = turko_mongol_group
+		religion_group = tengri_group
 		religion = zunist
 		religion = jainism
 	}
 }	
 
-pw_resurgence_trigger = { #Not used, but I might need it later
+pw_resurgence_trigger = { #Now used, I needed it later
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
 	NOT = { province_id = 118 }
 	is_reformation_center = no

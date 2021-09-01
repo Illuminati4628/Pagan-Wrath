@@ -10,11 +10,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = scandinavian
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}	
+		pw_norse_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_norse_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -32,12 +29,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -64,11 +62,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = germanic
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_continental_germanic_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_continental_germanic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -86,12 +81,13 @@ province_event = {
 		}	
 		development = 10
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -118,11 +114,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = british
-			continent = europe
-			NOT = { area = iceland_area } #Because Britain is an island by the previous definition, which is unhelpful when trying to spawn this oen.
-		}	
+		pw_insular_germanic_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_insular_germanic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -140,12 +133,13 @@ province_event = {
 		}	
 		development = 10
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -172,25 +166,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture_group = gaelic
-				AND = {
-					culture_group = brythonic
-					NOT = { culture = breton } #They get Gallic instead
-				}	
-				AND = {	
-					culture_group = celtic
-					NOT = { culture = celtic_breton } #They get Gallic instead
-					NOT = { culture = belgae } #CI continental celts
-					NOT = { culture = pictone }
-					NOT = { culture = arverni }
-					NOT = { culture = galianeg }
-				}	
-			}	
-			continent = europe
-			NOT = { area = iceland_area } #Because Britain and Ireland are islands by the previous definition, which is unhelpful when trying to spawn this one.
-		}	
+		pw_druidic_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_druidic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -208,12 +185,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -240,16 +218,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture_group = latin
-				culture_group = old_latin
-				culture_group = gallo_italic
-				culture_group = rhaetian				
-			}
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}	
+		pw_latin_hellenic_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_latin_hellenic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -267,12 +237,13 @@ province_event = {
 		}	
 		development = 15
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -299,11 +270,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = byzantine
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}	
+		pw_greek_hellenic_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_greek_hellenic_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -321,12 +289,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -353,11 +322,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = west_slavic
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_slavic_spawn_area_west = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -375,12 +341,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -407,11 +374,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = east_slavic
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_slavic_spawn_area_east = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_east_slavic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -429,12 +393,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -461,11 +426,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = south_slavic
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_slavic_spawn_area_south = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_south_slavic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -483,12 +445,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -515,11 +478,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = baltic
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_baltic_pagan_reformed_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_baltic_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -537,12 +497,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -569,11 +530,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = finno_ugric
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}	
+		pw_finnish_pagan_reformed_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_finnish_pagan_reformed_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -591,12 +549,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -623,11 +582,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			culture_group = dacian
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}	
+		pw_zalmoxian_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_zalmoxian_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -645,12 +601,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -677,14 +634,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture = al_misr_arabic
-				culture_group = egyptian_group
-			}	
-			continent = africa
-			province_is_on_an_island = no #Don't want this spawning on random islands
-		}	
+		pw_egyptian_pagan_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_egyptian_pagan_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -702,12 +653,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -734,21 +686,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture = moroccan
-				culture = tunisian
-				culture = algerian
-				AND = {
-					culture_group = berber_group
-					NOT = { culture = tuareg }
-					NOT = { culture = zenaga }
-					NOT = { culture = libyan_berber_culture }
-				}						
-			}	
-			continent = africa
-			province_is_on_an_island = no
-		}	
+		pw_canaanite_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_canaanite_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -766,12 +705,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -798,17 +738,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			AND = {
-				culture_group = iranian
-				NOT = { culture = baluchi } #These Guys get Zunist Instead
-				NOT = { culture = afghani }
-				NOT = { culture = dari_afghan }
-				NOT = { culture = tajik }	
-			}	
-			continent = asia
-			province_is_on_an_island = no
-		}	
+		pw_zoroastrian_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_zoroastrian_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -826,12 +757,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -858,15 +790,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			AND = {
-				culture_group = turko_semitic
-				NOT = { culture = al_suryah_arabic }
-				NOT = { culture = al_iraqiya_arabic }	
-			}	
-			continent = asia
-			province_is_on_an_island = no #Don't want this spawning on random islands
-		}
+		pw_arabic_pagan_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_arabic_pagan_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -884,12 +809,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -916,14 +842,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture = al_suryah_arabic
-				culture = al_iraqiya_arabic
-			}	
-			continent = asia
-			province_is_on_an_island = no #Don't want this spawning on random islands
-		}
+		pw_ashurist_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_ashurist_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -941,12 +861,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -973,16 +894,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture = baluchi
-				culture = afghani
-				culture = dari_afghan
-				culture = tajik
-			}	
-			continent = asia
-			province_is_on_an_island = no
-		}	
+		pw_zunist_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_zunist_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -1000,12 +913,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1032,13 +946,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		OR = {
-			culture_group = eastern_aryan
-			culture_group = hindusthani
-			culture_group = western_aryan
-			culture_group = dravidian
-			culture_group = central_indic						
-		}	
+		pw_jainism_spawn_area = yes	
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_jainism_toggle_off }
 		OR = {
 			had_global_flag = {
@@ -1056,12 +965,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1088,14 +998,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture_group = kipchak
-				culture_group = tartar
-			}
-			continent = asia
-			NOT  ={ province_is_on_an_island = yes } #Don't want this spawning on Iceland
-		}
+		pw_tengri_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_tengri_pagan_reformed_toggle_off }		
 		OR = {
 			had_global_flag = {
@@ -1113,12 +1017,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1146,27 +1051,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture_group = french
-				culture = breton
-				culture = celtic_breton 
-				culture = belgae #CI continental celts
-				culture = pictone
-				culture = arverni
-				culture = galianeg					
-				AND = {
-					culture_group =	occitanic #Occitan Renaissance
-					NOT = { culture = catalan } #They get Celtiberic
-				}	
-				AND = {
-					culture_group =	occitano_romance #CI Occitans
-					NOT = { culture = catalan } #They get Celtiberic
-				}				
-			}
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_gallic_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_gallo_druidic_toggle_off }		
 		OR = {
 			had_global_flag = {
@@ -1184,12 +1070,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1217,15 +1104,8 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				culture_group = iberian
-				culture = catalan #In CI these are not in the Iberian group
-				culture = aragonese
-			}
-			continent = europe
-			province_is_on_an_island = no #Don't want this spawning on Iceland
-		}
+		pw_celtiberic_spawn_area = yes
+		pw_resurgence_trigger = yes	
 		NOT = { has_global_flag = pw_ibero_druidic_toggle_off }		
 		OR = {
 			had_global_flag = {
@@ -1243,12 +1123,13 @@ province_event = {
 		}	
 		development = 7
 		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
 	}
 	
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 50
+		days = 1500
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1258,6 +1139,59 @@ province_event = {
 		change_religion = ibero_druidic
 		add_reform_center = ibero_druidic
 		set_global_flag = ibero_druidic_resurgence
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 9125
+		}		
+		pw_add_neighbour_resistance_weakness = yes			
+	}
+}
+
+# The Turkic Resurgence
+province_event = {
+	id = pw_reformation.23
+	title = "pw_reformation.23.t"
+	desc = "pw_reformation.23.d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		pw_turkic_spawn_area = yes
+		pw_resurgence_trigger = yes	
+		NOT = { has_global_flag = pw_turkic_pagan_toggle_off }		
+		OR = {
+			had_global_flag = {
+				flag = pw_pagan_religion_100_enabled
+				days = 36500
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_50_enabled
+				days = 18250
+			}
+			had_global_flag = {
+				flag = pw_pagan_religion_10_enabled
+				days = 3650
+			}			
+		}	
+		development = 7
+		is_reformation_center = no		
+		NOT = { has_province_modifier = religious_center }
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1500
+	}
+
+	#This is just a mere cult, nothing more... right?
+	option = {
+		name = pw_reformation.23.a	
+		enable_religion = turkic_pagan
+		change_religion = turkic_pagan
+		add_reform_center = turkic_pagan
+		set_global_flag = turkic_pagan_resurgence
 		add_permanent_province_modifier = {
 			name = religious_zeal_at_conv
 			duration = 9125

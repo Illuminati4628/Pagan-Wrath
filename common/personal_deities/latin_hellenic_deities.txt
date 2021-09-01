@@ -1,9 +1,13 @@
+# Each religion with personal deities is to have 6
+
 jupiter = {
 
 	prestige = 1
-	republican_tradition = 0.01
+	republican_tradition = 1
 	legitimacy = 1
 	horde_unity = 1
+	devotion = 1
+	meritocracy = 1
 	
 	allow = {
 		religion = latin_hellenic

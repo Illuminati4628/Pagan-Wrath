@@ -50,8 +50,8 @@ country_decisions = {
 				limit = {
 					religion = ROOT
 					OR = {
-						any_neighbor_province = { development = 40 }
-						development = 40
+						any_neighbor_province = { development = 30 }
+						development = 30
 					}	
 				}
 				change_religion = imperial_hellenic
@@ -61,7 +61,7 @@ country_decisions = {
 				name = "pagan_conversion_zeal"
 				duration = 3650
 			}
-		}
+		}		
 	}
 	
 	pw_proclaim_imperial_hellenic_dominance = {
@@ -168,5 +168,69 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}		
+	}
+
+	pw_christian_cave_to_apotheosian = {
+	
+		major = yes
+		
+		potential = {
+			has_global_flag = pw_imperial_hellenic_dominance
+			religion_group = christian
+			is_free_or_tributary_trigger = yes
+		}
+		
+		allow = {
+			is_at_war = no
+			has_global_flag = pw_imperial_hellenic_dominance
+		}
+
+		effect = {
+			change_religion = imperial_hellenic
+			add_prestige = -100
+			add_devotion = -50
+			every_owned_province = {
+				limit = {
+					religion = ROOT
+					OR = {
+						any_neighbor_province = { development = 30 }
+						development = 30
+					}	
+				}
+				change_religion = imperial_hellenic
+			}			
+			capital_scope = { change_religion = imperial_hellenic }
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_idea_group = religious_ideas #Zealous nations should not convert.
+					tag = PAP #Pope in no circumstance may convert.
+					AND = { #Devoted theocracies should not convert either.
+						government = theocracy
+						devotion = 75
+					}
+					is_emperor = yes #The HREmperor really should never take this decision as it would remove their emperorship.
+					NOT = { prestige = 0 } #
+					total_development = 250 #Apparently "development" only applies to provinces...
+				}
+			}
+			modifier = { #Figured these guys would be less inclined to convert due to their relation with the church that just got destroyed, but the Apotheosian point still stands, so it's not impossible.
+				factor = 0.5
+				OR = {
+					religion = protestant
+					religion = reformed
+					religion = cathar
+					religion = waldensian
+					religion = lollard
+				}
+			}			
+		}		
+	}	
 }		

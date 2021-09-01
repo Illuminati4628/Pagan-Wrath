@@ -78,16 +78,43 @@ norse_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group =	scandinavian }
-			}	
+			factor = 0
+			NOT = { culture_group =	scandinavian }	
 		}	
 		modifier = {
 			factor = 3
 			OR = {
 				culture_group =	scandinavian
 			}	
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = germanic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group =	scandinavian
+					owner = { religion = norse_pagan_reformed }
+					pw_norse_spawn_area = yes
+					any_neighbor_province = { religion = norse_pagan_reformed } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group =	scandinavian			
+				any_neighbor_province = {
+					religion = norse_pagan_reformed
+				}
+			}
 		}		
 		modifier = {
 			factor = 1.5
@@ -175,17 +202,34 @@ insular_germanic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group =	british }
-			}	
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = germanic_group #Any heretics may get converted
+				}	
+			}
 		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group =	british
+					owner = { religion = insular_germanic }
+					pw_insular_germanic_spawn_area = yes
+					any_neighbor_province = { religion = insular_germanic } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
-				culture_group =	british		
-			}	
-		}		
+				culture_group =	british			
+				any_neighbor_province = {
+					religion = insular_germanic
+				}
+			}
+		}
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -272,17 +316,34 @@ continental_germanic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group =	germanic }
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = germanic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = germanic	
+					owner = { religion = continental_germanic }
+					pw_continental_germanic_spawn_area = yes 
+					any_neighbor_province = { religion = continental_germanic } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
-				culture_group =	germanic		
+				culture_group =	germanic			
+				any_neighbor_province = {
+					religion = continental_germanic
+				}				
 			}	
-		}
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -369,21 +430,36 @@ druidic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = gaelic }
-				NOT = { culture_group = brythonic }
-				NOT = { culture_group = celtic }
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = celtic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = gaelic
+					culture_group = brythonic
+					culture_group = celtic
+					owner = { religion = druidic }
+					pw_druidic_spawn_area = yes 
+					any_neighbor_province = { religion = druidic } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture_group =	gaelic
 				culture_group =	brythonic
-				culture_group =	celtic			
+				culture_group =	celtic		
+				any_neighbor_province = { religion = druidic }				
 			}	
-		}
+		}					
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -466,24 +542,37 @@ greek_hellenic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = byzantine }
-				NOT = { culture = turkish } #Yes I'm going to allow it to spread to Turks, mainly due to their location
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					AND = {
+						religion_group = hellenic_group #Any heretics may get converted
+						NOT = { religion = imperial_hellenic } #This is basically an 'upgraded' form of Hellenic, so the CoRs should avoid it
+					}	
+				}	
+			}
+		}	
 		modifier = {
-			factor = 1
-			OR = {	
-				culture = turkish #However I still want Greeks to be prioritised for obvious reasons
-			}	
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = byzantine	
+					owner = { religion = greek_hellenic }
+					pw_greek_hellenic_spawn_area = yes
+					any_neighbor_province = { religion = greek_hellenic } #Can only spread out from centers, not randomly
+				}
+			}
 		}		
 		modifier = {
 			factor = 3
 			OR = {
-				culture_group =	byzantine		
+				culture_group =	byzantine	
+				any_neighbor_province = {
+					religion = greek_hellenic
+				}				
 			}	
-		}		
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -570,21 +659,43 @@ latin_hellenic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group =	gallo_italic }
-				NOT = { culture_group =	rhaetian }
-				NOT = { culture_group =	island_romance }
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					AND = {
+						religion_group = hellenic_group #Any heretics may get converted
+						NOT = { religion = imperial_hellenic } #This is basically an 'upgraded' form of Hellenic, so the CoRs should avoid it
+					}	
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = latin
+					culture_group =	gallo_italic
+					culture_group =	rhaetian
+					culture_group =	island_romance	
+					culture_group = old_latin
+					owner = { religion = latin_hellenic }
+					pw_latin_hellenic_spawn_area = yes 
+					any_neighbor_province = { religion = latin_hellenic } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture_group = latin
 				culture_group =	gallo_italic
 				culture_group =	rhaetian
-				culture_group =	island_romance				
+				culture_group =	island_romance	
+				culture_group = old_latin
+				any_neighbor_province = {
+					religion = latin_hellenic
+				}				
 			}	
 		}			
 		modifier = {
@@ -683,6 +794,35 @@ baltic_pagan_reformed_center_of_reformation = {
 			OR = {
 				culture_group = baltic				
 			}	
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = balto_slavic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group =	baltic
+					owner = { religion = baltic_pagan_reformed }
+					pw_baltic_pagan_reformed_spawn_area = yes
+					any_neighbor_province = { religion = baltic_pagan_reformed } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = baltic	
+				any_neighbor_province = {
+					religion = baltic_pagan_reformed
+				}				
+			}	
 		}			
 		modifier = {
 			factor = 1.5
@@ -770,21 +910,36 @@ slavic_pagan_reformed_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group =	west_slavic }
-				NOT = { culture_group = east_slavic }
-				NOT = { culture_group =	south_slavic }
-				NOT = { culture_group =	unified_slavic }				
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = balto_slavic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = west_slavic
+					culture_group =	unified_slavic		
+					owner = { religion = slavic_pagan_reformed }
+					pw_slavic_spawn_area_west = yes
+					any_neighbor_province = { religion = slavic_pagan_reformed } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture_group = west_slavic
-				culture_group = east_slavic	
-				culture_group = south_slavic	
-				culture_group = unified_slavic				
+				#culture_group = east_slavic	
+				#culture_group = south_slavic	
+				culture_group = unified_slavic	
+				any_neighbor_province = {
+					religion = slavic_pagan_reformed
+				}				
 			}	
 		}			
 		modifier = {
@@ -798,6 +953,250 @@ slavic_pagan_reformed_center_of_reformation = {
 			NOT = { 
 				num_of_centers_of_reformation = { 
 					religion = slavic_pagan_reformed
+					count = 2 
+				} 
+			}
+		}			
+	}
+}
+
+east_slavic_pagan_reformed_center_of_reformation = {
+
+	religion = east_slavic_pagan_reformed
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 7
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = east_slavic_pagan_reformed
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = balto_slavic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = east_slavic
+					culture_group =	unified_slavic			
+					owner = { religion = east_slavic_pagan_reformed }
+					pw_slavic_spawn_area_east = yes
+					any_neighbor_province = { religion = east_slavic_pagan_reformed } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = east_slavic	
+				culture_group = unified_slavic	
+				any_neighbor_province = {
+					religion = east_slavic_pagan_reformed
+				}				
+			}	
+		}							
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { 
+				num_of_centers_of_reformation = { 
+					religion = east_slavic_pagan_reformed
+					count = 2 
+				} 
+			}
+		}			
+	}
+}
+
+south_slavic_pagan_reformed_center_of_reformation = {
+
+	religion = south_slavic_pagan_reformed
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 7
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = south_slavic_pagan_reformed
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = balto_slavic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group =	south_slavic
+					culture_group =	unified_slavic	
+					owner = { religion = south_slavic_pagan_reformed }
+					pw_slavic_spawn_area_south = yes 
+					any_neighbor_province = { religion = south_slavic_pagan_reformed } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				#culture_group = west_slavic
+				#culture_group = east_slavic	
+				culture_group = south_slavic	
+				culture_group = unified_slavic	
+				any_neighbor_province = {
+					religion = south_slavic_pagan_reformed
+				}				
+			}	
+		}				
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { 
+				num_of_centers_of_reformation = { 
+					religion = south_slavic_pagan_reformed
 					count = 2 
 				} 
 			}
@@ -876,19 +1275,36 @@ finnish_pagan_reformed_center_of_reformation = {
 			owner = {
 				religion = finnish_pagan_reformed
 			}
-		}
+		}	
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group =	finno_ugric }				
-			}	
-		}				
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = finnic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group =	finno_ugric		
+					owner = { religion = finnish_pagan_reformed }
+					pw_finnish_pagan_reformed_spawn_area = yes
+					any_neighbor_province = { religion = finnish_pagan_reformed } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture_group = finno_ugric
+				any_neighbor_province = {
+					religion = finnish_pagan_reformed
+				}				
 			}	
-		}	
+		}		
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -941,14 +1357,29 @@ egyptian_pagan_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = egyptian_group }
-				NOT = { culture = sudanese_arabic }
-				NOT = { culture = old_egyptian }
-				NOT = { culture = al_misr_arabic }			
-			}	
-		}				
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion = coptic #In this case the Coptics in the Nile are also effected
+					religion_group = egyptian_pagan_group #Any heretics may get converted, if they had any... that is
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = {
+					culture_group = egyptian_group
+					culture = sudanese_arabic
+					culture = old_egyptian
+					culture = al_misr_arabic
+					owner = { religion = egyptian_pagan }
+					pw_egyptian_pagan_spawn_area = yes 
+					any_neighbor_province = { religion = egyptian_pagan } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
@@ -956,6 +1387,7 @@ egyptian_pagan_center_of_reformation = {
 				culture = sudanese_arabic
 				culture = old_egyptian
 				culture = al_misr_arabic
+				any_neighbor_province = { religion = egyptian_pagan }				
 			}	
 		}			
 		modifier = {
@@ -1014,21 +1446,36 @@ canaanite_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture = tunisian }
-				NOT = { culture = algerian }
-				NOT = { culture = moroccan }			
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = canaanite_group #Any heretics may get converted, if they had any... that is
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = {
+					culture = tunisian
+					culture = algerian
+					culture = moroccan
+					owner = { religion = canaanite }
+					pw_canaanite_spawn_area = yes 
+					any_neighbor_province = { religion = canaanite } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture = tunisian
 				culture = algerian
 				culture = moroccan
+				any_neighbor_province = { religion = canaanite }				
 			}	
-		}			
+		}		
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1085,23 +1532,42 @@ zoroastrian_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = iranian }	
-				culture = baluchi
-				culture = afghani
-				culture = tajik
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = zoroastrian_group #Any heretics may get converted, if they had any... that is
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					AND = {
+						culture_group = iranian
+						NOT = { culture = baluchi }
+						NOT = { culture = afghani }
+						NOT = { culture = tajik	}
+					}
+					owner = { religion = zoroastrian }
+					pw_zoroastrian_spawn_area = yes
+					any_neighbor_province = { religion = zoroastrian } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
-				culture_group = iranian
-				NOT = { culture = baluchi }
-				NOT = { culture = afghani }
-				NOT = { culture = tajik	}
+				AND = {
+					culture_group = iranian
+					NOT = { culture = baluchi }
+					NOT = { culture = afghani }
+					NOT = { culture = tajik	}
+				}
+				any_neighbor_province = { religion = zoroastrian }			
 			}	
-		}	
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1158,15 +1624,34 @@ zalmoxian_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = dacian }	
-			}	
-		}				
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = dacian_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = dacian		
+					owner = { religion = zalmoxian }
+					pw_zalmoxian_spawn_area = yes
+					any_neighbor_province = { religion = zalmoxian } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
-			culture_group = dacian
-		}	
+			OR = {
+				culture_group = dacian
+				any_neighbor_province = {
+					religion = zalmoxian
+				}				
+			}	
+		}		
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1223,17 +1708,31 @@ arabic_pagan_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture = gulf_arabic }
-				NOT = { culture = bedouin_arabic }
-				NOT = { culture = hejazi_culture }
-				NOT = { culture = omani_culture }
-				NOT = { culture = yemeni_culture }
-				NOT = { culture = true_bedouin }
-				NOT = { culture = mashriqi }	
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = arabic_pagan_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture = gulf_arabic 
+					culture = bedouin_arabic
+					culture = hejazi_culture
+					culture = omani_culture
+					culture = yemeni_culture
+					culture = true_bedouin
+					culture = mashriqi
+					owner = { religion = arabic_pagan } 
+					any_neighbor_province = { religion = arabic_pagan } #Can only spread out from centers, not randomly
+					pw_arabic_pagan_spawn_area = yes 
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
@@ -1244,8 +1743,9 @@ arabic_pagan_center_of_reformation = {
 				culture = yemeni_culture
 				culture = true_bedouin
 				culture = mashriqi
+				any_neighbor_province = { religion = arabic_pagan }			
 			}	
-		}	
+		}				
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1302,19 +1802,36 @@ ashurist_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture = al_iraqiya_arabic }
-				NOT = { culture = al_suryah_arabic }
-			}	
-		}				
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = arabic_pagan_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture = al_iraqiya_arabic
+					culture = al_suryah_arabic
+					culture = mashriqi
+					owner = { religion = ashurist }
+					pw_ashurist_spawn_area = yes
+					any_neighbor_province = { religion = arabic_pagan } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture = al_iraqiya_arabic
 				culture = al_suryah_arabic
+				culture = mashriqi
+				any_neighbor_province = { religion = ashurist }				
 			}	
-		}	
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1371,21 +1888,36 @@ zunist_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture = baluchi }
-				NOT = { culture = afghani }
-				NOT = { culture = tajik	}
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = dharmic #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture = baluchi
+					culture = afghani
+					culture = tajik
+					owner = { religion = zunist }
+					pw_zunist_spawn_area = yes
+					any_neighbor_province = { religion = zunist } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture = baluchi
 				culture = afghani
 				culture = tajik
+				any_neighbor_province = { religion = zunist }				
 			}	
-		}	
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1442,15 +1974,29 @@ jainism_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = hindusthani }
-				NOT = { culture_group = western_aryan }
-				NOT = { culture_group = eastern_aryan }
-				NOT = { culture_group = dravidian }
-				NOT = { culture_group = central_indic }
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = dharmic #Any heretics may get converted (who are also the primary religion in the area anyway)
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group = hindusthani
+					culture_group = western_aryan
+					culture_group = eastern_aryan
+					culture_group = dravidian
+					culture_group = central_indic
+					owner = { religion = jainism }
+					pw_jainism_spawn_area = yes
+					any_neighbor_province = { religion = jainism } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
@@ -1459,8 +2005,9 @@ jainism_center_of_reformation = {
 				culture_group = eastern_aryan
 				culture_group = dravidian
 				culture_group = central_indic
+				any_neighbor_province = { religion = jainism }				
 			}	
-		}	
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1517,11 +2064,14 @@ tengri_pagan_reformed_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = tartar } #Base BT and CI compatibility hell yeah
-				NOT = { culture_group = kipchak }
-				NOT = { culture_group = oghur }
+			factor = 0
+			NOT = {
+				OR = { 
+					culture_group = tartar #Base BT and CI compatibility hell yeah
+					culture_group = kipchak
+					culture_group = oghur
+					any_neighbor_province = { religion = tengri_pagan_reformed } #Can only spread out from centers, not randomly
+				}	
 			}	
 		}			
 		modifier = {
@@ -1531,7 +2081,38 @@ tengri_pagan_reformed_center_of_reformation = {
 				culture_group = kipchak
 				culture_group = oghur
 			}	
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = tengri_group #Any heretics may get converted
+				}	
+			}
 		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = {
+					culture_group = tartar #Base BT and CI compatibility hell yeah
+					culture_group = kipchak
+					culture_group = oghur
+					owner = { religion = tengri_pagan_reformed }
+					pw_tengri_spawn_area = yes
+					any_neighbor_province = { religion = tengri_pagan_reformed }
+				}	
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = tartar
+				culture_group = kipchak
+				culture_group = oghur
+				any_neighbor_province = { religion = tengri_pagan_reformed }				
+			}	
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1618,21 +2199,36 @@ druidic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = gaelic }
-				NOT = { culture_group = brythonic }
-				NOT = { culture_group = celtic }
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = celtic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = {
+					culture_group =	gaelic
+					culture_group =	brythonic
+					culture_group =	celtic
+					owner = { religion = druidic }
+					pw_druidic_spawn_area = yes
+					any_neighbor_province = { religion = druidic } #Can only spread out from centers, not randomly
+				}
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
 				culture_group =	gaelic
-				culture_group =	brythonic
-				culture_group =	celtic			
+				culture_group = brythonic
+				culture_group =	celtic	
+				any_neighbor_province = { religion = druidic }				
 			}	
-		}
+		}			
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1719,33 +2315,40 @@ gallo_druidic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = french }
+			factor = 0
+			NOT = {
 				OR = {
-					NOT = { culture_group =	occitanic }
-					culture = catalan
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = celtic_group #Any heretics may get converted
 				}	
-				OR = {
-					NOT = { culture_group =	occitano_romance }	
-					culture = catalan
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					AND = {
+						culture_group = occitano_romance
+						NOT = { culture = catalan }
+					}
+					culture_group =	french
+					owner = { religion = gallo_druidic }
+					pw_gallic_spawn_area = yes
+					any_neighbor_province = { religion = gallo_druidic } #Can only spread out from centers, not randomly
 				}
-			}	
-		}			
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
-				culture_group =	french
-				OR = {
-					culture_group =	occitanic
+				AND = {
+					culture_group = occitano_romance
 					NOT = { culture = catalan }
-				}	
-				OR = {
-					culture_group =	occitano_romance	
-					NOT = { culture = catalan }
-				}	
+				}
+				culture_group = french
+				any_neighbor_province = { religion = gallo_druidic }
 			}	
-		}
+		}				
 		modifier = {
 			factor = 1.5
 			culture_group = FROM
@@ -1832,17 +2435,144 @@ ibero_druidic_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 0.01
-			OR = {
-				NOT = { culture_group = iberian }
-				NOT = { culture = catalan }
-			}	
-		}			
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = celtic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					culture = catalan
+					culture_group =	iberian
+					owner = { religion = ibero_druidic }
+					pw_celtiberic_spawn_area = yes
+					any_neighbor_province = { religion = ibero_druidic } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
 		modifier = {
 			factor = 3
 			OR = {
-				culture_group =	iberian
-				culture = catalan		
+				culture = catalan
+				culture_group =	iberian	
+				any_neighbor_province = { religion = ibero_druidic }				
+			}	
+		}		
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = ibero_druidic count = 2 } }
+		}		
+	}
+}
+
+turkic_pagan_center_of_reformation = {
+
+	religion = turkic_pagan
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = turkic_pagan
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = muslim #Will only effect Islamic provinces
+					religion_group = tengri_group #Any heretics may get converted
+				}
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = { 
+					culture = turkish
+					owner = { religion = turkic_pagan }
+					pw_turkic_spawn_area = yes
+					any_neighbor_province = { religion = turkic_pagan } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture = turkish	
+				any_neighbor_province = { religion = turkic_pagan }				
 			}	
 		}
 		modifier = {
@@ -1853,7 +2583,7 @@ ibero_druidic_center_of_reformation = {
 			factor = 2
 			culture_group = FROM
 			development = 10
-			NOT = { num_of_centers_of_reformation = { religion = ibero_druidic count = 2 } }
+			NOT = { num_of_centers_of_reformation = { religion = turkic_pagan count = 2 } }
 		}		
 	}
 }

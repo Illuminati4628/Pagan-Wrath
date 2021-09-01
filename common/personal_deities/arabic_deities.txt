@@ -1,5 +1,6 @@
-amm = 
-{
+# Each religion with personal deities is to have 6
+#Wathanist
+amm = {
 	army_tradition = 1
 	discipline = 0.05
 	
@@ -19,8 +20,7 @@ amm =
 	}	
 }
 
-shams = 
-{
+shams = {
 	manpower_recovery_speed = 0.2
 	hostile_attrition = 1
 	
@@ -40,8 +40,7 @@ shams =
 	}	
 }
 
-athtar = 
-{
+athtar = {
 	global_unrest = -1
 	infantry_power = 0.1
 	
@@ -57,8 +56,7 @@ athtar =
 	}	
 }
 
-almaqah = 
-{
+almaqah = {
 	leader_land_fire = 1
 	legitimacy = 0.5
 	republican_tradition = 0.5
@@ -81,8 +79,7 @@ almaqah =
 	}	
 }
 
-talab = 
-{
+talab = {
 	production_efficiency = 0.1
 	leader_land_shock = 1
 	
@@ -98,8 +95,7 @@ talab =
 	}	
 }
 
-wadd = 
-{
+wadd = {
 	diplomats = 1
 	diplomatic_upkeep = 1
 	

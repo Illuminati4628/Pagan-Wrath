@@ -1,3 +1,119 @@
+Version 0.7.1.0
+  Bug Fixes
+   - Fixed missing localisation for some modifiers
+  Changes
+   - Pagan religions now spread out from neighbouring provinces of CoRs rather then randomly within the range of them, should result in a little less messy spread  
+  Additions
+   - Added Brethren pirate religion, uses the islamic schools effects
+   - Added Secular 'religion' can be obtained in the age of revolutions, uses buffed harmony mechanics.
+Version 0.7.0.2
+
+  Bug Fixes
+   - Fixed a Canaanite Deity not giving a build time reduction modifier.
+   - Some error log stuff that the average player probably wouldn't notice
+  Changes
+   -   
+  Additions
+   -    
+Version 0.7.0.1
+
+  Bug Fixes
+   - Fixed Tengri Group nations not getting the claim Mandate CB. (Yes this does mean that a Turkic ottomans could claim the mandate if they somehow end up bordering China)
+  Changes
+   -
+  Additions
+   - Added new Kemetic and Celtic religion sounds courtesy of ComradDoge | Shattered Europa
+  
+Version 0.7.0.0
+
+  Bug Fixes
+   - Various Vanilla religions not having sounds because PDX.
+   - Turkic religion not having sounds because Illuminati.
+   - Fixed missing missionaries (as in the guy on the map when you're converting provinces) for Tengri and New World pagan groups
+   
+  Changes   
+   - Reworked Ritualist into Pajelança
+   - Reworked Plenty of religion country modifiers (many were duplicates or a little OP, one of them had bloody 20% discipline wtf why did I do that)
+   - Changed the placeholder deity icon to be a little cleaner.
+  Additions
+   - Added Personal Deities for Pajelança
+   - Added Admapu religion for Patagonia
+   - Added Zemi religion for the Caribbean Islands and nearby coastal South America
+   
+Version 0.6.3.1
+
+  Bug Fixes
+   - Fixed Rodunic and Sudunic using the wrong icons
+
+Version 0.6.3.0
+
+  Bug Fixes
+   - I'm not sure if there were any, I'm horrible with organising sometimes
+   - Probably introduced some... keep an eye out for em, they are jerks and say mean things, such as; "Hey snail, you're shell looks like a rabbit puked on a turd!" Just really mean guys honestly.
+  
+  Changes
+   - Changed expansion events MTTH from 10 years up to 25, this should make it so that there may not be 3 CoRs from the events, but nations converting may still spawn them
+   - Pagan Expansion events are no longer considered major, it was getting way too spammy
+   - Renamed Tengri to Uighur and moved it from the pagan group into a new Tengri group, with Turkic
+   - Moved Shamanist to the new Tengri group and renamed it to Siberian, also recoloured it to be an icy blue
+   - Reworked Pagan Spread to only spread to provinces outside of their home region (area their centres can spawn in) if the province is from the expected culture or owned by a nation following that religion, i.e. Anglic will only spread into Ireland if it has been converted to a culture in the British Group or England already owns it whilst being Anglic
+    - Also reworked the spread to no longer effect other pagans, unless the pagans are heretics
+  Additions
+   - Added Turkic Religion
+   - Added Tengri religion group for Turkic and Uighur
+
+Version 0.6.2
+  
+  Bug Fixes
+   - Fixed toggle for Celtiberic and Gallic not actually disabling the religions
+   - Fixed diety icons because I can't count apparantly
+
+Version STRENG GEHEIM
+  - Did something horrible
+
+Version 0.6.1
+
+  Bug Fixes
+   - Fixed Establish Official Religious Authority decision being repeatable
+   - Fixed Celtic faiths missing holy war name
+   - Fixed Gallic, Celtiberic, Sudunic and Rodunic not having proper conversion options, meaning you couldn't convert to them (may have been fixed in the last update but I forgot to note it so here it is)
+
+Version 0.6.0
+
+  Bug Fixes
+   - While probably not noticed for English users, fixed missing or outdated localisation in the French, German and Spanish files, though note these are still in English
+   
+  Changes
+   - Tweaked the adopt Apotheosian decision to convert provinces that have either have or neighbour 30 dev provinces, down from 40
+
+  Additions
+   - Added 7 new personal deities to Apotheosian, though they aren't dieties in the traditional sense, more so what the current ruler is going to ascend to.
+   - Added 4 new personal deities to Canaanite, now they have 6 like most other pagans, though currently icons are placeholder
+   - Added decision for Christians to convert to Apotheosian after the Apotheosian Dominance event occurs through the decision.
+
+Version 0.5.3
+
+  Bug Fixes
+   - Fixed missing Rodunic and Sudunic CoRs
+   - Fixed Gaelic CoRs potentially spawning in Lower Brittany
+   - Localised Gallic and Celtiberic CoRs
+   - Hopefully fixed the Expansion Event spam
+   
+  Changes
+   - Changed events to not spawn CoRs in provinces with religious centers  
+
+Version 0.5.2
+
+  Bug Fixes
+   - Fixed crash when opening cathar religion screen when running heresy
+   - Hopefully fixed certain religions not spawning until after a reload
+   - Fixed scrolling in the decision menu getting locked when opening the toggle menu, by deleting them
+   
+  Changes
+   - Reverted religions spawn via cultures back to using preset regions, not sure why past me ever decided to change something that was working fine...
+   - Changed the religion toggles from decisions to event menus
+
+
 Version 0.5.1
 
  Changes
@@ -13,7 +129,7 @@ Version 0.5
 
  Changes
   - Cleaned up the changelog.
-  - Completely changed how centers of resurgence appear, rather than appearing in set areas they can now appear on any respective culture/group as long as it's on the correct continent. This means if a player manages to wipe out a culture/culture group before the CoR spawns that religion can no longer appear. Though that probably won't happen... unless you're Vlindemann
+  - Completely changed how centers of resurgence appear, rather than appearing in set areas they can now appear on any respective culture/group as long as it's on the correct continent. This means if a player manages to wipe out a culture/culture group before the CoR spawns that religion can no longer appear. 
   - Renamed Druidic to Gaelic and tweaked its colour to be less similar to the Muslims
   - Renamed Arabic (the pagan religion) to Wathanist
   - Renamed Slavic to Prabohnic (more on this in additions)

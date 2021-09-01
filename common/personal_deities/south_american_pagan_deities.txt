@@ -1,0 +1,114 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+# Each religion with personal deities is to have at least 6
+
+tupan = { #Hunt and Artisanry
+	land_attrition = -0.05
+	build_cost = -0.1
+	
+	allow = { religion = south_american_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}			
+	}	
+}
+
+jaci = { #Moon and protector of the night
+	envoy_travel_time = -0.1
+	global_missionary_strength = 0.02
+	
+	allow = { religion = south_american_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}	
+}
+
+guaraci = { #The Sun
+	land_morale = 0.05
+	shock_damage_received = -0.05
+	
+	allow = { religion = south_american_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+anhanga = { #Underworld
+	yearly_corruption = -0.05
+	production_efficiency = 0.05
+	
+	allow = { religion = south_american_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+ceuci = { #Guardian of homes and workplaces
+	defensiveness = 0.10
+	development_cost = -0.05
+	
+	allow = { religion = south_american_pagan }
+	sprite = 91 #Placeholder for now
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+ruda = { #Love
+	manpower_recovery_speed = 0.10
+	heir_chance = 0.25
+	
+	allow = { religion = south_american_pagan }
+	sprite = 91 #Placeholder for now
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+	}	
+}

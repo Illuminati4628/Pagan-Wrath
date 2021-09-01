@@ -9,3 +9,27 @@ imperial_hellenic_religious_center = {
 	
 	local_missionary_strength = -0.05
 }
+
+bt_birkarls = {
+	potential = {
+		owner = {
+			religion_group = christian
+			tag = SWE #For now. They could be used by other tags later down the line, would it would require a way of revoking them.
+		}
+	}
+	trigger = {
+		culture = sapmi
+		religion = finnish_pagan_reformed
+		is_state = yes
+		owner = {
+			NOT = {
+				has_country_modifier = vasa_centralization_reforms
+			}
+		}
+	}
+	
+	local_unrest = -4
+	min_local_autonomy = 75
+	local_tax_modifier = 0.25
+	trade_goods_size_modifier = 0.25
+}

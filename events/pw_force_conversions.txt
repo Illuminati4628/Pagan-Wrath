@@ -7,7 +7,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = norse_pagan_reformed }
+		ROOT = { any_owned_province = { religion = norse_pagan_reformed } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { norse_pagan_reformed = 5 }
 		NOT = { religion = norse_pagan_reformed }
@@ -110,7 +110,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = insular_germanic }
+		ROOT = { any_owned_province = { religion = insular_germanic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { insular_germanic = 5 }
 		NOT = { religion = insular_germanic }
@@ -213,7 +213,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = continental_germanic }
+		ROOT = { any_owned_province = { religion = continental_germanic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { continental_germanic = 5 }
 		NOT = { religion = continental_germanic }
@@ -316,7 +316,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = druidic }
+		ROOT = { any_owned_province = { religion = druidic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { druidic = 5 }
 		NOT = { religion = druidic }
@@ -423,7 +423,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = latin_hellenic }
+		ROOT = { any_owned_province = { religion = latin_hellenic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { latin_hellenic = 5 }
 		NOT = { religion = latin_hellenic }
@@ -531,7 +531,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = greek_hellenic }
+		ROOT = { any_owned_province = { religion = greek_hellenic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { greek_hellenic = 5 }
 		NOT = { religion = greek_hellenic }
@@ -634,7 +634,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = baltic_pagan_reformed }
+		ROOT = { any_owned_province = { religion = baltic_pagan_reformed } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { baltic_pagan_reformed = 5 }
 		NOT = { religion = baltic_pagan_reformed }
@@ -737,7 +737,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = slavic_pagan_reformed }
+		ROOT = { any_owned_province = { religion = slavic_pagan_reformed } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { slavic_pagan_reformed = 5 }
 		NOT = { religion = slavic_pagan_reformed }
@@ -845,7 +845,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = finnish_pagan_reformed }
+		ROOT = { any_owned_province = { religion = finnish_pagan_reformed } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { finnish_pagan_reformed = 5 }
 		NOT = { religion = finnish_pagan_reformed }
@@ -948,7 +948,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = egyptian_pagan }
+		ROOT = { any_owned_province = { religion = egyptian_pagan } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { egyptian_pagan = 5 }
 		NOT = { religion = egyptian_pagan }
@@ -1056,7 +1056,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = canaanite }
+		ROOT = { any_owned_province = { religion = canaanite } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { canaanite = 5 }
 		NOT = { religion = canaanite }
@@ -1163,7 +1163,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = zalmoxian }
+		ROOT = { any_owned_province = { religion = zalmoxian } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { zalmoxian = 5 }
 		NOT = { religion = zalmoxian }
@@ -1266,7 +1266,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = arabic_pagan }
+		ROOT = { any_owned_province = { religion = arabic_pagan } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { arabic_pagan = 5 }
 		NOT = { religion = arabic_pagan }
@@ -1377,7 +1377,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = ashurist }
+		ROOT = { any_owned_province = { religion = ashurist } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { ashurist = 5 }
 		NOT = { religion = ashurist }
@@ -1483,7 +1483,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = tengri_pagan_reformed }
+		ROOT = { any_owned_province = { religion = tengri_pagan_reformed } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { tengri_pagan_reformed = 5 }
 		NOT = { religion = tengri_pagan_reformed }
@@ -1590,7 +1590,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = zoroastrian }
+		ROOT = { any_owned_province = { religion = zoroastrian } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { zoroastrian = 5 }
 		NOT = { religion = zoroastrian }
@@ -1698,7 +1698,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = gallo_druidic }
+		ROOT = { any_owned_province = { religion = gallo_druidic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { gallo_druidic = 5 }
 		NOT = { religion = gallo_druidic }
@@ -1811,7 +1811,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		ROOT = any_owned_province = { religion = ibero_druidic }
+		ROOT = { any_owned_province = { religion = ibero_druidic } }
 		NOT = { religious_unity = 0.9 }
 		religion_years = { ibero_druidic = 5 }
 		NOT = { religion = ibero_druidic }

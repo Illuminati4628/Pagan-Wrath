@@ -156,7 +156,7 @@
  pw_reformation.20.a:0 "This is just a mere cult, nothing more... right?"
 
  pw_expansion.20.t:0 "The Tengri Faith's Expansion!"
- pw_expansion.20.d:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.20.desc:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.20.a:0 "Perhaps this is more than a mere cult..."
  
  pw_reformation.21.t:0 "The Gallic Faith's Resurgence!"
@@ -175,8 +175,17 @@
  pw_expansion.22.d:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
  pw_expansion.22.a:0 "Perhaps this is more than a mere cult..." 
  
- pw_hellenic.1.t:0 "Hellenic Dominance"
- pw_hellenic.1.d:0 "The Hellenic faiths have captured and converted all 5 cities of the old Pentarchy, enforcing their dominance over the Christians. Once more will the gods of the Greeks and Romans rule across the mediterranean, while Christianity fades into obscurity in the region."
+ pw_reformation.23.t:0 "The Turkic Faith's Resurgence!"
+ pw_reformation.23.d:0 "The old Turkic faith has reformed in [Root.GetName]!"
+ pw_reformation.23.a:0 "This is just a mere cult, nothing more... right?"
+
+ pw_expansion.23.t:0 "The Turkic Faith's Expansion!"
+ pw_expansion.23.d:0 "This reformed faith has spread its influence and formed a new religious center in [Root.GetName]!"
+ pw_expansion.23.a:0 "Perhaps this is more than a mere cult..."  
+ 
+ 
+ pw_hellenic.1.t:0 "Apotheosian Dominance"
+ pw_hellenic.1.d:0 "The Apotheosian faith has captured and converted all 5 cities of the old Christian Pentarchy, enforcing their dominance over the Christians. Once more will the gods of the Greeks and Romans rule across the mediterranean, while Christianity fades into obscurity in the region."
  pw_hellenic.1.a:0 "A Glorious Achievement!"
  
  pw_forceconversion.1.t:0 "The Norse followers demand conversion!"
@@ -254,8 +263,8 @@
  pw_harmonisations.2.t:0 "Harmonisation of Celtic Faiths"
  pw_harmonisations.2.d:0 "We have managed to integrate the Celtic faiths and customs into our own."
  pw_harmonisations.2.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
- pw_harmonisations.3.t:0 "Harmonisation of Hellenic Faiths"
- pw_harmonisations.3.d:0 "We have managed to integrate the Hellenic faiths and customs into our own."
+ pw_harmonisations.3.t:0 "Harmonisation of Hellenistic Faiths"
+ pw_harmonisations.3.d:0 "We have managed to integrate the Hellenistic faiths and customs into our own."
  pw_harmonisations.3.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
  pw_harmonisations.4.t:0 "Harmonisation of Balto-Slavic Faiths"
  pw_harmonisations.4.d:0 "We have managed to integrate the Balto-Slavic faiths and customs into our own."
@@ -280,7 +289,7 @@
  pw_harmonisations.10.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
  pw_harmonisations.11.d:0 "We have managed to integrate the New World Pagan faiths and customs into our own."
  pw_harmonisations.11.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
- pw_harmonisations.12.d:0 "We have managed to integrate the Turko-Mongol faiths and customs into our own."
+ pw_harmonisations.12.d:0 "We have managed to integrate the Tengri faiths and customs into our own."
  pw_harmonisations.12.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'" 
  #Tooltips
 
@@ -291,3 +300,80 @@
  fatefullcollision:0 "A fateful collision..."
  heirnightmares:0 "[Root.Heir.GetName]'s dreams are plagued with nightmares..."
  thesunrises:0 "The Sun Rises..."
+
+ pw_toggle_menu.1.title:0 "Pagan Toggle Menu"
+ pw_toggle_menu.1.desc:0 "In this menu you can choose to disable or enable specific pagan religions."
+ 
+ pw_toggle_menu.1.a:0 "Disable Norse"
+ pw_toggle_menu.1.b:0 "Enable Norse"
+ 
+ pw_toggle_menu.1.c:0 "Disable Anglic"
+ pw_toggle_menu.1.d:0 "Enable Anglic"
+ 
+ pw_toggle_menu.1.e:0 "Disable Tuistic"
+ pw_toggle_menu.1.f:0 "Enable Tuistic"
+ 
+ pw_toggle_menu.1.g:0 "Disable Gaelic"
+ pw_toggle_menu.1.h:0 "Enable Gaelic"
+ 
+ pw_toggle_menu.1.i:0 "Disable Gallic"
+ pw_toggle_menu.1.j:0 "Enable Gallic"
+ 
+ pw_toggle_menu.1.k:0 "Disable Celtiberic"
+ pw_toggle_menu.1.l:0 "Enable Celtiberic"
+ 
+ pw_toggle_menu.1.m:0 "Disable Latin"
+ pw_toggle_menu.1.n:0 "Enable Latin"
+ 
+ pw_toggle_menu.1.o:0 "Disable Hellenic"
+ pw_toggle_menu.1.p:0 "Enable Hellenic"
+ 
+ pw_toggle_menu.1.q:0 "Disable Romuva"
+ pw_toggle_menu.1.r:0 "Enable Romuva"
+ 
+ pw_toggle_menu.1.s:0 "Disable Prabohnic"
+ pw_toggle_menu.1.t:0 "Enable Prabohnic"
+ 
+ pw_toggle_menu.1.u:0 "Disable Rodunic"
+ pw_toggle_menu.1.v:0 "Enable Rodunic"
+ 
+ pw_toggle_menu.1.w:0 "Disable Sudunic"
+ pw_toggle_menu.1.x:0 "Enable Sudunic"
+ 
+ pw_toggle_menu.1.y:0 "Disable Finnic"
+ pw_toggle_menu.1.z:0 "Enable Finnic"
+ 
+ pw_toggle_menu.1.aa:0 "Disable Kemetic"
+ pw_toggle_menu.1.ab:0 "Enable Kemetic"
+ 
+ pw_toggle_menu.1.ac:0 "Disable Canaanite"
+ pw_toggle_menu.1.ad:0 "Enable Canaanite"
+ 
+ pw_toggle_menu.1.ae:0 "Disable Zalmoxian"
+ pw_toggle_menu.1.af:0 "Enable Zalmoxian"
+ 
+ pw_toggle_menu.1.ag:0 "Disable Wathanist"
+ pw_toggle_menu.1.ah:0 "Enable Wathanist"
+ 
+ pw_toggle_menu.1.ai:0 "Disable Ashurist"
+ pw_toggle_menu.1.aj:0 "Enable Ashurist"
+ 
+ pw_toggle_menu.1.ak:0 "Disable Jainism"
+ pw_toggle_menu.1.al:0 "Enable Jainism"
+ 
+ pw_toggle_menu.1.am:0 "Disable Zunist"
+ pw_toggle_menu.1.an:0 "Enable Zunist"
+ 
+ pw_toggle_menu.1.ao:0 "Disable Tengri (Central Asia)"
+ pw_toggle_menu.1.ap:0 "Enable Tengri (Central Asia)"
+ 
+ pw_toggle_menu.1.aq:0 "Disable Zoroastrian"
+ pw_toggle_menu.1.ar:0 "Enable Zoroastrian"
+ 
+ pw_toggle_menu.1.as:0 "Disable Cthuhluism"
+ pw_toggle_menu.1.at:0 "Enable Cthuhluism"
+ 
+ pw_toggle_menu.1.au:0 "Disable Turkic"
+ pw_toggle_menu.1.av:0 "Enable Turkic"
+ 
+ pw_toggle_menu.exit:0 "Exit"

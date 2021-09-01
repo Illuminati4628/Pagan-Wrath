@@ -1871,24 +1871,7 @@ pagan = {
 		}
 		
 		heretic = { SNAKE_CLAN }
-	}
-	new_shamanist = {
-		color = { 110 90 60 }
-		icon = 29
-		country = {
-			hostile_attrition = 0.1
-			land_attrition = -0.1
-		}
-		province = {
-			local_missionary_strength = 0.02
-		}
-		country_as_secondary = {
-			loot_amount = 0.25
-			global_supply_limit_modifier = 0.33
-		}
-
-		heretic = { OLD_SHAMANIST }
-	}		
+	}	
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
 		color = { 75 55 35 }
 		icon = 12
@@ -1907,16 +1890,21 @@ pagan = {
 		fetishist_cult = yes
 		heretic = { GOAT_SKULL }
 	}
-	tengri_pagan_reformed = {
-		icon = 27
-		color = { 0 175 200 }
+	dreamtime = {
+		icon = 29
+		color = { 197 133 43 }
 		country = {
-			cav_to_inf_ratio = 0.25
-			global_regiment_cost = -0.2
+			shock_damage_received = -0.05
+			diplomatic_reputation = 1
 		}
-		can_have_secondary_religion = yes
-		heretic = { OLD_TENGRI }
-	}
+		country_as_secondary = {
+			shock_damage = 0.1
+			hostile_attrition = 2
+		}
+		
+		fetishist_cult = yes
+		heretic = { WAGYLKOOP MOORAMOORA GINGARRURNDE }
+	}	
 	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pagan

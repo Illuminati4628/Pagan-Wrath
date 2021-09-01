@@ -1,0 +1,19 @@
+namespace = pw_hellenic
+
+country_event = { #Apotheosian proclaims dominance over Christianity
+	id = pw_hellenic.1
+	title =  pw_hellenic.1.t
+	desc =  pw_hellenic.1.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name =  pw_hellenic.1.a
+		add_prestige = 25
+		add_legitimacy = 25
+		PAP = { set_papacy_active = no }
+	}
+}

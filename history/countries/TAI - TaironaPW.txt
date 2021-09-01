@@ -1,1 +1,1 @@
-religion = south_american_pagan
+religion = caribbean_pagan }

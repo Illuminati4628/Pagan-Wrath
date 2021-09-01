@@ -364,7 +364,7 @@ country_event = {
 }
 
 
-#Turko-Mongol Group Harmonisation
+#Tengri Group Harmonisation
 country_event = {
 	id = pw_harmonisations.12
 	title = "pw_harmonisations.12.t"
@@ -376,8 +376,8 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { religion_group = turko_mongol_group }
-				save_event_target_as = pw_turko_mongol_group_province
+				limit = { religion_group = tengri_group }
+				save_event_target_as = pw_tengri_group_province
 			}
 			clr_country_flag = harmonization_shangdi_conflict
 			clr_country_flag = harmonization_han_kitab
@@ -390,7 +390,74 @@ country_event = {
 		name = "pw_harmonisations.12.a"
 		tooltip = {
 			add_country_modifier = {
-				name = "harmonized_turko_mongol_group"
+				name = "harmonized_tengri_group"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Eastern Group Harmonisation
+country_event = { #For secular
+	id = pw_harmonisations.13
+	title = "pw_harmonisations.13.t"
+	desc = "pw_harmonisations.13.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = eastern }
+				save_event_target_as = pw_eastern_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.13.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_eastern"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#Pirate Code Harmonisation
+country_event = {
+	id = pw_harmonisations.14
+	title = "pw_harmonisations.14.t"
+	desc = "pw_harmonisations.14.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { religion_group = pirate_code }
+				save_event_target_as = pw_pirate_code_province
+			}
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "pw_harmonisations.14.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_pirate_code"
 				duration = -1
 			}
 		}

@@ -1,5 +1,6 @@
-ashur = 
-{
+# Each religion with personal deities is to have 6
+#Ashurist
+ashur = {
 	land_morale = 0.1
 	tolerance_heretic = 2
 	
@@ -19,8 +20,7 @@ ashur =
 	}	
 }
 
-anu = 
-{
+anu = {
 	diplomatic_upkeep = 1
 	improve_relation_modifier = 0.20
 	
@@ -40,8 +40,7 @@ anu =
 	}	
 }
 
-bel = 
-{
+bel = {
 	global_tax_modifier = 0.10
 	stability_cost_modifier = -0.1
 	
@@ -57,8 +56,7 @@ bel =
 	}	
 }
 
-ea = 
-{
+ea = {
 	land_attrition = -0.1
 	core_creation = -0.1
 	
@@ -78,8 +76,7 @@ ea =
 	}	
 }
 
-shamash = 
-{
+shamash = {
 	global_unrest = -1
 	improve_relation_modifier = 0.2
 	
@@ -95,8 +92,7 @@ shamash =
 	}	
 }
 
-ramman = 
-{
+ramman = {
 	hostile_attrition = 1
 	siege_ability = 0.1
 	

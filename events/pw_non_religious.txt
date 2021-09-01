@@ -1,0 +1,170 @@
+namespace = pw_non_religious
+
+# Select Brethren School
+province_event = {
+	id = pw_non_religious.01
+	title = "pw_non_religious.01.t"
+	desc = "pw_non_religious.01.d"
+	picture = RELIGION_eventPicture
+	
+	major = no
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = pirate_code
+		OR = {
+			has_religious_school = no
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pw_non_religious.1.a #Gives areas historical school of region
+		trigger = {
+			ai = yes
+		}
+		if = { #Viking in Northern Europe or in Scandinavian Culture Group
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							region = scandinavia_region
+							region = low_countries_region
+							region = north_german_region
+							region = south_german_region
+							region = russia_region
+							region = british_isles_region
+							region = ireland_area
+							region = baltic_region
+						}
+					}
+					OR = {
+						culture_group = scandinavian #Initially just Scandinavian, but figured other Germanics should be able to get it
+						culture_group = british
+						culture_group = germanic
+					}	
+				}	
+			}
+			set_religious_school = {
+				group = non_religious
+				school = viking_school
+			}
+		}
+		else_if = { #Berber in North Africa
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							region = maghreb_region
+							region = egypt_region
+						}
+					}
+					culture = tunisian
+					culture = algerian
+					culture = moroccan
+				}
+			}
+			set_religious_school = {
+				group = non_religious
+				school = berber_school
+			}
+		}
+		else_if = { #Wokou in East Asia
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							superregion = far_east_superregion
+							superregion = china_superregion
+							region = manchuria_region
+							region = east_siberia_region
+						}
+					}
+					culture_group = japanese_g
+				}	
+			}
+			set_religious_school = {
+				group = non_religious
+				school = japanese_school
+			}
+		}
+		else_if = { #Malay in East Indies
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							superregion = east_indies_superregion
+						}
+					}
+					culture_group = malayan
+				}
+			}
+			set_religious_school = {
+				group = non_religious
+				school = malay_school
+			}
+		}
+		else = { #Remaining Brethren get this:
+			set_religious_school = {
+				group = non_religious
+				school = caribbean_school
+			}
+		}
+	}
+	option = {
+		name = pw_non_religious.1.b #Viking
+		trigger = {
+			religion = pirate_code
+			ai = no
+		}
+		set_religious_school = {
+			group = non_religious
+			school = viking_school
+		}
+	}
+	option = {
+		name = pw_non_religious.1.c #Berber
+		trigger = {
+			religion = pirate_code
+			ai = no
+		}
+		set_religious_school = {
+			group = non_religious
+			school = berber_school
+		}
+	}
+	option = {
+		name = pw_non_religious.1.d #Wokou
+		trigger = {
+			religion = pirate_code
+			ai = no
+		}
+		set_religious_school = {
+			group = non_religious
+			school = japanese_school
+		}
+	}
+	option = {
+		name = pw_non_religious.1.e #Malay
+		trigger = {
+			religion = pirate_code
+			ai = no
+		}
+		set_religious_school = {
+			group = non_religious
+			school = malay_school
+		}
+	}
+	option = {
+		name = pw_non_religious.1.f #Caribbean (generic fallback)
+		trigger = {
+			religion = pirate_code
+			ai = no
+		}
+		set_religious_school = {
+			group = non_religious
+			school = caribbean_school
+		}
+	}
+}

@@ -1,3 +1,5 @@
+# Each religion with personal deities is to have 6
+
 dieves = {
 
 	land_morale = 0.1

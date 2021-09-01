@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_german:
  pw_enable_pagans_title:0 "Enable Pagan Resurgence (100 Years)"
  pw_enable_pagans_desc:0 "Enable the Pagan Resurgence and events related to it."
  pw_pagan_religion_enabled.tt:0 "After enabling this decision, pagan religions will begin to spawn around 100 years after the decision was enabled."
@@ -11,151 +11,10 @@
  pw_enable_pagans_50_desc:0 "Enable the Pagan Resurgence and events related to it."
  pw_pagan_religion_50_enabled.tt:0 "After enabling this decision, pagan religions will begin to spawn around 50 years after the decision was enabled."
  
- pw_toggle_pagans_menu_on_title:0 "Toggle Pagan Menu"
- pw_toggle_pagans_menu_on_desc:0 "Toggles the pagan menu on, in this menu you will be able to toggle on and off the various pagan religions, all are on by default."
- pw_pagan_toggle_on.tt:0 "Toggle On"
+ pw_toggle_pagans_menu_on_title:0 "Open Pagan Menu"
+ pw_toggle_pagans_menu_on_desc:0 "Opens the pagan menu, in this menu you will be able to toggle on and off the various pagan religions, all are on by default."
+ pw_pagan_toggle_on.tt:0 ""
  
- pw_toggle_pagans_menu_off_title:0 "Toggle Pagan Menu"
- pw_toggle_pagans_menu_off_desc:0 "Toggles the pagan menu off to reduce clutter."
- pw_pagan_toggle_off.tt:0 "Toggle Off"
- 
- pw_toggle_norse_off_title:0 "Disable Norse Religion" 
- pw_toggle_norse_off_desc:0 "Disables the Norse religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_norse_on_title:0 "Reenable Norse Religion"
- pw_toggle_norse_on_desc:0 "Reenables the Norse religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_insular_germanic_off_title:0 "Disable Anglic Religion"
- pw_toggle_insular_germanic_off_desc:0 "Disables the Anglic religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_insular_germanic_on_title:0 "Reenable Anglic Religion"
- pw_toggle_insular_germanic_on_desc:0 "Reenables the Anglic religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_continental_germanic_off_title:0 "Disable Tuistic Religion"
- pw_toggle_continental_germanic_off_desc:0 "Disables the Tuistic religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_continental_germanic_on_title:0 "Reenable Tuistic Religion"
- pw_toggle_continental_germanic_on_desc:0 "Reenables the Tuistic religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_druidic_off_title:0 "Disable Gaelic Religion"
- pw_toggle_druidic_off_desc:0 "Disables the Gaelic religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_druidic_on_title:0 "Reenable Gaelic Religion"
- pw_toggle_druidic_on_desc:0 "Reenables the Gaelic religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_gallo_druidic_off_title:0 "Disable Gallic Religion"
- pw_toggle_gallo_druidic_off_desc:0 "Disables the Gallic religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_druidic_on_title:0 "Reenable Gallic Religion"
- pw_toggle_druidic_on_desc:0 "Reenables the Gallic religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_ibero_druidic_off_title:0 "Disable Celtiberic Religion"
- pw_toggle_ibero_druidic_off_desc:0 "Disables the Celtiberic religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_ibero_druidic_on_title:0 "Reenable Celtiberic Religion"
- pw_toggle_ibero_druidic_on_desc:0 "Reenables the Celtiberic religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_latin_hellenic_off_title:0 "Disable Latin Religion"
- pw_toggle_latin_hellenic_off_desc:0 "Disables the Latin religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_latin_hellenic_on_title:0 "Reenable Latin Religion"
- pw_toggle_latin_hellenic_on_desc:0 "Reenables the Latin religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_greek_hellenic_off_title:0 "Disable Hellenic Religion"
- pw_toggle_greek_hellenic_off_desc:0 "Disables the Hellenic religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_greek_hellenic_on_title:0 "Reenable Hellenic Religion"
- pw_toggle_greek_hellenic_on_desc:0 "Reenables the Hellenic religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_baltic_pagan_reformed_off_title:0 "Disable Romuva Religion"
- pw_toggle_baltic_pagan_reformed_off_desc:0 "Disables the Romuva religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_baltic_pagan_reformed_on_title:0 "Reenable Romuva Religion"
- pw_toggle_baltic_pagan_reformed_on_desc:0 "Reenables the Romuva religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_slavic_pagan_reformed_off_title:0 "Disable Prabohnic Religion"
- pw_toggle_slavic_pagan_reformed_off_desc:0 "Disables the Prabohnic (West Slavic) religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_slavic_pagan_reformed_on_title:0 "Reenable Prabohnic Religion"
- pw_toggle_slavic_pagan_reformed_on_desc:0 "Reenables the Prabohnic (West Slavic) religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_east_slavic_pagan_reformed_off_title:0 "Disable Rodunic Religion"
- pw_toggle_east_slavic_pagan_reformed_off_desc:0 "Disables the Rodunic (East Slavic) religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_east_slavic_pagan_reformed_on_title:0 "Reenable Rodunic Religion"
- pw_toggle_east_slavic_pagan_reformed_on_desc:0 "Reenables the Rodunic (East Slavic) religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_south_slavic_pagan_reformed_off_title:0 "Disable Sudunic Religion"
- pw_toggle_south_slavic_pagan_reformed_off_desc:0 "Disables the Sudunic (South Slavic) religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_south_slavic_pagan_reformed_on_title:0 "Reenable Sudunic Religion"
- pw_toggle_south_slavic_pagan_reformed_on_desc:0 "Reenables the Sudunic (South Slavic) religion and events related to it, can be toggled back off if you so wish."
-   
- pw_toggle_finnish_pagan_reformed_off_title:0 "Disable Suomenusko Religion"
- pw_toggle_finnish_pagan_reformed_off_desc:0 "Disables the Suomenusko religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_finnish_pagan_reformed_on_title:0 "Reenable Suomenusko Religion"
- pw_toggle_finnish_pagan_reformed_on_desc:0 "Reenables the Suomenusko religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_egyptian_pagan_off_title:0 "Disable Kemetic Religion"
- pw_toggle_egyptian_pagan_off_desc:0 "Disables the Kemetic (Egyptian) religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_egyptian_pagan_on_title:0 "Reenable Kemetic Religion"
- pw_toggle_egyptian_pagan_on_desc:0 "Reenables the Kemetic (Egyptian) religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_canaanite_off_title:0 "Disable Canaanite Religion"
- pw_toggle_canaanite_off_desc:0 "Disables the Canaanite religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_canaanite_on_title:0 "Reenable Canaanite Religion"
- pw_toggle_canaanite_on_desc:0 "Reenables the Canaanite religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_zalmoxian_off_title:0 "Disable Zalmoxian Religion"
- pw_toggle_zalmoxian_off_desc:0 "Disables the Zalmoxian religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_zalmoxian_on_title:0 "Reenable Zalmoxian Religion"
- pw_toggle_zalmoxian_on_desc:0 "Reenables the Zalmoxian religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_arabic_pagan_off_title:0 "Disable Wathanist Religion"
- pw_toggle_arabic_pagan_off_desc:0 "Disables the Wathanist (Arabic) religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_arabic_pagan_on_title:0 "Reenable Wathanist Religion"
- pw_toggle_arabic_pagan_on_desc:0 "Reenables the Wathanist (Arabic) religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_ashurist_off_title:0 "Disable Ashurist Religion"
- pw_toggle_ashurist_off_desc:0 "Disables the Ashurist religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_ashurist_on_title:0 "Reenable Ashurist Religion"
- pw_toggle_ashurist_on_desc:0 "Reenables the Ashurist religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_jainism_off_title:0 "Disable Jainism Religion"
- pw_toggle_jainism_off_desc:0 "Disables the Jain religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_jainism_on_title:0 "Reenable Jainism Religion"
- pw_toggle_jainism_on_desc:0 "Reenables the Jain religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_zunist_off_title:0 "Disable Zunist Religion"
- pw_toggle_zunist_off_desc:0 "Disables the Zunist religion and events related to it, can be toggled back on if you so wish."
- 
- pw_toggle_zunist_on_title:0 "Reenable Zunist Religion"
- pw_toggle_zunist_on_desc:0 "Reenables the Zunist religion and events related to it, can be toggled back off if you so wish."
- 
- pw_toggle_tengri_pagan_reformed_off_title:0 "Disable Tengri Resurgence"
- pw_toggle_tengri_pagan_reformed_off_desc:0 "Disables the Tengri resurgence on the western steppe, can be toggled back on if you so wish."
- 
- pw_toggle_tengri_pagan_reformed_on_title:0 "Reenable Tengri Resurgence"
- pw_toggle_tengri_pagan_reformed_on_desc:0 "Reenables the Tengri resurgence on the western steppe, can be toggled back off if you so wish."
- 
- pw_toggle_zoroastrian_off_title:0 "Disable Zoroastrian Resurgence"
- pw_toggle_zoroastrian_off_desc:0 "Disables the Zoroastrian resurgence, can be toggled back on if you so wish."
- 
- pw_toggle_zoroastrian_on_title:0 "Reenable Zoroastrian Resurgence"
- pw_toggle_zoroastrian_on_desc:0 "Reenables the Zoroastrian resurgence, can be toggled back off if you so wish."
- 
- pw_toggle_cthuhlu_off_title:0 "Disable Cthulhism"
- pw_toggle_cthuhlu_off_desc:0 "Disables Cthulhism, can be toggled back on if you so wish."
- 
- pw_cthuhlu_on_title:0 "Reenable Cthulhism"
- pw_cthuhlu_on_desc:0 "Reenables Cthulhism, can be toggled back off if you so wish." 
  
  pw_neoplatonic_reforms_decision_title:0 "Neoplatonic Reforms"
  pw_neoplatonic_reforms_decision_desc:0 "By establishing Neoplatonic reforms we will be able to increase the influence of our faith and help study the works of ancient phlisophers."
@@ -166,6 +25,8 @@
  pw_proclaim_imperial_hellenic_dominance_title:0 "Proclaim Apotheosian Dominance"
  pw_proclaim_imperial_hellenic_dominance_desc:0 "The time has come for the dominion of the Christians in Europe to end, the Emperor wills that the old gods will rule Europe once more!"
 
+ pw_christian_cave_to_apotheosian_title:0 "Cave to the Apotheosians
+ pw_christian_cave_to_apotheosian_desc:0 "Our faith has been shattered, the legitimacy of our church is laughable, what few devote christians remain lose increasing hope. Perhaps it is best we abandon the words of Christ completely and finally cave to the Apotheosian rule. Possibly, then, could we be respected again. We might also find protection from the new Master of the Mediterranean, considering their obvious stance against christianity."
 
  pw_mystery_cults_title:0 "Establish Mystery Cults"
  pw_mystery_cults_desc:0 "By establishing Mystery Cults we can more effectively guide unbelievers into following our gods."

@@ -132,13 +132,29 @@ harmonized_new_world_pagan = {
 	religion = yes
 }	
 
-harmonized_turko_mongol_group = {
+harmonized_tengri_group = {
 	cav_to_inf_ratio = 0.15
 	religion = yes
 }	
 
 harmonized_eldritch_group = { #This seems highly cursed... though in saying that things like the Wartgod exist so my point is probably moot.
-	reinforce_speed = 0.05
+	siege_ability = 0.10
 	religion = yes
 }	
 	
+harmonized_non_religious_group = { #
+	global_institution_spread = 0.05
+	religion = yes
+}		
+
+harmonized_eastern = { #For secularism
+	stability_cost_modifier = -0.05
+	religion = yes
+}
+
+#Religion
+
+harmonized_pirate_code = {
+	heavy_ship_power = 0.05
+	religion = yes
+}	

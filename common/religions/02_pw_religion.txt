@@ -14,11 +14,15 @@ christian = {
 			continental_germanic
 			insular_germanic
 			druidic
+			gallo_druidic
+			ibero_druidic
 			latin_hellenic
 			greek_hellenic
 			finnish_pagan_reformed
 			baltic_pagan_reformed
 			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
 			zalmoxian
 		}
 	}
@@ -47,6 +51,8 @@ christian = {
 		allowed_conversion = {
 			continental_germanic
 			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
 		}	
 	}
 	
@@ -61,11 +67,15 @@ christian = {
 			continental_germanic
 			insular_germanic
 			druidic
+			gallo_druidic
+			ibero_druidic			
 			latin_hellenic
 			greek_hellenic
 			finnish_pagan_reformed
 			baltic_pagan_reformed
 			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
 			zalmoxian			
 		}
 		allowed_center_conversion = {
@@ -85,11 +95,15 @@ christian = {
 			continental_germanic
 			insular_germanic
 			druidic
+			gallo_druidic
+			ibero_druidic			
 			latin_hellenic
 			greek_hellenic
 			finnish_pagan_reformed
 			baltic_pagan_reformed
 			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
 			zalmoxian			
 		}
 		allowed_center_conversion = {
@@ -106,6 +120,8 @@ christian = {
 			finnish_pagan_reformed
 			baltic_pagan_reformed
 			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
 			zalmoxian
 		}	
 	}
@@ -128,6 +144,20 @@ christian = {
 			protestant
 			#waldensian
 			catholic
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			gallo_druidic
+			ibero_druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
+			zalmoxian			
 		}
 		country = {
 			tolerance_own = 2
@@ -259,6 +289,20 @@ christian = {
 		allowed_conversion = {
 			reformed
 			protestant
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			gallo_druidic
+			ibero_druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
+			zalmoxian			
 		}
 		country = {
 			legitimacy = 1
@@ -294,6 +338,20 @@ christian = {
 			protestant
 			#cathar
 			catholic
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			gallo_druidic
+			ibero_druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
+			zalmoxian			
 		}
 		country = {
 			tolerance_heretic = 1
@@ -431,6 +489,20 @@ christian = {
 			protestant
 			cathar
 			waldensian
+			norse_pagan_reformed
+			continental_germanic
+			insular_germanic
+			druidic
+			gallo_druidic
+			ibero_druidic
+			latin_hellenic
+			greek_hellenic
+			finnish_pagan_reformed
+			baltic_pagan_reformed
+			slavic_pagan_reformed
+			south_slavic_pagan_reformed
+			east_slavic_pagan_reformed
+			zalmoxian			
 		}
 		country = {
 			global_institution_spread = 0.1 #Lollards were some of the first to translate the Bible into the vernacular
@@ -517,6 +589,7 @@ muslim = {
 			ashurist
 			zunist
 			tengri_pagan_reformed
+			turkic_pagan
 		}	
 	}
 
@@ -530,6 +603,8 @@ muslim = {
 			arabic_pagan
 			ashurist
 			zunist
+			tengri_pagan_reformed
+			turkic_pagan			
 		}			
 	}
 	
@@ -543,6 +618,8 @@ muslim = {
 			arabic_pagan
 			ashurist
 			zunist
+			tengri_pagan_reformed
+			turkic_pagan			
 		}			
 	}
 #####This one is also 'added' by Heresy! However it is currently unimplemented, so don't @me, go @neo (don't actually though, that will just slow down the progress because you annoyed him)
@@ -689,14 +766,86 @@ dharmic = {
 pagan = {
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
-	center_of_religion = 2190	#Was the Great Horde's Capital, but ultimately I decided to move this to Asia
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
 		color = { 75 55 35 }
 		icon = 12
+	}	
+	animism = {
+		color = { 0 120 95 }
+		icon = 11
 	}
-	new_shamanist = {
-		color = { 110 90 60 }
+	#dreamtime = { #Not yet 1.31
 		icon = 29
+		color = { 200 75 75 }
+	}	
+}
+
+tengri_group = { #Tengri is now a group for individual Tengri religions
+	center_of_religion = 2190	#Qaraqorum
+	
+	tengri_pagan_reformed = { #Renamed to Uighur
+		icon = 27
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1445.1.1							
+		on_convert = {
+			change_religion = tengri_pagan_reformed
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}		
+		}		
+		color = { 130 180 200 }
+		country = {
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
+		}
+		country_as_secondary = {
+			cav_to_inf_ratio = 0.25
+			cavalry_power = 0.1
+		}		
+		can_have_secondary_religion = yes
+		heretic = { OLD_TENGRI }
+	}
+	turkic_pagan = { #Turkic
+		icon = 108 
+		allowed_center_conversion = {
+			sunni
+			shiite
+			ibadi
+		}
+		date = 1445.1.1							
+		on_convert = {
+			change_religion = turkic_pagan
+			add_prestige = -100
+			remove_country_modifier = unified_islam #if you unified it why would you forsake your title?
+			
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}		
+		}		
+		color = { 130 200 170 }
+		country = {
+			cavalry_power = 0.1
+			siege_ability = 0.05
+		}
+		country_as_secondary = {
+			global_regiment_cost = -0.2
+			siege_ability = 0.05
+		}		
+		can_have_secondary_religion = yes
+		heretic = { OLD_TURKIC }
+	}
+	new_shamanist = { #Siberian
+		color = { 180 205 240 }
+		icon = 109
 		country = {
 			hostile_attrition = 0.1
 			land_attrition = -0.1
@@ -708,26 +857,12 @@ pagan = {
 			loot_amount = 0.25
 			global_supply_limit_modifier = 0.33
 		}
-
+		can_have_secondary_religion = yes
 		heretic = { OLD_SHAMANIST }
 	}		
-	animism = {
-		color = { 0 120 95 }
-		icon = 11
-	}
-	tengri_pagan_reformed = {
-		icon = 27
-		color = { 0 175 200 }
-	}	
-}
-
-#turko_mongol_group = { #Attempt to split tengri from the others, but for some reason kept causing crashes, I believe it is something to do with Harmonisation, for now I'll keep them in the same group.
-#	center_of_religion = 2190	#Was the Great Horde's Capital, but ultimately I decided to move this to Asia
-#		
-#
-#	crusade_name = CRUSADE
-#	harmonized_modifier = harmonized_turko_mongol_group	
-#}	
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_tengri_group
+}	
 
 new_world_pagan = {
 	totemism = {
@@ -744,6 +879,8 @@ new_world_pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
+
+		#ancestors = yes #1.31 Mechanic currently not used in my 1.30 version
 		
 		heretic = { BEAR_SPIRIT }	
 	}
@@ -816,10 +953,29 @@ new_world_pagan = {
 		heretic = { MESOAMERICAN_HERETIC }	
 	}
 	
-	south_american_pagan = {
-		color = { 10 95 60 }
+	south_american_pagan = { #Pajelança 
+		color = { 180 20 0 }
 		icon = 57 
 		country = {
+			war_exhaustion = -0.10
+			tolerance_heathen = 1
+		}
+		country_as_secondary = {
+			shock_damage = 0.10
+			global_supply_limit_modifier = 0.10
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+
+		personal_deity = yes
+		
+		heretic = { SOUTHAMERICAN_HERETIC }	
+	}
+	patagonian_pagan = { #Admapu
+		color = { 117 170 219 }
+		icon = 110
+		country = { #Just copying og south american pagan for now, get real modifiers later
 			tolerance_own = 1
 			global_tax_modifier = 0.05
 		}
@@ -830,8 +986,22 @@ new_world_pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-		heretic = { SOUTHAMERICAN_HERETIC }	
 	}
+	caribbean_pagan = { #Zemi, may be a bit misrepresentative, but oh well, information is rather scarce.
+		color = { 105 105 120 } #From the stone used in the idols
+		icon = 111
+		country = { #
+			global_trade_power = 0.05
+			shock_damage_received = -0.05
+		}
+		country_as_secondary = {
+			tolerance_own = 1
+			shock_damage = 0.10
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+	}		
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_new_world_pagan
 }	
@@ -917,7 +1087,7 @@ germanic_group = {
 		}
 		country_as_secondary = {
 			merc_maintenance_modifier = -0.1
-			galley_power = 0.2
+			galley_power = 0.10
 		}
 		
 		personal_deity = yes
@@ -965,7 +1135,7 @@ germanic_group = {
 		}
 		country_as_secondary = {
 			global_ship_cost = -0.1
-			army_tradition_decay = -0.1
+			army_tradition_decay = -0.01
 		}
 		
 		personal_deity = yes
@@ -1010,8 +1180,8 @@ germanic_group = {
 			land_attrition = -0.1
 		}
 		country_as_secondary = {
-			global_ship_cost = -0.1
-			army_tradition_decay = -0.1
+			cavalry_fire = 1
+			drill_gain_modifier = 0.05
 		}
 		personal_deity = yes
 		
@@ -1061,12 +1231,12 @@ celtic_group = {
 		date = 1445.1.1							
 		misguided_heretic = yes
 		country = {
-			land_morale = 0.1
-			land_attrition = -0.1
+			same_culture_advisor_cost = -0.25
+			hostile_attrition = 1
 		}
 		country_as_secondary = {
-			global_ship_cost = -0.1
-			army_tradition_decay = -0.1
+			siege_ability = 0.10
+			unjustified_demands = -0.1
 		}		
 			
 		personal_deity = yes
@@ -1107,12 +1277,12 @@ celtic_group = {
 		date = 1445.1.1							
 		misguided_heretic = yes
 		country = {
-			land_morale = 0.1
-			land_attrition = -0.1
+			fort_maintenance_modifier = -0.10
+			production_efficiency = 0.05
 		}
 		country_as_secondary = {
-			global_ship_cost = -0.1
-			army_tradition_decay = -0.1
+			available_province_loot = 0.10
+			culture_conversion_cost = -0.15
 		}		
 			
 		personal_deity = yes
@@ -1153,12 +1323,12 @@ celtic_group = {
 		date = 1445.1.1							
 		misguided_heretic = yes
 		country = {
-			land_morale = 0.1
-			land_attrition = -0.1
+			global_ship_recruit_speed = -0.1
+			build_time = -0.15
 		}
 		country_as_secondary = {
-			global_ship_cost = -0.1
-			army_tradition_decay = -0.1
+			privateer_efficiency = 0.15
+			global_tax_modifier = 0.05
 		}		
 			
 		personal_deity = yes
@@ -1182,7 +1352,9 @@ celtic_group = {
 		
 		heretic = { OLD_IBERO_DRUIDIC }
 	}		
-	harmonized_modifier = harmonized_celtic_group			
+	harmonized_modifier = harmonized_celtic_group	
+
+	crusade_name = HOLY_WAR		
 }
 
 hellenic_group = { #Hellenistic
@@ -1210,7 +1382,7 @@ hellenic_group = { #Hellenistic
 		}
 		country_as_secondary = {
 			global_unrest = -1
-			religious_unity = 1
+			religious_unity = 0.15
 		}		
 		personal_deity = yes
 
@@ -1246,12 +1418,12 @@ hellenic_group = { #Hellenistic
 		date = 1445.1.1				
 		misguided_heretic = yes
 		country = {
-			stability_cost_modifier = -0.1
+			culture_conversion_cost = -0.1 #Representing Latinisation of people
 			tolerance_heathen = 1
 		}
 		country_as_secondary = {
-			global_unrest = -1
-			religious_unity = 1
+			years_of_nationalism = -5
+			religious_unity = 0.15
 		}		
 		personal_deity = yes
 
@@ -1281,12 +1453,14 @@ hellenic_group = { #Hellenistic
 		misguided_heretic = yes
 		country = {
 			global_missionary_strength = 0.02
-			global_unrest = -2
+			tolerance_heretic = 3
 		}
 		country_as_secondary = {
-			global_unrest = -1
-			religious_unity = 1
+			ae_impact = -0.10
+			unjustified_demands = -0.15
 		}		
+		
+		personal_deity = yes
 		
 		date = 1445.1.1							
 		
@@ -1317,7 +1491,7 @@ balto_slavic_group = {
 		}	
 		date = 1445.1.1							
 		country = {
-			enemy_core_creation = 0.2
+			garrison_size = 0.10
 			hostile_attrition = 1
 		}
 		country_as_secondary = {
@@ -1350,7 +1524,7 @@ balto_slavic_group = {
 		heretic = { OLD_ROMUVA }	
 	}
 
-	slavic_pagan_reformed = { #Zapadoslavic
+	slavic_pagan_reformed = { #Prahbonic
 		icon = 55
 		color = { 180 120 130 }
 		allowed_center_conversion = {
@@ -1366,15 +1540,12 @@ balto_slavic_group = {
 		}
 		date = 1445.1.1							
 		country = {
-			culture_conversion_cost = -0.15
-			manpower_recovery_speed = 0.1
-		}
-		province = {
-			local_manpower_modifier = 0.1
+			reinforce_speed = 0.10
+			cavalry_shock = 1
 		}
 		country_as_secondary = {
-			manpower_recovery_speed = 0.1
-			advisor_pool = 1
+			num_accepted_cultures = 1
+			cavalry_power = 0.10
 		}
 		on_convert = {
 			change_religion = slavic_pagan_reformed
@@ -1397,8 +1568,8 @@ balto_slavic_group = {
 		heretic = { OLD_SLAVIC }
 	}
 	
-	east_slavic_pagan_reformed = { #Rusic
-		icon = 55
+	east_slavic_pagan_reformed = { #Rodunic
+		icon = 105
 		color = { 135 80 130 }
 		allowed_center_conversion = {
 			protestant	
@@ -1415,9 +1586,6 @@ balto_slavic_group = {
 		country = {
 			culture_conversion_cost = -0.15
 			manpower_recovery_speed = 0.1
-		}
-		province = {
-			local_manpower_modifier = 0.1
 		}
 		country_as_secondary = {
 			manpower_recovery_speed = 0.1
@@ -1444,8 +1612,8 @@ balto_slavic_group = {
 		heretic = { OLD_EAST_SLAVIC }
 	}
 
-	south_slavic_pagan_reformed = { #Yugoslavic
-		icon = 55
+	south_slavic_pagan_reformed = { #Sudunic
+		icon = 106
 		color = { 150 100 175 }
 		allowed_center_conversion = {
 			protestant	
@@ -1460,15 +1628,12 @@ balto_slavic_group = {
 		}
 		date = 1445.1.1							
 		country = {
-			culture_conversion_cost = -0.15
-			manpower_recovery_speed = 0.1
-		}
-		province = {
-			local_manpower_modifier = 0.1
+			global_autonomy = -0.05
+			tolerance_own = 1
 		}
 		country_as_secondary = {
-			manpower_recovery_speed = 0.1
-			advisor_pool = 1
+			war_exhaustion = -0.05
+			loot_amount = 0.10
 		}
 		on_convert = {
 			change_religion = south_slavic_pagan_reformed
@@ -1560,7 +1725,7 @@ finnic_group = {
 		date = 1445.1.1							
 		country = {
 			hostile_attrition = 1
-			defensiveness = 0.2
+			garrison_size = 0.10
 		}
 		country_as_secondary = {
 			hostile_attrition = 1
@@ -1642,16 +1807,16 @@ canaanite_group = {
 			naval_maintenance_modifier = -0.1
 			trade_efficiency = 0.1
 		}
+		country_as_secondary = {
+			fort_maintenance_modifier = -0.10
+			global_own_trade_power = 0.1
+		}		
 		allowed_center_conversion = {
 			sunni
 			shiite
 			ibadi
 		}
 		date = 1445.1.1
-		country_as_secondary = {
-			build_cost = -0.1
-			defensiveness = 0.2
-		}
 		on_convert = {
 			change_religion = canaanite
 			add_prestige = -100
@@ -1682,6 +1847,10 @@ dacian_group = {
 			defensiveness = 0.2
 			tolerance_heathen = 2
 		}
+		country_as_secondary = {
+			build_time = -0.1
+			discipline = 0.5
+		}		
 		allowed_center_conversion = {
 			catholic
 			orthodox
@@ -1694,10 +1863,6 @@ dacian_group = {
 			lollard			
 		}	
 		date = 1445.1.1							
-		country_as_secondary = {
-			build_time = -0.1
-			discipline = 0.2
-		}
 		on_convert = {
 			change_religion = zalmoxian
 			add_prestige = -100
@@ -1730,8 +1895,8 @@ arabic_pagan_group = {
 		color = { 80 210 90 }
 		icon = 101
 		country = {
-			global_trade_power = 0.1
-			defensiveness = 0.1
+			global_prov_trade_power_modifier = 0.1
+			reinforce_speed = 0.10
 		}
 		allowed_center_conversion = {
 			sunni
@@ -1772,7 +1937,7 @@ arabic_pagan_group = {
 		date = 1445.1.1
 		country_as_secondary = {
 			land_maintenance_modifier = -0.1
-			global_unrest = -1
+			build_cost = -0.1
 		}
 		on_convert = {
 			change_religion = ashurist
@@ -1805,7 +1970,7 @@ eldritch_group = {
 		}
 		country = {
 			tolerance_own = 2
-			tolerance_heretic = -5
+			#tolerance_heretic = -5 #Doesn't have any heretics at the moment
 			naval_morale = 0.15
 		}
 		country_as_secondary = {
@@ -1820,4 +1985,229 @@ eldritch_group = {
 
 	crusade_name = ELDRITCH_CRUSADE
 	
-}	
+}
+
+non_religious_group = { #For certain ideals that supercede religion such as secularism and pirate code
+	defender_of_faith = no
+	
+	religious_schools = {
+		viking_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				religion = pirate_code
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = { who = FROM value = 150 }
+				NOT = { has_country_modifier = viking_scholar_modifier }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = viking_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = viking_scholar_modifier
+
+			picture = "GFX_icon_pirate_code_school_viking"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			naval_attrition = -0.05
+			shock_damage = 0.10
+		}
+		barbary_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				religion = pirate_code
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = { who = FROM value = 150 }
+				NOT = { has_country_modifier = barbary_scholar_modifier }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = barbary_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = barbary_scholar_modifier
+
+			picture = "GFX_icon_pirate_code_school_barbary"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			sailors_recovery_speed = 0.05
+			galley_power = 0.1
+		}
+		caribbean_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				religion = pirate_code
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = { who = FROM value = 150 }
+				NOT = { has_country_modifier = caribbean_scholar_modifier }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = caribbean_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = caribbean_scholar_modifier
+
+			picture = "GFX_icon_pirate_code_school_caribbean"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			ship_durability = 0.1
+			blockade_efficiency = 0.05
+		}			
+		japanese_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				religion = pirate_code
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = { who = FROM value = 150 }
+				NOT = { has_country_modifier = japanese_scholar_modifier }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = japanese_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = japanese_scholar_modifier
+
+			picture = "GFX_icon_pirate_code_school_japanese"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			navy_tradition_decay = -0.01
+			naval_morale = 0.1
+		}		
+		malayan_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				religion = pirate_code
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = { who = FROM value = 150 }
+				NOT = { has_country_modifier = malayan_scholar_modifier }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = malayan_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = malayan_scholar_modifier
+
+			picture = "GFX_icon_pirate_code_school_malayan"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			recover_navy_morale_speed = 0.1
+			global_ship_repair = 0.1
+		}				
+	}	
+	
+	secular = { #Secular
+		color = { 25 25 25 }
+		icon = 112
+		country = {
+			global_missionary_strength = -10 #Secularism cannot exist in provinces!
+			no_religion_penalty = yes
+			global_tax_modifier = 0.1
+			stability_cost_modifier = -0.2		
+			harmonization_speed = 0.5
+			yearly_harmony = 2.5
+		}
+		country_as_secondary = {
+			no_religion_penalty = yes #This shouldn't even happen but if it somehow does have this...
+			stability_cost_modifier = -0.1
+		}
+		heretic = NOT_APPLICIBLE #No heretics should appear due to no provinces being secular
+		uses_harmony = yes #This may need a retheme...
+	}	
+	pirate_code = { #Brethren
+		color = { 15 15 30 }
+		icon = 113
+		country = {
+			capture_ship_chance = 0.05
+			heavy_ship_power = 0.75
+		}
+		country_as_secondary = {
+			naval_forcelimit_modifier = 0.05
+			capture_ship_chance = 0.05
+		}
+		heretic = PRIVATEER
+		may_perform_slave_raid_on_same_religion = yes #Why yes pirates raid pirates, though this is a little redundent because you can only get this religion by being a pirate, unless you went for rebel strats to become pirate ottomans or something else horrible
+	}
+
+	
+	harmonized_modifier = harmonized_non_religious_group 
+	
+	crusade_name = CRUSADE_STRUGGLE
+}

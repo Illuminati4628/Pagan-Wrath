@@ -1,0 +1,442 @@
+namespace = pw_toggle_menu
+
+country_event = { #Toggle Event
+	id = pw_toggle_menu.1
+	title = "pw_toggle_menu.1.title"
+	desc = "pw_toggle_menu.1.desc"
+	picture = RELIGION_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = { #Disable Norse
+		name = "pw_toggle_menu.1.a" 
+		trigger = {
+			NOT = { has_global_flag = pw_norse_toggle_off } 
+		}
+		set_global_flag = pw_norse_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Norse
+		name = "pw_toggle_menu.1.b" 
+		trigger = {
+			has_global_flag = pw_norse_toggle_off
+		}
+		clr_global_flag = pw_norse_toggle_off 
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	
+	option = { #Disable Anglic
+		name = "pw_toggle_menu.1.c" 
+		trigger = {
+			NOT = { has_global_flag = pw_insular_germanic_toggle_off } 
+		}
+		set_global_flag = pw_insular_germanic_toggle_off 
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Anglic
+		name = "pw_toggle_menu.1.d" 
+		trigger = {
+			has_global_flag = pw_insular_germanic_toggle_off 
+		}
+		clr_global_flag = pw_insular_germanic_toggle_off 
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Tuistic
+		name = "pw_toggle_menu.1.e" 
+		trigger = {
+			NOT = { has_global_flag = pw_continental_germanic_toggle_off }
+		}
+		set_global_flag = pw_continental_germanic_toggle_off 
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Tuistic
+		name = "pw_toggle_menu.1.f" 
+		trigger = {
+			has_global_flag = pw_continental_germanic_toggle_off 
+		}
+		clr_global_flag = pw_continental_germanic_toggle_off 
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Gaelic
+		name = "pw_toggle_menu.1.g" 
+		trigger = {
+			NOT = { has_global_flag = pw_druidic_toggle_off }
+		}
+		set_global_flag = pw_druidic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Gaelic
+		name = "pw_toggle_menu.1.h" 
+		trigger = {
+			has_global_flag = pw_druidic_toggle_off
+		}
+		clr_global_flag = pw_druidic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Gallic
+		name = "pw_toggle_menu.1.i" 
+		trigger = {
+			NOT = { has_global_flag = pw_gallo_druidic_toggle_off }
+		}
+		set_global_flag = pw_gallo_druidic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Gallic
+		name = "pw_toggle_menu.1.j" 
+		trigger = {
+			has_global_flag = pw_gallo_druidic_toggle_off
+		}
+		clr_global_flag = pw_gallo_druidic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Celtiberic
+		name = "pw_toggle_menu.1.k" 
+		trigger = {
+			NOT = { has_global_flag = pw_ibero_druidic_toggle_off }
+		}
+		set_global_flag = pw_ibero_druidic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Celtiberic
+		name = "pw_toggle_menu.1.l" 
+		trigger = {
+			has_global_flag = pw_ibero_druidic_toggle_off
+		}
+		clr_global_flag = pw_ibero_druidic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Latin
+		name = "pw_toggle_menu.1.m" 
+		trigger = {
+			NOT = { has_global_flag = pw_latin_hellenic_toggle_off }
+		}
+		set_global_flag = pw_latin_hellenic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Latin
+		name = "pw_toggle_menu.1.n" 
+		trigger = {
+			has_global_flag = pw_latin_hellenic_toggle_off
+		}
+		clr_global_flag = pw_latin_hellenic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Hellenic
+		name = "pw_toggle_menu.1.o" 
+		trigger = {
+			NOT = { has_global_flag = pw_greek_hellenic_toggle_off }
+		}
+		set_global_flag = pw_greek_hellenic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Hellenic
+		name = "pw_toggle_menu.1.p" 
+		trigger = {
+			has_global_flag = pw_greek_hellenic_toggle_off
+		}
+		clr_global_flag = pw_greek_hellenic_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Romuva
+		name = "pw_toggle_menu.1.q" 
+		trigger = {
+			NOT = { has_global_flag = pw_baltic_pagan_reformed_toggle_off }
+		}
+		set_global_flag = pw_baltic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Romuva
+		name = "pw_toggle_menu.1.r" 
+		trigger = {
+			has_global_flag = pw_baltic_pagan_reformed_toggle_off
+		}
+		clr_global_flag = pw_baltic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Prabohnic
+		name = "pw_toggle_menu.1.s" 
+		trigger = {
+			NOT = { has_global_flag = pw_slavic_pagan_reformed_toggle_off }
+		}
+		set_global_flag = pw_slavic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Prabohnic
+		name = "pw_toggle_menu.1.t" 
+		trigger = {
+			has_global_flag = pw_slavic_pagan_reformed_toggle_off
+		}
+		clr_global_flag = pw_slavic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Rodunic
+		name = "pw_toggle_menu.1.u" 
+		trigger = {
+			NOT = { has_global_flag = pw_east_slavic_pagan_reformed_toggle_off }
+		}
+		set_global_flag = pw_east_slavic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Rodunic
+		name = "pw_toggle_menu.1.v" 
+		trigger = {
+			has_global_flag = pw_east_slavic_pagan_reformed_toggle_off
+		}
+		clr_global_flag = pw_east_slavic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+
+	option = { #Disable Sudunic
+		name = "pw_toggle_menu.1.w" 
+		trigger = {
+			NOT = { has_global_flag = pw_south_slavic_pagan_reformed_toggle_off }
+		}
+		set_global_flag = pw_south_slavic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Sudunic
+		name = "pw_toggle_menu.1.x" 
+		trigger = {
+			has_global_flag = pw_south_slavic_pagan_reformed_toggle_off
+		}
+		clr_global_flag = pw_south_slavic_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Finnic
+		name = "pw_toggle_menu.1.y" 
+		trigger = {
+			NOT = { has_global_flag = pw_finnish_pagan_reformed_toggle_off }
+		}
+		set_global_flag = pw_finnish_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Finnic
+		name = "pw_toggle_menu.1.z" 
+		trigger = {
+			has_global_flag = pw_finnish_pagan_reformed_toggle_off 
+		}
+		clr_global_flag = pw_finnish_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Kemetic
+		name = "pw_toggle_menu.1.aa" 
+		trigger = {
+			NOT = { has_global_flag = pw_egyptian_pagan_toggle_off }
+		}
+		set_global_flag = pw_egyptian_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Kemetic
+		name = "pw_toggle_menu.1.ab" 
+		trigger = {
+			has_global_flag = pw_egyptian_pagan_toggle_off
+		}
+		clr_global_flag = pw_egyptian_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Canaanite
+		name = "pw_toggle_menu.1.ac" 
+		trigger = {
+			NOT = { has_global_flag = pw_canaanite_toggle_off }
+		}
+		set_global_flag = pw_canaanite_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Canaanite
+		name = "pw_toggle_menu.1.ad" 
+		trigger = {
+			has_global_flag = pw_canaanite_toggle_off
+		}
+		clr_global_flag = pw_canaanite_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	
+	option = { #Disable Zalmoxian
+		name = "pw_toggle_menu.1.ae" 
+		trigger = {
+			NOT = { has_global_flag = pw_zalmoxian_toggle_off }
+		}
+		set_global_flag = pw_zalmoxian_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Zalmoxian
+		name = "pw_toggle_menu.1.af" 
+		trigger = {
+			has_global_flag = pw_zalmoxian_toggle_off
+		}
+		clr_global_flag = pw_zalmoxian_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+	
+	option = { #Disable Wathanist
+		name = "pw_toggle_menu.1.ag" 
+		trigger = {
+			NOT = { has_global_flag = pw_arabic_pagan_toggle_off }
+		}
+		set_global_flag = pw_arabic_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Wathanist
+		name = "pw_toggle_menu.1.ah" 
+		trigger = {
+			has_global_flag = pw_arabic_pagan_toggle_off
+		}
+		clr_global_flag = pw_arabic_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}		
+	
+	option = { #Disable Ashurist
+		name = "pw_toggle_menu.1.ai" 
+		trigger = {
+			NOT = { has_global_flag = pw_ashurist_toggle_off }
+		}
+		set_global_flag = pw_ashurist_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Ashurist
+		name = "pw_toggle_menu.1.aj" 
+		trigger = {
+			has_global_flag = pw_ashurist_toggle_off
+		}
+		clr_global_flag = pw_ashurist_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+
+	option = { #Disable Jainism
+		name = "pw_toggle_menu.1.ak" 
+		trigger = {
+			NOT = { has_global_flag = pw_jainism_toggle_off }
+		}
+		set_global_flag = pw_jainism_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Jainism
+		name = "pw_toggle_menu.1.al" 
+		trigger = {
+			has_global_flag = pw_jainism_toggle_off
+		}
+		clr_global_flag = pw_jainism_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+
+	option = { #Disable Zunist
+		name = "pw_toggle_menu.1.am" 
+		trigger = {
+			NOT = { has_global_flag = pw_zunist_toggle_off }
+		}
+		set_global_flag = pw_zunist_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Zunist
+		name = "pw_toggle_menu.1.an" 
+		trigger = {
+			has_global_flag = pw_zunist_toggle_off
+		}
+		clr_global_flag = pw_zunist_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+
+	option = { #Disable Uighur (Central Asia)
+		name = "pw_toggle_menu.1.ao" 
+		trigger = {
+			NOT = { has_global_flag = pw_tengri_pagan_reformed_toggle_off }
+		}
+		set_global_flag = pw_tengri_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Uighur (Central Asia)
+		name = "pw_toggle_menu.1.ap" 
+		trigger = {
+			has_global_flag = pw_tengri_pagan_reformed_toggle_off
+		}
+		clr_global_flag = pw_tengri_pagan_reformed_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}		
+
+	option = { #Disable Zoroastrian
+		name = "pw_toggle_menu.1.aq" 
+		trigger = {
+			NOT = { has_global_flag = pw_zoroastrian_toggle_off }
+		}
+		set_global_flag = pw_zoroastrian_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Zoroastrian
+		name = "pw_toggle_menu.1.ar" 
+		trigger = {
+			has_global_flag = pw_zoroastrian_toggle_off
+		}
+		clr_global_flag = pw_zoroastrian_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+
+	option = { #Disable Cthuhluism
+		name = "pw_toggle_menu.1.as" 
+		trigger = {
+			NOT = { has_global_flag = pw_cthuhlu_toggle_off }
+		}
+		set_global_flag = pw_cthuhlu_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Cthuhluism
+		name = "pw_toggle_menu.1.at" 
+		trigger = {
+			has_global_flag = pw_cthuhlu_toggle_off
+		}
+		clr_global_flag = pw_cthuhlu_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+
+	
+	option = { #Disable Turkic
+		name = "pw_toggle_menu.1.au" 
+		trigger = {
+			NOT = { has_global_flag = pw_turkic_pagan_toggle_off }
+		}
+		set_global_flag = pw_turkic_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Turkic
+		name = "pw_toggle_menu.1.av" 
+		trigger = {
+			has_global_flag = pw_turkic_pagan_toggle_off
+		}
+		clr_global_flag = pw_turkic_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}		
+
+	option = { #Disable Brethren
+		name = "pw_toggle_menu.1.aw" 
+		trigger = {
+			NOT = { has_global_flag = pw_pirate_code_toggle_off }
+		}
+		set_global_flag = pw_pirate_code_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Brethren
+		name = "pw_toggle_menu.1.ax" 
+		trigger = {
+			has_global_flag = pw_pirate_code_toggle_off
+		}
+		clr_global_flag = pw_pirate_code_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+	
+	option = {
+		name = "pw_toggle_menu.exit" 
+	}
+}

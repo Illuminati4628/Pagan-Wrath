@@ -1,41 +1,43 @@
+# Each religion with personal deities is to have 6
+
 amun = {
-         global_tax_modifier = 0.1
-         navy_tradition = 1
+	global_tax_modifier = 0.1
+	navy_tradition = 1
 
-         allow = { religion = egyptian_pagan }
-         sprite = 64
+	allow = { religion = egyptian_pagan }
+	sprite = 64
 
-         ai_will_do = {
-			factor = 1
+	ai_will_do = {
+		factor = 1
 			modifier = {
-				   factor = 2
-				   personality = ai_capitalist
+				factor = 2
+				personality = ai_capitalist
 			}
 			modifier = {
-				   factor = 2
-				   personality = ai_militarist
+				factor = 2
+				personality = ai_militarist
 			}
-        }
+	}
 }
 
 maat = {
-        stability_cost_modifier = -0.10
-        global_unrest = -1
+	stability_cost_modifier = -0.10
+	global_unrest = -1
 
-        allow = { religion = egyptian_pagan }
-        sprite = 65
+	allow = { religion = egyptian_pagan }
+	sprite = 65
 
-        ai_will_do = {
-			factor = 1
-			modifier = {
-				  factor = 3
-				  personality = ai_capitalist
-			}
-			modifier = {
-				  factor = 2
-				  personality = ai_diplomat
-			}
-        }
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+	}
 }
 
 ra = {

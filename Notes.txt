@@ -1,0 +1,28 @@
+Each religion with deities should have atleast 6 options, but no more then 12
+
+Each religion group should have 3 (five including specific religion events) uniques events at least. Each individual religion should have 2 unique events at least.
+
+Each religion should have one unique decision and each group 2 unique decisions, making for 3 total
+
+religion group code names
+	christian 				# Christian
+	muslim 					# Muslim
+	eastern 				# Eastern
+	dharmic 				# Dharmic
+	pagan 					# Pagan
+	tengri_group 			# Tengri
+	new_world_pagan 		# New World Pagan
+	jewish_group 			# Jewish
+	zoroastrian_group 		# Zoroastrian
+	germanic_group 			# Germanic
+	celtic_group 			# Druidic
+	hellenic_group 			# Hellenistic
+	balto_slavic_group 		# Balto-Slavic
+	finnic_group 			# Finno-Uralic
+	egyptian_pagan_group 	# Kemetic
+	canaanite_group 		# Canaanite
+	dacian_group			# Dacian
+	arabic_pagan_group 		# Levantine
+	eldritch_group 			# Eldritch
+	
+	

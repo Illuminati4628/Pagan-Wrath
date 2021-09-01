@@ -28,39 +28,39 @@ sound = {
 }
 sound = {
 	name = defender_of_the_druidic_faith
-	file = "start_conversion_druidic.wav"
+	file = "tab_celtic_religion.wav"
 }
 sound = {
 	name = start_convert_druidic
-	file = "start_conversion_druidic.wav"
+	file = "tab_celtic_religion.wav"
 }
 sound = {
 	name = religion_druidic
-	file = "start_conversion_druidic.wav"
+	file = "tab_celtic_religion.wav"
 }
 sound = {
 	name = defender_of_the_gallo_druidic_faith
-	file = "start_conversion_druidic.wav"
+	file = "tab_celtic_religion.wav"
 }
 sound = {
 	name = start_convert_gallo_druidic
-	file = "start_conversion_druidic.wav"
+	file = "tab_celtic_religion.wav"
 }
 sound = {
 	name = religion_gallo_druidic
-	file = "start_conversion_druidic.wav"
+	file = "tab_celtic_religion.wav"
 }
 sound = {
-	name = defender_of_the_gallo_druidic_faith
-	file = "start_conversion_druidic.wav"
+	name = defender_of_the_ibero_druidic_faith
+	file = "tab_celtic_religion.wav"
 }
 sound = {
-	name = start_convert_gallo_druidic
-	file = "start_conversion_druidic.wav"
+	name = start_convert_ibero_druidic
+	file = "tab_celtic_religion.wav"
 }
 sound = {
-	name = religion_gallo_druidic
-	file = "start_conversion_druidic.wav"
+	name = religion_ibero_druidic
+	file = "tab_celtic_religion.wav"
 }
 sound = {
 	name = defender_of_the_greek_hellenic_faith
@@ -91,7 +91,7 @@ sound = {
 	file = "claim_defender_faith_imperial_hellenic.wav"
 }
 sound = {
-	name = start_convert_latin_hellenic
+	name = start_convert_imperial_hellenic
 	file = "start_conversion_imperial_hellenic.wav"
 }
 sound = {
@@ -136,15 +136,15 @@ sound = {
 }
 sound = {
 	name = defender_of_the_egyptian_pagan_faith
-	file = "start_conversion_egyptian_pagan.wav"
+	file = "tab_ancient_egyptian.wav"
 }
 sound = {
 	name = start_convert_egyptian_pagan
-	file = "start_conversion_egyptian_pagan.wav"
+	file = "tab_ancient_egyptian.wav"
 }
 sound = {
 	name = religion_egyptian_pagan
-	file = "start_conversion_egyptian_pagan.wav"
+	file = "tab_ancient_egyptian.wav"
 }
 sound = {
 	name = defender_of_the_canaanite_faith
@@ -218,5 +218,84 @@ sound = {
 	name = religion_new_shamanist
 	file = "start_conversion_new_shamanist.wav"
 }
+sound = {
+	name = start_convert_south_american_pagan
+	file = "start_conversion_south_american_pagan.wav"
+}
+sound = {
+	name = religion_south_american_pagan
+	file = "start_conversion_south_american_pagan.wav"
+}
+sound = {
+	name = start_convert_patagonian_pagan
+	file = "start_conversion_south_american_pagan.wav"
+}
+sound = {
+	name = religion_patagonian_pagan
+	file = "start_conversion_south_american_pagan.wav"
+}
+sound = {
+	name = start_convert_caribbean_pagan
+	file = "start_conversion_south_american_pagan.wav"
+}
+sound = {
+	name = religion_caribbean_pagan
+	file = "start_conversion_south_american_pagan.wav"
+}
 
-	
+#Vanilla Religions
+
+sound = { #Open religion page
+	name = religion_hussite
+	file = "tab_religion_christian.wav"
+}
+sound = {
+	name = religion_inti
+	file = "tab_religion_america.wav"
+}
+sound = {
+	name = religion_nahuatl
+	file = "tab_religion_america.wav"
+}
+sound = {
+	name = religion_mesoamerican_religion
+	file = "tab_religion_america.wav"
+}
+
+sound = { #Convert province
+	name = start_convert_shiite
+	file = "start_conversion_muslim_shiite.wav"
+}
+sound = {
+	name = defender_of_the_hussite_faith
+	file = "claim_defender_faith_protestant.wav"
+}
+sound = {
+	name = defender_of_the_anglican_faith
+	file = "claim_defender_faith_protestant.wav"
+}
+
+sound = {
+	name = start_convert_hussite
+	file = "start_conversion_christian_protestant.wav"
+}
+
+sound = {
+	name = start_convert_totemist
+	file = "start_conversion_pagan_animism.wav"
+}
+
+sound = {
+	name = start_convert_inti
+	file = "start_conversion_pagan_animism.wav"
+}
+
+sound = {
+	name = start_convert_nahuatl
+	file = "start_conversion_pagan_animism.wav"
+}
+
+sound = {
+	name = start_convert_mesoamerican_religion
+	file = "start_conversion_pagan_animism.wav"
+}

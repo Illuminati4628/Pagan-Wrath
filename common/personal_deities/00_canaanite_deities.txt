@@ -1,8 +1,8 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new dieties, make sure they are uniquely named.
-
-baal_hammon =
-{
+# Each religion with personal deities is to have 6
+#Canaanite
+baal_hammon = {
 	# (Manpower - Navy)
 	manpower_recovery_speed = 0.1
 	naval_morale = 0.1
@@ -23,8 +23,7 @@ baal_hammon =
 	}
 }
 
-tanit = 
-{
+tanit = {
 	#(Diplomatic - Economy)
 	diplomatic_reputation = 1
 	production_efficiency = 0.10
@@ -45,8 +44,7 @@ tanit =
 	}	
 }
 
-astarte =
-{
+astarte = {
 	#(Innovative - Tech/Idea)
 	idea_cost = -0.05
 	technology_cost = -0.05
@@ -66,3 +64,55 @@ astarte =
 		}			
 	}	
 }
+
+kothar_wa_hasis = {
+	#(God of Craft - Building)
+	build_time = -0.1
+	build_cost = -0.1
+	
+	allow = { religion = canaanite }
+	sprite = 91 #Placeholder for now
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}				
+	}	
+}	
+
+dagon = {
+	#God of fish/fishing
+	navy_tradition_decay = -0.01
+	global_sailors_modifier = 0.1
+	
+	allow = { religion = canaanite }
+	sprite = 91 #Placeholder for now	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}		
+	}	
+}	
+
+melqarth = {
+	#God of life and death
+	production_efficiency = 0.05
+	war_exhaustion = -0.05
+	
+	allow = { religion = canaanite }
+	sprite = 91 #Placeholder for now	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}	
+	}	
+}		
