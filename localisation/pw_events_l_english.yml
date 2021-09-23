@@ -302,7 +302,7 @@
  thesunrises:0 "The Sun Rises..."
 
  pw_toggle_menu.1.title:0 "Pagan Toggle Menu"
- pw_toggle_menu.1.desc:0 "In this menu you can choose to disable or enable specific pagan religions."
+ pw_toggle_menu.1.desc:0 "In this menu you can choose to disable or enable specific pagan (and certain other) religions."
  
  pw_toggle_menu.1.a:0 "Disable Norse"
  pw_toggle_menu.1.b:0 "Enable Norse"
@@ -375,5 +375,14 @@
  
  pw_toggle_menu.1.au:0 "Disable Turkic"
  pw_toggle_menu.1.av:0 "Enable Turkic"
+
+ pw_toggle_menu.1.aw:0 "Disable Brethren (Pirate Religion)"
+ pw_toggle_menu.1.ax:0 "Enable Brethren (Pirate Religion)" 
+ 
+ pw_toggle_menu.1.ay:0 "Disable Secular"
+ pw_toggle_menu.1.az:0 "Enable Secular" 
+ 
+ pw_toggle_menu.1.ba:0 "Disable Irreligious"
+ pw_toggle_menu.1.bb:0 "Enable Irreligious"  
  
  pw_toggle_menu.exit:0 "Exit"

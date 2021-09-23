@@ -774,7 +774,7 @@ pagan = {
 		color = { 0 120 95 }
 		icon = 11
 	}
-	#dreamtime = { #Not yet 1.31
+	dreamtime = {
 		icon = 29
 		color = { 200 75 75 }
 	}	
@@ -1052,6 +1052,16 @@ zoroastrian_group = {
 			merchants = 1
 			tolerance_own = 1
 		}
+
+		holy_sites = { 421 4430 2223 441 2235 }
+
+		blessings = {
+			blessing_yasna
+			blessing_haoma
+			blessing_navjote
+			blessing_manthras
+			blessing_dakhma
+		}		
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
@@ -1472,7 +1482,7 @@ hellenic_group = { #Hellenistic
 	crusade_name = HOLY_WAR	
 }	
 
-balto_slavic_group = {
+balto_slavic_group = { #Eastern European
 	defender_of_faith = yes
 	center_of_religion = 295
 	baltic_pagan_reformed = {
@@ -1654,17 +1664,8 @@ balto_slavic_group = {
 		personal_deity = yes
 
 		heretic = { OLD_SOUTH_SLAVIC }
-	}	
-	
-	harmonized_modifier = harmonized_balto_slavic_group
+	}
 
-	crusade_name = HOLY_WAR	
-	
-}
-
-finnic_group = {
-	defender_of_faith = yes
-	center_of_religion = 4151
 	finnish_pagan_reformed = {
 		icon = 54
 		color = { 190 110 50 }
@@ -1749,12 +1750,15 @@ finnic_group = {
 		personal_deity = yes
 		
 		heretic = { OLD_URALIC }	
-	}
-
-	harmonized_modifier = harmonized_finnic_group
+	}	
+	
+	harmonized_modifier = harmonized_balto_slavic_group
 
 	crusade_name = HOLY_WAR	
+	
 }
+
+#Cut Finnic Group and Merged into Balto-Slavic, renamed Eastern European
 
 egyptian_pagan_group = {
 	defender_of_faith = yes
@@ -1987,14 +1991,13 @@ eldritch_group = {
 	
 }
 
-non_religious_group = { #For certain ideals that supercede religion such as secularism and pirate code
-	defender_of_faith = no
-	
+pw_nonassociated = { #For certain institutions that supercede religion, only available if you enable them, rather then being enabled by default
+	defender_of_faith = no	
 	religious_schools = {
 		viking_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-				religion = pirate_code
+				religion = pw_pirate_code
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -2030,7 +2033,7 @@ non_religious_group = { #For certain ideals that supercede religion such as secu
 		barbary_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-				religion = pirate_code
+				religion = pw_pirate_code
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -2066,7 +2069,7 @@ non_religious_group = { #For certain ideals that supercede religion such as secu
 		caribbean_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-				religion = pirate_code
+				religion = pw_pirate_code
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -2102,7 +2105,7 @@ non_religious_group = { #For certain ideals that supercede religion such as secu
 		japanese_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-				religion = pirate_code
+				religion = pw_pirate_code
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -2138,7 +2141,7 @@ non_religious_group = { #For certain ideals that supercede religion such as secu
 		malayan_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-				religion = pirate_code
+				religion = pw_pirate_code
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -2170,10 +2173,24 @@ non_religious_group = { #For certain ideals that supercede religion such as secu
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			recover_navy_morale_speed = 0.1
 			global_ship_repair = 0.1
-		}				
+		}
 	}	
-	
-	secular = { #Secular
+	pw_pirate_code = { #Brethren
+		color = { 15 15 60 }
+		icon = 113
+		country = {
+			capture_ship_chance = 0.05
+			heavy_ship_power = 0.75
+		}
+		country_as_secondary = {
+			naval_forcelimit_modifier = 0.05
+			capture_ship_chance = 0.05
+		}
+		heretic = { PRIVATEER }
+		harmonized_modifier = harmonized_pw_pirate_code
+		may_perform_slave_raid_on_same_religion = yes #Why yes pirates raid pirates, though this is a little redundent because you can only get this religion by being a pirate, unless you went for rebel strats to become pirate ottomans or something else horrible
+	}
+	pw_secular = { #Secular
 		color = { 25 25 25 }
 		icon = 112
 		country = {
@@ -2188,26 +2205,26 @@ non_religious_group = { #For certain ideals that supercede religion such as secu
 			no_religion_penalty = yes #This shouldn't even happen but if it somehow does have this...
 			stability_cost_modifier = -0.1
 		}
-		heretic = NOT_APPLICIBLE #No heretics should appear due to no provinces being secular
+		heretic = { NOT_APPLICIBLE } #No heretics should appear due to no provinces being secular
 		uses_harmony = yes #This may need a retheme...
-	}	
-	pirate_code = { #Brethren
-		color = { 15 15 30 }
+	}
+	pw_irreligious = { #Irreligious, only exists in provinces, very rarely
+		color = { 25 25 25 }
 		icon = 113
 		country = {
-			capture_ship_chance = 0.05
-			heavy_ship_power = 0.75
+			global_tax_modifier = 0.05
+			technology_cost = -0.05
 		}
-		country_as_secondary = {
-			naval_forcelimit_modifier = 0.05
-			capture_ship_chance = 0.05
+		country_as_secondary = { #This makes no sense but so does adding this to a mod about pagans in the first place, very unlikely to happen though as these guys only spawn in secular nations
+			global_unrest = -2
+			global_autonomy = -0.01
 		}
-		heretic = PRIVATEER
-		may_perform_slave_raid_on_same_religion = yes #Why yes pirates raid pirates, though this is a little redundent because you can only get this religion by being a pirate, unless you went for rebel strats to become pirate ottomans or something else horrible
+		heretic = { ATHEIST }
+		#No special effects!
+		harmonized_modifier = harmonized_pw_irreligious
 	}
-
 	
-	harmonized_modifier = harmonized_non_religious_group 
+	harmonized_modifier = harmonized_nonassociated
 	
-	crusade_name = CRUSADE_STRUGGLE
-}
+	crusade_name = CRUSADE_STRUGGLE		
+}	

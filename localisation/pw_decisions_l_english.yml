@@ -40,5 +40,8 @@
  spreading_of_germanic_rituals_title:0 "Spreading of Germanic Rituals"
  spreading_of_germanic_rituals_desc:0 "Establishing Rituals for the Germanic Faith will allow us to better spread our religion to unbelievers."
  
- pw_adopt_brethren_code:0 "Adopt the Brethren Code"
- pw_adopt_brethren_code:0 "Now that we have established ourselves as a local force and done away with the religious establishment we can now proclaim a new Brethren Code for every good pirate to follow, this will allow us to better control what our crews will do at sea and in port."
+ pw_adopt_brethren_code_title:0 "Adopt the Brethren Code"
+ pw_adopt_brethren_code_desc:0 "Now that we have established ourselves as a local force, we can now proclaim a new Brethren Code for every good pirate to follow, this will allow us to better control what our crews will do at sea and in port."
+ 
+ pw_adopt_secularism_title:0 "Adopt Secularism"
+ pw_adopt_secularism_desc:0 "The time has come to separate the state and religion, we shall cease our conversion efforts and finally let all our subjects worship in peace."

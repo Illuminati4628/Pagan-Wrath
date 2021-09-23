@@ -1,7 +1,7 @@
 namespace = pw_non_religious
 
 # Select Brethren School
-province_event = {
+country_event = {
 	id = pw_non_religious.01
 	title = "pw_non_religious.01.t"
 	desc = "pw_non_religious.01.d"
@@ -11,7 +11,7 @@ province_event = {
 	
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		religion = pirate_code
+		religion = pw_pirate_code
 		OR = {
 			has_religious_school = no
 		}
@@ -47,7 +47,7 @@ province_event = {
 				}	
 			}
 			set_religious_school = {
-				group = non_religious
+				group = pw_nonassociated
 				school = viking_school
 			}
 		}
@@ -66,7 +66,7 @@ province_event = {
 				}
 			}
 			set_religious_school = {
-				group = non_religious
+				group = pw_nonassociated
 				school = berber_school
 			}
 		}
@@ -85,7 +85,7 @@ province_event = {
 				}	
 			}
 			set_religious_school = {
-				group = non_religious
+				group = pw_nonassociated
 				school = japanese_school
 			}
 		}
@@ -101,13 +101,13 @@ province_event = {
 				}
 			}
 			set_religious_school = {
-				group = non_religious
+				group = pw_nonassociated
 				school = malay_school
 			}
 		}
 		else = { #Remaining Brethren get this:
 			set_religious_school = {
-				group = non_religious
+				group = pw_nonassociated
 				school = caribbean_school
 			}
 		}
@@ -115,56 +115,155 @@ province_event = {
 	option = {
 		name = pw_non_religious.1.b #Viking
 		trigger = {
-			religion = pirate_code
+			religion = pw_pirate_code
 			ai = no
 		}
 		set_religious_school = {
-			group = non_religious
+			group = pw_nonassociated
 			school = viking_school
 		}
 	}
 	option = {
 		name = pw_non_religious.1.c #Berber
 		trigger = {
-			religion = pirate_code
+			religion = pw_pirate_code
 			ai = no
 		}
 		set_religious_school = {
-			group = non_religious
+			group = pw_nonassociated
 			school = berber_school
 		}
 	}
 	option = {
 		name = pw_non_religious.1.d #Wokou
 		trigger = {
-			religion = pirate_code
+			religion = pw_pirate_code
 			ai = no
 		}
 		set_religious_school = {
-			group = non_religious
+			group = pw_nonassociated
 			school = japanese_school
 		}
 	}
 	option = {
 		name = pw_non_religious.1.e #Malay
 		trigger = {
-			religion = pirate_code
+			religion = pw_pirate_code
 			ai = no
 		}
 		set_religious_school = {
-			group = non_religious
+			group = pw_nonassociated
 			school = malay_school
 		}
 	}
 	option = {
 		name = pw_non_religious.1.f #Caribbean (generic fallback)
 		trigger = {
-			religion = pirate_code
+			religion = pw_pirate_code
 			ai = no
 		}
 		set_religious_school = {
-			group = non_religious
+			group = pw_nonassociated
 			school = caribbean_school
 		}
+	}
+}
+
+province_event = { #Remember religion before Secular
+	id = pw_non_religious.02
+	title = "pw_non_religious.02.t"
+	desc = "pw_non_religious.02.d"
+	picture = RELIGION_eventPicture
+	
+	major = no
+	hidden = yes
+	
+	trigger = {
+		owner = { religion = pw_secular }
+	}
+
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = pre_secular_religion_var
+				value = religion
+			}
+		}
+	}
+	option = {
+		name = null
+	}
+}		
+
+province_event = { #Remove Secular from a province reverting to previous religion
+	id = pw_non_religious.03
+	title = "pw_non_religious.03.t"
+	desc = "pw_non_religious.03.d"
+	picture = RELIGION_eventPicture
+	major = no
+	hidden = yes
+	
+	trigger = {
+		religion = pw_secular
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		change_religion = variable:pre_secular_religion_var
+	}
+}	
+
+province_event = { #Spread Irreligious
+	id = pw_non_religious.04
+	title = "pw_non_religious.04.t"
+	desc = "pw_non_religious.04.d"
+	picture = RELIGION_eventPicture
+	major = no
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				owner = { religion = pw_secular }
+				enlightenment = 90
+			}
+			any_neighbor_province = {
+				religion = pw_irreligious
+			}	
+		}	
+	}
+
+	mean_time_to_happen = {
+		years = 250 #Generally a very slow process, even today there are barely any majority irreligious provinces, with the exception of state enforced areas
+		modifier = {
+			factor = 0.1
+			owner = {
+				has_country_modifer = pw_state_atheism #Down to 25 years
+			}	
+		}
+	}	
+	
+	option = {
+		change_religion = pw_irreligious
+	}
+}	
+
+country_event = { #Turn Irreligious countries Secular
+	id = pw_non_religious.05
+	title = "pw_non_religious.04.t"
+	desc = "pw_non_religious.04.d"
+	picture = RELIGION_eventPicture
+	major = no
+	hidden = yes
+	
+	trigger = {
+		religion = pw_irreligious
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		change_religion = pw_secular
 	}
 }

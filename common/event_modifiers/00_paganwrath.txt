@@ -142,7 +142,7 @@ harmonized_eldritch_group = { #This seems highly cursed... though in saying that
 	religion = yes
 }	
 	
-harmonized_non_religious_group = { #
+harmonized_nonassociated = { #
 	global_institution_spread = 0.05
 	religion = yes
 }		
@@ -154,7 +154,37 @@ harmonized_eastern = { #For secularism
 
 #Religion
 
-harmonized_pirate_code = {
+harmonized_pw_pirate_code = {
 	heavy_ship_power = 0.05
 	religion = yes
 }	
+
+harmonized_pw_irreligious = {
+	technology_cost = -0.05
+	religion = yes
+}	
+
+##################################################
+# Religious Schools Modifiers
+##################################################
+
+viking_scholar_modifier = {
+	naval_attrition = -0.05
+	shock_damage = 0.10
+}
+barbary_scholar_modifier = {
+	sailors_recovery_speed = 0.05
+	galley_power = 0.1
+}
+caribbean_scholar_modifier = {
+	ship_durability = 0.1
+	blockade_efficiency = 0.05
+}
+japanese_scholar_modifier = {
+	navy_tradition_decay = -0.01
+	naval_morale = 0.1
+}
+malayan_scholar_modifier = {
+	recover_navy_morale_speed = 0.1
+	global_ship_repair = 0.1
+}

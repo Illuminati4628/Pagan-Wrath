@@ -436,6 +436,40 @@ country_event = { #Toggle Event
 		country_event = { id = pw_toggle_menu.1 days = 0 }
 	}	
 	
+	option = { #Disable Secular
+		name = "pw_toggle_menu.1.ay" 
+		trigger = {
+			has_global_flag = pw_secular_toggle_on
+		}
+		clr_global_flag = pw_secular_toggle_on
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Secular
+		name = "pw_toggle_menu.1.az" 
+		trigger = {
+			NOT = { has_global_flag = pw_secular_toggle_on }
+		}
+		set_global_flag = pw_secular_toggle_on
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+
+	option = { #Disable Irreligious
+		name = "pw_toggle_menu.1.ba" 
+		trigger = {
+			has_global_flag = pw_irreligious_toggle_on
+		}
+		clr_global_flag = pw_irreligious_toggle_on
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Irreligious
+		name = "pw_toggle_menu.1.bb" 
+		trigger = {
+			NOT = { has_global_flag = pw_irreligious_toggle_on }
+		}
+		set_global_flag = pw_irreligious_toggle_on
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+	
 	option = {
 		name = "pw_toggle_menu.exit" 
 	}

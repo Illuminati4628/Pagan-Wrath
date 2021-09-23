@@ -188,7 +188,7 @@
  great_emperors: "Great"
  great_emperors_desc: "Some rulers are so great in almost every way, seen as pure perfection. The ruler has mastered many things and will no doubt continue to do so, perhaps even claiming the very peak of the pantheon, as the new ruler of all gods."
  
- balto_slavic_group:0 "Balto-Slavic"
+ balto_slavic_group:0 "Eastern European" #Group names can be more then one word, only things that show up on map should be one word
  
  OLD_SLAVIC: "Old Prabohnic"
  slavic_pagan_reformed_religion_desc: "Named after the supreme god Praboh, the Prabohnic religion was the ancient polytheistic belief system of the West Slavic peoples."
@@ -278,7 +278,7 @@
  saule_desc: "Saule is the goddess of the Sun. She is often associated with life, fertility and health."
  
  
- finnic_group:0 "Finno-Uralic"
+ #finnic_group:0 "Finno-Uralic" #Cut
  
  OLD_SUOMENUSKO: "Old Finnic"
  finnish_pagan_reformed_religion_desc: "Finnic is the polytheistic traditional belief system of the Finnic peoples. In their traditions most of their deities ruled over a specific aspect of nature. By 1444 the Finnic religion was mostly practiced by the Sami nomads."
@@ -510,7 +510,7 @@
  caribbean_pagan_rebels_army: "$RELIGION$ Army"
  
  
- non_religious_group:0 "Non Religious"
+ pw_nonassociated:0 "Non Religious"
  
  viking_school:0 "Viking"
  barbary_school:0 "Barbary"
@@ -518,17 +518,29 @@
  japanese_school:0 "Wakou"
  malayan_school:0 "Malay"
  
- secular:0 "Secular"
+ pw_secular:0 "Secular"
+ pw_secular_religion_desc:0 "Secularism is the principle of the separation of government and religion. A secular country does not force or encourage the practice of one religion over another, instead treating all religions equally.\nMany modern countries are secular, but secularism cannot appear in provinces."
  NOT_APPLICIBLE:0 "Sensationalist" #Just in case...
  
- pirate_code:0 "Brethren" #Gonna go with this for now
- pirate_code_rebels_demand:0 "Convert $COUNTRYNAME$"
- pirate_code_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
- pirate_code_rebels_title: "Religious"
- pirate_code_rebels_name: "$RELIGION$ Zealots"
- pirate_code_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
- pirate_code_rebels_army: "$RELIGION$ Army" 
+ pw_pirate_code:0 "Brethren" #Gonna go with this for now
+ pw_pirate_code_religion_desc:0 "Brethren is a loose term to refer to the various pirate codes and hierarchies of the high seas, though any official pirate state to adopt it will have likely attempted to standardise a few guidelines into actual rules. In any case there is only one deity that they worship and that deity is plunder and glory!"
+ pw_pirate_code_rebels_demand:0 "Convert $COUNTRYNAME$"
+ pw_pirate_code_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ pw_pirate_code_rebels_title: "Religious"
+ pw_pirate_code_rebels_name: "$RELIGION$ Zealots"
+ pw_pirate_code_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ pw_pirate_code_rebels_army: "$RELIGION$ Army" 
  PRIVATEER:0 "Privateer"
+ 
+ pw_irreligious:0 "Irreligious"
+ pw_irreligious_religion_desc:0 "Irreligion represents lack of religion./nThis religion rarely appears in the lategame
+ pw_irreligious_rebels_demand:0 "Convert $COUNTRYNAME$"
+ pw_irreligious_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ pw_irreligious_rebels_title: "Religious"
+ pw_irreligious_rebels_name: "$RELIGION$ Zealots"
+ pw_irreligious_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ pw_irreligious_rebels_army: "$RELIGION$ Army"  
+ ATHEIST:0 "Atheist"
  CRUSADE_STRUGGLE:0 "Struggle"
  
  insular_germanic_center_of_reformation:0 "Center of Resurgence"
@@ -567,3 +579,59 @@
  cthulhu_rebels_army:0 "$RELIGION$ Army"
  ##New NepNep
  TERAPANTHA:0 "Terapantha"
+ 
+ ##Backported 1.31 stuff
+ #Alcheringa
+ dreamtime:0 "Alcheringa"
+ dreamtime_religion_desc:0 "The Dreamtime is the religious and cultural worldview of the Aboriginal Australians. The Dreamtime simultaneously describes a time before the existence of the material world and also a separate plane of existence in parallel with the material world. Shamans are said to be able to contact the Dreamtime, and traces of the Dreaming are found all across the world."
+ dreamtime_demand:0 "Convert $COUNTRYNAME$"
+ dreamtime_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ dreamtime_rebels_title:0 "Religious"
+ dreamtime_rebels_name:0 "$RELIGION$ Zealots"
+ dreamtime_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ dreamtime_rebels_army:0 "$RELIGION$ Army"
+ WAGYLKOOP:0 "Wagylkoop"
+ MOORAMOORA:0 "Mooramoora"
+ GINGARRURNDE:0 "Gingarrurnde"
+ ancestor_story:0 "The Ancestors"
+ ancestor_story_desc:0 "We were carried here on the backs of our Ancestors, and the holiest among all Ancestors may ascend into the Dreaming and remain with us on the spiritual plane."
+ erathipa_story:0 "Erathipa"
+ erathipa_story_desc:1 "Erathipa is a Dreaming figure who takes the form of a boulder in the shape of a pregnant woman. Erathipa keeps the souls of deceased children in her womb, and any woman who approaches Erathipa will be blessed with fertility."
+ crow_story:0 "Crow"
+ crow_story_desc:0 "The Crow is a champion of Humanity in the Dreaming who appears in Stories all across Australia. It is to Crow that we can give thanks for Humanity's discovery of fire, and his children here on Earth are to be venerated as holy creatures."
+ moinee_story:0 "Moinee"
+ moinee_story_desc:0 "The first Palawa were kangaroo, turned into men by the benevolent creator spirit Moinee. He cut the ground to make way for rivers and islands, separating Tasmania from the rest of the continent."
+ military_story:0 "Adnoartina"
+ military_story_desc:0 "Adnoartina was the rival of Marindi. The battles of Adnoartina and Marindi were legendary, and at the foot of Uluru, their battle became so bloody that they took the forms of animals; Marindi a dog, and Adnoartina a lizard. Their fight lasted for days as they climbed higher and higher up the surface of Uluru. Once at the summit, Adnoartina bit down on Marindi’s neck and ate him, and it is Marindi’s divine blood which gave Uluru its red colour."
+ islam_story:0 "Islamic Dreaming"
+ islam_story_desc:0 "Makassarian traders brought with them a strange and enchanting set of stories. Though Islam will never replace the Dreaming, it is unquestionable that the faith of the Makassar has influenced all those who have heard it."
+ dharma_story:0 "Dharmic Dreaming"
+ dharma_story_desc:0 "We follow the ancient ways of the Hindu gods. From them we have learned about reincarnation and about how to efficiently organize society through castes."
+ baiame_story:0 "Baiame"
+ baiame_story_desc:0 "Baiame is the creator God and Sky Father. He descended from the heavens and gave unto the world the ocean, rivers, and mountains. He then returned to humanity to give unto them laws, traditions, language, and a voice with which to sing."
+ spirits_story:0 "The Spirits"
+ spirits_story_desc:0 "Many spirits inhabit sacred sites across Australia, and their Stories in the Dreaming influence the world around us; both spiritually and physically."
+ conquest_story:0 "Lumaluma"
+ conquest_story_desc:0 "A malevolent God of greed and gluttony, Lumaluma engaged in cannibalism; consuming the dead until he came to become a whale."
+ djunkgao_story:0 "Djunkgao Sisters"
+ djunkgao_story_desc:0 "The Djunkgao Sisters birthed from their wombs the rivers and the oceans of the world before embracing mortality and becoming the first women of the world."
+ wagyl_story:0 "Wagyl"
+ wagyl_story_desc:0 "Wagyl is a manifestation of the Rainbow Serpent worshipped by the Nyoongah. He slithers across Western Australia in the Dreaming, forming rivers along his path."
+ rainbow_story:0 "The Rainbow Serpent"
+ rainbow_story_desc:0 "The Rainbow Serpent is among few deities to be worshipped all across the Dreaming world. Stories of the Rainbow Serpent's purpose in the Dreaming vary wildly across faiths, but He is often attributed to rainfall or water and is a benevolent force to all peoples."
+ 
+ #Zoroastrian stuff
+ coptic_blessings:1 "Patriarchal Blessings"
+ zoroastrian_blessings:0 "Rituals"
+ blessing_yasna:0 "Yasna"
+ blessing_haoma:0 "Haoma"
+ blessing_navjote:0 "Navjote"
+ blessing_manthras:0 "Manthras"
+ blessing_dakhma:0 "Dakhma"
+ HOLY_SITE_421_DESC:1 "The Ateshgah of Baku is one of the most important Fire Temples of the Zoroastrianism. While technically in Surakhani, it is binded to the city of Baku since antiquity, as it was also called 'The Fires of Baguan' in reference to the city of Baku. The fire emerges directly from the surface and its flames burn perpetually, with ferocious strength. It is said that some 'fire worshippers' still live in the vicinity."
+ HOLY_SITE_441_DESC:1 "It is said that the prophet Zaratushtra was born in Khorezm and therefore the region and, especially, the ancient city of Khiva, center of it, are considered sacred as the motherland of Zoroastrianism. The islamic invasions have direly harmed our religion in the region, but pockets of followers resist and even among the muslims in the region, several zoroastrian traditions survive."
+ HOLY_SITE_2223_DESC:2 "The Atash Bahram declared to be the fire of the priest class, called Adur Farnbag, burns in the Larestan region, close to the city of Karyan. It is the most venerated among the three Fires of Victory, the others two being named Adur Gushnasp devoted to warriors and Adur Burzen-Mihr devoted to farmers."
+ HOLY_SITE_2235_DESC:1 "In the Mount Revand of Khorasan, close to the city of Kashmar, the Adur Burzen-Mihr, one of the three Atash Bahram or Fires of Victory, burns associated to the farmer class. A major center of pilgrimage during the ancient times, its significance for the zoroastrians has not faded away."
+ HOLY_SITE_4430_DESC:1 "When the Khorezm fell to the muslim forces, some worshippers fled to India and founded a community in Sanjan, carrying a sacred fire with them. A silsila o traditional link was formed between this new community and the original one in Persia from where the name Sanjan came from. Since 1297, the fire has moved around, first to the Bahrot Caves, then to the viallge of Bansda and finally to Navsari."
+ pick_coptic_blessing:0 "Pick Blessing"
+ pick_zoroastrian_blessing:0 "Pick Ritual"

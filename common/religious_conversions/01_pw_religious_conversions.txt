@@ -101,7 +101,6 @@ norse_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group =	scandinavian
-					owner = { religion = norse_pagan_reformed }
 					pw_norse_spawn_area = yes
 					any_neighbor_province = { religion = norse_pagan_reformed } #Can only spread out from centers, not randomly
 				}	
@@ -215,7 +214,6 @@ insular_germanic_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group =	british
-					owner = { religion = insular_germanic }
 					pw_insular_germanic_spawn_area = yes
 					any_neighbor_province = { religion = insular_germanic } #Can only spread out from centers, not randomly
 				}	
@@ -329,7 +327,6 @@ continental_germanic_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group = germanic	
-					owner = { religion = continental_germanic }
 					pw_continental_germanic_spawn_area = yes 
 					any_neighbor_province = { religion = continental_germanic } #Can only spread out from centers, not randomly
 				}
@@ -445,7 +442,6 @@ druidic_center_of_reformation = {
 					culture_group = gaelic
 					culture_group = brythonic
 					culture_group = celtic
-					owner = { religion = druidic }
 					pw_druidic_spawn_area = yes 
 					any_neighbor_province = { religion = druidic } #Can only spread out from centers, not randomly
 				}
@@ -558,7 +554,6 @@ greek_hellenic_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group = byzantine	
-					owner = { religion = greek_hellenic }
 					pw_greek_hellenic_spawn_area = yes
 					any_neighbor_province = { religion = greek_hellenic } #Can only spread out from centers, not randomly
 				}
@@ -679,7 +674,6 @@ latin_hellenic_center_of_reformation = {
 					culture_group =	rhaetian
 					culture_group =	island_romance	
 					culture_group = old_latin
-					owner = { religion = latin_hellenic }
 					pw_latin_hellenic_spawn_area = yes 
 					any_neighbor_province = { religion = latin_hellenic } #Can only spread out from centers, not randomly
 				}
@@ -809,7 +803,6 @@ baltic_pagan_reformed_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group =	baltic
-					owner = { religion = baltic_pagan_reformed }
 					pw_baltic_pagan_reformed_spawn_area = yes
 					any_neighbor_province = { religion = baltic_pagan_reformed } #Can only spread out from centers, not randomly
 				}
@@ -924,7 +917,6 @@ slavic_pagan_reformed_center_of_reformation = {
 				OR = { 
 					culture_group = west_slavic
 					culture_group =	unified_slavic		
-					owner = { religion = slavic_pagan_reformed }
 					pw_slavic_spawn_area_west = yes
 					any_neighbor_province = { religion = slavic_pagan_reformed } #Can only spread out from centers, not randomly
 				}
@@ -1047,7 +1039,6 @@ east_slavic_pagan_reformed_center_of_reformation = {
 				OR = { 
 					culture_group = east_slavic
 					culture_group =	unified_slavic			
-					owner = { religion = east_slavic_pagan_reformed }
 					pw_slavic_spawn_area_east = yes
 					any_neighbor_province = { religion = east_slavic_pagan_reformed } #Can only spread out from centers, not randomly
 				}	
@@ -1168,7 +1159,6 @@ south_slavic_pagan_reformed_center_of_reformation = {
 				OR = { 
 					culture_group =	south_slavic
 					culture_group =	unified_slavic	
-					owner = { religion = south_slavic_pagan_reformed }
 					pw_slavic_spawn_area_south = yes 
 					any_neighbor_province = { religion = south_slavic_pagan_reformed } #Can only spread out from centers, not randomly
 				}
@@ -1290,7 +1280,6 @@ finnish_pagan_reformed_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group =	finno_ugric		
-					owner = { religion = finnish_pagan_reformed }
 					pw_finnish_pagan_reformed_spawn_area = yes
 					any_neighbor_province = { religion = finnish_pagan_reformed } #Can only spread out from centers, not randomly
 				}	
@@ -1374,7 +1363,6 @@ egyptian_pagan_center_of_reformation = {
 					culture = sudanese_arabic
 					culture = old_egyptian
 					culture = al_misr_arabic
-					owner = { religion = egyptian_pagan }
 					pw_egyptian_pagan_spawn_area = yes 
 					any_neighbor_province = { religion = egyptian_pagan } #Can only spread out from centers, not randomly
 				}
@@ -1461,7 +1449,6 @@ canaanite_center_of_reformation = {
 					culture = tunisian
 					culture = algerian
 					culture = moroccan
-					owner = { religion = canaanite }
 					pw_canaanite_spawn_area = yes 
 					any_neighbor_province = { religion = canaanite } #Can only spread out from centers, not randomly
 				}
@@ -1550,7 +1537,6 @@ zoroastrian_center_of_reformation = {
 						NOT = { culture = afghani }
 						NOT = { culture = tajik	}
 					}
-					owner = { religion = zoroastrian }
 					pw_zoroastrian_spawn_area = yes
 					any_neighbor_province = { religion = zoroastrian } #Can only spread out from centers, not randomly
 				}	
@@ -1637,7 +1623,6 @@ zalmoxian_center_of_reformation = {
 			NOT = {	
 				OR = { 
 					culture_group = dacian		
-					owner = { religion = zalmoxian }
 					pw_zalmoxian_spawn_area = yes
 					any_neighbor_province = { religion = zalmoxian } #Can only spread out from centers, not randomly
 				}	
@@ -1727,7 +1712,6 @@ arabic_pagan_center_of_reformation = {
 					culture = yemeni_culture
 					culture = true_bedouin
 					culture = mashriqi
-					owner = { religion = arabic_pagan } 
 					any_neighbor_province = { religion = arabic_pagan } #Can only spread out from centers, not randomly
 					pw_arabic_pagan_spawn_area = yes 
 				}
@@ -1817,7 +1801,6 @@ ashurist_center_of_reformation = {
 					culture = al_iraqiya_arabic
 					culture = al_suryah_arabic
 					culture = mashriqi
-					owner = { religion = ashurist }
 					pw_ashurist_spawn_area = yes
 					any_neighbor_province = { religion = arabic_pagan } #Can only spread out from centers, not randomly
 				}	
@@ -1903,7 +1886,6 @@ zunist_center_of_reformation = {
 					culture = baluchi
 					culture = afghani
 					culture = tajik
-					owner = { religion = zunist }
 					pw_zunist_spawn_area = yes
 					any_neighbor_province = { religion = zunist } #Can only spread out from centers, not randomly
 				}	
@@ -1991,7 +1973,6 @@ jainism_center_of_reformation = {
 					culture_group = eastern_aryan
 					culture_group = dravidian
 					culture_group = central_indic
-					owner = { religion = jainism }
 					pw_jainism_spawn_area = yes
 					any_neighbor_province = { religion = jainism } #Can only spread out from centers, not randomly
 				}
@@ -2098,7 +2079,6 @@ tengri_pagan_reformed_center_of_reformation = {
 					culture_group = tartar #Base BT and CI compatibility hell yeah
 					culture_group = kipchak
 					culture_group = oghur
-					owner = { religion = tengri_pagan_reformed }
 					pw_tengri_spawn_area = yes
 					any_neighbor_province = { religion = tengri_pagan_reformed }
 				}	
@@ -2214,7 +2194,6 @@ druidic_center_of_reformation = {
 					culture_group =	gaelic
 					culture_group =	brythonic
 					culture_group =	celtic
-					owner = { religion = druidic }
 					pw_druidic_spawn_area = yes
 					any_neighbor_province = { religion = druidic } #Can only spread out from centers, not randomly
 				}
@@ -2332,7 +2311,6 @@ gallo_druidic_center_of_reformation = {
 						NOT = { culture = catalan }
 					}
 					culture_group =	french
-					owner = { religion = gallo_druidic }
 					pw_gallic_spawn_area = yes
 					any_neighbor_province = { religion = gallo_druidic } #Can only spread out from centers, not randomly
 				}
@@ -2449,7 +2427,6 @@ ibero_druidic_center_of_reformation = {
 				OR = { 
 					culture = catalan
 					culture_group =	iberian
-					owner = { religion = ibero_druidic }
 					pw_celtiberic_spawn_area = yes
 					any_neighbor_province = { religion = ibero_druidic } #Can only spread out from centers, not randomly
 				}	
@@ -2562,7 +2539,6 @@ turkic_pagan_center_of_reformation = {
 			NOT = {
 				OR = { 
 					culture = turkish
-					owner = { religion = turkic_pagan }
 					pw_turkic_spawn_area = yes
 					any_neighbor_province = { religion = turkic_pagan } #Can only spread out from centers, not randomly
 				}	

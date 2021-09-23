@@ -40,6 +40,32 @@ province_event = { #The Norse Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -100,6 +126,32 @@ province_event = { #The Tuistic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -160,6 +212,32 @@ province_event = { #The Anglic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -220,6 +298,32 @@ province_event = { #The Gaelic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -280,6 +384,32 @@ province_event = { #The Latin Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -340,6 +470,32 @@ province_event = { #The Hellenic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -402,6 +558,32 @@ province_event = { #The Prabohic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -462,6 +644,32 @@ province_event = { #The Rodunic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -522,6 +730,32 @@ province_event = { #The Sudunic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -582,6 +816,32 @@ province_event = { #The Romuva Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -642,6 +902,32 @@ province_event = { #The Finnic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -702,6 +988,32 @@ province_event = { #The Zalmoxian Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -762,6 +1074,32 @@ province_event = { #The Kemetic Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -822,6 +1160,32 @@ province_event = { #The Canaanite Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -882,6 +1246,32 @@ province_event = { #The Zoroastrian Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -942,6 +1332,32 @@ province_event = { #The Wathanist Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -1002,6 +1418,32 @@ province_event = { #The Ashurist Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -1062,6 +1504,32 @@ province_event = { #The Zunist Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -1122,6 +1590,32 @@ province_event = { #The Jain Expansion
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -1178,6 +1672,32 @@ province_event = { #The Tengri Expansion among the Eastern Tatars
 	}
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	immediate = {
@@ -1243,6 +1763,32 @@ province_event = {
 
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1304,6 +1850,32 @@ province_event = {
 
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	#This is just a mere cult, nothing more... right?
@@ -1365,6 +1937,32 @@ province_event = {
 
 	mean_time_to_happen = {
 		years = 25
+		modifier = {
+			factor = 5
+			owner = {
+				government = theocracy #Basically shouldn't happen in highly religious states
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religious_ideas = 3
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				legitimacy_equivalent = 60
+			}	
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				NOT = {
+					religious_unity = 0.80
+				}	
+			}	
+		}			
 	}
 
 	#This is just a mere cult, nothing more... right?

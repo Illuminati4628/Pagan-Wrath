@@ -1,0 +1,157 @@
+country_decisions = {
+
+	pw_adopt_brethren_code = {
+		potential = {
+			OR = {
+				has_global_flag = pw_pagan_religion_100_enabled
+				has_global_flag = pw_pagan_religion_50_enabled
+				has_global_flag = pw_pagan_religion_10_enabled
+			}
+			NOT = { has_global_flag = pw_pirate_code_toggle_off }
+			has_reform = pirate_republic_reform #You are a pirate!
+			NOT = { religion = pw_pirate_code }
+		}	
+		allow = {
+			is_at_war = no
+			stability = 1
+			OR = { 
+				num_of_heavy_ship = 15
+				num_of_galley = 15
+			}
+			OR = { #1/3rd of your ships must be heavies/galleys
+				heavy_ship_fraction = 0.33
+				galley_fraction = 0.33
+			}
+			NOT = { transport_fraction = 0.5 } #Cannot have more then 50% transports
+		}	
+		effect = {
+			set_global_flag = pw_pirate_code_enabled
+			change_religion = pw_pirate_code
+			add_stability = -2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	pw_adopt_secularism = {
+		potential = {
+			OR = {
+				has_global_flag = pw_pagan_religion_100_enabled
+				has_global_flag = pw_pagan_religion_50_enabled
+				has_global_flag = pw_pagan_religion_10_enabled
+			}
+			has_global_flag = pw_secular_toggle_on
+			adm_tech = 30 #Late Game decision
+			NOT = { religion = pw_secular }
+			NOT = { government = theocracy }
+			NOT = { has_reform = caliphate_reform }
+			NOT = { has_reform = feudal_theocracy }
+			NOT = { has_reform = iqta }
+			is_force_converted = no
+			is_part_of_hre = no
+			is_emperor = no
+			is_emperor_of_china = no
+			OR = {
+				is_free_or_tributary_trigger = yes
+				overlord = { religion = pw_secular }
+			}			
+		}	
+		allow = {
+			is_at_war = no
+			stability = 2
+			
+		}	
+		effect = {
+			set_global_flag = pw_secular_enabled
+			change_religion = pw_secular
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 30 }
+				NOT = { has_idea_group = humanist_ideas }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					religion_group = muslim
+					has_idea_group = religious_ideas
+				}
+				NOT = { adm_tech = 30 }
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+				overlord = { NOT = { religion = pw_secular } }
+			}
+		}
+	}	
+	pw_adopt_state_atheism = {
+		potential = {
+			religion = pw_secular
+			absolutism = 80
+			NOT = { has_country_modifier = pw_state_atheism }
+			NOT = { has_country_modifier = pw_state_atheism_abolished }
+		}
+		allow = {
+			OR = {
+				has_reform = peasants_republic
+				has_reform = presidential_despot_reform
+				has_reform = military_dictatorship_reform
+				AI = no
+			}
+			is_subject = no
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			add_country_modifier = {
+				name = pw_state_atheism
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_reform = peasants_republic }
+					NOT = { has_reform = presidential_despot_reform }
+					NOT = { has_reform = military_dictatorship_reform }
+				}	
+			}
+		}
+	}	
+	pw_abolish_state_atheism = {
+		potential = {
+			has_country_modifier = pw_state_atheism
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			remove_country_modifier = pw_state_atheism
+			add_country_modifier = {
+				name = pw_state_atheism_abolished
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_reform = peasants_republic
+					has_reform = presidential_despot_reform
+					has_reform = military_dictatorship_reform
+				}
+			}
+		}
+	}	
+}		
