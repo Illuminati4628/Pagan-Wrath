@@ -531,6 +531,11 @@
  pw_pirate_code_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  pw_pirate_code_rebels_army: "$RELIGION$ Army" 
  PRIVATEER:0 "Privateer"
+ viking_school:0 "Viking"
+ barbary_school:0 "Barbary"
+ caribbean_school:0 "Caribbean"
+ japanese_school:0 "Wokou"
+ malayan_school:0 "Malay"
  
  pw_irreligious:0 "Irreligious"
  pw_irreligious_religion_desc:0 "Irreligion represents lack of religion./nThis religion rarely appears in the lategame
