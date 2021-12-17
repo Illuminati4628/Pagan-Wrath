@@ -1,0 +1,37 @@
+
+estate_druids = {
+	modifier_definition = {
+		type = loyalty
+		key = druids_loyalty_modifier
+		trigger = {
+			has_estate = estate_druids
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = druids_influence_modifier
+		trigger = {
+			has_estate = estate_druids
+		}
+	}
+}
+
+estate_warrior_bands = {
+	modifier_definition = {
+		type = loyalty
+		key = warrior_bands_loyalty_modifier
+		trigger = {
+			has_estate = estate_warrior_bands
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = warrior_bands_influence_modifier
+		trigger = {
+			has_estate = estate_warrior_bands
+		}
+	}
+}
+

@@ -1,0 +1,537 @@
+
+#This one or the next one will always be valid
+estate_warrior_bands_hire_advisor = {
+	can_select = {
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+	}
+	task_requirements = {
+		employed_advisor = {
+			category = MIL
+		}
+		is_in_deficit = no
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_warrior_bands
+			loyalty = 10
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_warrior_bands
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+estate_warrior_bands_fire_advisor = {
+	can_select = {
+		employed_advisor = {
+			category = MIL
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+		modifier = {
+			factor = 0.5
+			employed_advisor = {
+				type = commandant
+				religion = root
+			}
+		}
+		modifier = {
+			factor = 2
+			advisor = commandant
+			NOT = {
+				employed_advisor = {
+					type = commandant
+					religion = root
+				}
+			}
+		}
+	}
+	immediate_effect = {
+		hidden_effect = {
+			set_country_flag = need_to_fire_mil_advisor
+		}
+	}
+	on_invalid = {
+		clr_country_flag = need_to_fire_mil_advisor
+	}
+	task_requirements = {
+		custom_trigger_tooltip = {
+			tooltip = fire_mil_advisor_tooltip
+			has_country_flag = just_fired_mil_advisor
+		}
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_warrior_bands
+			loyalty = 10
+		}
+		clr_country_flag = just_fired_mil_advisor
+		clr_country_flag = need_to_fire_mil_advisor
+	}
+	invalid_trigger = {
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		NOT = { has_country_flag = just_fired_mil_advisor }
+	}
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_warrior_bands
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		clr_country_flag = need_to_fire_mil_advisor
+    }
+}
+
+#Raid a neighbouring country
+#estate_warrior_bands_raid_neighbour = {
+#	can_select = {
+#		is_at_war = no
+#		manpower_percentage = 0.50
+#		NOT = { has_country_modifier = agenda_successful_raid }
+#		any_neighbor_country = { 
+#			NOT = { religion = root } 
+#		}
+#	}
+#	selection_weight = {
+#		factor = 1
+#		modifier = {
+#			factor = 1.5
+#			manpower_percentage = 0.50
+#		}
+#		modifier = {
+#			factor = 1.5
+#			manpower_percentage = 0.60
+#		}
+#		modifier = {
+#			factor = 1.5
+#			manpower_percentage = 0.70
+#		}
+#		modifier = {
+#			factor = 1.5
+#			manpower_percentage = 0.80
+#		}
+#		modifier = {
+#			factor = 1.5
+#			manpower_percentage = 0.90
+#		}
+#		modifier = {
+#			factor = 0.35
+#			has_idea_group = humanist_ideas
+#		}
+#		modifier = {
+#			factor = 2
+#			has_idea_group = offensive_ideas
+#		}
+#	}
+#	pre_effect = {
+#		random_neighbor_country = {
+#			limit = {
+#				OR = {
+#					NOT = { religion = root }
+#					NOT = { has_country_flag = agenda_raid_target_successfully_raided }
+#				}
+#			save_event_target_as = agenda_country
+#			}
+#		}
+#	}
+#	fail_if = {
+#		event_target:agenda_country = {
+#			has_country_modifier = agenda_raid_target
+#		}
+#	}
+#	immediate_effect = {
+#		event_target:agenda_country = {
+#			add_country_modifier = {
+#				name = agenda_raid_target
+#				duration = 3650 #10 Years to raid the target
+#			}
+#			country_event = { id = pw_germanic.1 } #Lets the target know that they have been targeted for a raid
+#		}
+#	}
+#	on_invalid = {
+#		event_target:agenda_country = {
+#			if = {
+#				limit = { has_country_modifier = agenda_raid_target }
+#				remove_country_modifier = agenda_raid_target
+#			}
+#		}
+#	}
+#	task_requirements = {
+#		event_target:agenda_country = {
+#			has_country_flag = agenda_raid_target_successfully_raided
+#		}
+#	}
+#    task_completed_effect = {
+#		hidden_effect = {
+#			event_target:agenda_country = {
+#				if = {
+#					limit = { has_country_modifier = agenda_raid_target }
+#					remove_country_modifier = agenda_raid_target
+#				}
+#				set_country_flag = {
+#					agenda_raid_target_successfully_raided
+#					duration = 3650 #Cannot be raided again for 10 years
+#				}
+#			}
+#			add_country_modifier = {
+#				name = agenda_successful_raid
+#				duration = 1825 #Cannot raid again for another 5 years
+#				hidden = yes
+#			}
+#		}
+#		generate_scaled_advisor_of_type_and_religion_effect = {
+#			type = commandant
+#			religion = root
+#			discount = yes
+#		}
+#		add_estate_loyalty = {
+#			estate = estate_warrior_bands
+#			loyalty = 10
+#		}
+#    }
+#    failing_effect = {
+#		event_target:agenda_country = {
+#			if = {
+#				limit = { has_country_modifier = agenda_raid_target }
+#				remove_country_modifier = agenda_raid_target
+#			}
+#			add_country_modifier = agenda_successfully_stopped_raid
+#		}
+#        add_estate_loyalty_modifier = {
+#            estate = estate_warrior_bands
+#			desc = EST_VAL_AGENDA_DENIED
+#			loyalty = -5
+#			duration = 7300
+#        }
+#    }
+#}
+#
+#Recover Manpower
+estate_warrior_bands_recover_manpower = {
+	can_select = {
+		manpower_percentage = 0.25
+		is_at_war = no
+		NOT = { has_country_modifier = recovering_economy }
+	}
+	selection_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			manpower_percentage = 0.15
+		}
+		modifier = {
+			factor = 1.5
+			manpower_percentage = 0.05
+		}
+	}
+	fail_if = {
+		is_at_war = yes
+	}
+	task_requirements = {
+		manpower_percentage = 0.85 }
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_warrior_bands
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = recovering_economy
+			duration = 5475
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_warrior_bands
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+	}
+}
+
+estate_warrior_bands_build_barracks_in_y = {
+	can_select = {
+		mil_tech = 6
+		any_owned_province = {
+			is_state_core = root
+			NOT = { has_building = barracks }
+			OR = {
+				AND = {
+					NOT = { has_building = barracks }
+					num_free_building_slots = 1
+				}
+				AND = {
+					ROOT = { mil_tech = 16 }
+					has_building = training_fields
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.65
+			NOT = {
+				any_owned_province = {
+					is_state_core = root
+					base_manpower = 4
+					NOT = { has_building = barracks }
+					OR = {
+						AND = {
+							NOT = { has_building = barracks }
+							num_free_building_slots = 1
+						}
+						AND = {
+							ROOT = { mil_tech = 16 }
+							has_building = training_fields
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_owned_province = {
+				is_state_core = root
+				base_manpower = 7
+				NOT = { has_building = training_fields }
+				OR = {
+					AND = {
+						NOT = { has_building = barracks }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { mil_tech = 16 }
+						has_building = barracks
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				crown_land_share = 15
+			}
+		}
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_warrior_bands_build_barracks_in_y_var
+			value = 0
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				NOT = { has_building = training_fields }
+				OR = {
+					AND = {
+						NOT = { has_building = barracks }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { mil_tech = 16 }
+						has_building = barracks
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				base_manpower = 4
+				NOT = { has_building = training_fields }
+				OR = {
+					AND = {
+						NOT = { has_building = barracks }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { mil_tech = 16 }
+						has_building = barracks
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				base_manpower = 7
+				NOT = { has_building = training_fields }
+				OR = {
+					AND = {
+						NOT = { has_building = barracks }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { mil_tech = 16 }
+						has_building = barracks
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					NOT = { has_building = barracks }
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_warrior_bands_build_barracks_in_y_var
+						value = 1
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = estate_warrior_bands_build_barracks_in_y_var
+						value = 2
+					}
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = root }
+		}
+	}
+    task_requirements = {
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_warrior_bands_build_barracks_in_y_var
+					value = 2
+				}
+			}
+			event_target:agenda_province = {
+				has_building = training_fields
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+    }
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_warrior_bands
+			loyalty = 10
+		}
+		if = {
+			limit = {
+				NOT = { crown_land_share = 15 }
+				estate_territory = {
+					estate = estate_warrior_bands
+					territory = 10
+				}
+			}
+			take_estate_land_share_small = { estate = estate_warrior_bands }
+		}
+		else = {
+			event_target:agenda_province = {
+				add_base_manpower = 1
+			}
+		}
+    }
+    failing_effect = {
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = root }
+				add_named_unrest = {
+					name = local_warrior_bands_displeased
+					value = 5
+				}
+			}
+		}
+		add_estate_loyalty_modifier = {
+			estate = estate_warrior_bands
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+    }
+}
+
+estate_warrior_bands_enlarge_army = {
+	selection_weight = {
+		factor = 1
+	}
+	can_select = {
+		army_size_percentage = 0.5
+		is_at_war = no
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 2
+			army_size_percentage = 0.4
+		}
+		modifier = {
+			factor = 3
+			army_size_percentage = 0.3
+		}
+		modifier = {
+			factor = 4
+			army_size_percentage = 0.2
+		}
+		modifier = {
+			factor = 5
+			army_size_percentage = 0.1
+		}
+	}
+	fail_if = {
+		is_at_war = yes
+	}
+    task_requirements = {
+		army_size_percentage = 0.8
+    }
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_warrior_bands
+			loyalty = 10
+		}
+		add_prestige = 10
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_warrior_bands
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}

@@ -1307,6 +1307,119 @@ finnish_pagan_reformed_center_of_reformation = {
 	}
 }
 
+magyar_pagan_reformed_center_of_reformation = {
+
+	religion = magyar_pagan_reformed
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = magyar_pagan_reformed
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = finnic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture_group =	carpathian		
+					pw_istenhit_spawn_area = yes
+					any_neighbor_province = { religion = magyar_pagan_reformed } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = carpathian
+				any_neighbor_province = {
+					religion = magyar_pagan_reformed
+				}				
+			}	
+		}		
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = magyar_pagan_reformed count = 2 } }
+		}				
+	}
+}
+
 egyptian_pagan_center_of_reformation = {
 
 	religion = egyptian_pagan
@@ -1449,6 +1562,7 @@ canaanite_center_of_reformation = {
 					culture = tunisian
 					culture = algerian
 					culture = moroccan
+					culture = phoenician
 					pw_canaanite_spawn_area = yes 
 					any_neighbor_province = { religion = canaanite } #Can only spread out from centers, not randomly
 				}
@@ -1801,6 +1915,7 @@ ashurist_center_of_reformation = {
 					culture = al_iraqiya_arabic
 					culture = al_suryah_arabic
 					culture = mashriqi
+					culture_group = aramaic
 					pw_ashurist_spawn_area = yes
 					any_neighbor_province = { religion = arabic_pagan } #Can only spread out from centers, not randomly
 				}	
@@ -2561,5 +2676,118 @@ turkic_pagan_center_of_reformation = {
 			development = 10
 			NOT = { num_of_centers_of_reformation = { religion = turkic_pagan count = 2 } }
 		}		
+	}
+}
+
+nuragic_pagan_center_of_reformation = {
+
+	religion = nuragic_pagan
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5
+
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { continent = FROM }
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 1
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 2
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 3
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 4
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				num_of_cardinals = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				religion = nuragic_pagan
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					religion_group = christian #Will only effect Christian provinces
+					religion_group = nuragic_group #Any heretics may get converted
+				}	
+			}
+		}	
+		modifier = {
+			factor = 0
+			NOT = {	
+				OR = { 
+					culture = sardinian
+					pw_nuragic_spawn_area = yes
+					any_neighbor_province = { religion = nuragic_pagan } #Can only spread out from centers, not randomly
+				}	
+			}
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+				culture = sardinian
+				any_neighbor_province = {
+					religion = nuragic_pagan
+				}				
+			}	
+		}		
+		modifier = {
+			factor = 1.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 2
+			culture_group = FROM
+			development = 10
+			NOT = { num_of_centers_of_reformation = { religion = nuragic_pagan count = 2 } }
+		}				
 	}
 }

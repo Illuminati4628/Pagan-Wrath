@@ -34,6 +34,29 @@ pw_resistance_weakness = {
 	local_religious_conversion_resistance = -0.5
 }
 
+#State Atheism
+
+pw_state_atheism = { #Unsure if I even want modifiers for these, they are just triggers for events, actually why did I not just do flags then?
+}
+
+pw_state_atheism_abolished = {
+}
+
+#Estate Stuff
+agenda_raid_target = {
+	manpower_recovery_speed = 0.05
+}
+
+agenda_successfully_stopped_raid = {
+	global_unrest = -2
+	production_efficiency = 0.05
+}
+
+#Championship of the Warriors
+pw_favourite_candidate_championship = {
+	global_unrest = -2
+}
+
 #Missionary Strength Decisions
 
 pw_mystery_cult = {
@@ -152,6 +175,11 @@ harmonized_eastern = { #For secularism
 	religion = yes
 }
 
+harmonized_nuragic_group = {
+	defensiveness = 0.05
+	religion = yes
+}	
+
 #Religion
 
 harmonized_pw_pirate_code = {
@@ -163,6 +191,23 @@ harmonized_pw_irreligious = {
 	technology_cost = -0.05
 	religion = yes
 }	
+
+harmonized_greek_hellenic = {
+	technology_cost = -0.05
+	religion = yes
+}
+
+harmonized_latin_hellenic = {
+	culture_conversion_cost = -0.05
+	religion = yes
+}
+
+harmonized_imperial_hellenic = {
+	prestige = 0.05
+	religion = yes
+}
+
+
 
 ##################################################
 # Religious Schools Modifiers
@@ -187,4 +232,33 @@ japanese_scholar_modifier = {
 malayan_scholar_modifier = {
 	recover_navy_morale_speed = 0.1
 	global_ship_repair = 0.1
+}
+
+norse_viking_scholar_modifier = {
+	global_colonial_growth = 15
+	global_ship_trade_power = 0.1
+}
+swedish_viking_scholar_modifier = {
+	trade_steering = 0.1
+	infantry_shock = 1
+}
+danish_viking_scholar_modifier = {
+	shock_damage_received = -0.15
+	native_assimilation = 0.20
+}
+german_scholar_modifier = {
+	siege_ability = 0.10
+	global_trade_goods_size_modifier = 0.05
+}
+frisian_scholar_modifier = {
+	institution_spread_from_true_faith = 0.1
+	production_efficiency = 0.05
+}
+dutch_scholar_modifier = {
+	global_prov_trade_power_modifier = 0.1
+	trade_company_investment_cost = -0.1
+}
+anglish_scholar_modifier = {
+	blockade_efficiency = 0.1
+	unjustified_demands = -0.2
 }

@@ -1,0 +1,283 @@
+namespace = pw_germanic
+
+# Select Germanic School
+country_event = {
+	id = pw_germanic.01
+	title = "pw_germanic.01.t"
+	desc = "pw_germanic.01.d"
+	picture = RELIGION_eventPicture
+	
+	major = no
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion_group = germanic_group
+		OR = {
+			has_religious_school = no
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 0
+	}	
+	
+	option = {
+		name = pw_germanic.1.a #Gives areas historical school of region
+		trigger = {
+			ai = yes
+		}
+		if = { #Norwegian
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							area = northern_norway
+							area = eastern_norway
+							area = western_norway
+							area = subarctic_islands_area
+							area = iceland_area
+							area = southern_norway_area
+							area = trondelag_area
+						}
+					}
+					culture = norwegian
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = norse_viking_school
+			}
+		}
+		else_if = { #Swedish
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							area = svealand_area
+							area = norrland_area
+							area = gotaland_area
+							area = vastra_gotaland_area
+						}
+					}
+					culture = swedish
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = swedish_viking_school
+			}
+		}
+		else_if = { #Danish
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							area = skaneland_area
+							area = jutland_area
+							area = denmark_area
+							area = schleswig_area
+						}
+					}
+					culture = danish
+					culture = scanian
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = danish_viking_school
+			} 
+		}
+		else_if = { #German
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							region = north_german_region
+							region = south_german_region
+						}
+					}
+					AND = {
+						culture_group = germanic
+						NOT = { culture = frisian }
+						NOT = { culture = dutch }
+						NOT = { culture = dutch_modern }
+						NOT = { culture = dutch_low_saxon }
+					}
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = german_school
+			}
+		}	
+		else_if = { #Frisian
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							area = frisia_area
+						}
+					}
+					culture_group = anglo_frisian
+					culture = frisian
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = frisian_school
+			}
+		}
+		else_if = { #Dutch
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							AND = {
+								region = low_countries_region
+								NOT = { area = frisia_area }
+							}	
+						}
+					}
+					culture = dutch
+					culture = dutch_modern
+					culture = dutch_low_saxon
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = dutch_school
+			}
+		}
+		else_if = { #Anglo-Saxon
+			limit = {
+				OR = {
+					capital_scope = {
+						OR = {
+							AND = {
+								region = british_isles_region
+								NOT = { area = scottish_marches_area }
+								NOT = { area = lowlands_area }
+								NOT = { area = highlands_area }
+								NOT = { area = kingdom_of_the_isles_area }
+								NOT = { area = scottish_marches_area }
+							}	
+						}
+					}
+					culture_group = british	
+				}
+				religion_group = germanic_group
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = anglish_school
+			}
+		}		
+		else_if = { #Anglic falls back to Anglo-Saxon
+			limit = {
+				religion = insular_germanic
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = anglish_school
+			}
+		}
+		else_if = { #Norse falls back to Norwegian
+			limit = {
+				religion = norse_pagan_reformed
+			}
+			set_religious_school = {
+				group = germanic_group
+				school = norse_viking_school
+			}
+		}			
+		else = { #Remaining Germanic falls back to this:
+			set_religious_school = {
+				group = germanic_group
+				school = german_school
+			}
+		}
+	}
+	option = {    
+		name = pw_germanic.1.b #Norwegian
+		trigger = {
+			religion = norse_pagan_reformed
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = norse_viking_school
+		}
+	}
+	option = {
+		name = pw_germanic.1.c #Swedish
+		trigger = {
+			religion = norse_pagan_reformed
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = swedish_viking_school
+		}
+	}
+	option = {
+		name = pw_germanic.1.d #Danish
+		trigger = {
+			religion = norse_pagan_reformed
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = danish_viking_school
+		}
+	}
+	option = {
+		name = pw_germanic.1.e #German
+		trigger = {
+			religion = continental_germanic
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = german_school
+		}
+	}
+	option = {
+		name = pw_germanic.1.f #Frisian
+		trigger = {
+			religion = continental_germanic
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = frisian_school
+		}
+	}
+	option = {
+		name = pw_germanic.1.g #Dutch
+		trigger = {
+			religion = continental_germanic
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = dutch_school
+		}
+	}
+	option = {
+		name = pw_germanic.1.h #English
+		trigger = {
+			religion = insular_germanic
+			ai = no
+		}
+		set_religious_school = {
+			group = germanic_group
+			school = anglish_school
+		}
+	}
+}

@@ -1,0 +1,117 @@
+estate_warrior_bands = { 
+	icon = 16
+
+	# If true, country will get estate
+	trigger = {
+		religion_group = germanic_group
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		land_morale = 0.1		
+		manpower_in_true_faith_provinces = 0.1
+	}
+	country_modifier_neutral = {
+		manpower_in_true_faith_provinces = 0.05	
+	}	
+	country_modifier_angry = {
+		manpower_in_true_faith_provinces = -0.1	
+		land_morale = -0.1
+	}
+	
+	land_ownership_modifier = {
+		warrior_bands_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { religion_group = owner }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = owner }
+		}
+		modifier = {
+			factor = 0.67
+			NOT = { is_state_core = owner }
+		}
+		modifier = {
+			factor = 1.2
+			base_tax = 10
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {
+		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
+		trigger = {
+			NOT = { dominant_religion = ROOT }
+		}	
+		influence = -15
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}
+		influence = -40
+	}
+
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}
+		loyalty = -20
+	}
+
+	color = { 125 30 30 }
+
+	privileges = { 
+		estate_warrior_bands_land_rights
+		estate_warrior_bands_tournaments
+		estate_warrior_bands_higher_administration
+		estate_warrior_bands_infantry_raiders
+		estate_warrior_bands_cavalry_raiders		
+		estate_warrior_bands_artillery_raiders
+	}
+
+	agendas = { 
+		estate_warrior_bands_hire_advisor
+		estate_warrior_bands_fire_advisor	
+		estate_warrior_bands_raid_neighbour
+		estate_warrior_bands_recover_manpower	
+		estate_warrior_bands_build_barracks_in_y	
+		estate_warrior_bands_enlarge_army
+	}
+	influence_from_dev_modifier = 1.0
+	
+	custom_name = {
+		desc = estate_wb_viking_clans
+		trigger = {
+			OR = {
+				religion = norse_pagan_reformed
+				culture_group = scandinavian
+			}	
+		}
+	}	
+	custom_name = {
+		desc = estate_wb_varangian_leagues
+		trigger = {
+			OR = {
+				culture_group = byzantine
+			}	
+		}
+	}		
+}

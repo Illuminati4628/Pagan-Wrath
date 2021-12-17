@@ -30,9 +30,11 @@ country_decisions = {
 		major = yes
 		
 		potential = {
+			NOT = { tag = GRE } #They have tolerance in their ideas, would be pretty weird to let them have this without the downside.
 			government = monarchy
 			government_rank = 3
 			religion_group = hellenic_group
+			NOT = { religion = syncretic_hellenic }
 			NOT = { religion = imperial_hellenic } #Debated on whether or not to allow a united HRE to do this, but I figured if you're enough of a memelord to go Hellenic after forming it I figured why not, and I guess it makes it holy again. Instead now the Emperor is what is venerated as being holy, as disgusting as a Habsburg being deified is, rather then whatever the hell the holy actually meant in our timeline.
 		}
 		
@@ -231,6 +233,40 @@ country_decisions = {
 					religion = lollard
 				}
 			}			
+		}		
+	}
+
+	pw_adopt_romaic = {
+	
+		major = yes
+		
+		potential = {
+			tag = BYZ
+			government_rank = 3
+			religion_group = hellenic_group
+			NOT = { religion = syncretic_hellenic }
+			NOT = { religion = imperial_hellenic } #Debated on whether or not to allow a united HRE to do this, but I figured if you're enough of a memelord to go Hellenic after forming it I figured why not, and I guess it makes it holy again. Instead now the Emperor is what is venerated as being holy, as disgusting as a Habsburg being deified is, rather then whatever the hell the holy actually meant in our timeline.
+		}
+		
+		allow = {
+			NOT = { has_idea_group = religious_ideas } #This is the tolerance path, no reason to have that idea set.
+			stability = 1
+			adm_power = 50
+			dip_power = 50
+		}
+
+		effect = {
+			add_stability = -1
+			add_adm_power = -50
+			add_dip_power = -50
+			enable_religion = syncretic_hellenic
+			change_religion = syncretic_hellenic
+			add_harmonized_religion = greek_hellenic
+			capital_scope = { change_religion = syncretic_hellenic }
+			add_country_modifier = {
+				name = "pagan_conversion_zeal"
+				duration = 3650
+			}
 		}		
 	}	
 }		

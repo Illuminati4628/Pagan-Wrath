@@ -1,0 +1,2350 @@
+syn_zeus = { #Greek if non-western group, Latin if western
+
+	prestige = 1
+	republican_tradition = 1
+	legitimacy = 1
+	horde_unity = 1
+	devotion = 1
+	meritocracy = 1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 25
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+syn_athena = {
+
+	technology_cost = -0.05
+	discipline = 0.05
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 26
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_aphrodite = {
+
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.20
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 27
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_apollo = {
+
+	idea_cost = -0.05
+	global_unrest = -1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 28
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_ares = {
+
+	land_morale = 0.10
+	siege_ability = 0.05
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 29
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_artemis = {
+
+	production_efficiency = 0.10
+	global_tax_modifier = 0.10
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 30
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_hades = {
+
+	unjustified_demands = -0.10
+	core_creation = -0.075
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 31
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}			
+	}	
+}
+
+syn_hermes = {
+
+	diplomats = 1
+	build_cost = -0.1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 32
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_poseidon = {
+
+	naval_morale = 0.10
+	trade_efficiency = 0.1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			NOT = { technology_group = western }
+		}	
+	}
+	sprite = 33
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_colonialist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+
+
+syn_jupiter = {
+
+	prestige = 1
+	republican_tradition = 1
+	legitimacy = 1
+	horde_unity = 1
+	devotion = 1
+	meritocracy = 1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 25
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+syn_minerva = {
+
+	technology_cost = -0.05
+	discipline = 0.05
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 26
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_venus = {
+
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.20
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 27
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_w_apollo = {
+
+	idea_cost = -0.05
+	global_unrest = -1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 28
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_mars = {
+
+	land_morale = 0.10
+	siege_ability = 0.05
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 29
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_diana = {
+
+	production_efficiency = 0.10
+	global_tax_modifier = 0.10
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 30
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_pluto = { 
+
+	unjustified_demands = -0.10
+	core_creation = -0.075
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 31
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}			
+	}	
+}
+
+syn_mercury = {
+
+	diplomats = 1
+	build_cost = -0.1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 32
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_neptune = {
+
+	naval_morale = 0.10
+	trade_efficiency = 0.1
+	
+	allow = {
+		AND = {
+			religion = syncretic_hellenic
+			technology_group = western
+		}	
+	}
+	sprite = 33
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_colonialist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+# Each religion with personal deities is to have 6
+
+syn_amun = {
+	global_tax_modifier = 0.1
+	navy_tradition = 1
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = egyptian_pagan_group 
+		}
+	}	
+	sprite = 64
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+	}
+}
+
+syn_maat = {
+	stability_cost_modifier = -0.10
+	global_unrest = -1
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = egyptian_pagan_group 
+		}
+	}	
+	sprite = 65
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+	}
+}
+
+syn_ra = {
+    hostile_attrition = 1.0
+    recover_army_morale_speed = 0.05
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = egyptian_pagan_group 
+		}
+	}	
+    sprite = 66
+
+    ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}
+    }
+}
+
+syn_seth = {
+    infantry_power = 0.1
+    global_manpower_modifier = 0.1
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = egyptian_pagan_group 
+		}
+	}	
+    sprite = 67
+
+    ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}
+    }
+}    
+
+syn_isis = {
+    heir_chance = 0.50
+    manpower_recovery_speed = 0.25
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = egyptian_pagan_group 
+		}
+	}	
+    sprite = 68
+
+    ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}
+    }
+}
+
+syn_anubis = {
+    global_unrest = -1
+    discipline = 0.05
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = egyptian_pagan_group 
+		}
+	}	
+    sprite = 69
+
+    ai_will_do = {
+		factor = 1
+		modifier = {
+			  factor = 2
+			  personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+				personality = ai_capitalist
+		}
+    }
+}
+
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+# Each religion with personal deities is to have 6
+#Norse
+syn_odin = {
+	legitimacy = 0.1
+	horde_unity = 0.1
+	core_creation = -0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = germanic_group 
+		}
+	}	
+	sprite = 7
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+syn_freya = {
+	global_manpower_modifier = 0.1
+	global_tax_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = germanic_group 
+		}
+	}	
+	sprite = 8
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}
+	}
+}
+
+syn_tor = {
+	leader_land_shock = 1
+	defensiveness = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = germanic_group 
+		}
+	}	
+	sprite = 9
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}		
+	}
+}
+
+syn_tyr = {
+	global_sailors_modifier = 0.10
+	discipline = 0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = germanic_group 
+		}
+	}	
+	sprite = 10
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}		
+	}
+}
+
+syn_njord = {
+	trade_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = germanic_group 
+		}
+	}	
+	sprite = 11
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+
+syn_snotra = {
+	technology_cost = -0.05
+	build_cost = -0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = germanic_group 
+		}
+	}	
+	sprite = 12
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+# Each religion with personal deities is to have 6
+#Gaelic
+syn_toutatis = {
+	land_morale = 0.1
+	defensiveness = 0.2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = celtic_group
+		}
+	}	
+	sprite = 46
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}	
+}
+
+syn_taranis = {
+	discipline = 0.05
+	leader_land_shock = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = celtic_group
+		}
+	}	
+	sprite = 47
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_lugus = {
+	global_tax_modifier = 0.15
+	global_trade_goods_size_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = celtic_group
+		}
+	}	
+	sprite = 48
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}			
+	}	
+}
+
+syn_dagda = {
+	infantry_power = 0.10
+	leader_land_manuever = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = celtic_group
+		}
+	}	
+	sprite = 49
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_sulis = {
+	global_sailors_modifier = 0.05
+	diplomatic_upkeep = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = celtic_group
+		}
+	}	
+	sprite = 50
+	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_brigid = {
+	manpower_recovery_speed = 0.20
+	improve_relation_modifier = 0.20
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = celtic_group
+		}
+	}	
+	sprite = 51
+	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+# Each religion with personal deities is to have 6
+
+#West Slavic/ Prahbohnic
+syn_perun = {
+	hostile_attrition = 1.0
+	defensiveness = 0.2
+	
+	    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 13
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_svetovid ={
+	land_morale = 0.1
+	discipline = 0.05
+	
+	    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 14
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+
+syn_lada ={
+	naval_morale = 0.15
+	navy_tradition = 1
+	
+	    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}		
+	}	
+}
+
+syn_veles = {
+	leader_land_fire = 1
+	global_trade_goods_size_modifier = 0.1
+	
+	    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 16
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}		
+	}	
+}
+
+syn_svarog = {
+	production_efficiency = 0.1
+	manpower_recovery_speed = 0.20
+	
+	    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 17
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}		
+	}	
+}
+
+syn_jarilo = {
+	global_unrest = -1
+	global_tax_modifier = 0.1
+	
+	    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 18
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}			
+	}		
+}
+
+# Each religion with personal deities is to have 6
+
+syn_dieves = {
+
+	land_morale = 0.1
+	core_creation = -0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 40
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+syn_perkunas = {
+
+	infantry_power = 0.075
+	leader_land_shock = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 41
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+syn_auseklis = {
+	
+	diplomatic_upkeep = 2# 1?
+	improve_relation_modifier = 0.15
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 42
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}
+	}
+}
+
+syn_saule = {
+
+	production_efficiency = 0.1
+	global_trade_goods_size_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 43
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+	}
+}
+
+syn_laima = {
+	
+	heir_chance = 1
+	republican_tradition = 0.01
+	legitimacy = 1
+	horde_unity = 1
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 44
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+	}
+}
+
+syn_gabija = {
+
+	hostile_attrition = 1.0
+	defensiveness = 0.2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = balto_slavic_group 
+		}
+	}	
+	sprite = 45
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+	}
+}
+
+#Finnic
+# Each religion with personal deities is to have 6
+syn_ukko = {
+	land_morale = 0.1
+	discipline = 0.025
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = finnic_group 
+		}
+	}	
+	sprite = 34
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+
+syn_tapio = {
+	hostile_attrition = 1.0
+	defensiveness = 0.2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = finnic_group 		
+		}
+	}	
+	sprite = 35
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_ahti = {
+	naval_morale = 0.20
+	navy_tradition = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = finnic_group 		
+		}
+	}	
+	sprite = 36
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}		
+	}	
+}
+
+syn_mielikki = {
+	leader_land_fire = 1
+	global_trade_goods_size_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = finnic_group 		
+		}
+	}	
+	sprite = 37
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}		
+	}	
+}
+
+syn_akras = {
+	production_efficiency = 0.1
+	manpower_recovery_speed = 0.20
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = finnic_group 		
+		}
+	}	
+	sprite = 38
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}		
+	}	
+}
+
+syn_tuoni = {
+	global_unrest = -1
+	global_tax_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = finnic_group 		
+		}
+	}	
+	sprite = 39
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}			
+	}		
+}
+
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+# Each religion with personal deities is to have 6
+#Canaanite
+syn_baal_hammon = {
+	# (Manpower - Navy)
+	manpower_recovery_speed = 0.1
+	naval_morale = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 120
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+
+syn_tanit = {
+	#(Diplomatic - Economy)
+	diplomatic_reputation = 1
+	production_efficiency = 0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 121
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_kothar_wa_hasis = {
+	#(God of Craft - Building)
+	build_time = -0.1
+	technology_cost = -0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 122 #Placeholder for now
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}				
+	}	
+}
+
+syn_dagon = {
+	#God of fish/fishing
+	navy_tradition_decay = -0.01
+	global_sailors_modifier = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 123 #Placeholder for now	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}		
+	}	
+}	
+
+syn_melqarth = {
+	#God of life and death
+	global_trade_goods_size_modifier = 0.05
+	republican_tradition = 1
+	legitimacy = 1
+	horde_unity = 1
+	devotion = 1
+	meritocracy = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 124 #Placeholder for now	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}	
+	}	
+}		
+
+syn_astarte = {
+	#(Innovative - Tech/Idea)
+	cav_to_inf_ratio = 0.15
+	manpower_recovery_speed = 0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 125
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}		
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}			
+	}	
+}	
+
+syn_reshep = {
+	#War and Plague
+	discipline = 0.05
+	hostile_attrition = 1
+
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 126 #Placeholder for now	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+	}	
+}
+
+syn_ishara = {
+	#Oath
+	global_unrest = -2
+	stability_cost_modifier = -0.1
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = canaanite_group 		
+		}
+	}	
+	sprite = 127 #Placeholder for now	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}	
+	}	
+}
+
+# Each religion with personal deities is to have 6
+#Wathanist
+syn_amm = {
+	army_tradition = 1
+	discipline = 0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 85
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}	
+}
+
+syn_shams = {
+	manpower_recovery_speed = 0.2
+	hostile_attrition = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 86
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_athtar = {
+	global_unrest = -1
+	infantry_power = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 87
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}			
+	}	
+}
+
+syn_almaqah = {
+	leader_land_fire = 1
+	legitimacy = 0.5
+	republican_tradition = 0.5
+	devotion = 0.5
+	horde_unity = 0.5
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 88
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_talab = {
+	production_efficiency = 0.1
+	leader_land_shock = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 89
+	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}			
+	}	
+}
+
+syn_wadd = {
+	diplomats = 1
+	diplomatic_upkeep = 1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 90
+	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}			
+	}	
+}	
+
+# Each religion with personal deities is to have 6
+#Ashurist
+syn_ashur = {
+	land_morale = 0.1
+	tolerance_heretic = 2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 79
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}	
+}
+
+syn_anu = {
+	diplomatic_upkeep = 1
+	improve_relation_modifier = 0.20
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 80
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_bel = {
+	global_tax_modifier = 0.10
+	stability_cost_modifier = -0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 81
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}			
+	}	
+}
+
+syn_ea = {
+	land_attrition = -0.1
+	core_creation = -0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 82
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_shamash = {
+	global_unrest = -1
+	improve_relation_modifier = 0.2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 83
+	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_ramman = {
+	hostile_attrition = 1
+	siege_ability = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = arabic_pagan_group	
+		}
+	}	
+	sprite = 84
+	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}			
+	}	
+}
+
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+# Each religion with personal deities is to have at least 6
+
+syn_tupan = { #Hunt and Artisanry
+	land_attrition = -0.05
+	build_cost = -0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = new_world_pagan	
+		}
+	}	
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}			
+	}	
+}
+
+syn_jaci = { #Moon and protector of the night
+	envoy_travel_time = -0.1
+	global_missionary_strength = 0.02
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = new_world_pagan	
+		}
+	}	
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}	
+}
+
+syn_guaraci = { #The Sun
+	land_morale = 0.05
+	shock_damage_received = -0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = new_world_pagan	
+		}
+	}	
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_anhanga = { #Underworld
+	yearly_corruption = -0.05
+	production_efficiency = 0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = new_world_pagan	
+		}
+	}	
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_ceuci = { #Guardian of homes and workplaces
+	defensiveness = 0.10
+	development_cost = -0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = new_world_pagan	
+		}
+	}	
+	sprite = 91 #Placeholder for now
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}			
+	}	
+}
+
+syn_ruda = { #Love
+	manpower_recovery_speed = 0.10
+	heir_chance = 0.25
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = new_world_pagan	
+		}
+	}	
+	sprite = 91 #Placeholder for now
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+	}	
+}
+
+syn_shiva = {
+	# (Diplomatic - War)
+	ae_impact = -0.05
+	core_creation = -0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = dharmic	
+		}
+	}	
+	sprite = 1
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+
+syn_ganesha = {
+	#(Diplomatic - Peace)
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.20
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = dharmic	
+		}
+	}	
+	sprite = 2
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}	
+}
+
+syn_surya = {
+	#(Economic - Income)
+	global_tax_modifier = 0.10
+	trade_efficiency = 0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = dharmic	
+		}
+	}	
+	sprite = 3
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}		
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}			
+	}	
+}
+
+syn_ganga = {
+	#(Economic - Savings)
+	interest = -0.25
+	build_cost = -0.10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = dharmic	
+		}
+	}	
+	sprite = 4
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}		
+	}	
+}
+
+syn_shakti = { 
+	#(Military - Offensive) 
+	siege_ability = 0.05
+	discipline = 0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = dharmic	
+		}
+	}	
+	sprite = 5
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}	
+}
+
+syn_vishnu = {
+	# (Military - Defensive)
+	defensiveness = 0.2
+	global_missionary_strength = 0.02
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = dharmic	
+		}
+	}	
+	sprite = 6
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}		
+	}	
+}
+
+syn_ku = {
+	improve_relation_modifier = 0.2
+	spy_offence = 0.2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = pw_pacific_group	
+		}
+	}	
+	sprite = 114
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+	}
+}
+
+syn_makemake = {
+	heir_chance = 1
+	production_efficiency = 0.05
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = pw_pacific_group	
+		}
+	}
+	sprite = 115
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}
+	}
+}
+
+syn_oro = {
+	discipline = 0.05
+	shock_damage = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = pw_pacific_group	
+		}
+	}
+	sprite = 116
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}		
+	}
+}
+
+syn_tane = {
+	diplomatic_reputation = 2
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = pw_pacific_group	
+		}
+	}
+	sprite = 117
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}			
+	}
+}
+
+syn_tangaroa = {
+	trade_efficiency = 0.1
+	naval_morale = 0.1
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = pw_pacific_group	
+		}
+	}
+	sprite = 118
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 1.5
+			personality = ai_colonialist
+		}	
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+
+syn_rango = {
+	stability_cost_modifier = -0.15
+	reduced_liberty_desire = -10
+	
+    allow = { 
+		AND = {
+			religion = syncretic_hellenic 
+			has_harmonized_with = pw_pacific_group	
+		}
+	}
+	sprite = 119
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist
+		}		
+	}
+}

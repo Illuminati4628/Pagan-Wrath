@@ -1,0 +1,101 @@
+estate_druids = { #Clergy still represents the higher religious class within the Celtic Religions, Druids are more localised missionary groups
+	icon = 15
+
+	# If true, country will get estate
+	trigger = {
+		religion_group = celtic_group
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		global_unrest = -2			
+		global_missionary_strength = 0.2
+	}
+	country_modifier_neutral = {
+		global_unrest = -1			
+	}	
+	country_modifier_angry = {
+		global_unrest = 2
+		global_missionary_strength = -0.2
+	}
+	
+	land_ownership_modifier = {
+		druids_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { religion_group = owner }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = owner }
+		}
+		modifier = {
+			factor = 0.67
+			NOT = { is_state_core = owner }
+		}
+		modifier = {
+			factor = 1.2
+			base_tax = 10
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {
+		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
+		trigger = {
+			NOT = { dominant_religion = ROOT }
+		}	
+		influence = -15
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}
+		influence = -40
+	}
+
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}
+		loyalty = -20
+	}
+
+	color = { 75 145 55 }
+
+	privileges = { 
+		estate_druids_land_rights
+		estate_druids_missions
+		estate_druids_colonial_ventures
+		estate_druids_higher_administration
+		estate_druids_restore_countryside
+		estate_druids_diplomatic_missions
+	}
+
+	agendas = { #Alot of these will overlap with clergy agendas
+		estate_druids_hire_advisor
+		estate_druids_fire_advisor	
+		estate_druids_convert_province_x
+		estate_druids_recover_manpower	
+		estate_druids_build_temple_in_y	
+		estate_druids_develop_x 
+		estate_druids_destroy_manufactory_in_y
+		estate_druids_reduce_devastation_in_x
+	}
+	influence_from_dev_modifier = 1.0
+}

@@ -8,9 +8,10 @@ tags={
 	"Graphics"
 }
 dependencies={
+	"Beyond Typus Beta"
 	"Beyond Typus"
 	"-BT Addon: Heresy!"
 }
 name="-BT Addon: Pagan Wrath"
-supported_version="1.30.*"
+supported_version="1.32.*"
 remote_file_id="2075838365"

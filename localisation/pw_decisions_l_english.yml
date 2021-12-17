@@ -25,8 +25,11 @@
  pw_proclaim_imperial_hellenic_dominance_title:0 "Proclaim Apotheosian Dominance"
  pw_proclaim_imperial_hellenic_dominance_desc:0 "The time has come for the dominion of the Christians in Europe to end, the Emperor wills that the old gods will rule Europe once more!"
 
- pw_christian_cave_to_apotheosian_title:0 "Cave to the Apotheosians
+ pw_christian_cave_to_apotheosian_title:0 "Cave to the Apotheosians"
  pw_christian_cave_to_apotheosian_desc:0 "Our faith has been shattered, the legitimacy of our church is laughable, what few devote christians remain lose increasing hope. Perhaps it is best we abandon the words of Christ completely and finally cave to the Apotheosian rule. Possibly, then, could we be respected again. We might also find protection from the new Master of the Mediterranean, considering their obvious stance against christianity."
+
+ pw_adopt_romaic_title:0 "Adopt Romaic"
+ pw_adopt_romaic_desc:0 "Adopt a syncretic form of Hellenism that shall incoperate dieties from harmonised faiths into our own."
 
  pw_mystery_cults_title:0 "Establish Mystery Cults"
  pw_mystery_cults_desc:0 "By establishing Mystery Cults we can more effectively guide unbelievers into following our gods."
@@ -34,14 +37,118 @@
  pw_establish_official_religious_authorities_title:0 "Establish Official Religious Authorities"
  pw_establish_official_religious_authorities_desc:0 "If we are ever to be able to properly stand up against the hostile religions that surround us it would be a good idea to take from them what makes them so effective at swaying so many people. If we are to establish an official Hierarchy for our faith we may be able to more effectively convert those who refuse to believe."
  
- spreading_of_anglic_rituals_title:0 "Spreading of Anglic Rituals"
+ spreading_of_anglic_rituals_title:0 "Spreading of Ænglic Rituals"
  spreading_of_anglic_rituals_desc:0 "By Establishing specific rituals that even our Monarch will follow we can better direct our people to worship our gods and have them help teach those who don't."
  
- spreading_of_germanic_rituals_title:0 "Spreading of Germanic Rituals"
- spreading_of_germanic_rituals_desc:0 "Establishing Rituals for the Germanic Faith will allow us to better spread our religion to unbelievers."
+ spreading_of_germanic_rituals_title:0 "Spreading of Tuistic Rituals"
+ spreading_of_germanic_rituals_desc:0 "Establishing Rituals for the Tuistic Faith will allow us to better spread our religion to unbelievers."
  
  pw_adopt_brethren_code_title:0 "Adopt the Brethren Code"
  pw_adopt_brethren_code_desc:0 "Now that we have established ourselves as a local force, we can now proclaim a new Brethren Code for every good pirate to follow, this will allow us to better control what our crews will do at sea and in port."
  
  pw_adopt_secularism_title:0 "Adopt Secularism"
  pw_adopt_secularism_desc:0 "The time has come to separate the state and religion, we shall cease our conversion efforts and finally let all our subjects worship in peace."
+ 
+ pw_althistorical_zunist_tt:0 "§Y[Root.GetName]§! has either §YBaluchi, Afghan§! or §YTajik§! as the primary culture and §Y[Root.Capital.GetName]§! is in one of the §GAfgan§! areas."
+ pw_can_convert_to_zunist_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YZunist§!."
+ pw_can_convert_to_zunist_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Zunist Center of Resurgence§! and §G10%§! of its provinces are §YZunist§!." 
+ 
+ pw_althistorical_jainism_tt:0 "§Y[Root.GetName]§! is in one of the §YIndian§! culture groups and §Y[Root.Capital.GetName]§! is in the §GIndia§! superregion."
+ pw_can_convert_to_jainism_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YJain§!."
+ pw_can_convert_to_jainism_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Jain Center of Resurgence§! and §G10%§! of its provinces are §YJain§!." 
+ 
+ pw_althistorical_tengri_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in either the §YTatar, Kipchak§! or §YOghur§! culture group and §Y[Root.Capital.GetName]§! is in the §GCentral Asia§! region."
+ pw_can_convert_to_tengri_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YTengri§!."
+ pw_can_convert_to_tengri_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Tengri Center of Resurgence§! and §G10%§! of its provinces are §YTengri§!." 
+ 
+ pw_althistorical_turkic_pagan_tt:0 "§Y[Root.GetName]§! has §YTurkish§! as the priamry culture and §Y[Root.Capital.GetName]§! is in the §GAnatolia§! region."
+ pw_can_convert_to_turkic_pagan_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YTurkic§!."
+ pw_can_convert_to_turkic_pagan_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Turkic Center of Resurgence§! and §G10%§! of its provinces are §YTurkic§!." 
+ 
+ pw_althistorical_zoroastrian_tt:0 "§Y[Root.GetName]§! is in the §YIranian§! culture group and §Y[Root.Capital.GetName]§! is in the §GPersia§! or §GWestern Khorasan§! region."
+ pw_can_convert_to_zoroastrian_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YZoroastrian§!."
+ pw_can_convert_to_zoroastrian_tt_1:0 "§Y[Root.GetName]§! owns at least §Y1 Zoroastrian Center of Resurgence§! and §G10%§! of its provinces are §YZoroastrian§!." 
+ 
+ pw_althistorical_norse_tt:0 "§Y[Root.GetName]§! is in the §YScandinavian§! culture group and §Y[Root.Capital.GetName]§! is in the §GMainland Scandinavia§! region."
+ pw_can_convert_to_norse_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YNorse§!."
+ pw_can_convert_to_norse_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Norse Center of Resurgence§! and §G10%§! of its provinces are §YNorse§!." 
+ 
+ pw_althistorical_continental_germanic_tt:0 "§Y[Root.GetName]§! is in either the §YGermanic§! or §YAnglo-Frisian§! culture group and §Y[Root.Capital.GetName]§! is in either the §GNorth German, South German§! or the §GLow Countries§! region, excluding the §RBohemian§! areas."
+ pw_can_convert_to_continental_germanic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YTuistic§!."
+ pw_can_convert_to_continental_germanic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Tuistic Center of Resurgence§! and §G10%§! of its provinces are §YTuistic§!."  
+ 
+ pw_althistorical_insular_germanic_tt:0 "§Y[Root.GetName]§! is in the §YBritish§! culture group and §Y[Root.Capital.GetName]§! is in either the §GGreat Britain§! or the §GIreland§! region."
+ pw_can_convert_to_insular_germanic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YÆnglic§!."
+ pw_can_convert_to_insular_germanic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Ænglic Center of Resurgence§! and §G10%§! of its provinces are §YÆnglic§!."   
+ 
+ pw_althistorical_druidic_tt:0 "§Y[Root.GetName]§! is in the either the §YGaelic, Brythonic§! or §YCeltic§! culture group and §Y[Root.Capital.GetName]§! is in either the §GCeltic Great Britain§! or the §GIreland§! region."
+ pw_can_convert_to_druidic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YGaelic§!."
+ pw_can_convert_to_druidic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Gaelic Center of Resurgence§! and §G10%§! of its provinces are §YGaelic§!."
+ 
+ pw_althistorical_gallo_druidic_tt:0 "§Y[Root.GetName]§! is in the either the §YFrench, Occitanic§! culture group or has §YProvençal§! as primary culture and §Y[Root.Capital.GetName]§! is in the §GFrance§! region."
+ pw_can_convert_to_gallo_druidic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YGallic§!."
+ pw_can_convert_to_gallo_druidic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Gallic Center of Resurgence§! and §G10%§! of its provinces are §YGallic§!." 
+ 
+ pw_althistorical_ibero_druidic_tt:0 "§Y[Root.GetName]§! is in either the §YIberian§! culture group or has §YCatalan§! as primary culture and §Y[Root.Capital.GetName]§! is in the §GIberia§! region."
+ pw_can_convert_to_ibero_druidic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YCeltiberic§!."
+ pw_can_convert_to_ibero_druidic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Celtiberic Center of Resurgence§! and §G10%§! of its provinces are §YCeltiberic§!."  
+ 
+ pw_althistorical_greek_hellenic_tt:0 "§Y[Root.GetName]§! is in the §YHellenic§! culture group and §Y[Root.Capital.GetName]§! is in the §GGreek Balkans§! region."
+ pw_can_convert_to_greek_hellenic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YHellenic§!."
+ pw_can_convert_to_greek_hellenic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Hellenic Center of Resurgence§! and §G10%§! of its provinces are §YHellenic§!."
+ 
+ pw_althistorical_greek_hellenic_tt:0 "§Y[Root.GetName]§! is in either the §YItalian, Gallo-Italic, Rhaetian§! or §YLatin§! culture group and §Y[Root.Capital.GetName]§! is in the §GMainland Italy§! region."
+ pw_can_convert_to_greek_hellenic_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YLatin§!."
+ pw_can_convert_to_greek_hellenic_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Latin Center of Resurgence§! and §G10%§! of its provinces are §YLatin§!."
+ 
+ pw_althistorical_baltic_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in the §YBaltic§! culture group and §Y[Root.Capital.GetName]§! is in the §GBaltic§! region, excluding the §RPrussian§! and §REstonian§! areas."
+ pw_can_convert_to_baltic_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YRomuva§!."
+ pw_can_convert_to_baltic_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Romuva Center of Resurgence§! and §G10%§! of its provinces are §YRomuva§!."
+ 
+ pw_althistorical_slavic_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in either the §YWest Slavic§! or §YUnified Slavic§! culture group and §Y[Root.Capital.GetName]§! is in either the §GPoland§! region or the §GBohemian§! areas."
+ pw_can_convert_to_slavic_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YPrabohviera§!."
+ pw_can_convert_to_slavic_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Prabohviera Center of Resurgence§! and §G10%§! of its provinces are §YPrabohviera§!."
+ 
+ pw_althistorical_east_slavic_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in either the §YEast Slavic§! or §YUnified Slavic§! culture group and §Y[Root.Capital.GetName]§! is in either the §GRussia§! or the §GRuthenia§! region."
+ pw_can_convert_to_east_slavic_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YRoduvera§!."
+ pw_can_convert_to_east_slavic_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Roduvera Center of Resurgence§! and §G10%§! of its provinces are §YRoduvera§!."
+ 
+ pw_althistorical_south_slavic_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in either the §YSouth Slavic§! or §YUnified Slavic§! culture group and §Y[Root.Capital.GetName]§! is in the §GSlavic Balkans! region."
+ pw_can_convert_to_south_slavic_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YSudvyara§!."
+ pw_can_convert_to_south_slavic_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Sudvyara Center of Resurgence§! and §G10%§! of its provinces are §YSudvyara§!."
+ 
+ pw_althistorical_finnish_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in the §YFinnic§! culture group and §Y[Root.Capital.GetName]§! is in either the §GFinnish§! or §GEstonian§! areas."
+ pw_can_convert_to_finnish_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YUkonusko§!."
+ pw_can_convert_to_finnish_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Ukonusko Center of Resurgence§! and §G10%§! of its provinces are §YUkonusko§!."
+ 
+ pw_althistorical_magyar_pagan_reformed_tt:0 "§Y[Root.GetName]§! is in the §YHungarian§! culture group and §Y[Root.Capital.GetName]§! is in the §GHungarian Carpathia§! region."
+ pw_can_convert_to_magyar_pagan_reformed_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YIstenhit§!."
+ pw_can_convert_to_magyar_pagan_reformed_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Istenhit Center of Resurgence§! and §G10%§! of its provinces are §YIstenhit§!."
+ 
+ pw_althistorical_egyptian_pagan_tt:0 "§Y[Root.GetName]§! is in either the §YCoptic§! culture group or has §YOld Egyptian, Masri§! or §YSudanese§! as primary culture and §Y[Root.Capital.GetName]§! is in the §GEgypt§! region."
+ pw_can_convert_to_egyptian_pagan_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YKemetic§!."
+ pw_can_convert_to_egyptian_pagan_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Kemetic Center of Resurgence§! and §G10%§! of its provinces are §YKemetic§!."
+ 
+ pw_althistorical_canaanite_tt:0 "§Y[Root.GetName]§! is in either has §YTunisian, Moroccan, Algerian§! or §YPhoenician§! as primary culture and §Y[Root.Capital.GetName]§! is in the §GCoastal Maghreb§! areas."
+ pw_can_convert_to_canaanite_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YCanaanite§!."
+ pw_can_convert_to_canaanite_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Canaanite Center of Resurgence§! and §G10%§! of its provinces are §YCanaanite§!."
+ 
+ pw_althistorical_canaanite_tt:0 "§Y[Root.GetName]§! is in the §YRomanian§! culture group and §Y[Root.Capital.GetName]§! is in the §GRomanian Carpathia§! region."
+ pw_can_convert_to_canaanite_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YZalmoxian§!."
+ pw_can_convert_to_canaanite_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Zalmoxian Center of Resurgence§! and §G10%§! of its provinces are §YZalmoxian§!."
+ 
+ pw_althistorical_arabic_pagan_tt:0 "§Y[Root.GetName]§! is has one of the §YArabic§! cultures found in Arabia proper and §Y[Root.Capital.GetName]§! is in the §GArabia§! region."
+ pw_can_convert_to_arabic_pagan_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YWathanist§!."
+ pw_can_convert_to_arabic_pagan_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Wathanist Center of Resurgence§! and §G10%§! of its provinces are §YWathanist§!."
+ 
+ pw_althistorical_ashurist_tt:0 "§Y[Root.GetName]§! has one of the §YArabic§! cultures found in Arabia proper as primary culture and §Y[Root.Capital.GetName]§! is in the §GMesopotamia§! region, excluding the §RNorthernmost§! areas."
+ pw_can_convert_to_ashurist_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YAshurist§!."
+ pw_can_convert_to_ashurist_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Ashurist Center of Resurgence§! and §G10%§! of its provinces are §YAshurist§!."
+ 
+ pw_althistorical_nuragic_pagan_tt:0 "§Y[Root.GetName]§! has §YSardinian§! as primary culture and §Y[Root.Capital.GetName]§! is in the §Sardinia§! area."
+ pw_can_convert_to_nuragic_pagan_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YNuragic§!."
+ pw_can_convert_to_nuragic_pagan_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Nuragic Center of Resurgence§! and §G10%§! of its provinces are §YNuragic§!."
+ 
+ pw_althistorical_nuragic_pagan_tt:0 "§Y[Root.GetName]§! is in the §YTatar§! culture group and §Y[Root.Capital.GetName]§! is in the §Pontic Steppe§! region."
+ pw_can_convert_to_nuragic_pagan_tt_1:0 "§Y[Root.GetName]§! is both §Yindependent§! and §G15%§! of its provinces are §YScythian§!."
+ pw_can_convert_to_nuragic_pagan_tt_2:0 "§Y[Root.GetName]§! owns at least §Y1 Scythian Center of Resurgence§! and §G10%§! of its provinces are §YScythian§!."

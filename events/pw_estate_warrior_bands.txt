@@ -1,0 +1,102 @@
+###########################################################
+# Events for the Warrior Bands Estate
+#
+# written by Hadiros, still WIP, further events to be done later
+###########################################################
+
+namespace = pw_estate_warrior_bands
+
+country_event = { #Advancement of the Warrior Bands
+	id = pw_estate_warrior_bands.1
+	title = pw_estate_warrior_bands.1.t
+	desc = pw_estate_warrior_bands.1.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_estate = estate_warrior_bands
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_warrior_bands
+				modifier = EST_VAL_WARRIOR_BANDS_DECLINES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_warrior_bands
+				modifier = EST_VAL_WARRIOR_BANDS_ADVANCES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_warrior_bands
+				modifier = EST_VAL_WARRIOR_BANDS_ADVANCES_20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+
+	option = {
+		name = pw_estate_warrior_bands.1.a #Ok
+		add_estate_influence_modifier = {
+			estate = estate_warrior_bands
+			desc = EST_VAL_WARRIOR_BANDS_ADVANCES
+			influence = 10
+			duration = 5475
+		}
+	}
+}
+
+country_event = { #Decline of the Warrior Bands
+	id = pw_estate_warrior_bands.2
+	title = pw_estate_warrior_bands.2.t
+	desc = pw_estate_warrior_bands.2.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_warrior_bands
+		estate_influence = {
+			estate = estate_warrior_bands
+			influence = 15
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_warrior_bands
+				modifier = EST_VAL_WARRIOR_BANDS_DECLINES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_warrior_bands
+				modifier = EST_VAL_WARRIOR_BANDS_ADVANCES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_warrior_bands
+				modifier = EST_VAL_WARRIOR_BANDS_ADVANCES_20
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = pw_estate_warrior_bands.2.a #Ok
+		add_estate_influence_modifier = {
+			estate = estate_warrior_bands
+			desc = EST_VAL_WARRIOR_BANDS_DECLINES
+			influence = -10
+			duration = 5475
+		}
+	}
+}

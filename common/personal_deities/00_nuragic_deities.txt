@@ -1,0 +1,135 @@
+#Nuragic
+# Each religion with personal deities is to have at least 6
+nuragic_pagan_sardo = { #Sardò, aka Sid Addir Bab (Ancient powerful hunter), aka Sardus Pater (Father of Sardinians), is the true god and father of all Sardinians, virtually recognized as that by all peoples to which sardinian took contact in such age, as it gave the name to both the island and it's people
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+nuragic_pagan_orgia = { #Orgìa, the goddess of water, in a time in which water was very important and has always been a scarce resource in Sardinia, such goddess was of key importance and in her honour several hundreds holy wells had been built
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+nuragic_pagan_maimon = { #Maimon, a god of rain, survived in some old prayers and in toponyms
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+nuragic_pagan_merre = { #Merre, what Greeks called Asclepius and what Romans called Esculapius, was another key sardinian god of which evidence has been found in a variety of archeological finds
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+nuragic_pagan_norax = { #Norax, part of the cult of heroes, the founder of Nora
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+nuragic_pagan_iolaus = { #Iolaus, part of the cult of heroes but of which we only know the ancient greek name and not the local one
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+nuragic_pagan_urtho = { #Urtho/Orcus, god of death and the underground world, hundreds of nuraghes are named after him even today and he is a key figure in many pagan rituals on carnival
+	land_morale = 0.1
+	discipline = 0.025
+	
+	allow = { religion = nuragic_pagan }
+	sprite = 91 #Placeholder for now
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}

@@ -1,0 +1,412 @@
+namespace = pw_germanic_tournament
+
+country_event = { # 1 The Championship of the Warriors
+	id = pw_germanic_tournament.1
+	title = "pw_germanic_tournament.1.t"
+	desc = "pw_germanic_tournament.1.d"
+	picture = TOURNAMENT_eventPicture
+	
+	major = no
+	
+	trigger = {
+		has_country_flag = warrior_bands_tournaments
+		religion_group = germanic_group
+		OR = {
+			NOT = { has_country_flag = germanic_had_recent_tournament }
+			had_country_flag = { flag = germanic_had_recent_tournament days = 1825 }
+		}		
+	}	
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = germanic_had_recent_tournament
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}	
+	
+	option = { #Let the championship begin!
+		name = "pw_germanic_tournament.1.a"
+		ai_chance = { factor = 1 }
+		
+		add_years_of_income = -0.1
+		add_legitimacy = 5
+		germanic_tournament_effect = yes
+	}
+}	
+
+country_event = { #2 Favourite Candidate wins
+	id = pw_germanic_tournament.2
+	title = "pw_germanic_tournament.2.t"
+	desc = "pw_germanic_tournament.2.d"
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.2.a"
+		ai_chance = { factor = 1 }
+		add_country_modifier = {
+			name = "pw_favourite_candidate_championship"
+			duration = 1825
+		}
+	}
+}
+
+country_event = { #3 Championship Riots!
+	id = pw_germanic_tournament.3
+	title = "pw_germanic_tournament.3.t"
+	desc = "pw_germanic_tournament.3.d"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.3.a"
+		ai_chance = { factor = 1 }
+		
+		ROOT = {
+			capital_scope = {
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 2
+				}
+			}	
+		}
+	}
+	
+	option = { #Pacify them
+		name = "pw_germanic_tournament.3.b"
+		ai_chance = { factor = 1 }
+		
+		add_yearly_manpower = -0.66 #Cut from 1.5 because 1.30 adjusted rebel sizes.
+	}
+}
+
+country_event = { #4 Championship Riots!
+	id = pw_germanic_tournament.4
+	title = "pw_germanic_tournament.4.t"
+	desc = "pw_germanic_tournament.4.d"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.4.a"
+		ai_chance = { factor = 1 }
+		
+		ROOT = {
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+				}	
+			}
+		}
+	}
+	
+	option = { #Pacify them
+		name = "pw_germanic_tournament.4.b"
+		ai_chance = { factor = 1 }
+		
+		add_yearly_manpower = -1.0 #Cut from 2.5 because 1.30 adjusted rebel sizes drastically.
+	}
+}
+
+country_event = { #5 Fresh Recruits
+	id = pw_germanic_tournament.5
+	title = "pw_germanic_tournament.5.t"
+	desc = "pw_germanic_tournament.5.d"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.5.a"
+		ai_chance = { factor = 1 }
+		ROOT = {
+			capital_scope = {
+				add_base_manpower = 1
+			}	
+		}
+	}
+}
+
+country_event = { #6 Arms Production Boom
+	id = pw_germanic_tournament.6
+	title = "pw_germanic_tournament.6.t"
+	desc = "pw_germanic_tournament.6.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.6.a"
+		ai_chance = { factor = 1 }
+		ROOT = {
+			capital_scope = {
+				add_base_production = 1
+			}	
+		}
+	}
+}
+
+country_event = { #7 The Poor Merchant Wins!
+	id = pw_germanic_tournament.7
+	title = "pw_germanic_tournament.7.t"
+	desc = "pw_germanic_tournament.7.d"
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.7.a"
+		ai_chance = { factor = 1 }
+		
+		add_dip_power = 50
+		add_estate_influence_modifier = {
+			estate = estate_burghers
+			desc = EST_VAL_BURGHERS_CHAMPIONSHIP
+			influence = 10
+			duration = 1825
+		}
+	}
+}
+
+country_event = { #8 The Noble Squire Wins!
+	id = pw_germanic_tournament.8
+	title = "pw_germanic_tournament.8.t"
+	desc = "pw_germanic_tournament.8.d"
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.8.a"
+		ai_chance = { factor = 1 }
+		
+		add_mil_power = 50
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = EST_VAL_NOBLES_CHAMPIONSHIP
+			influence = 10
+			duration = 1825
+		}
+	}
+}
+
+country_event = { #9 The Clergy's Choice Wins!
+	id = pw_germanic_tournament.9
+	title = "pw_germanic_tournament.9.t"
+	desc = "pw_germanic_tournament.9.d"
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.9.a"
+		ai_chance = { factor = 1 }
+		
+		add_adm_power = 50
+		add_estate_influence_modifier = {
+			estate = estate_church
+			desc = EST_VAL_CHURCH_CHAMPIONSHIP
+			influence = 10
+			duration = 1825
+		}
+	}
+}
+
+country_event = { #10 The Warriors Own Wins!
+	id = pw_germanic_tournament.10
+	title = "pw_germanic_tournament.10.t"
+	desc = "pw_germanic_tournament.10.d"
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.10.a"
+		ai_chance = { factor = 1 }
+		
+		add_mil_power = 50
+		add_estate_influence_modifier = {
+			estate = estate_generals
+			desc = EST_VAL_WARRIOR_BANDS_CHAMPIONSHIP
+			influence = 10
+			duration = 1825
+		}
+	}
+}
+
+country_event = { #11 Champion of Champions
+	id = pw_germanic_tournament.11
+	title = "pw_germanic_tournament.11.t"
+	desc = "pw_germanic_tournament.11.d"
+	picture = TOURNAMENT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.11.a"
+		ai_chance = { factor = 1 }
+		
+		create_general = { tradition = 100 }
+		add_army_professionalism = 0.03
+	}
+}
+
+country_event = { #12 Rampaging Warriors
+	id = pw_germanic_tournament.12
+	title = "pw_germanic_tournament.12.t"
+	desc = "pw_germanic_tournament.12.d"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.12.a"
+		ai_chance = { factor = 1 }
+		
+		add_years_of_income = -0.5
+	}
+}
+
+country_event = { #13 Bribed Warriors
+	id = pw_germanic_tournament.13
+	title = "pw_germanic_tournament.13.t"
+	desc = "pw_germanic_tournament.13.d"
+	picture = CORRUPTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.13.a"
+		ai_chance = { factor = 1 }
+		
+		add_corruption = 1
+	}
+}
+
+country_event = { #14 Golden Comet
+	id = pw_germanic_tournament.14
+	title = "pw_germanic_tournament.14.t"
+	desc = "pw_germanic_tournament.14.d"
+	picture = DEATH_OF_HEIR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		religion_group = germanic_group
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Ok
+		name = "pw_germanic_tournament.14.a"
+		ai_chance = { factor = 1 }
+		
+		kill_ruler = yes
+	}
+}

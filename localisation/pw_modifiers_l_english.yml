@@ -36,5 +36,83 @@
  killed_an_old_one:0 "Killed an Old One"
  
  pw_resistance_weakness:0 "Pagan Susceptibility"
- desc_pw_resistance_weakness:0 "The populace of this province is particularly sentimental to paganism, and will more eagerly convert to pagan faiths."
+ desc_pw_resistance_weakness:0 "The populace of this province is particularly sentimental to paganism, and will more eagerly convert to pagan faiths. This, however has undermined the authority of the local clergy and may make it easier for heresies to take root as well."
+ 
+ #Harmonized Modifiers
+ 
+ harmonized_germanic_group:0 "Harmonised with Germanic Faiths"
+ desc_harmonized_germanic_group:0 "We have incorporated all Germanic faiths into our country and national ethos."
+ harmonized_celtic_group:0 "Harmonised with Celtic Faiths"
+ desc_harmonized_celtic_group:0 "We have incorporated all Celtic faiths into our country and national ethos."
+ harmonized_hellenic_group:0 "Harmonised with Hellenistic Faiths"
+ desc_harmonized_hellenic_group:0 "We have incorporated all Hellenistic faiths into our country and national ethos."
+ harmonized_balto_slavic_group:0 "Harmonised with Balto-Slavic Faiths"
+ desc_harmonized_balto_slavic_group:0 "We have incorporated all Balto-Slavic faiths into our country and national ethos."
+ harmonized_finnic_group:0 "Harmonised with Uralian Faiths"
+ desc_harmonized_finnic_group:0 "We have incorporated all Uralian faiths into our country and national ethos."
+ harmonized_egyptian_group:0 "Harmonised with Kemetic Faiths"
+ desc_harmonized_egyptian_group:0 "We have incorporated all Kemetic faiths into our country and national ethos."
+ harmonized_canaanite_group:0 "Harmonised with Canaanite Faiths"
+ desc_harmonized_canaanite_group:0 "We have incorporated all Canaanite faiths into our country and national ethos."
+ harmonized_dacian_group:0 "Harmonised with Dacian Faiths"
+ desc_harmonized_dacian_group:0 "We have incorporated all Dacian faiths into our country and national ethos."
+ harmonized_arabic_pagan_group:0 "Harmonised with Levantine Faiths"
+ desc_harmonized_arabic_pagan_group:0 "We have incorporated all Levantine faiths into our country and national ethos."
+ harmonized_new_world_pagan:0 "Harmonised with New World Pagan Faiths"
+ desc_harmonized_new_world_pagan:0 "We have incorporated all New World Pagan faiths into our country and national ethos."
+ harmonized_tengri_group:0 "Harmonised with Tengri Faiths"
+ desc_harmonized_tengri_group:0 "We have incorporated all Tengri faiths into our country and national ethos."
+ harmonized_eldritch_group:0 "Harmonised with Eldritch Faiths"
+ desc_harmonized_eldritch_group:0 "We have incorporated all Eldritch faiths into our country and national ethos."
+ harmonized_nonassociated:0 "Harmonised with Non-associated Doctrines"
+ desc_harmonized_nonassociated:0 "We have incorporated all Non-associated Doctrines into our country and national ethos."
+ harmonized_eastern:0 "Harmonised with Eastern Faiths"
+ desc_harmonized_eastern:0 "We have incorporated all Eastern faiths into our country and national ethos."
+ harmonized_pw_pirate_code:0 "Harmonised with the Brethren"
+ desc_harmonized_pw_pirate_code:0 "We have incorporated the Brethren code into our country and national ethos."
+ harmonized_pw_irreligious:0 "Harmonised with the Irreligious"
+ desc_harmonized_pw_irreligious:0 "We have incorporated the Irreligious into our country and national ethos."
+ harmonized_greek_hellenic:0 "Harmonised with the Hellenic Faith"
+ desc_harmonized_greek_hellenic:0 "We have incorporated the Hellenic faith into our country and national ethos."
+ harmonized_latin_hellenic:0 "Harmonised with the Latin Faith"
+ desc_harmonized_latin_hellenic:0 "We have incorporated the Latin faith into our country and national ethos."
+ harmonized_imperial_hellenic:0 "Harmonised with the Apotheosian Faith"
+ desc_harmonized_imperial_hellenic:0 "We have incorporated the Apotheosian faith into our country and national ethos."
+ harmonized_nuragic_group:0 "Harmonised with Nuragic Faith"
+ desc_harmonized_nuragic_group:0 "We have incorporated the Nuragic faith into our country and national ethos."
+
+
+ viking_scholar_modifier:0 "Viking Scholars"
+ desc_viking_scholar_modifier:0 "We are currently entertaining Viking Scholars to further the raiding discussion in our country."
+ barbary_scholar_modifier:0 "Berber Scholars"
+ desc_barbary_scholar_modifier:0 "We are currently entertaining Berber Scholars to further the raiding discussion in our country."
+ caribbean_scholar_modifier:0 "Caribbean Scholars"
+ desc_caribbean_scholar_modifier:0 "We are currently entertaining Caribbean Scholars to further the raiding discussion in our country."
+ japanese_scholar_modifier:0 "Wokou Scholars"
+ desc_japanese_scholar_modifier:0 "We are currently entertaining Wokou Scholars to further the raiding discussion in our country."
+ malayan_scholar_modifier:0 "Malay Scholars"
+ desc_malayan_scholar_modifier:0 "We are currently entertaining Malay Scholars to further the raiding discussion in our country."
+
+ norse_viking_scholar_modifier:0 "Norwegian Scholars"
+ desc_norse_viking_scholar_modifier:0 "We are currently entertaining Norwegian Scholars to further the theological discussion in our country."
+ swedish_viking_scholar_modifier:0 "Swedish Scholars"
+ desc_swedish_viking_scholar_modifier:0 "We are currently entertaining Swedish Scholars to further the theological discussion in our country."
+ danish_viking_scholar_modifier:0 "Danish Scholars"
+ desc_danish_viking_scholar_modifier:0 "We are currently entertaining Danish Scholars to further the theological discussion in our country."
+ german_scholar_modifier:0 "German Scholars"
+ desc_german_scholar_modifier:0 "We are currently entertaining German Scholars to further the theological discussion in our country."
+ frisian_scholar_modifier:0 "Frisian Scholars"
+ desc_frisian_scholar_modifier:0 "We are currently entertaining Frisian Scholars to further the theological discussion in our country."
+ dutch_scholar_modifier:0 "Dutch Scholars"
+ desc_dutch_scholar_modifier:0 "We are currently entertaining Dutch Scholars to further the theological discussion in our country."
+ anglish_scholar_modifier:0 "Ænglish Scholars"
+ desc_anglish_scholar_modifier:0 "We are currently entertaining Ænglish Scholars to further the theological discussion in our country."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  

@@ -44,7 +44,7 @@ pw_insular_germanic_spawn_area = {
 
 pw_druidic_spawn_area = {
 	OR = {
-		region = ireland_area #why is this area instead of region like all the others?
+		region = ireland_region #finally this was changed to region instead of area
 		area = wales_area
 		area = deheubarth_area
 		area = highlands_area
@@ -60,7 +60,7 @@ pw_latin_hellenic_spawn_area = {
 		AND = {
 			region = italy_region
 			NOT = { area = central_italy_area } #Papacy says no
-			NOT = { province_id = 118 } #Papacy really says no
+			NOT = { area = sardinia_area } #Nuragic
 		}
 	}
 }
@@ -103,9 +103,15 @@ pw_slavic_spawn_area_east = {
 	OR = {
 		AND = {
 			region = russia_region
-			NOT = { area = north_karelia_area }
+			NOT = { area = north_karelia }
 			NOT = { area = karelia_area }
 			NOT = { area = laponia_area }
+		}
+		AND = { 
+			region = ruthenia_region 
+			NOT = { area = podolia_volhynia_area }
+			NOT = { area = podlasie_area }
+			NOT = { area = red_ruthenia_area }
 		}
 	}
 }	
@@ -136,10 +142,6 @@ pw_baltic_pagan_reformed_spawn_area = {
 			region = baltic_region
 			NOT = { area = estonia_ingria_area }
 			NOT = { area = north_livonia_area }
-			NOT = { area = west_prussia_area }
-			NOT = { area = east_prussia_area }
-			NOT = { area = masuria_area }
-			NOT = { area = nadruvia_area }
 		}	
 		area = trakai_area		
 		area = yotvingia_area
@@ -148,7 +150,7 @@ pw_baltic_pagan_reformed_spawn_area = {
 
 pw_finnish_pagan_reformed_spawn_area = {
 	OR = {
-		area = north_karelia_area
+		area = north_karelia
 		area = karelia_area
 		area = laponia_area
 		area = bothnia_area
@@ -156,6 +158,22 @@ pw_finnish_pagan_reformed_spawn_area = {
 		area = west_karelia_area	
 	}
 }	
+
+pw_istenhit_spawn_area = {
+	OR = {
+		area = alfold_area	
+		area = transdanubia_area	
+		area = slovakia_area	
+		area = carpathian_ruthenia_area	
+		area = upper_hungary_area
+		AND = {
+			area = eastern_alfold_area
+			NOT = { province_id = 8203 }
+			NOT = { province_id = 157 }
+			NOT = { province_id = 3152 }	
+		}			
+	}
+}
 
 pw_zalmoxian_spawn_area = {
 	OR = {
@@ -242,9 +260,9 @@ pw_tengri_spawn_area = { #Moved from Western Steppe
 	OR = {
 		AND = {
 			region = central_asia_region
-			#NOT = { area = tambov_area }
-			#NOT = { area = saratov_area }
-			#NOT = { area = samara_area }
+			NOT = { area = tambov_area }
+			NOT = { area = saratov_area }
+			NOT = { area = samara_area }
 		}
 	}
 }		
@@ -266,8 +284,20 @@ pw_celtiberic_spawn_area = {
 		region = iberia_region
 	}
 }
+
+pw_nuragic_spawn_area = {
+	OR = {
+		area = sardinia_area
+	}
+}	
+
+pw_scythian_pagan_spawn_area = {
+	OR = {
+		region = crimea_region 
+	}
+}
 	
-pw_pagan_trigger = {
+pw_pagan_trigger = { #For resurgence pagans, native 1444 pagans (except uighur) are not used here
 	OR = {
 		religion_group = germanic_group
 		religion_group = celtic_group
@@ -277,31 +307,1922 @@ pw_pagan_trigger = {
 		religion_group = egyptian_pagan_group
 		religion_group = canaanite_group
 		religion_group = dacian_group
-		religion_group = arabic_group
+		religion_group = arabic_pagan_group
 		religion_group = tengri_group
+		religion_group = nuragic_group 
 		religion = zunist
-		religion = jainism
+		religion = jainism #Not really pagan but until I pass through India in the future they will get the generic pagan bonuses
 	}
 }	
 
-pw_resurgence_trigger = { #Now used, I needed it later
+pw_can_have_pagan_cor_trigger = { #Now used, I needed it later
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
 	NOT = { province_id = 118 }
+	religion = yes
 	is_reformation_center = no
 	is_island = no
 	expelling_minorities = no
-	development = 5
+	development = 10
 	NOT = {
 		any_neighbor_province = {
 			is_reformation_center = yes
 		}
+		owner = {
+			is_subject = yes
+		}
 	}
-	NOT = {
-		any_province = {
-			area = PREV
-			is_reformation_center = yes
-			religion = $RELIGION$
+	if = {
+		limit = {			
+			owner = {
+				ai = yes
+			}
+		}		
+		NOT = {
+			AND = {
+				owner = {
+					government = theocracy
+				}
+				is_capital = yes
+			}
 		}
 	}
 }
 	
+#################################
+# Conversion triggers
+#################################
+
+pw_is_althistorical_zunist = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_zunist_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture = baluchi
+					culture = afghani
+					culture = tajik
+				}
+				capital_scope = {
+					OR = {
+						area = ghor_area 
+						area = balkh_area 
+						area = kabulistan_area 
+						area = makran_area 
+						area = kalat_area 	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_zunist = {
+	OR = {
+		pw_is_althistorical_turkic_pagan = yes
+		any_owned_province = {
+			religion = zunist
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					area = ghor_area 
+					area = balkh_area 
+					area = kabulistan_area 
+					area = makran_area 
+					area = kalat_area 	
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = zunist
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_zunist_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = zunist
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_zunist_tt_2
+				any_owned_province = {
+					religion = zunist
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = zunist
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_jainism = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_jainism_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = hindusthani
+					culture_group = western_aryan
+					culture_group = eastern_aryan
+					culture_group = dravidian
+					culture_group = central_indic
+				}
+				capital_scope = {
+					OR = {
+						region = coromandel_region
+						region = deccan_region
+						region = west_india_region
+						region = hindusthan_region
+						region = bengal_region	
+					}	
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_jainism = {
+	OR = {
+		pw_is_althistorical_turkic_pagan = yes
+		any_owned_province = {
+			religion = jainism
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = coromandel_region
+					region = deccan_region
+					region = west_india_region
+					region = hindusthan_region
+					region = bengal_region	
+				}	
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = jainism
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_jainism_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = jainism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_jainism_tt_2
+				any_owned_province = {
+					religion = jainism
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = jainism
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_tengri_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_tengri_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = tartar #Base BT and CI compatibility hell yeah
+					culture_group = kipchak
+					culture_group = oghur
+				}
+				capital_scope = {
+					region = central_asia_region	
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_tengri_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_turkic_pagan = yes
+		any_owned_province = {
+			religion = tengri_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				region = central_asia_region
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = tengri_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_tengri_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = tengri_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_tengri_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = tengri_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = tengri_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_turkic_pagan = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_turkic_pagan_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture = turkish
+				}
+				capital_scope = {
+					region = anatolia_region	
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_turkic_pagan = {
+	OR = {
+		pw_is_althistorical_turkic_pagan = yes
+		any_owned_province = {
+			religion = turkic_pagan
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				region = anatolia_region
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = turkic_pagan
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_turkic_pagan_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = turkic_pagan
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_turkic_pagan_tt_2
+				any_owned_province = {
+					religion = turkic_pagan
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = turkic_pagan
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_zoroastrian = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_zoroastrian_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = iranian
+					NOT = { culture = baluchi }
+					NOT = { culture = afghani }
+					NOT = { culture = tajik	}
+				}
+				capital_scope = {
+					OR = {
+						region = persia_region
+						AND = {
+							region = khorasan_region
+							NOT = { area = ghor_area }
+							NOT = { area = balkh_area }
+							NOT = { area = kabulistan_area }
+							NOT = { area = makran_area }
+							NOT = { area = kalat_area }
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_zoroastrian = {
+	OR = {
+		pw_is_althistorical_zoroastrian = yes
+		any_owned_province = {
+			religion = zoroastrian
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = persia_region
+					AND = {
+						region = khorasan_region
+						NOT = { area = ghor_area }
+						NOT = { area = balkh_area }
+						NOT = { area = kabulistan_area }
+						NOT = { area = makran_area }
+						NOT = { area = kalat_area }
+					}	
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = zoroastrian
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_zoroastrian_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = zoroastrian
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_zoroastrian_tt_2
+				any_owned_province = {
+					religion = zoroastrian
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = zoroastrian
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_norse = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_norse_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = scandinavian
+				}
+				capital_scope = {
+					OR = {
+						AND = {
+							region = scandinavia_region
+							NOT = { area = northern_norway }
+							NOT = { area = norrland_area }
+							NOT = { area = bothnia_area }
+							NOT = { area = finland_area }
+							NOT = { area = west_karelia_area }
+							NOT = { area = trondelag_area }
+							NOT = { area = subarctic_islands_area }
+							NOT = { area = iceland_area }			
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_norse = {
+	OR = {
+		pw_is_althistorical_norse = yes
+		any_owned_province = {
+			religion = norse_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					AND = {
+						region = scandinavia_region
+						NOT = { area = northern_norway }
+						NOT = { area = norrland_area }
+						NOT = { area = bothnia_area }
+						NOT = { area = finland_area }
+						NOT = { area = west_karelia_area }
+						NOT = { area = trondelag_area }
+						NOT = { area = subarctic_islands_area }
+						NOT = { area = iceland_area }			
+					}
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = norse_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_norse_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = norse_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_norse_tt_2
+				any_owned_province = {
+					religion = norse_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = norse_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_continental_germanic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_continental_germanic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = germanic
+					culture_group = anglo_frisian
+				}
+				capital_scope = {
+					OR = {
+						region = north_german_region
+						AND = {
+							region = south_german_region
+							NOT = { area = bohemia_area } 
+							NOT = { area = erzgebirge_area }		
+							NOT = { area = moravia_area }
+						}	
+						region = low_countries_region		
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_continental_germanic = {
+	OR = {
+		pw_is_althistorical_continental_germanic = yes
+		any_owned_province = {
+			religion = continental_germanic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = north_german_region
+					AND = {
+						region = south_german_region
+						NOT = { area = bohemia_area } 
+						NOT = { area = erzgebirge_area }		
+						NOT = { area = moravia_area }
+					}	
+					region = low_countries_region		
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = continental_germanic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_continental_germanic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = continental_germanic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_continental_germanic_tt_2
+				any_owned_province = {
+					religion = continental_germanic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = continental_germanic
+				}
+			}
+		}
+	}
+}
+
+
+pw_is_althistorical_insular_germanic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_insular_germanic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = british
+				}
+				capital_scope = {
+					OR = {
+						AND = {
+							region = british_isles_region
+							NOT = { area = wales_area }
+							NOT = { area = deheubarth_area }
+							NOT = { area = highlands_area }
+							NOT = { area = kingdom_of_the_isles_area }
+							NOT = { province_id = 8142 }
+							NOT = { province_id = 4366 }
+							NOT = { province_id = 233 }
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_insular_germanic = {
+	OR = {
+		pw_is_althistorical_insular_germanic = yes
+		any_owned_province = {
+			religion = insular_germanic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = british_isles_region
+					region = ireland_region
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = insular_germanic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_insular_germanic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = insular_germanic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_insular_germanic_tt_2
+				any_owned_province = {
+					religion = insular_germanic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = insular_germanic
+				}
+			}
+		}
+	}
+}
+
+
+pw_is_althistorical_druidic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_druidic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = gaelic
+					culture_group = brythonic
+					culture_group = unified_celtic_group
+				}
+				capital_scope = {
+					OR = {
+						region = ireland_region #finally this was changed to region instead of area
+						area = wales_area
+						area = deheubarth_area
+						area = highlands_area
+						area = kingdom_of_the_isles_area 
+						province_id = 8142
+						province_id = 4366
+						province_id = 233	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_druidic = {
+	OR = {
+		pw_is_althistorical_druidic = yes
+		any_owned_province = {
+			religion = druidic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = ireland_region #finally this was changed to region instead of area
+					area = wales_area
+					area = deheubarth_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area 
+					province_id = 8142
+					province_id = 4366
+					province_id = 233	
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = druidic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_druidic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = druidic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_druidic_tt_2
+				any_owned_province = {
+					religion = druidic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = druidic
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_gallo_druidic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_gallo_druidic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = french
+					culture_group = occitanic
+					culture_group = francoprovencal
+				}
+				capital_scope = {
+					OR = {
+						region = france_region #Meant to exclude nations that might culture-shift to one of the above cultures but keep their capital in another region	
+					}	
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_gallo_druidic = {
+	OR = {
+		pw_is_althistorical_druidic = yes
+		any_owned_province = {
+			religion = druidic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = france_region
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = gallo_druidic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_gallo_druidic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = gallo_druidic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_gallo_druidic_tt_2
+				any_owned_province = {
+					religion = gallo_druidic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = gallo_druidic
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_ibero_druidic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_ibero_druidic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = iberian
+					culture = catalan
+				}
+				capital_scope = {
+					OR = {
+						region = iberia_region #Meant to exclude nations that might culture-shift to one of the above cultures but keep their capital in another region	
+					}	
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_ibero_druidic = {
+	OR = {
+		pw_is_althistorical_ibero_druidic = yes
+		any_owned_province = {
+			religion = ibero_druidic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = iberia_region
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = ibero_druidic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_ibero_druidic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = ibero_druidic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_ibero_druidic_tt_2
+				any_owned_province = {
+					religion = ibero_druidic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = ibero_druidic
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_greek_hellenic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_greek_hellenic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = byzantine
+				}
+				capital_scope = {
+					OR = {
+						area = morea_area
+						area = aegean_archipelago_area	
+						area = eastern_mediterrenean_islands_area
+						area = western_aegean_area
+						area = aetolia_area
+						area = thessaly_area
+						area = northern_epirus_area
+						area = northern_greece_area
+						area = macedonia_area
+						area = albania_area
+						area = eastern_macedonia_area
+						AND = {
+							area = thrace_area
+							NOT = { province_id = 151 } #Ecumenical Patriachate says no, unless the Ottomans got rid of him, in which case they say no
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pw_can_convert_to_greek_hellenic = {
+	OR = {
+		pw_is_althistorical_greek_hellenic = yes
+		any_owned_province = {
+			religion = greek_hellenic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					area = morea_area
+					area = aegean_archipelago_area	
+					area = eastern_mediterrenean_islands_area
+					area = western_aegean_area
+					area = aetolia_area
+					area = thessaly_area
+					area = northern_epirus_area
+					area = northern_greece_area
+					area = macedonia_area
+					area = albania_area
+					area = eastern_macedonia_area
+					AND = {
+						area = thrace_area
+						NOT = { province_id = 151 } #Ecumenical Patriachate says no, unless the Ottomans got rid of him, in which case they say no
+					}	
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = greek_hellenic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_greek_hellenic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = greek_hellenic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_greek_hellenic_tt_2
+				any_owned_province = {
+					religion = greek_hellenic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = greek_hellenic
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_latin_hellenic = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_latin_hellenic_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = latin
+					culture_group = gallo_italic
+					culture_group = old_latin
+					culture_group = rhaetian
+				}
+				capital_scope = {
+					OR = {
+						AND = {
+							region = italy_region
+							NOT = { area = central_italy_area } #Papacy says no
+							NOT = { area = sardinia_area } #Nuragic
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_latin_hellenic = {
+	OR = {
+		pw_is_althistorical_latin_hellenic = yes
+		any_owned_province = {
+			religion = latin_hellenic
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					AND = {
+						region = italy_region
+						NOT = { area = central_italy_area } #Papacy says no
+						NOT = { area = sardinia_area } #Nuragic
+					}
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = latin_hellenic
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_latin_hellenic_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = latin_hellenic
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_latin_hellenic_tt_2
+				any_owned_province = {
+					religion = latin_hellenic
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = latin_hellenic
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_baltic_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_baltic_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = baltic
+				}
+				capital_scope = {
+					OR = {
+						AND = {
+							region = baltic_region
+							NOT = { area = estonia_ingria_area }
+							NOT = { area = north_livonia_area }
+						}
+						area = trakai_area		
+						area = yotvingia_area
+					}	
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_baltic_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_baltic_pagan_reformed = yes
+		any_owned_province = {
+			religion = baltic_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					AND = {
+						region = baltic_region
+						NOT = { area = estonia_ingria_area }
+						NOT = { area = north_livonia_area }
+					}
+					area = trakai_area		
+					area = yotvingia_area
+				}	
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = baltic_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_baltic_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = baltic_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_baltic_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = baltic_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = baltic_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_slavic_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_slavic_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = west_slavic
+				}
+				capital_scope = {
+					OR = {
+						region = poland_region
+						area = bohemia_area 
+						area = erzgebirge_area 	
+						area = moravia_area 
+						area = slovakia_area
+						area = carpathian_ruthenia_area
+						area = podolia_volhynia_area
+						area = podlasie_area
+						area = red_ruthenia_area
+					}
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_slavic_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_slavic_pagan_reformed = yes
+		any_owned_province = {
+			religion = slavic_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = poland_region
+					area = bohemia_area 
+					area = erzgebirge_area 	
+					area = moravia_area 
+					area = slovakia_area
+					area = carpathian_ruthenia_area
+					area = podolia_volhynia_area
+					area = podlasie_area
+					area = red_ruthenia_area
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = slavic_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_slavic_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = slavic_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_slavic_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = slavic_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = slavic_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_east_slavic_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_east_slavic_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = east_slavic
+				}
+				capital_scope = {
+					OR = {
+						AND = {
+							region = russia_region
+							NOT = { area = north_karelia }
+							NOT = { area = karelia_area }
+							NOT = { area = laponia_area }
+						}
+						AND = {
+							region = ruthenia_region 
+							NOT = { area = podolia_volhynia_area }
+							NOT = { area = podlasie_area }
+							NOT = { area = red_ruthenia_area }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_east_slavic_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_east_slavic_pagan_reformed = yes
+		any_owned_province = {
+			religion = east_slavic_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					AND = {
+						region = russia_region
+						NOT = { area = north_karelia }
+						NOT = { area = karelia_area }
+						NOT = { area = laponia_area }
+					}
+					AND = { 
+						region = ruthenia_region 
+						NOT = { area = podolia_volhynia_area }
+						NOT = { area = podlasie_area }
+						NOT = { area = red_ruthenia_area }
+					}
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = east_slavic_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_east_slavic_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = east_slavic_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_east_slavic_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = east_slavic_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = east_slavic_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_south_slavic_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_south_slavic_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = south_slavic
+				}
+				capital_scope = {
+					AND = {
+						region = balkan_region
+						NOT = { area = morea_area }
+						NOT = { area = aegean_archipelago_area	 }
+						NOT = { area = eastern_mediterrenean_islands_area }
+						NOT = { area = western_aegean_area }
+						NOT = { area = aetolia_area }
+						NOT = { area = thessaly_area }
+						NOT = { area = northern_epirus_area }
+						NOT = { area = northern_greece_area }
+						NOT = { area = macedonia_area }
+						NOT = { area = albania_area }
+						NOT = { area = eastern_macedonia_area }
+						NOT = { area = thrace_area }
+					}
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_south_slavic_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_south_slavic_pagan_reformed = yes
+		any_owned_province = {
+			religion = south_slavic_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				AND = {
+					region = balkan_region
+					NOT = { area = morea_area }
+					NOT = { area = aegean_archipelago_area	 }
+					NOT = { area = eastern_mediterrenean_islands_area }
+					NOT = { area = western_aegean_area }
+					NOT = { area = aetolia_area }
+					NOT = { area = thessaly_area }
+					NOT = { area = northern_epirus_area }
+					NOT = { area = northern_greece_area }
+					NOT = { area = macedonia_area }
+					NOT = { area = albania_area }
+					NOT = { area = eastern_macedonia_area }
+					NOT = { area = thrace_area }
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = south_slavic_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_south_slavic_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = south_slavic_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_south_slavic_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = south_slavic_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = south_slavic_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_finnish_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_finnish_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = finno_ugric
+				}
+				capital_scope = {
+					OR = {
+						area = north_karelia
+						area = karelia_area
+						area = laponia_area
+						area = bothnia_area
+						area = finland_area
+						area = west_karelia_area	
+					}
+				}
+			}
+		}
+	}
+}
+
+pw_can_convert_to_finnish_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_finnish_pagan_reformed = yes
+		any_owned_province = {
+			religion = finnish_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					area = north_karelia
+					area = karelia_area
+					area = laponia_area
+					area = bothnia_area
+					area = finland_area
+					area = west_karelia_area	
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = finnish_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_finnish_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = finnish_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_finnish_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = finnish_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = finnish_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_magyar_pagan_reformed = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_magyar_pagan_reformed_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = magyar_pagan_reformed
+				}
+				capital_scope = {
+					OR = {
+						area = alfold_area	
+						area = transdanubia_area	
+						area = slovakia_area	
+						area = carpathian_ruthenia_area	
+						area = upper_hungary_area
+						AND = {
+							area = eastern_alfold_area
+							NOT = { province_id = 8203 }
+							NOT = { province_id = 157 }
+							NOT = { province_id = 3152 }	
+						}			
+					}
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_magyar_pagan_reformed = {
+	OR = {
+		pw_is_althistorical_magyar_pagan_reformed = yes
+		any_owned_province = {
+			religion = magyar_pagan_reformed
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					area = alfold_area	
+					area = transdanubia_area	
+					area = slovakia_area	
+					area = carpathian_ruthenia_area	
+					area = upper_hungary_area
+					AND = {
+						area = eastern_alfold_area
+						NOT = { province_id = 8203 }
+						NOT = { province_id = 157 }
+						NOT = { province_id = 3152 }	
+					}			
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = magyar_pagan_reformed
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_magyar_pagan_reformed_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = magyar_pagan_reformed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_magyar_pagan_reformed_tt_2
+				any_owned_province = {
+					religion = magyar_pagan_reformed
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = magyar_pagan_reformed
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_egyptian_pagan = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_egyptian_pagan_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = egyptian_group
+					culture = sudanese_arabic
+					culture = old_egyptian
+					culture = al_misr_arabic
+				}
+				capital_scope = {
+					OR = {
+						region = egypt_region			
+					}
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_egyptian_pagan = {
+	OR = {
+		pw_is_althistorical_egyptian_pagan = yes
+		any_owned_province = {
+			religion = egyptian_pagan
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					region = egypt_region			
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = egyptian_pagan
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_egyptian_pagan_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = egyptian_pagan
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_egyptian_pagan_tt_2
+				any_owned_province = {
+					religion = egyptian_pagan
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = egyptian_pagan
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_canaanite = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_canaanite_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture = tunisian
+					culture = algerian
+					culture = moroccan
+					culture = phoenician
+				}
+				capital_scope = {
+					OR = {
+						area = tunisia_area
+						area = kabylia_area
+						area = tripolitania_area
+						area = ouled_nail_area
+						area = barbary_coast_area
+						area = northern_morocco_area		
+					}
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_canaanite = {
+	OR = {
+		pw_is_althistorical_canaanite = yes
+		any_owned_province = {
+			religion = canaanite
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					area = tunisia_area
+					area = kabylia_area
+					area = tripolitania_area
+					area = ouled_nail_area
+					area = barbary_coast_area
+					area = northern_morocco_area		
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = canaanite
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_canaanite_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = canaanite
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_canaanite_tt_2
+				any_owned_province = {
+					religion = canaanite
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = canaanite
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_zalmoxian = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_zalmoxian_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = dacian
+				}
+				capital_scope = {
+					AND = {
+						region = carpathia_region
+						NOT = { area = slovakia_area }
+						NOT = { area = carpathian_ruthenia_area }
+						NOT = { area = transdanubia_area }
+						NOT = { area = alfold_area }
+						NOT = { area = upper_hungary_area }
+					}	
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_zalmoxian = {
+	OR = {
+		pw_is_althistorical_zalmoxian = yes
+		any_owned_province = {
+			religion = zalmoxian
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				AND = {
+					region = carpathia_region
+					NOT = { area = slovakia_area }
+					NOT = { area = carpathian_ruthenia_area }
+					NOT = { area = transdanubia_area }
+					NOT = { area = alfold_area }
+					NOT = { area = upper_hungary_area }
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = zalmoxian
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_zalmoxian_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = zalmoxian
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_zalmoxian_tt_2
+				any_owned_province = {
+					religion = zalmoxian
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = zalmoxian
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_arabic_pagan = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_arabic_pagan_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture = gulf_arabic 
+					culture = bedouin_arabic
+					culture = hejazi_culture
+					culture = omani_culture
+					culture = yemeni_culture
+					culture = true_bedouin
+					culture = mashriqi
+				}
+				capital_scope = {
+					region = arabia_region
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_arabic_pagan = {
+	OR = {
+		pw_is_althistorical_arabic_pagan = yes
+		any_owned_province = {
+			religion = arabic_pagan
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				region = arabia_region
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = arabic_pagan
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_arabic_pagan_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = arabic_pagan
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_arabic_pagan_tt_2
+				any_owned_province = {
+					religion = arabic_pagan
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = arabic_pagan
+				}
+			}
+		}
+	}
+}
+pw_is_althistorical_ashurist = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_ashurist_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture = al_iraqiya_arabic
+					culture = al_suryah_arabic
+					culture = mashriqi
+					culture_group = aramaic
+				}
+				capital_scope = {
+					OR = {
+						AND = {
+							region = mesopotamia_region
+							NOT = { area = mardin_area }
+							NOT = { area = erzurum_area }
+							NOT = { area = north_kurdistan_area }
+						}	
+					}
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_ashurist = {
+	OR = {
+		pw_is_althistorical_ashurist = yes
+		any_owned_province = {
+			religion = ashurist
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					AND = {
+						region = mesopotamia_region
+						NOT = { area = mardin_area }
+						NOT = { area = erzurum_area }
+						NOT = { area = north_kurdistan_area }
+					}	
+				}
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = ashurist
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_ashurist_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = ashurist
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_ashurist_tt_2
+				any_owned_province = {
+					religion = ashurist
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = ashurist
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_nuragic_pagan = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_nuragic_pagan_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture = sardinian
+				}
+				capital_scope = {
+					area = sardinia_area
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_nuragic_pagan = {
+	OR = {
+		pw_is_althistorical_nuragic_pagan = yes
+		any_owned_province = {
+			religion = nuragic_pagan
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				area = sardinia_area
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = nuragic_pagan
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_nuragic_pagan_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = nuragic_pagan
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_nuragic_pagan_tt_2
+				any_owned_province = {
+					religion = nuragic_pagan
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = nuragic_pagan
+				}
+			}
+		}
+	}
+}
+
+pw_is_althistorical_pw_scythian_pagan = {
+	custom_trigger_tooltip = {
+		tooltip = pw_althistorical_pw_scythian_pagan_tt		
+		OR = {
+			AND = {
+				OR = {
+					culture_group = tartar
+					culture_group = kipchak
+					culture_group = oghur					
+				}
+				capital_scope = {
+					region = crimea_region
+				}
+			}
+		}	
+	}
+}
+
+pw_can_convert_to_nuragic_pagan = {
+	OR = {
+		pw_is_althistorical_pw_scythian_pagan = yes
+		any_owned_province = {
+			religion = pw_scythian_pagan
+		}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				region = crimea_region
+			}
+		}
+		OR = {
+			num_of_religion = {
+				value = 0.25
+				religion = pw_scythian_pagan
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_pw_scythian_pagan_tt_1
+				is_subject = no
+				num_of_religion = {
+					value = 0.15
+					religion = pw_scythian_pagan
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pw_can_convert_to_pw_scythian_pagan_tt_2
+				any_owned_province = {
+					religion = pw_scythian_pagan
+					is_reformation_center = yes
+				}
+				num_of_religion = {
+					value = 0.1
+					religion = pw_scythian_pagan
+				}
+			}
+		}
+	}
+}

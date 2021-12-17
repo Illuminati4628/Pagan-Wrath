@@ -10,3 +10,560 @@ pw_add_neighbour_resistance_weakness = {
 		}
 	}
 }
+#Warrior Championship Events
+
+germanic_tournament_effect = { #Yes this is a copy of Dub's Chariot Race events except I've switched some things up, don't like it? Fight me in the arena yourself then.
+	#Outcomes:																Chance:
+	#Favourite candidate of the people: -2 global unrest for 4 years		10%
+	#City revolts: Particularists spawn in Capital							10%
+	#City revolts 2: Pretenders spawn in Capital							10%
+	#Fresh Recruits revenue: Add 1 base manpower.							5%
+	#Production of arms: Add 1 base production								5%
+	#Rags to Champion: Gain 50 dip power. Burghers gain 10 influence 		10%
+	#Noble Squire wins: Gain 50 mil power. Nobility gain 10 influence		10%
+	#Clergy's Choice: Gain 50 adm power. Clergy gain 10 influence			5%
+	#Warriors own wins: Gain 50 mil power. Warrior Bands gain 10 influence	10%
+	#Champion of Champions: Gain 100 tradition general						5%
+	#Rampaging Warriors: Lose 0.5 years of income to repairs				10%
+	#Bribed warriors: Gain 1 corruption										9%
+	#Rogue arrow: Monarch dies												1%
+	#																		_______
+	#Chance of bad: 40%. Chance of good: 60%. 						Total:	100%
+	custom_tooltip = germanic_tournament_effect_tooltip
+	hidden_effect = {
+		random_list = {
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.2
+					days = 10
+				}
+			}
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.3
+					days = 10
+				}
+			}
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.4
+					days = 10
+				}
+			}
+			5 = {
+				country_event = {
+					id = pw_germanic_tournament.5
+					days = 10
+				}
+			}
+			5 = {
+				country_event = {
+					id = pw_germanic_tournament.6
+					days = 10
+				}
+			}
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.7
+					days = 10
+				}
+			}
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.8
+					days = 10
+				}
+			}
+			5 = {
+				country_event = {
+					id = pw_germanic_tournament.9
+					days = 10
+				}
+			}
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.10
+					days = 10
+				}
+			}
+			5 = {
+				country_event = {
+					id = pw_germanic_tournament.11
+					days = 10
+				}
+			}
+			10 = {
+				country_event = {
+					id = pw_germanic_tournament.12
+					days = 10
+				}
+			}
+			9 = {
+				country_event = {
+					id = pw_germanic_tournament.13
+					days = 10
+				}
+			}
+			1 = {
+				country_event = {
+					id = pw_germanic_tournament.14
+					days = 10
+				}
+			}
+		}
+	}
+}
+
+#Conversions
+pw_conv_to_turkic_pagan: 
+	change_religion = turkic_pagan
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_zunist = {	
+	change_religion = zunist
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_jainism = {	
+	change_religion = jainism
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_tengri_pagan_reformed = {	
+	change_religion = tengri_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_zoroastrian = {	
+	change_religion = zoroastrian
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_norse = {	
+	change_religion = norse_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+pw_conv_to_continental_germanic = {
+	change_religion = continental_germanic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_insular_germanic = {
+	change_religion = insular_germanic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_druidic = {	
+	change_religion = druidic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_gallo_druidic = {
+	change_religion = gallo_druidic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_ibero_druidic = {
+	change_religion = ibero_druidic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_greek_hellenic = {
+	change_religion = greek_hellenic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_latin_hellenic = {
+	change_religion = latin_hellenic
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_baltic_pagan_reformed = {
+	change_religion = baltic_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_slavic_pagan_reformed = {
+	change_religion = slavic_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_east_slavic_pagan_reformed = {
+	change_religion = east_slavic_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_south_slavic_pagan_reformed = {
+	change_religion = south_slavic_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_finnish_pagan_reformed = {
+	change_religion = finnish_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_magyar_pagan_reformed = {
+	change_religion = magyar_pagan_reformed
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_egyptian_pagan = {
+	change_religion = egyptian_pagan
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_canaanite = {
+	change_religion = canaanite
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_zalmoxian = {
+	change_religion = zalmoxian
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_arabic_pagan = {
+	change_religion = arabic_pagan
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_ashurist = {
+	change_religion = ashurist
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_nuragic_pagan = {
+	change_religion = nuragic_pagan
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}
+
+pw_conv_to_pw_scythian_pagan = {
+	change_religion = pw_scythian_pagan
+	add_prestige = -100
+	remove_country_modifier = counter_reformation
+	remove_country_modifier = the_statue_in_restraint_of_appeals
+	remove_country_modifier = bavarian_jesuits
+	remove_country_modifier = the_societas_jesu
+	remove_country_modifier = the_declaration_of_indulgence
+	remove_country_modifier = de_heretico_comburendo
+	remove_country_modifier = the_conventicle_act
+	remove_country_modifier = unified_islam
+	
+	add_country_modifier = {
+		name = "pagan_conversion_zeal"
+		duration = 3650
+	}	
+}

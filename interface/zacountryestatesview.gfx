@@ -1,0 +1,46 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_estates_icons"
+		texturefile = "gfx//interface//estates_icons.dds"
+		noOfFrames = 16
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_estates_icons_colour-stroke"
+		texturefile = "gfx/interface/estates_icons_colour-stroke.dds"
+		noOfFrames = 16
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "privilege_druids_missions"
+		texturefile = "gfx/interface/privileges/privilege_druids_missions.dds"
+	}
+	spriteType = {
+		name = "privilege_colonial_ventures"
+		texturefile = "gfx/interface/privileges/privilege_colonial_ventures.dds"
+	}
+	spriteType = {
+		name = "privilege_restore_countryside"
+		texturefile = "gfx/interface/privileges/privilege_restore_countryside.dds"
+	}
+	spriteType = {
+		name = "privilege_diplomatic_missions"
+		texturefile = "gfx/interface/privileges/privilege_diplomatic_missions.dds"
+	}
+	spriteType = {
+		name = "privilege_warrior_bands_tournaments"
+		texturefile = "gfx/interface/privileges/privilege_warrior_bands_tournaments.dds"
+	}
+	spriteType = {
+		name = "privilege_infantry_raiders"
+		texturefile = "gfx/interface/privileges/privilege_infantry_raiders.dds"
+	}
+	spriteType = {
+		name = "privilege_cavalry_raiders"
+		texturefile = "gfx/interface/privileges/privilege_cavalry_raiders.dds"
+	}
+	spriteType = {
+		name = "privilege_artillery_raiders"
+		texturefile = "gfx/interface/privileges/privilege_artillery_raiders.dds"
+	}			
+}

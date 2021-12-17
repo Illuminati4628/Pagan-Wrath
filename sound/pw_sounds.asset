@@ -99,6 +99,18 @@ sound = {
 	file = "start_conversion_imperial_hellenic.wav"
 }
 sound = {
+	name = defender_of_the_syncretic_hellenic_faith
+	file = "claim_defender_faith_syncretic_hellenic.wav"
+}
+sound = {
+	name = start_convert_syncretic_hellenic
+	file = "start_conversion_syncretic_hellenic.wav"
+}
+sound = {
+	name = religion_syncretic_hellenic
+	file = "start_conversion_syncretic_hellenic.wav"
+}
+sound = {
 	name = defender_of_the_baltic_pagan_reformed_faith
 	file = "start_conversion_baltic_pagan_reformed.wav"
 }
@@ -123,6 +135,30 @@ sound = {
 	file = "start_conversion_slavic_pagan_reformed.wav"
 }
 sound = {
+	name = defender_of_the_east_slavic_pagan_reformed_faith
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_east_slavic_pagan_reformed
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = religion_east_slavic_pagan_reformed
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = defender_of_the_south_slavic_pagan_reformed_faith
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_south_slavic_pagan_reformed
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
+	name = religion_south_slavic_pagan_reformed
+	file = "start_conversion_slavic_pagan_reformed.wav"
+}
+sound = {
 	name = defender_of_the_finnish_pagan_reformed_faith
 	file = "start_conversion_finnish_pagan_reformed.wav"
 }
@@ -132,6 +168,30 @@ sound = {
 }
 sound = {
 	name = religion_finnish_pagan_reformed
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = defender_of_the_uralic_pagan_reformed_faith
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_uralic_pagan_reformed
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = religion_uralic_pagan_reformed
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = defender_of_the_magyar_pagan_reformed_faith
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = start_convert_magyar_pagan_reformed
+	file = "start_conversion_finnish_pagan_reformed.wav"
+}
+sound = {
+	name = religion_magyar_pagan_reformed
 	file = "start_conversion_finnish_pagan_reformed.wav"
 }
 sound = {
@@ -216,6 +276,22 @@ sound = {
 }
 sound = {
 	name = religion_new_shamanist
+	file = "start_conversion_new_shamanist.wav"
+}
+sound = {
+	name = defender_of_the_tengri_pagan_reformed_faith
+	file = "start_conversion_new_shamanist.wav"
+}
+sound = {
+	name = start_convert_turkic_pagan
+	file = "start_conversion_new_shamanist.wav"
+}
+sound = {
+	name = religion_turkic_pagan
+	file = "start_conversion_new_shamanist.wav"
+}
+sound = {
+	name = defender_of_the_turkic_pagan_faith
 	file = "start_conversion_new_shamanist.wav"
 }
 sound = {

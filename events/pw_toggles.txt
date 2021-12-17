@@ -392,7 +392,7 @@ country_event = { #Toggle Event
 		set_global_flag = pw_cthuhlu_toggle_off
 		country_event = { id = pw_toggle_menu.1 days = 0 }
 	}
-	option = { #Enable Cthuhluism
+	option = { #Enable Cthuhluist
 		name = "pw_toggle_menu.1.at" 
 		trigger = {
 			has_global_flag = pw_cthuhlu_toggle_off
@@ -417,8 +417,25 @@ country_event = { #Toggle Event
 		}
 		clr_global_flag = pw_turkic_pagan_toggle_off
 		country_event = { id = pw_toggle_menu.1 days = 0 }
-	}		
-
+	}	
+	
+	option = { #Disable Istenhit
+		name = "pw_toggle_menu.1.bc" 
+		trigger = {
+			NOT = { has_global_flag = pw_istenhit_pagan_toggle_off }
+		}
+		set_global_flag = pw_istenhit_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}
+	option = { #Enable Istenhit
+		name = "pw_toggle_menu.1.bd" 
+		trigger = {
+			has_global_flag = pw_istenhit_pagan_toggle_off
+		}
+		clr_global_flag = pw_istenhit_pagan_toggle_off
+		country_event = { id = pw_toggle_menu.1 days = 0 }
+	}	
+	
 	option = { #Disable Brethren
 		name = "pw_toggle_menu.1.aw" 
 		trigger = {
@@ -469,8 +486,10 @@ country_event = { #Toggle Event
 		set_global_flag = pw_irreligious_toggle_on
 		country_event = { id = pw_toggle_menu.1 days = 0 }
 	}	
-	
+		
 	option = {
 		name = "pw_toggle_menu.exit" 
 	}
+	
+	
 }

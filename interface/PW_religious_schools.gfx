@@ -1,0 +1,54 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_norse_viking"
+		texturefile = "gfx/interface/icon_germanic_group_school_norse_viking.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_swedish_viking"
+		texturefile = "gfx/interface/icon_germanic_group_school_swedish_viking.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_danish_viking"
+		texturefile = "gfx/interface/icon_germanic_group_school_danish_viking.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_german"
+		texturefile = "gfx/interface/icon_germanic_group_school_german.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_frisian"
+		texturefile = "gfx/interface/icon_germanic_group_school_frisian.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_dutch"
+		texturefile = "gfx/interface/icon_germanic_group_school_dutch.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_germanic_group_school_anglish"
+		texturefile = "gfx/interface/icon_germanic_group_school_anglish.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_pw_nonassociated_school_viking"
+		texturefile = "gfx/interface/icon_pw_nonassociated_school_viking.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_pw_nonassociated_school_barbary"
+		texturefile = "gfx/interface/icon_pw_nonassociated_school_barbary.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_pw_nonassociated_school_caribbean"
+		texturefile = "gfx/interface/icon_pw_nonassociated_school_caribbean.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_pw_nonassociated_school_japanese"
+		texturefile = "gfx/interface/icon_pw_nonassociated_school_japanese.dds"
+	}	
+	spriteType = {
+		name = "GFX_icon_pw_nonassociated_school_malayan"
+		texturefile = "gfx/interface/icon_pw_nonassociated_school_malayan.dds"
+	}	
+}	
+
+
+

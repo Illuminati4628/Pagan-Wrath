@@ -1,0 +1,997 @@
+
+#This one or the next one will always be valid
+estate_druids_hire_advisor = {
+	can_select = {
+		NOT = {
+			employed_advisor = {
+				category = ADM
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+	}
+	task_requirements = {
+		employed_advisor = {
+			category = ADM
+		}
+		is_in_deficit = no
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+estate_druids_fire_advisor = {
+	can_select = {
+		employed_advisor = {
+			category = ADM
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+		modifier = {
+			factor = 0.5
+			employed_advisor = {
+				type = theologian
+				religion = root
+			}
+		}
+		modifier = {
+			factor = 2
+			advisor = theologian
+			NOT = {
+				employed_advisor = {
+					type = theologian
+					religion = root
+				}
+			}
+		}
+	}
+	immediate_effect = {
+		hidden_effect = {
+			set_country_flag = need_to_fire_adm_advisor
+		}
+	}
+	on_invalid = {
+		clr_country_flag = need_to_fire_adm_advisor
+	}
+	task_requirements = {
+		custom_trigger_tooltip = {
+			tooltip = fire_adm_advisor_tooltip
+			has_country_flag = just_fired_adm_advisor
+		}
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+		clr_country_flag = just_fired_adm_advisor
+		clr_country_flag = need_to_fire_adm_advisor
+	}
+	invalid_trigger = {
+		NOT = {
+			employed_advisor = {
+				category = ADM
+			}
+		}
+		NOT = { has_country_flag = just_fired_adm_advisor }
+	}
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		clr_country_flag = need_to_fire_adm_advisor
+    }
+}
+
+#Convert a province
+estate_druids_convert_province_x = {
+	can_select = {
+		num_of_missionaries = 1
+		any_owned_province = {
+			is_state_core = root
+			NOT = { religion = root }
+			NOT = { has_province_modifier = religious_zeal_at_conv }
+			NOT = { has_province_modifier = expelled_minority }
+			NOT = { has_province_modifier = religious_migration }
+			NOT = { religion = secondary }
+			has_missionary = no
+			missionary_strength = 0.01
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.85 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.65 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.5 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.4 }
+		}
+		modifier = {
+			factor = 0.35
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_missionaries = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			is_defender_of_faith = yes
+		}
+		modifier = {
+			factor = 0.35
+			has_country_modifier = recent_converted_province_mission_timer
+		}
+	}
+	pre_effect = {
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				NOT = { religion = root }
+				NOT = { has_province_modifier = religious_zeal_at_conv }
+				NOT = { has_province_modifier = expelled_minority }
+				NOT = { has_province_modifier = religious_migration }
+				NOT = { religion = secondary }
+				has_missionary = no
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				NOT = { religion = root }
+				NOT = { has_province_modifier = religious_zeal_at_conv }
+				NOT = { has_province_modifier = expelled_minority }
+				NOT = { has_province_modifier = religious_migration }
+				NOT = { religion = secondary }
+				has_missionary = no
+				development = 10
+			}
+			save_event_target_as = agenda_province
+		}
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			OR = {
+				NOT = { owned_by = root }
+				AND = {
+					NOT = { religion = root }
+					religion = secondary
+				}
+			}
+		}
+	}
+	immediate_effect = {
+		event_target:agenda_province = {
+			add_province_modifier = {
+				name = agenda_conversion_zeal
+				duration = 7300
+			}
+		}
+	}
+	on_invalid = {
+		event_target:agenda_province = {
+			if = {
+				limit = { has_province_modifier = agenda_conversion_zeal }
+				remove_province_modifier = agenda_conversion_zeal
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	task_requirements = {
+		event_target:agenda_province = {
+			religion = root
+		}
+	}
+    task_completed_effect = {
+		hidden_effect = {
+			event_target:agenda_province = {
+				if = {
+					limit = { has_province_modifier = agenda_conversion_zeal }
+					remove_province_modifier = agenda_conversion_zeal
+				}
+			}
+			add_country_modifier = {
+				name = recent_converted_province_mission_timer
+				duration = 3650
+				hidden = yes
+			}
+		}
+		generate_scaled_advisor_of_type_and_religion_effect = {
+			type = inquisitor
+			religion = root
+			discount = yes
+		}
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+    }
+    failing_effect = {
+		event_target:agenda_province = {
+			if = {
+				limit = { has_province_modifier = agenda_conversion_zeal }
+				remove_province_modifier = agenda_conversion_zeal
+			}
+		}
+        add_estate_loyalty_modifier = {
+            estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+#Recover Manpower
+estate_druids_recover_manpower = {
+	can_select = {
+		manpower_percentage = 0.25
+		is_at_war = no
+		NOT = { has_country_modifier = recovering_economy }
+	}
+	selection_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			manpower_percentage = 0.15
+		}
+		modifier = {
+			factor = 1.5
+			manpower_percentage = 0.05
+		}
+	}
+	fail_if = {
+		is_at_war = yes
+	}
+	task_requirements = {
+		manpower_percentage = 0.85
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = recovering_economy
+			duration = 5475
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+estate_druids_build_temple_in_y = {
+	can_select = {
+		adm_tech = 4
+		any_owned_province = {
+			is_state_core = root
+			NOT = { has_building = cathedral }
+			OR = {
+				AND = {
+					NOT = { has_building = temple }
+					num_free_building_slots = 1
+				}
+				AND = {
+					ROOT = { adm_tech = 19 }
+					has_building = temple
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.65
+			NOT = {
+				any_owned_province = {
+					is_state_core = root
+					base_tax = 4
+					NOT = { has_building = cathedral }
+					OR = {
+						AND = {
+							NOT = { has_building = temple }
+							num_free_building_slots = 1
+						}
+						AND = {
+							ROOT = { adm_tech = 19 }
+							has_building = temple
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_owned_province = {
+				is_state_core = root
+				base_tax = 7
+				NOT = { has_building = cathedral }
+				OR = {
+					AND = {
+						NOT = { has_building = temple }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { adm_tech = 19 }
+						has_building = temple
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				crown_land_share = 15
+			}
+		}
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_druids_build_temple_in_y_var
+			value = 0
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				NOT = { has_building = cathedral }
+				OR = {
+					AND = {
+						NOT = { has_building = temple }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { adm_tech = 19 }
+						has_building = temple
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				base_tax = 4
+				NOT = { has_building = cathedral }
+				OR = {
+					AND = {
+						NOT = { has_building = temple }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { adm_tech = 19 }
+						has_building = temple
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				base_tax = 7
+				NOT = { has_building = cathedral }
+				OR = {
+					AND = {
+						NOT = { has_building = temple }
+						num_free_building_slots = 1
+					}
+					AND = {
+						ROOT = { adm_tech = 19 }
+						has_building = temple
+					}
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					NOT = { has_building = temple }
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_druids_build_temple_in_y_var
+						value = 1
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = estate_druids_build_temple_in_y_var
+						value = 2
+					}
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = root }
+		}
+	}
+    task_requirements = {
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_druids_build_temple_in_y_var
+					value = 2
+				}
+			}
+			event_target:agenda_province = {
+				has_building = cathedral
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+    }
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+		if = {
+			limit = {
+				NOT = { crown_land_share = 15 }
+				estate_territory = {
+					estate = estate_druids
+					territory = 10
+				}
+			}
+			take_estate_land_share_small = { estate = estate_druids }
+		}
+		else = {
+			event_target:agenda_province = {
+				add_base_tax = 1
+			}
+		}
+    }
+    failing_effect = {
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = root }
+				add_named_unrest = {
+					name = local_druids_displeased
+					value = 5
+				}
+			}
+		}
+		add_estate_loyalty_modifier = {
+			estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+    }
+}
+
+estate_druids_develop_x = {
+	selection_weight = {
+		factor = 1
+	}
+	can_select = {
+		capital_scope = {
+			is_state_core = root
+		}
+	}
+	pre_effect = {
+		random_list = {
+			1 = {
+				random_owned_province = {
+					limit = {
+						is_state_core = root
+						area_for_scope_province = {
+							is_capital_of = root
+						}
+					}
+					save_event_target_as = agenda_province
+				}
+			}
+			2 = {
+				trigger = {
+					any_owned_province = {
+						is_state_core = root
+						OR = {
+							AND = {
+								religion = root
+								OR = {
+									culture = root
+									has_owner_accepted_culture = yes
+								}
+							}
+						}
+						region_for_scope_province = {
+							is_capital_of = root
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_state_core = root
+						OR = {
+							AND = {
+								religion = root
+								OR = {
+									culture = root
+									has_owner_accepted_culture = yes
+								}
+							}
+						}
+						region_for_scope_province = {
+							is_capital_of = root
+						}
+					}
+					save_event_target_as = agenda_province
+				}
+			}
+			1 = {
+				random_owned_province = {
+					limit = {
+						is_state_core = root
+					}
+					save_event_target_as = agenda_province
+				}
+			}
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_adm_var
+						value = 1
+					}
+				}
+				set_variable = {
+					which = province_adm_var
+					value = 0
+				}
+			}
+			export_to_variable = {
+				which = province_adm_var
+				value = trigger_value:base_tax
+			}
+			change_variable = {
+				which = province_adm_var
+				value = 2
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = root }
+		}
+	}
+    task_requirements = {
+		event_target:agenda_province = {
+			base_tax = "province_adm_var"
+		}
+    }
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+		add_prestige = 10
+    }
+    failing_effect = {
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = root }
+				add_named_unrest = {
+					name = local_druids_displeased
+					value = 5
+				}
+			}
+		}
+        add_estate_loyalty_modifier = {
+            estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+#It was a neat idea but I decided to not make a player basically lose money for loyalty, as it would immediately be rebuilt after the agenda is completed anyway, also manufactory isn't a proper trigger for buildings anyway.
+#estate_druids_destroy_manufactory_in_y = {
+#	can_select = {
+#		adm_tech = 4
+#		any_owned_province = {
+#			is_state_core = root
+#			has_building = manufactory
+#		}
+#	}
+#	selection_weight = {
+#		factor = 1
+#		modifier = {
+#			factor = 0.65
+#			NOT = {
+#				any_owned_province = {
+#					is_state_core = root
+#					base_tax = 4
+#					has_building = manufactory
+#					OR = {
+#						AND = {
+#							has_building = manufactory
+#							num_free_building_slots = 0
+#						}
+#					}
+#				}
+#			}
+#		}
+#		modifier = {
+#			factor = 1.2
+#			any_owned_province = {
+#				is_state_core = root
+#				base_tax = 7
+#				has_building = manufactory
+#				OR = {
+#					AND = {
+#						has_building = manufactory
+#						num_free_building_slots = 0
+#					}
+#				}
+#			}
+#		}
+#		modifier = {
+#			factor = 2
+#			NOT = {
+#				crown_land_share = 15
+#			}
+#		}
+#	}
+#	pre_effect = {
+#		set_variable = {
+#			which = estate_druids_destroy_manufactory_in_y_var
+#			value = 0
+#		}
+#		random_owned_province = {
+#			limit = {
+#				is_state_core = root
+#				has_building = manufactory
+#				OR = {
+#					AND = {
+#						has_building = manufactory
+#						num_free_building_slots = 0
+#					}
+#				}
+#			}
+#			save_event_target_as = agenda_province
+#		}
+#		random_owned_province = {
+#			limit = {
+#				is_state_core = root
+#				base_tax = 4
+#				has_building = manufactory
+#				OR = {
+#					AND = {
+#						has_building = manufactory
+#						num_free_building_slots = 0
+#					}
+#				}
+#			}
+#			save_event_target_as = agenda_province
+#		}
+#		random_owned_province = {
+#			limit = {
+#				is_state_core = root
+#				base_tax = 7
+#				has_building = manufactory
+#				OR = {
+#					AND = {
+#						NOT = { has_building = manufactory }
+#						num_free_building_slots = 0
+#					}
+#				}
+#			}
+#			save_event_target_as = agenda_province
+#		}
+#		event_target:agenda_province = {
+#			if = {
+#				limit = {
+#					has_building = manufactory
+#				}
+#				ROOT = {
+#					set_variable = {
+#						which = estate_druids_destroy_manufactory_in_y_var
+#						value = 1
+#					}
+#				}
+#			}
+#			else = {
+#				ROOT = {
+#					set_variable = {
+#						which = estate_druids_destroy_manufactory_in_y_var
+#						value = 2
+#					}
+#				}
+#			}
+#		}
+#	}
+#	provinces_to_highlight = {
+#		province_id = event_target:agenda_province
+#	}
+#	fail_if = {
+#		event_target:agenda_province = {
+#			NOT = { owned_by = root }
+#		}
+#	}
+#    task_requirements = {
+#		if = {
+#			limit = {
+#				check_variable = {
+#					which = estate_druids_destroy_manufactory_in_y_var
+#					value = 2
+#				}
+#			}
+#			event_target:agenda_province = {
+#				NOT = { has_building = manufactory }
+#			}
+#		}
+#    }
+#    task_completed_effect = {
+#		add_estate_loyalty = {
+#			estate = estate_druids
+#			loyalty = 10
+#		}
+#		if = {
+#			limit = {
+#				NOT = { crown_land_share = 15 }
+#				estate_territory = {
+#					estate = estate_druids
+#					territory = 10
+#				}
+#			}
+#			take_estate_land_share_small = { estate = estate_druids }
+#		}
+#		else = {
+#			event_target:agenda_province = {
+#				add_base_tax = 1
+#			}
+#		}
+#    }
+#    failing_effect = {
+#		event_target:agenda_province = {
+#			if = {
+#				limit = { owned_by = root }
+#				add_named_unrest = {
+#					name = local_druids_displeased
+#					value = 5
+#				}
+#			}
+#		}
+#		add_estate_loyalty_modifier = {
+#			estate = estate_druids
+#			desc = EST_VAL_AGENDA_DENIED
+#			loyalty = -5
+#			duration = 7300
+#		}
+#    }
+#}
+
+estate_druids_reduce_devastation_in_x = {
+	can_select = {
+		any_owned_province = {
+			is_state_core = root
+			devastation = 15
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 1
+			any_owned_province = {
+				is_state_core = root
+				devastation = 15
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = {
+				is_state_core = root
+				devastation = 25
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				is_state_core = root
+				devastation = 35
+			}
+		}		
+		modifier = {
+			factor = 3
+			any_owned_province = {
+				is_state_core = root
+				devastation = 45
+			}
+		}	
+		modifier = {
+			factor = 4
+			any_owned_province = {
+				is_state_core = root
+				devastation = 55
+			}
+		}	
+		modifier = {
+			factor = 5
+			any_owned_province = {
+				is_state_core = root
+				devastation = 65
+			}
+		}			
+		modifier = {
+			factor = 2
+			NOT = {
+				crown_land_share = 15
+			}
+		}
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_druids_reduce_devastation_in_x_var
+			value = 0
+		}
+		random_owned_province = {
+			limit = {
+				devastation = 15
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				development = 20
+				devastation = 15
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				development = 20
+				devastation = 35
+			}
+			save_event_target_as = agenda_province
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					devastation = 15
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_druids_reduce_devastation_in_x_var
+						value = 1
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = estate_druids_reduce_devastation_in_x_var
+						value = 2
+					}
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = root }
+		}
+	}
+    task_requirements = {
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_druids_reduce_devastation_in_x_var
+					value = 2
+				}
+			}
+			event_target:agenda_province = {
+				devastation = 0
+			}
+		}
+    }
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_druids
+			loyalty = 10
+		}
+		if = {
+			limit = {
+				NOT = { crown_land_share = 15 }
+				estate_territory = {
+					estate = estate_druids
+					territory = 10
+				}
+			}
+			take_estate_land_share_small = { estate = estate_druids }
+		}
+		else = {
+			event_target:agenda_province = {
+				add_base_tax = 1
+			}
+		}
+    }
+    failing_effect = {
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = root }
+				add_named_unrest = {
+					name = local_druids_displeased
+					value = 5
+				}
+			}
+		}
+		add_estate_loyalty_modifier = {
+			estate = estate_druids
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+    }
+}

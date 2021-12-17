@@ -2,7 +2,7 @@
 # If adding new dieties, make sure they are uniquely named.
 # Each religion with personal deities is to have 6
 #Anglic
-odin = {
+ig_odin = {
 	legitimacy = 0.1
 	horde_unity = 0.1
 	core_creation = -0.10
@@ -23,7 +23,7 @@ odin = {
 	}
 }
 
-freya = {
+ig_freya = {
 	global_manpower_modifier = 0.1
 	global_tax_modifier = 0.1
 	
@@ -43,7 +43,7 @@ freya = {
 	}
 }
 
-tor = {
+ig_tor = {
 	leader_land_shock = 1
 	defensiveness = 0.1
 	
@@ -75,7 +75,7 @@ tor = {
 	}
 }
 
-tyr = {
+ig_tyr = {
 	global_sailors_modifier = 0.10
 	discipline = 0.05
 	
@@ -95,7 +95,7 @@ tyr = {
 	}
 }
 
-njord = {
+ig_njord = {
 	trade_efficiency = 0.1
 	global_trade_goods_size_modifier = 0.1
 	
@@ -120,7 +120,7 @@ njord = {
 }
 
 
-snotra =
+ig_snotra =
 {
 	technology_cost = -0.05
 	build_cost = -0.1

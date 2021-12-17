@@ -67,7 +67,7 @@ country_event = {
 			}
 			set_religious_school = {
 				group = pw_nonassociated
-				school = berber_school
+				school = barbary_school
 			}
 		}
 		else_if = { #Wokou in East Asia
@@ -102,7 +102,7 @@ country_event = {
 			}
 			set_religious_school = {
 				group = pw_nonassociated
-				school = malay_school
+				school = malayan_school
 			}
 		}
 		else = { #Remaining Brethren get this:
@@ -131,7 +131,7 @@ country_event = {
 		}
 		set_religious_school = {
 			group = pw_nonassociated
-			school = berber_school
+			school = barbary_school
 		}
 	}
 	option = {
@@ -153,7 +153,7 @@ country_event = {
 		}
 		set_religious_school = {
 			group = pw_nonassociated
-			school = malay_school
+			school = malayan_school
 		}
 	}
 	option = {
@@ -239,7 +239,7 @@ province_event = { #Spread Irreligious
 		modifier = {
 			factor = 0.1
 			owner = {
-				has_country_modifer = pw_state_atheism #Down to 25 years
+				has_country_modifier = pw_state_atheism #Down to 25 years
 			}	
 		}
 	}	

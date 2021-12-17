@@ -1,5 +1,5 @@
 # Take the Mandate of Heaven
-cb_take_mandate = {
+cb_take_mandate_pw = {
 	valid_for_subject = no
 
 	prerequisites = {
@@ -8,11 +8,7 @@ cb_take_mandate = {
 		is_neighbor_of = FROM
 		NOT = { has_reform = shogunate }
 		FROM = { is_emperor_of_china = yes }
-		OR = {
-			religion_group = pagan
-			religion_group = eastern
-			religion_group = tengri
-		}
+		religion_group = tengri_group
 		NOT = { truce_with = FROM }
 		is_revolutionary = no
 	}

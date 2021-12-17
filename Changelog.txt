@@ -1,23 +1,42 @@
-Version 0.7.1.0
-  Bug Fixes
-   - Fixed missing localisation for some modifiers
-  Changes
-   - Pagan religions now spread out from neighbouring provinces of CoRs rather then randomly within the range of them, should result in a little less messy spread  
+Version 0.8.01
   Additions
-   - Added Brethren pirate religion, uses the islamic schools effects
-   - Added Secular 'religion' can be obtained in the age of revolutions, uses buffed harmony mechanics.
-Version 0.7.0.2
+   - 
+  Changes
+   - Tweaked a canaanite deity bonus
+  Bug Fixes
+   - Fixed tonga not being in the new polynesian religion
+   
+Version 0.8.0.0
+   - Updated to BT14
 
-  Bug Fixes
-   - Fixed a Canaanite Deity not giving a build time reduction modifier.
-   - Some error log stuff that the average player probably wouldn't notice
-  Changes
-   -   
   Additions
-   -    
+   - Apotheosian uses the Totemist ancestor worship feature for Leviathan users
+   - Added Brethren pirate religion, uses the Islamic Schools effects
+   - Added Secular 'religion' which can be obtained in the age of revolutions, uses buffed harmony mechanics.
+   - Added the Islamic schools feature to Germanic religions, using their own modifiers of course, this is to be expanded further for certain cultures such as saxon and scottish, though I don't have icons or ideas for modifiers for these yet.
+   - Added Romaic religion to the Hellenic group, has Harmony mechanic that allows you to pick dieties from harmonised religions. This is basically a tolerance path as opposed to the neutral regular hellenic and the conversion based Apotheosian.
+   - Added Druid estate to Celtic Religions and Warrior Band estate to Germanic Religions, Druids focus on converting heathens while the Warrior Bands focus on fighting, I plan to give an estate to all the new religion groups in time (Note that events are very barebones at the moment for these estates) 
+   - Added Championship of Warriors Event set available with a Warrior Bands privilege, if you are familiar with the Byzantine Resurgence Chariot Races it is similar to that
+
+  Changes
+   - Pagan religions now spread out from neighbouring provinces of CoRs rather then randomly within the range of them, should result in a little less messy spread 
+   - Removed the expansion of X religion events, I feel these were too, well, clunky
+   - Revamped the effects upon changing a religion to work a little more like how changing to Cathar in 'Heresy!' addon is.
+   - Renamed Uralic to Turumic and Finnic to Ukonusko
+   - Tweaked Anglic to Ænglic
+   - Added a -3 Tolerance of heathens to Apotheosian, to drive the conversion emphasis up.
+   - Changed Canaanite deity modifiers and icons. Icon art courtesy of Transfurom
+   - Changed the icon for the Islamic schools to be a little more neutral, as other religions are also using it.
+   
+  Bug Fixes
+   - Properly fixed the bugged claim Mandate CB for the Tengrism group
+   - Fixed missing localisation for some modifiers
+   - Fixed a Canaanite Deity not giving a build time reduction modifier.  
+
 Version 0.7.0.1
 
   Bug Fixes
+   - Turkic religion not spawning correctly.
    - Fixed Tengri Group nations not getting the claim Mandate CB. (Yes this does mean that a Turkic ottomans could claim the mandate if they somehow end up bordering China)
   Changes
    -

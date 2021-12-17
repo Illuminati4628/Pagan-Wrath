@@ -1,0 +1,102 @@
+###########################################################
+# Events for the Warrior Bands Estate
+#
+# written by Hadiros, still WIP, further events to be done later
+###########################################################
+
+namespace = pw_estate_druids
+
+country_event = { #Advancement of the Druids
+	id = pw_estate_druids.1
+	title = pw_estate_druids.1.t
+	desc = pw_estate_druids.1.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_estate = estate_druids
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_druids
+				modifier = EST_VAL_DRUIDS_DECLINES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_druids
+				modifier = EST_VAL_DRUIDS_ADVANCES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_druids
+				modifier = EST_VAL_DRUIDS_ADVANCES_20
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+
+	option = {
+		name = pw_estate_druids.1.a #Ok
+		add_estate_influence_modifier = {
+			estate = estate_druids
+			desc = EST_VAL_DRUIDS_ADVANCES
+			influence = 10
+			duration = 5475
+		}
+	}
+}
+
+country_event = { #Decline of the Druids
+	id = pw_estate_druids.2
+	title = pw_estate_druids.2.t
+	desc = pw_estate_druids.2.d
+	picture = NOBLE_ESTATE_eventPicture
+	
+	trigger = {
+		has_estate = estate_druids
+		estate_influence = {
+			estate = estate_druids
+			influence = 15
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_druids
+				modifier = EST_VAL_DRUIDS_DECLINES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_druids
+				modifier = EST_VAL_DRUIDS_ADVANCES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_druids
+				modifier = EST_VAL_DRUIDS_ADVANCES_20
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = pw_estate_druids.2.a #Ok
+		add_estate_influence_modifier = {
+			estate = estate_druids
+			desc = EST_VAL_DRUIDS_DECLINES
+			influence = -10
+			duration = 5475
+		}
+	}
+}
