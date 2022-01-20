@@ -29,6 +29,7 @@
  EST_VAL_DRUIDS_DECLINES:0 "Decline of the [estate_druids.GetName]"
  EST_VAL_DRUIDS_ADVANCES:0 "Advancement of the [estate_druids.GetName]"
  EST_VAL_DRUIDS_ADVANCES_20:0 "Advancement of the [estate_druids.GetName]"
+ LESSAR_DRUIDS_EMPOWERED:0 "Empowered [estate_druids.GetName]"
  #Warrior Bands
  estate_warrior_bands:0 "Warrior Bands"
  estate_wb_viking_clans:0 "Viking Clans" #Norse religion/ Scandinavian culture group name
@@ -62,3 +63,4 @@
  EST_VAL_WARRIOR_BANDS_DECLINES:0 "Decline of the [estate_warrior_bands.GetName]"
  EST_VAL_WARRIOR_BANDS_ADVANCES:0 "Advancement of the [estate_warrior_bands.GetName]"
  EST_VAL_WARRIOR_BANDS_ADVANCES_20:0 "Advancement of the [estate_warrior_bands.GetName]"
+ WARRIOR_BANDS_EMPOWERED:0 "Empowered [estate_warrior_bands.GetName]"

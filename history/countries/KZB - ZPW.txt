@@ -1,0 +1,1 @@
+1290.1.1 = { religion = pw_central_bantu }

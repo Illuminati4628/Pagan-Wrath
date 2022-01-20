@@ -54,12 +54,12 @@
  swedish_viking_school_desc: "The Swedish vikings have developed a more agressive and trade focus school of thought."
  danish_viking_school: "Danish"
  danish_viking_school_desc: "The Danish vikings utilise a mix of fighting and exploration into their school of thought."
- german_school: "German"
- german_school_desc: "The Tuistic Germans formed a mix of industrial growth and art of sieges into their school."
+ german_school: "Suevi"
+ german_school_desc: "The Suevi formed a mix of industrial growth and art of sieges into their school."
  frisian_school: "Frisian"
  frisian_school_desc: "The school that the Frisians have created mixes production and acceptence of new ideals."
- dutch_school: "Dutch"
- dutch_school_desc: "The Dutch school has a deep focus on trade as its main philosophy."
+ dutch_school: "Batavian"
+ dutch_school_desc: "The Batavian school has a deep focus on trade as its main philosophy."
  anglish_school: "Ænglish"
  anglish_school_desc: "The Ænglish school is one of security and expansion."
 
@@ -823,7 +823,7 @@
  NURAGIC_HERETIC:0 "Nuragic Heretic" #Name to be changed 
  
  nuragic_pagan_sardo:0 "Sardò"
- nuragic_pagan_sardo_desc:0 "Sardò, also known as Sid Addir Bab (Ancient powerful hunter), or Sardus Pater (Father of Sardinians), is the true god and father of all Sardinians, virtually recognized as that by all peoples to which the Sardinians made contact with in the bronze age, as it gave the name to both the island and it's people"
+ nuragic_pagan_sardo_desc:0 "Sardò, also known as Sid Addir Bab (Ancient powerful hunter), or Sardus Pater (Father of Sardinians), is the true god and father of all Sardinians, virtually recognized as that by all peoples to which the Sardinians made contact with in the bronze age, as it gave the name to both the island and it's people."
  nuragic_pagan_orgia:0 "Orgìa"
  nuragic_pagan_orgia_desc:0 "Orgìa, the goddess of water. Water was a very improrant and scarce resource in Sardinia, as such the goddess was of key importance and several hundred holy wells had been built in her honour."
  nuragic_pagan_maimon:0 "Maimon"
@@ -839,7 +839,7 @@
  
  pw_horn_african:0 "Cushitic"
  pw_waaqeffanna:0 "Waaqeffanna"
- pw_waaqeffanna_religion_desc:0 "TBD"
+ pw_waaqeffanna_religion_desc:0 "Waaqeffanna is the polytheistic faith of the Cushitic people, the word Waaqeffanna derives from Waaqa, the ancient name for the Creator in the Cushitic languages of both the Oromo and Somali people. Waaqa has many manifesstations known as Ayyaana who serve as intermediate spirits between Waaqa and his creations. In 1444 this religion appears in small pockets in the Western part of the Horn of Africa."
  pw_waaqeffanna_rebels_demand:0 "Convert $COUNTRYNAME$"
  pw_waaqeffanna_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  pw_waaqeffanna_rebels_title: "Religious"
@@ -848,18 +848,31 @@
  pw_waaqeffanna_rebels_army: "$RELIGION$ Army"   
  WAAQ_HERETIC:0 "Waaq Heretic" #Name to be changed
  
- pw_west_african:0 "Guinean"
- pw_west_african_religion:0 "Guinean"
- pw_east_african:0 "East African"
- pw_east_african_religion:0 "East African"
- pw_central_african:0 "Congolese"
- pw_central_african_religion:0 "Congolese"
- pw_madagascan:0 "Madagascan"
- pw_madagascan_religion:0 "Madagascan"
- pw_south_african:0 "South African"
- pw_south_african_religion:0 "South African"
- pw_great_lakes_african:0 "Great Lakes African"
- pw_great_lakes_religion:0 "Great Lakes African"
+ pw_west_african_group:0 "Guinean"
+ pw_west_african:0 "Vodun"
+ pw_west_african_religion_desc:0 "" 
+ pw_yoruba:0 "Isese"
+ pw_yoruba_religion_desc:0 ""
+ pw_bori:0 "Bori"
+ pw_bori_religion_desc:0 ""
+ 
+ 
+ pw_madagascan_group:0 "Madagascan"
+ pw_madagascan:0 "Fomba-Gasy"
+ pw_madagascan_religion_desc:0 "Fomba-Gasy is the name of the traditional faith of the Malagasy people. The faith tells of a creator deity referred to as Zanahary and a divisions of Heaven and Earth between Zanahary and his son, Andrianerinerina, a rebellious hero and frequent theme of their worship as the son of God. In 1444 this religion covers most of Madagascar."
+ 
+ pw_bantu:0 "Bantu"
+ pw_east_bantu:0 "Maasai"
+ pw_east_bantu_religion_desc:0 ""
+ pw_central_bantu:0 "Bukongo"
+ pw_central_bantu_religion_desc:0 ""
+ pw_southern_bantu:0 "Munyambe"
+ pw_southern_bantu_religion_desc:0 ""
+ 
+
+ pw_south_african:0 "Khoisan"
+ pw_south_african:0 "Ixam"
+ pw_south_african_religion_desc:0 ""
  pw_caucasian_group:0 "Caucasian"
  pw_caucasian_religion:0 "Caucasian"
  

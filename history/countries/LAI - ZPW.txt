@@ -1,1 +1,1 @@
-religion = tapu
+1290.1.1 = { religion = tapu }

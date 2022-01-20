@@ -624,7 +624,7 @@ dharmic = {
 						religion = zunist
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -655,7 +655,7 @@ dharmic = {
 								religion = zunist
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -676,7 +676,7 @@ dharmic = {
 										religion = zunist
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -873,7 +873,7 @@ tengri_group = { #Tengrism
 						religion = tengri_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -887,7 +887,7 @@ tengri_group = { #Tengrism
 		on_convert = {			
 			pw_conv_to_tengri_pagan_reformed = yes
 			if = {
-				limit = {					
+				limit = {
 					NOT = {
 						religion_years = {
 							tengri_pagan_reformed = 20
@@ -904,7 +904,7 @@ tengri_group = { #Tengrism
 								religion = tengri_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -925,7 +925,7 @@ tengri_group = { #Tengrism
 										religion = tengri_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -973,7 +973,7 @@ tengri_group = { #Tengrism
 						religion = turkic_pagan
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -1004,7 +1004,7 @@ tengri_group = { #Tengrism
 								religion = turkic_pagan
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -1025,7 +1025,7 @@ tengri_group = { #Tengrism
 										religion = turkic_pagan
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -1352,7 +1352,7 @@ zoroastrian_group = {
 						religion = zoroastrian
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -1383,7 +1383,7 @@ zoroastrian_group = {
 								religion = zoroastrian
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -1404,7 +1404,7 @@ zoroastrian_group = {
 										religion = zoroastrian
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -1747,7 +1747,7 @@ germanic_group = {
 						religion = norse_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -1778,7 +1778,7 @@ germanic_group = {
 								religion = norse_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -1799,7 +1799,7 @@ germanic_group = {
 										religion = norse_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -1859,7 +1859,7 @@ germanic_group = {
 						religion = insular_germanic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -1890,7 +1890,7 @@ germanic_group = {
 								religion = insular_germanic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -1911,7 +1911,7 @@ germanic_group = {
 										religion = insular_germanic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -1968,7 +1968,7 @@ germanic_group = {
 						religion = continental_germanic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -1999,7 +1999,7 @@ germanic_group = {
 								religion = continental_germanic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -2020,7 +2020,7 @@ germanic_group = {
 										religion = continental_germanic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -2087,7 +2087,7 @@ celtic_group = {
 						religion = druidic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -2118,7 +2118,7 @@ celtic_group = {
 								religion = druidic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -2139,7 +2139,7 @@ celtic_group = {
 										religion = druidic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -2197,7 +2197,7 @@ celtic_group = {
 						religion = gallo_druidic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -2228,7 +2228,7 @@ celtic_group = {
 								religion = gallo_druidic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -2249,7 +2249,7 @@ celtic_group = {
 										religion = gallo_druidic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -2307,7 +2307,7 @@ celtic_group = {
 						religion = ibero_druidic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -2338,7 +2338,7 @@ celtic_group = {
 								religion = ibero_druidic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -2359,7 +2359,7 @@ celtic_group = {
 										religion = ibero_druidic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -2424,7 +2424,7 @@ hellenic_group = { #Hellenistic
 						religion = greek_hellenic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -2455,7 +2455,7 @@ hellenic_group = { #Hellenistic
 								religion = greek_hellenic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -2476,7 +2476,7 @@ hellenic_group = { #Hellenistic
 										religion = greek_hellenic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -2536,7 +2536,7 @@ hellenic_group = { #Hellenistic
 						religion = latin_hellenic
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -2567,7 +2567,7 @@ hellenic_group = { #Hellenistic
 								religion = latin_hellenic
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -2588,7 +2588,7 @@ hellenic_group = { #Hellenistic
 										religion = latin_hellenic
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -2665,7 +2665,7 @@ hellenic_group = { #Hellenistic
 balto_slavic_group = { #Balto-Slavic
 	defender_of_faith = yes
 	center_of_religion = 295
-	baltic_pagan_reformed = {
+	baltic_pagan_reformed = { #Romuva
 		icon = 53
 		color = { 120 85 105 }
 		allowed_center_conversion = {
@@ -2703,7 +2703,7 @@ balto_slavic_group = { #Balto-Slavic
 						religion = baltic_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -2734,7 +2734,7 @@ balto_slavic_group = { #Balto-Slavic
 								religion = baltic_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -2755,7 +2755,7 @@ balto_slavic_group = { #Balto-Slavic
 										religion = baltic_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -2812,7 +2812,7 @@ balto_slavic_group = { #Balto-Slavic
 						religion = slavic_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -2843,7 +2843,7 @@ balto_slavic_group = { #Balto-Slavic
 								religion = slavic_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -2864,7 +2864,7 @@ balto_slavic_group = { #Balto-Slavic
 										religion = slavic_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -3030,7 +3030,7 @@ balto_slavic_group = { #Balto-Slavic
 						religion = south_slavic_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -3061,7 +3061,7 @@ balto_slavic_group = { #Balto-Slavic
 								religion = south_slavic_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -3082,7 +3082,7 @@ balto_slavic_group = { #Balto-Slavic
 										religion = south_slavic_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -3147,7 +3147,7 @@ finnic_group = { #Uralian
 						religion = finnish_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -3178,7 +3178,7 @@ finnic_group = { #Uralian
 								religion = finnish_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -3199,7 +3199,7 @@ finnic_group = { #Uralian
 										religion = finnish_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -3298,7 +3298,7 @@ finnic_group = { #Uralian
 						religion = magyar_pagan_reformed
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -3329,7 +3329,7 @@ finnic_group = { #Uralian
 								religion = magyar_pagan_reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -3350,7 +3350,7 @@ finnic_group = { #Uralian
 										religion = magyar_pagan_reformed
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -3408,7 +3408,7 @@ egyptian_pagan_group = {
 						religion = egyptian_pagan
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -3439,7 +3439,7 @@ egyptian_pagan_group = {
 								religion = egyptian_pagan
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -3460,7 +3460,7 @@ egyptian_pagan_group = {
 										religion = egyptian_pagan
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -3519,7 +3519,7 @@ canaanite_group = {
 						religion = canaanite
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -3550,7 +3550,7 @@ canaanite_group = {
 								religion = canaanite
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -3571,7 +3571,7 @@ canaanite_group = {
 										religion = canaanite
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}
@@ -3636,7 +3636,7 @@ dacian_group = {
 						religion = zalmoxian
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -3667,7 +3667,7 @@ dacian_group = {
 								religion = zalmoxian
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -3688,7 +3688,7 @@ dacian_group = {
 										religion = zalmoxian
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -3714,10 +3714,10 @@ dacian_group = {
 	
 }
 
-arabic_pagan_group = {
+arabic_pagan_group = { #Levantine
 	defender_of_faith = yes
 	center_of_religion = 385
-	arabic_pagan = {
+	arabic_pagan = { #Wathanist
 		color = { 80 210 90 }
 		icon = 101
 		country = {
@@ -3746,7 +3746,7 @@ arabic_pagan_group = {
 						religion = arabic_pagan
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -3777,7 +3777,7 @@ arabic_pagan_group = {
 								religion = arabic_pagan
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -3798,7 +3798,7 @@ arabic_pagan_group = {
 										religion = arabic_pagan
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -3848,7 +3848,7 @@ arabic_pagan_group = {
 						religion = ashurist
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -3879,7 +3879,7 @@ arabic_pagan_group = {
 								religion = ashurist
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -3900,7 +3900,7 @@ arabic_pagan_group = {
 										religion = ashurist
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -3929,7 +3929,7 @@ arabic_pagan_group = {
 
 nuragic_group = { #Nuragic
 	nuragic_pagan  = {
-		color = { 0 255 127 }
+		color = { 0 255 125 }
 		icon = 116
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -3951,7 +3951,7 @@ nuragic_group = { #Nuragic
 						religion = nuragic_pagan
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 1
 				}
 			}
 			NOT = {
@@ -3982,7 +3982,7 @@ nuragic_group = { #Nuragic
 								religion = nuragic_pagan
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 1
 						}
 					}
 					NOT = {
@@ -4003,7 +4003,7 @@ nuragic_group = { #Nuragic
 										religion = nuragic_pagan
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 1
 								}
 							}
 						}
@@ -4050,9 +4050,9 @@ pw_horn_african = { #Cushitic
 	harmonized_modifier = harmonized_pw_horn_african
 }
 
-pw_west_african = {
-	pw_west_african_religion = { #This is just a test, complete rework tbd
-		color = 130 30 30
+pw_bantu = { #Bantu
+	pw_east_bantu = { #Maasai
+		color = { 15 140 100 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -4067,13 +4067,9 @@ pw_west_african = {
 		}
 		heretic = { WEST_AFRICAN_HERETIC }#Name to be figured out later
 	}
-	crusade_name = CRUSADE
-	harmonized_modifier = harmonized_pw_west_african	
-}
 
-pw_east_african = {
-	pw_east_african_religion = { #This is just a test, complete rework tbd
-		color = 90 70 175
+	pw_southern_bantu = { #Munyambe
+		color = { 115 180 95 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -4088,13 +4084,9 @@ pw_east_african = {
 		}
 		heretic = { EAST_AFRICAN_HERETIC }#Name to be figured out later
 	}
-	crusade_name = CRUSADE
-	harmonized_modifier = harmonized_pw_east_african	
-}
 
-pw_central_african = {
-	pw_central_african_religion = { #This is just a test, complete rework tbd
-		color = 50 70 25
+	pw_central_bantu = { #Bukongo
+		color = { 25 195 80 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -4110,12 +4102,12 @@ pw_central_african = {
 		heretic = { CENTRAL_AFRICAN_HERETIC }#Name to be figured out later
 	}
 	crusade_name = CRUSADE
-	harmonized_modifier = harmonized_pw_central_african	
+	harmonized_modifier = harmonized_pw_bantu
 }
 
-pw_madagascan = {
-	pw_madagascan_religion = { #This is just a test, complete rework tbd
-		color = 35 150 130
+pw_madagascan_group = {
+	pw_madagascan = { #Fomba-Gasy
+		color = { 245 230 170 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -4128,15 +4120,15 @@ pw_madagascan = {
 		province = {
 			local_missionary_strength = 0.01
 		}
-		heretic = { WEST_MADAGASCAN_HERETIC }#Name to be figured out later
+		heretic = { MADAGASCAN_HERETIC }#Name to be figured out later
 	}
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pw_madagascan
 }
 
-pw_south_african = {
-	pw_south_african_religion = { #This is just a test, complete rework tbd
-		color = 180 100 60
+pw_west_african_group = { #Guinean
+	pw_west_african = { #Vodun
+		color = { 245 30 120 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -4151,13 +4143,8 @@ pw_south_african = {
 		}
 		heretic = { WEST_AFRICAN_HERETIC }#Name to be figured out later
 	}
-	crusade_name = CRUSADE
-	harmonized_modifier = harmonized_pw_south_african	
-}
-
-pw_great_lakes_african = {
-	pw_great_lakes_african_religion = { #This is just a test, complete rework tbd
-		color = 30 80 100
+	pw_yoruba = { #Isese
+		color = { 75 60 240 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
 			global_unrest = -2
@@ -4170,10 +4157,47 @@ pw_great_lakes_african = {
 		province = {
 			local_missionary_strength = 0.01
 		}
-		heretic = { GREAT_LAKES_AFRICAN_HERETIC }#Name to be figured out later
+		heretic = { YORUBA_HERETIC }#Name to be figured out later
+	}	
+	pw_bori = { #Bori
+		color = { 160 30 60 }
+		icon = 115
+		country = { #Modifiers are placeholder will be reworked later
+			global_unrest = -2
+			tolerance_heathen = 2
+		}
+		country_as_secondary = {
+			religious_unity = 0.2
+			global_unrest = -2
+		}	
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = { BORI_HERETIC }#Name to be figured out later
+	}		
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_pw_west_african
+}
+
+pw_south_african = { #Khoisan
+	pw_south_african = { #Ixam
+		color = { 180 100 60 }
+		icon = 115
+		country = { #Modifiers are placeholder will be reworked later
+			global_unrest = -2
+			tolerance_heathen = 2
+		}
+		country_as_secondary = {
+			religious_unity = 0.2
+			global_unrest = -2
+		}	
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = { SOUTH_AFRICAN_HERETIC }#Name to be figured out later
 	}
 	crusade_name = CRUSADE
-	harmonized_modifier = harmonized_pw_great_lakes_african
+	harmonized_modifier = harmonized_pw_south_african	
 }
 
 pw_scythian_group  = {
@@ -4200,7 +4224,7 @@ pw_scythian_group  = {
 						religion = pw_scythian_pagan
 						is_reformation_center = yes
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 			NOT = {
@@ -4231,7 +4255,7 @@ pw_scythian_group  = {
 								religion = pw_scythian_pagan
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 2
 						}
 					}
 					NOT = {
@@ -4252,7 +4276,7 @@ pw_scythian_group  = {
 										religion = pw_scythian_pagan
 										is_reformation_center = yes
 									}
-									amount = 3
+									amount = 2
 								}
 							}
 						}

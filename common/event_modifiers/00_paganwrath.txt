@@ -180,6 +180,51 @@ harmonized_nuragic_group = {
 	religion = yes
 }	
 
+harmonized_pw_pacific_group = {
+	trade_range_modifier = 0.05
+	religion = yes
+}
+
+harmonized_pw_aboriginal_group = {
+	hostile_attrition = 0.05
+	religion = yes
+}
+
+harmonized_pw_caucasian_group = {
+	shock_damage_received = -0.05
+	religion = yes
+}
+
+harmonized_pw_scythian = {
+	cavalry_power = 0.05
+	religion = yes
+}
+
+harmonized_pw_south_african = {
+	infantry_fire = 0.05
+	religion = yes
+}
+
+harmonized_pw_madagascan = {
+	global_garrison_growth = 0.05
+	religion = yes
+}
+
+harmonized_pw_bantu = {
+	global_supply_limit_modifier = 0.05
+	religion = yes
+}
+
+harmonized_pw_horn_african = {
+	trade_efficiency = 0.05
+	religion = yes
+}
+
+harmonized_pw_west_african = {
+	manpower_recovery_speed = 0.05
+	religion = yes
+}
+
 #Religion
 
 harmonized_pw_pirate_code = {

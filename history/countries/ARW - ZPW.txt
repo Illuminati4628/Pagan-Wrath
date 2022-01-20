@@ -1,1 +1,1 @@
-religion = south_american_pagan
+1290.1.1 = { religion = south_american_pagan }
