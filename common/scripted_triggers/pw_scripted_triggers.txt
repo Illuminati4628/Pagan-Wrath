@@ -314,7 +314,16 @@ pw_pagan_trigger = { #For resurgence pagans, native 1444 pagans (except uighur) 
 		religion = jainism #Not really pagan but until I pass through India in the future they will get the generic pagan bonuses
 	}
 }	
-
+	
+pw_shamanist_trigger = { #For reworked african faiths, the shamanism (Fetishist) faith has been removed, this is kept for events
+	OR = {
+		religion_group = pw_horn_african
+		religion_group = pw_bantu
+		religion_group = pw_madagascan_group
+		religion_group = pw_west_african_group
+		religion_group = pw_south_african_group		
+	}
+}	
 pw_can_have_pagan_cor_trigger = { #Now used, I needed it later
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
 	NOT = { province_id = 118 }

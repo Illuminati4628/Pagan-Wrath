@@ -826,7 +826,7 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-		
+		fetishist_cult = yes
 		heretic = { SNAKE_CLAN }
 	}	
 	animism = {
@@ -4029,20 +4029,20 @@ nuragic_group = { #Nuragic
 
 pw_horn_african = { #Cushitic
 	pw_waaqeffanna = { #Waaqeffanna
-		color = { 190 140 70 }
+		color = { 30 150 130 }
 		icon = 115
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
 		province = {
-			local_missionary_strength = 0.01
-		}	
-		
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { WAAQ_HERETIC }#Name to be figured out later
 	}
 	
@@ -4052,53 +4052,56 @@ pw_horn_african = { #Cushitic
 
 pw_bantu = { #Bantu
 	pw_east_bantu = { #Maasai
-		color = { 15 140 100 }
-		icon = 115
+		color = { 170 160 75 }
+		icon = 121
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
-		heretic = { WEST_AFRICAN_HERETIC }#Name to be figured out later
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
+		heretic = { EAST_BANTU_HERETIC }#Name to be figured out later
 	}
 
 	pw_southern_bantu = { #Munyambe
-		color = { 115 180 95 }
-		icon = 115
+		color = { 195 155 20 }
+		icon = 122
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { EAST_AFRICAN_HERETIC }#Name to be figured out later
 	}
 
 	pw_central_bantu = { #Bukongo
-		color = { 25 195 80 }
-		icon = 115
+		color = { 190 145 65 }
+		icon = 123
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { CENTRAL_AFRICAN_HERETIC }#Name to be figured out later
 	}
 	crusade_name = CRUSADE
@@ -4108,18 +4111,19 @@ pw_bantu = { #Bantu
 pw_madagascan_group = {
 	pw_madagascan = { #Fomba-Gasy
 		color = { 245 230 170 }
-		icon = 115
+		icon = 124
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { MADAGASCAN_HERETIC }#Name to be figured out later
 	}
 	crusade_name = CRUSADE
@@ -4128,72 +4132,76 @@ pw_madagascan_group = {
 
 pw_west_african_group = { #Guinean
 	pw_west_african = { #Vodun
-		color = { 245 30 120 }
-		icon = 115
+		color = { 75 95 40 }
+		icon = 125
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { WEST_AFRICAN_HERETIC }#Name to be figured out later
 	}
 	pw_yoruba = { #Isese
-		color = { 75 60 240 }
-		icon = 115
+		color = { 100 135 50 }
+		icon = 126
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { YORUBA_HERETIC }#Name to be figured out later
 	}	
 	pw_bori = { #Bori
-		color = { 160 30 60 }
-		icon = 115
+		color = { 95 165 105 }
+		icon = 127
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { BORI_HERETIC }#Name to be figured out later
 	}		
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pw_west_african
 }
 
-pw_south_african = { #Khoisan
+pw_south_african_group = { #Khoisan
 	pw_south_african = { #Ixam
-		color = { 180 100 60 }
-		icon = 115
+		color = { 145 85 60 }
+		icon = 128
 		country = { #Modifiers are placeholder will be reworked later
-			global_unrest = -2
-			tolerance_heathen = 2
+			tolerance_own = 1
+			global_unrest = -1
 		}
 		country_as_secondary = {
-			religious_unity = 0.2
-			global_unrest = -2
-		}	
-		province = {
-			local_missionary_strength = 0.01
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		fetishist_cult = yes
 		heretic = { SOUTH_AFRICAN_HERETIC }#Name to be figured out later
 	}
 	crusade_name = CRUSADE
