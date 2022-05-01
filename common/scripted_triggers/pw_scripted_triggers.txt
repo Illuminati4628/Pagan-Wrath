@@ -297,7 +297,7 @@ pw_scythian_pagan_spawn_area = {
 	}
 }
 	
-pw_pagan_trigger = { #For resurgence pagans, native 1444 pagans (except uighur) are not used here
+pw_pagan_trigger = { #For resurgence pagans, native 1444 pagans (except Tengri) are not used here
 	OR = {
 		religion_group = germanic_group
 		religion_group = celtic_group

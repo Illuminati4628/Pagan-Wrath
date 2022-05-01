@@ -142,7 +142,7 @@ christian = {
 	##These are religions added by Heresy! I put them here just in case anything acts up, that's all, I won't do anything else with them. Actually I lied I changed some colours. In case it's not clear Heresy! is required to actually use these.
 	cathar = {
 		color = { 40 125 175 } #287DAF
-		icon = 34
+		icon = 64
 		allowed_conversion = {
 			reformed
 			protestant
@@ -171,7 +171,7 @@ christian = {
 	}
 	fraticelli = {
 		color = { 105 80 190 }
-		icon = 35
+		icon = 65
 		allowed_conversion = {
 			reformed
 			protestant
@@ -223,7 +223,7 @@ christian = {
 	}	
 	#messalian = {
 	#	color = { 0.6 0.1 0.4 }
-	#	icon = 33
+	#	icon = 63
 	#	country = {
 	#		global_missionary_strength = 0.01
 	#		heir_chance = 1
@@ -267,6 +267,7 @@ christian = {
 			zalmoxian			
 		}
 	}	
+	#BT Added
 	nestorian = {
 		color = { 240 30 45 }	
 		icon = 31
@@ -4595,7 +4596,7 @@ pw_nonassociated = { #For certain institutions that supercede religion, only ava
 		icon = 113
 		country = {
 			capture_ship_chance = 0.05
-			heavy_ship_power = 0.75
+			heavy_ship_power = 0.075
 		}
 		country_as_secondary = {
 			naval_forcelimit_modifier = 0.05

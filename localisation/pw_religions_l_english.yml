@@ -570,9 +570,9 @@
  tuoni: "Tuoni"
  tuoni_desc: "Tuoni is the god of death and the ruler of the underworld." 
  
- OLD_ISTENHIT:0 "Old Istenhit"
- magyar_pagan_reformed_religion_desc: "Istenhit is the polytheistic traditional belief system of the Magyar peoples. In this faith the world is split into three parts, the Upper World, home of the gods, all of whom have the same rank, Isten however is the most important figure. The Middle World shared between humans and many mythological creatures, often being supernatural. Finally there is the Underworld, home of Ördög, the creator of everything bad for humans, an example incudes annoying animals such as fleas and flies."
- magyar_pagan_reformed: "Istenhit"
+ OLD_ISTENHIT:0 "Old Magyar"
+ magyar_pagan_reformed_religion_desc: "In the Magyar faith the world is split into three parts, the Upper World, home of the gods, all of whom have the same rank, Isten however is the most important figure. The Middle World shared between humans and many mythological creatures, often being supernatural. Finally there is the Underworld, home of Ördög, the creator of everything bad for humans, an example incudes annoying animals such as fleas and flies."
+ magyar_pagan_reformed: "Magyar"
  magyar_pagan_reformed_rebels_title: "Religious"
  magyar_pagan_reformed_rebels_name: "$RELIGION$ Zealots"
  magyar_pagan_reformed_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."

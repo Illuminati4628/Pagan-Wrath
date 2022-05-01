@@ -13,5 +13,5 @@ dependencies={
 	"-BT Addon: Heresy!"
 }
 name="-BT Addon: Pagan Wrath"
-supported_version="1.32.*"
+supported_version="1.33.*"
 remote_file_id="2075838365"

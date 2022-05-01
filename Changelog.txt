@@ -1,10 +1,25 @@
+Version 0.9.0.1
+  Bug Fixes
+   - Fixed a province in Tunisia having the wrong religion
+   
+Version 0.9
+  Additions
+   - Consider this more a beta patch more then a complete release
+   - Updated for BT15
+   - Added African pagan religions, these are not yet fully complete but should serve as enough of a difference for the continent until further overhauls are done, similar to the South American Pajelança and Polynesian Tapu
+	- Currently these all just use the former fetishist cults and get the same events
+  Changes
+   - Relocalised Alcheringa to Dreamtime as the former isn't really a well known name and the latter is only really used by a small group in Central Australia (though getting an all encompassing Aboriginal name would be impossible due to how diverse the Aboriginals are)
+  Bug Fixes
+   - Fixed Brethren giving 75% Heavy Ship Combat ability instead of the intended 7.5%. Opps.
+
 Version 0.8.01
   Additions
    - 
   Changes
    - Tweaked a canaanite deity bonus
   Bug Fixes
-   - Fixed tonga not being in the new polynesian religion
+   - Fixed Tonga not being in the new polynesian religion
    
 Version 0.8.0.0
    - Updated to BT14
