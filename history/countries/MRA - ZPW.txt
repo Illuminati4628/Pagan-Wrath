@@ -1,1 +1,1 @@
-1290.1.1 = { religion = pw_southern_bantu }
+1290.1.1 = { religion = thunga }

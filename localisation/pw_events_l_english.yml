@@ -370,6 +370,16 @@
  pw_germanic.1.g:0 "We shall go the way of the Dutch."
  pw_germanic.1.h:0 "The Ænglish path is the correct one."
  
+ pw_germanic_school_opinion_events.1.t:0 "Mutual Respect between the [Root.GetReligiousSchool] and [school_opinion_increase_country.GetReligiousSchool]"
+ pw_germanic_school_opinion_events.1.d:0 "There have never been any theological differences worth a real conflict between the [Root.GetReligiousSchool] and [school_opinion_increase_country.GetReligiousSchool] schools and both customs often exist side by side.\nThe long-lasting cooperation between the [Root.GetAdjective] [Root.GetReligiousSchool] and the [school_opinion_increase_country.GetReligiousSchool] [school_opinion_increase_country.GetAdjective] states has, however, lead to a new era of mutual understanding and respect."
+ pw_germanic_school_opinion_events.1.a:0 "The gods have blessed us."
+ pw_germanic_school_opinion_events.2.t:0 "Normalization of relations between the [Root.GetReligiousSchool] and the [school_opinion_increase_country.GetReligiousSchool]"
+ pw_germanic_school_opinion_events.2.d:0 "For some time the relationship between the [Root.GetReligiousSchool] and the [school_opinion_increase_country.GetReligiousSchool] have been strongly colored by distrust and conflict. Some scholars have gone as far as to denounce the theologians of the other school and their followers.\nHowever, tensions have been greatly lessened in recent years and with [Root.GetAdjective] [Root.GetReligiousSchool] and [school_opinion_increase_country.GetAdjective] [school_opinion_increase_country.GetReligiousSchool] scholars leading the way towards tolerance and coexistence."
+ pw_germanic_school_opinion_events.2.a:0 "The gods have blessed us."
+ pw_germanic_school_opinion_events.3.t:0 "The Clergy and the [Root.GetAdjective] - [school_opinion_decrease_country.GetAdjective] War"
+ pw_germanic_school_opinion_events.3.d:0 "The prolonged conflict between the [school_opinion_decrease_country.GetAdjective] and the [Root.GetAdjective] is starting to spill into the religious realm. Mutual respect and tolerance is on an all time low and [school_opinion_decrease_country.GetReligiousSchool] thought is being marginalized in [Root.GetAdjective] society."
+ pw_germanic_school_opinion_events.3.a:0 "Unfortunate."
+ 
  #Championship of the Warriors
  pw_germanic_tournament.1.t:0 "The Championship of the Warriors"
  pw_germanic_tournament.1.d:0 "The time has come for the Championship of the Warriors to take place yet again. Citizens from all across [Root.GetName] are flocking to [Root.GetCapitalName] and have donned the colours and symbols of their favourite competitors. Some noteworthy competitors include a Choice pick by members of the Clergy, a young Squire of the Nobility, a near bankrupt member of the Burghers and a High ranking member of the Warrior Bands, there are also other independant parties involved including a particular underdog, favoured by the crowd. As always the state treasury shall fund the Championship to ensure quick prepartions and a fair competition.  \n\nNow, my [Root.Monarch.GetTitle], shall we take our rightful seats to watch the Championship?"

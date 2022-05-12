@@ -2,8 +2,11 @@
 #Tuistic
 tiwaz = {
 	discipline = 0.05
-	infantry_power = 0.10
-	
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+	meritocracy = 1
 	allow = { religion = continental_germanic }
 	sprite = 58
 	
@@ -20,7 +23,7 @@ tiwaz = {
 	}	
 }
 
-wodan ={
+wodan = {
 	land_morale = 0.1
 	core_creation = -0.10
 	
@@ -78,7 +81,7 @@ frijjo = {
 
 austro = {
 	production_efficiency = 0.1
-	manpower_recovery_speed = 0.20
+	manpower_recovery_speed = 0.15
 	
 	allow = { religion = continental_germanic }
 	sprite = 62

@@ -3,8 +3,11 @@
 # Each religion with personal deities is to have 6
 #Anglic
 ig_odin = {
-	legitimacy = 0.1
-	horde_unity = 0.1
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+	meritocracy = 1
 	core_creation = -0.10
 	
 	allow = { religion = insular_germanic }
@@ -45,7 +48,7 @@ ig_freya = {
 
 ig_tor = {
 	leader_land_shock = 1
-	defensiveness = 0.1
+	build_cost = -0.1
 	
 	allow = { religion = insular_germanic }
 	sprite = 9
@@ -69,9 +72,13 @@ ig_tor = {
 			personality = ai_militarist
 		}	
 		modifier = {
-			factor = 0.5
+			factor = 1.5
 			personality = ai_capitalist
 		}		
+		modifier = {
+		factor = 0.5
+			personality = ai_diplomat
+		}
 	}
 }
 
@@ -120,10 +127,9 @@ ig_njord = {
 }
 
 
-ig_snotra =
-{
+ig_snotra = {
 	technology_cost = -0.05
-	build_cost = -0.1
+	build_time = -0.1
 	
 	allow = { religion = insular_germanic }
 	sprite = 12

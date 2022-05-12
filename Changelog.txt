@@ -1,3 +1,12 @@
+Version 0.9.1.0
+  Additions
+   - Added East African religions courtesy of Africa Universalis
+  Changes
+   - Rebalanced Tuistic and Ænglic personal deities, less military stuff.
+  Bug Fixes
+   - Fixed religious school events firing between Muslim and Germanic schools
+   
+
 Version 0.9.0.1
   Bug Fixes
    - Fixed a province in Tunisia having the wrong religion
